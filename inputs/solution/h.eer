@@ -1,0 +1,245 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Specialization",
+   "id": 8,
+   "x": 483,
+   "y": 219,
+   "width": 35,
+   "height": 33,
+   "label": "d",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 11,
+   "x": 362,
+   "y": 125,
+   "width": 70,
+   "height": 51,
+   "label": "Lidera",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 2,
+   "x": 219,
+   "y": 162,
+   "width": 74,
+   "height": 41,
+   "label": "PROJECTO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 4,
+   "x": 516,
+   "y": 124,
+   "width": 85,
+   "height": 41,
+   "label": "EMPREGADO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 3,
+   "x": 361,
+   "y": 319,
+   "width": 87,
+   "height": 41,
+   "label": "ENGENHEIRO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 1,
+   "x": 154,
+   "y": 308,
+   "width": 70,
+   "height": 51,
+   "label": "participa",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 5,
+   "x": 531,
+   "y": 330,
+   "width": 85,
+   "height": 41,
+   "label": "SECRETAIRIA",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "LineTotal",
+   "id": 17,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 253,
+     "y": 200
+    },
+    {
+     "x": 186,
+     "y": 305
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 10,
+   "sourceType": "Entity",
+   "targetType": "Specialization",
+   "label": "line",
+   "source": 4,
+   "target": 8,
+   "listHandler": [
+    {
+     "x": 555,
+     "y": 162
+    },
+    {
+     "x": 497,
+     "y": 216
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 3,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 401,
+     "y": 316
+    },
+    {
+     "x": 394,
+     "y": 173
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 13,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 4,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 513,
+     "y": 141
+    },
+    {
+     "x": 429,
+     "y": 147
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "LineComplex",
+   "id": 14,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 8,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 497,
+     "y": 249
+    },
+    {
+     "x": 570,
+     "y": 327
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineComplex",
+   "id": 15,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 8,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 497,
+     "y": 249
+    },
+    {
+     "x": 401,
+     "y": 316
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 3,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 358,
+     "y": 336
+    },
+    {
+     "x": 221,
+     "y": 330
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  }
+ ]
+}

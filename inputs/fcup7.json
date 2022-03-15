@@ -1,0 +1,435 @@
+{
+ "reducibles": ["attribute"],
+ "nodes": [
+  {
+   "label": "Morada",
+   "id": 0,
+   "type": "attribute",
+   "x": 249,
+   "y": 127,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Localidade",
+   "id": 1,
+   "type": "attribute",
+   "x": 120,
+   "y": 84,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Rua",
+   "id": 2,
+   "type": "attribute",
+   "x": 235,
+   "y": 33,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": " Numero",
+   "id": 3,
+   "type": "attribute",
+   "x": 344,
+   "y": 78,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "ALUNO",
+   "id": 4,
+   "type": "entity",
+   "x": 270,
+   "y": 323,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Nome",
+   "id": 5,
+   "type": "attribute",
+   "x": 109,
+   "y": 239,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "NumBI",
+   "id": 6,
+   "type": "attribute",
+   "x": 124,
+   "y": 318,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Telefone",
+   "id": 7,
+   "type": "attribute",
+   "x": 363,
+   "y": 249,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "true"
+    },
+    {
+     "name": "key",
+     "value": "false"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Sexo",
+   "id": 8,
+   "type": "attribute",
+   "x": 208,
+   "y": 221,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  }],
+  "edges": [
+  {
+   "id": 9,
+   "type": "line",
+   "source": 2,
+   "target": 0,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "type": "line",
+   "source": 2,
+   "target": 1,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "type": "line",
+   "source": 3,
+   "target": 0,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "type": "line",
+   "source": 2,
+   "target": 3,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "type": "line",
+   "source": 5,
+   "target": 6,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "type": "line",
+   "source": 7,
+   "target": 8,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "type": "line",
+   "source": 2,
+   "target": 0,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "type": "line",
+   "source": 1,
+   "target": 5,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "type": "line",
+   "source": 8,
+   "target": 2,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "type": "line",
+   "source": 3,
+   "target": 6,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  }
+  ]
+ }

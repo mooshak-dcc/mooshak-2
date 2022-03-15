@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00013021_D_Mete_Olhinhos</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00013021_D_Mete_Olhinhos">00013021_D_Mete_Olhinhos</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00013021_D_Mete_Olhinhos/exD.java">exD.java</a>
+<a href="data/contests/ToPAS14/submissions/00013021_D_Mete_Olhinhos/exD.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 15:07:01 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 15:07:01 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/DE/Mete_Olhinhos">
+Mete_Olhinhos
+</a> Login: <code>Mete_Olhinhos</code> Group: DE [DE]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.088 sec<br>
+E=1 sec<br>
+M=1871696 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.090 sec<br>
+E=0 sec<br>
+M=1871696 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>247<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>1</U></font><font color='red'><S>24</S></font><font color='red'><U>3</U></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.097 sec<br>
+E=0 sec<br>
+M=1871696 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>20<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>15</U></font><font color='red'><S>20</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.094 sec<br>
+E=0 sec<br>
+M=1937232 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>704<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>628</U></font><font color='red'><S>704</S></font><font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.097 (1) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>1937232 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Wrong Answer</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{ 3 tests with <b>Wrong Answer</b>} {1 test with <b>Accepted</b>
+ 3 tests with <b>Wrong Answer</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class exD {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		ArrayList&lt;Integer&gt; vet=new ArrayList&lt;Integer&gt;();
+		int tempo,n;
+		
+		for (int i = 1; i &lt;=24; i++) {
+			tempo=sc.nextInt();
+			n=sc.nextInt();
+			if ((i==12)  || (i==22) || (i==23) || (i==24) ){
+				vet.add(n);
+			}
+			
+		}
+		 
+		double media1=(vet.get(0)+vet.get(3))/2;
+		double media2=(vet.get(1)+vet.get(2)+vet.get(3))/3;
+		double media3=(media1+media2)/2;
+		media3=media3*100;
+		int l=(int)media3/100;
+		System.out.println(l);
+		
+		
+		
+
+	}
+
+}
+
+</pre>
+
+</body>

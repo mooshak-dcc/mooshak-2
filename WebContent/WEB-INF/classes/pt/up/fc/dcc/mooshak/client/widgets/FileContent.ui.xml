@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:ace='urn:import:edu.ycp.cs.dh.acegwt.client.ace'>
+    
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+	<ui:style src="Filecontent.css" />
+
+	<g:HTMLPanel styleName="{style.base}">
+		<g:HTMLPanel styleName="{style.file-header}" ui:field="fileHeader">
+			<g:FileUpload ui:field="fileUpload" styleName="{style.fileupload}"/>
+			<span><ui:text from="{i18n.programName}" /></span>
+			<g:TextBox ui:field='filename' styleName="{style.filename}" />
+		</g:HTMLPanel>
+		<ace:AceEditor styleName='{style.code}' ui:field='editor' />
+	</g:HTMLPanel>
+</ui:UiBinder>

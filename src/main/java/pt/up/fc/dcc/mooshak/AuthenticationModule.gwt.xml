@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='authentication'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.google.gwt.user.Debug" />
+
+	<inherits name="com.google.gwt.logging.Logging" />
+
+	<set-property name="gwt.logging.logLevel" value="SEVERE" />
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<set-property name="gwt.logging.consoleHandler" value="ENABLED" />
+
+	<set-property name="gwt.logging.simpleRemoteHandler"
+		value="ENABLED" />
+
+	<extend-property name="locale" values="pt" />
+	<extend-property name="locale" values="es" />
+	<extend-property name="locale" values="arb" />
+
+	<source path="client" />
+	<source path="shared" />
+
+	<entry-point
+		class="pt.up.fc.dcc.mooshak.client.guis.authentication.AuthenticationEntryPoint" />
+
+	<add-linker name="xsiframe" />
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+
+	<!-- enable source maps -->
+	<set-property name="compiler.useSourceMaps" value="true" />
+
+	<!-- Remote services used during a JUnit run -->
+	<servlet path='/basicCommand'
+		class='pt.up.fc.dcc.mooshak.server.commands.BasicCommandServiceImpl' />
+	<servlet path='/event'
+		class='pt.up.fc.dcc.mooshak.server.events.EventServiceImpl' />
+</module>

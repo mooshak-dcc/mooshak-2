@@ -1,0 +1,9 @@
+set Fatal {}
+set Warning {}
+set Printer {}
+set Team_template {}
+set Person_template {}
+set Password_template {}
+set Config {}
+set Group {}
+set frozen false

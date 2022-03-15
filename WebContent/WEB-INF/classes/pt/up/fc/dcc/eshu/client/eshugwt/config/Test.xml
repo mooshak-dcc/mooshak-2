@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf:eshu xmlns:conf="http://www.example.org/EshuConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/EshuConfig EshuConfig.xsd ">
+  <conf:style>
+    <conf:editorStyle background="" borderColor="" borderWidth="0" gridColorLine="" gridVisible="true" height="0" width="0"/>
+    <conf:toolbarStyle background="" borderColor="" borderWidth="0" height="0" position="" width="0"/>
+    <conf:vertice background="" backgroundSelected="" borderColor="" borderWidth="0" height="0" width="0"/>
+    <conf:textBox align="" backgroundSelected="" color="" colorSelected="" font="" spacing=""/>
+    <conf:validation_syntaxe>true</conf:validation_syntaxe>
+  </conf:style>
+  <conf:diagram name="" pathFile="">
+    <conf:nodeTypes>
+      <conf:nodeConfig>
+        <conf:type>class</conf:type>
+        <conf:iconTollbarSVGPath>conf:iconTollbarSVGPath</conf:iconTollbarSVGPath>
+        <conf:imgSVGPath>conf:imgSVGPath</conf:imgSVGPath>
+        <conf:label alignment="true" defaultValue="" disabled="true" firstLetterCase="" letterCase="" position="">
+          <conf:underlined controler="" value=""/>
+        </conf:label>
+        <conf:containers>
+          <conf:container alignment="" default_text="" name="" pather="" textbox_default_number="" underlined="">
+            <conf:field name="" value=""/>
+          </conf:container>
+        </conf:containers>
+        <conf:stereotype>conf:stereotype</conf:stereotype>
+        <conf:variant>class</conf:variant>
+        <conf:isConfigurable>true</conf:isConfigurable>
+        <conf:includeElement>true</conf:includeElement>
+        <conf:infoUrlNode>
+          <conf:url>conf:url</conf:url>
+        </conf:infoUrlNode>
+        <conf:anchors>
+          <conf:anchor position=""/>
+        </conf:anchors>
+        <conf:propertiesNode>
+          <conf:property disabled="" impExp="true" name="" type="" typeShow="" view="true"/>
+        </conf:propertiesNode>
+        <conf:featuresNode/>
+        <conf:connects>
+          <conf:connect max="" min="" to="" with=""/>
+        </conf:connects>
+        <conf:degreeIn>conf:degreeIn</conf:degreeIn>
+        <conf:degreeOut>conf:degreeOut</conf:degreeOut>
+        <conf:nodeStyle autoresize="true"/>
+      </conf:nodeConfig>
+    </conf:nodeTypes>
+    <conf:edgeTypes>
+      <conf:edgeConfig>
+        <conf:type>class</conf:type>
+        <conf:iconTollbarSVGPath>conf:iconTollbarSVGPath</conf:iconTollbarSVGPath>
+        <conf:lineDuple>true</conf:lineDuple>
+        <conf:lineDash>true</conf:lineDash>
+        <conf:label alignment="true" defaultValue="" disabled="true" firstLetterCase="" letterCase="" position="">
+          <conf:underlined controler="" value=""/>
+        </conf:label>
+        <conf:variant>class</conf:variant>
+        <conf:isConfigurable>true</conf:isConfigurable>
+        <conf:infoUrlEdge>
+          <conf:url>conf:url</conf:url>
+        </conf:infoUrlEdge>
+        <conf:propertiesEdge>
+          <conf:property disabled="" impExp="true" name="" type="" typeShow="" view="true"/>
+        </conf:propertiesEdge>
+        <conf:featuresEdge/>
+        <conf:cardinality>true</conf:cardinality>
+        <conf:headSource dash="" fill="" type=""/>
+        <conf:headTarget dash="" fill="" type=""/>
+        <conf:stereotypes isStereotypes="">
+          <conf:label alignment="true" defaultValue="" disabled="true" firstLetterCase="" letterCase="" position="">
+            <conf:underlined controler="" value=""/>
+          </conf:label>
+        </conf:stereotypes>
+        <conf:lineDash>true</conf:lineDash>
+      </conf:edgeConfig>
+    </conf:edgeTypes>
+  </conf:diagram>
+</conf:eshu>

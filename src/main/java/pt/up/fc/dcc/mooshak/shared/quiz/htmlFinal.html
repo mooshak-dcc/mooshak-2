@@ -1,0 +1,221 @@
+<div xmlns:q="http://www.example.org/Quiz"
+	xmlns:h="http://www.w3.org/1999/xhtml" id="container-quizzes">
+	<div id="quiz">
+		<div id="quiz-head">
+			<div id="question-line"></div>
+		</div>
+		<div id="groups">
+			<div class="group" id="d2e1">
+				<p class="group-name">=============== superquiz ===============
+
+				</p>
+				<p>superquiz : [4]pts</p>
+				<div class="qa numeric" id="d11e1">
+					<div class="question-text">
+
+						Q 1 : What is a number from 1 to 5?
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="text" name="d11e1" id="d12e12"
+						onblur="inputNumeric(this)" disabled value="2"
+						class="border-correct">
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+				</div>
+				<div class="qa matching" id="d9e1">
+					<div class="question-text">
+
+						Q 2 : Which animal eats which food?
+						<div class="text-score">[ 0 pts]</div>
+						<b></b>
+					</div>
+					<table style="width: '100px'">
+						<tr>
+							<th>Option 1</th>
+							<th>Option 2</th>
+						</tr>
+						<tr>
+							<td><input type="text" name="mappedValue"
+								class="input-macthing" onblur="inputMatching(this)" id="d10e12"
+								disabled> cat food</td>
+							<td>1 . cat</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="mappedValue"
+								class="input-macthing" onblur="inputMatching(this)" id="d10e13"
+								disabled> dog food</td>
+							<td>2 . dog</td>
+						</tr>
+					</table>
+				</div>
+				<div class="qa shortAnswer" id="d7e1">
+					<div class="question-text">
+
+						Q 3 : Two plus<input type="text" onblur="inputShort(this)"
+							id="d8e12" name="d8e12" value="2" disabled> equals four.
+						<div class="text-score">[ 0 pts]</div>
+						<b></b>
+					</div>
+				</div>
+				<div class="qa numeric" id="d15e1">
+					<div class="question-text">
+
+						Q 4 : What is a number from 1 to 5?
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="text" name="d15e1" id="d17e12"
+						onblur="inputNumeric(this)" disabled value="2"
+						class="border-correct">
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+				</div>
+				<div class="qa single" id="d5e1">
+					<div class="question-text">
+
+						Q 5 : What's between orange and green in the spectrum? <img
+							alt="a piano" src="img.jpg"
+							style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;">
+
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="radio" value="false" class=" w3-radio" name="d5e1"
+						id="d6e13" disabled><label class="&#xA;wrong-choice&#xA;">
+						red </label><br>
+					<input type="radio" value="false" class=" w3-radio" name="d5e1"
+						id="d6e14" disabled><label class="&#xA;wrong-choice&#xA;">
+						blue </label><br>
+					<input type="radio" value="true" checked
+						class="w3-radio wrong-choice " name="d5e1" id="d6e12" disabled><label
+						class="&#xA;correct-choice&#xA;"> yellow </label>
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+					<div class="text-feedback">[ right; good! ]</div>
+					<br>
+				</div>
+				<div class="qa numeric" id="d19e1">
+					<div class="question-text">
+
+						Q 6 : When was Ulysses S. Grant born? <img alt="a piano"
+							src="img.jpg"
+							style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;">
+
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="text" name="d19e1" id="d22e12"
+						onblur="inputNumeric(this)" disabled value="2"
+						class="border-correct">
+
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+				</div>
+			</div>
+			<div class="group" id="d23e1">
+				<p class="group-name">=============== group2 ===============</p>
+				<p>group2 : [1]pts</p>
+				<div class="qa single" id="d32e1">
+					<div class="question-text">
+
+						Q 1 : What's the answer to this multiple-choice question? <img
+							alt="a piano" src="img.jpg"
+							style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;">
+
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="radio" value="false" class=" w3-radio" name="d32e1"
+						id="d33e13" disabled><label class="&#xA;wrong-choice&#xA;">
+						another wrong answer </label><br>
+					<input type="radio" value="true" checked
+						class="w3-radio wrong-choice " name="d32e1" id="d33e14" disabled><label
+						class="&#xA;correct-choice&#xA;"> right answer </label>
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+					<div class="text-feedback">[Very good!]</div>
+					<br>
+					<input type="radio" value="false" class=" w3-radio" name="d32e1"
+						id="d33e12" disabled><label class="&#xA;wrong-choice&#xA;">
+						wrong answer </label><br>
+				</div>
+				<div class="qa fillInTheBlank" id="d30e1">
+					<div class="question-text">
+
+						Q 2 : Difficult multiple choice question<select
+							onclick="inputfillInTheBlank(this)" id="d31e12" disabled
+							class="border-wrong">
+							<option value="wrong answer              " id="d31e122">wrong
+								answer</option>
+							<option value="half credit answer      " id="d31e123" selected>half
+								credit answer</option>
+							<option value="full credit answer    " id="d31e124">full
+								credit answer</option>
+						</select>
+						<div class="icones">
+							<img src="images/wrong.png.png" alt="Correct" class="img-answer">
+						</div>
+						teste test
+						<div class="text-score">[ 0 pts]</div>
+						<b></b>
+					</div>
+				</div>
+			</div>
+			<div class="group" id="d38e1">
+				<p class="group-name">=============== HTML ===============</p>
+				<p>HTML : [1]pts</p>
+				<div class="qa single" id="d43e1">
+					<div class="question-text">
+
+						Q 1 : Which HTML attribute specifies an alternate text for an
+						image, if the image cannot be displayed?
+						<div class="text-score">[ 1 pts]</div>
+						<b></b>
+					</div>
+					<input type="radio" value="true" checked
+						class="w3-radio wrong-choice " name="d43e1" id="d44e13" disabled><label
+						class="&#xA;correct-choice&#xA;">alt </label>
+					<div class="icones">
+						<img src="images/correct.png" alt="Correct" class="img-answer">
+					</div>
+					<br>
+					<input type="radio" value="false" class=" w3-radio" name="d43e1"
+						id="d44e14" disabled><label class="&#xA;wrong-choice&#xA;">longdesc</label><br>
+					<input type="radio" value="false" class=" w3-radio" name="d43e1"
+						id="d44e12" disabled><label class="&#xA;wrong-choice&#xA;">src
+					</label><br>
+				</div>
+				<div class="qa boolean" id="d45e1">
+					<div class="question-text">
+
+						Q 2 : 42 is the Absolute Answer to everything.
+						<div class="text-score">[ 0 pts]</div>
+						<b></b>
+					</div>
+					<input type="radio" name="d45e1" id="d46e12" class="w3-radio"
+						onclick="inputBoolean(this)" disabled checked><label
+						class="&#xA;correct-choice&#xA;&#xA;line-through&#xA;">
+						True </label>
+					<div class="icones">
+						<img src="images/wrong.png" alt="Correct" class="img-answer">
+					</div>
+					<div class="text-feedback">[You gave the right answer.}]</div>
+					<br>
+					<input type="radio" name="d45e1" id="d46e11" class="w3-radio"
+						onclick="inputBoolean(this)" disabled><label
+						class="&#xA;wrong-choice&#xA;"> False </label><br>
+				</div>
+			</div>
+		</div>
+
+
+		===============And of Question=================
+
+	</div>
+</div>

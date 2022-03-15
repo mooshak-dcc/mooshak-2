@@ -1,0 +1,21 @@
+
+
+.statement {
+	min-width: 590px;
+	min-height: 600px;
+	margin: 5px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	padding-top: 0 !important; 
+}
+
+.statement > div{
+	padding: 0 !important;
+}
+
+.okBtn {
+	margin: 5px;
+	float: right;
+	height: 30px;
+}

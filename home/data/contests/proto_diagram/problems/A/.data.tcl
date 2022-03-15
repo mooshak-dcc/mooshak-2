@@ -1,0 +1,26 @@
+set Fatal {}
+set Warning {}
+set Name A
+set Color {}
+set Title A
+set Difficulty {Very Easy}
+set Type {}
+set Description A.html
+set PDF {}
+set Program A.eer
+set solutions {}
+set Environment {}
+set Timeout 2
+set quiz {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Game_manager {}
+set Game_package {}
+set Original_location {}
+set Editor_kind DIAGRAM
+set Start {}
+set Stop {}
+set images {}
+set tests {}
+set skeletons {}
+set frozen false

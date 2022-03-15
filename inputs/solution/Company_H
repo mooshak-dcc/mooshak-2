@@ -1,0 +1,934 @@
+{
+ "reducibles": [
+  "Attribute",
+  "AttributeDerived",
+  "AttributeMultivalue",
+  "AttributeKey",
+  "AttributeKeyWeak"
+ ],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Attribute",
+   "id": 2,
+   "x": 120,
+   "y": 120,
+   "width": 70,
+   "height": 41,
+   "label": "Name",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 21,
+   "x": 10,
+   "y": 66,
+   "width": 81,
+   "height": 41,
+   "label": "First_Name",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 22,
+   "x": 100,
+   "y": 32,
+   "width": 75,
+   "height": 41,
+   "label": "LastName",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 5,
+   "x": 206,
+   "y": 69,
+   "width": 70,
+   "height": 41,
+   "label": "Adress",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 6,
+   "x": 294,
+   "y": 89,
+   "width": 70,
+   "height": 41,
+   "label": "Salary",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 220,
+   "y": 197,
+   "width": 85,
+   "height": 41,
+   "label": "EMPLOYEE",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 4,
+   "x": 78,
+   "y": 214,
+   "width": 70,
+   "height": 41,
+   "label": "Ssn",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 7,
+   "x": 456,
+   "y": 198,
+   "width": 78,
+   "height": 51,
+   "label": "Works_For",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 45,
+   "x": 489,
+   "y": 268,
+   "width": 70,
+   "height": 41,
+   "label": "Hour",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 9,
+   "x": 606,
+   "y": 71,
+   "width": 70,
+   "height": 41,
+   "label": "Name",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 11,
+   "x": 792,
+   "y": 91,
+   "width": 70,
+   "height": 41,
+   "label": "Location",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 12,
+   "x": 699,
+   "y": 30,
+   "width": 70,
+   "height": 41,
+   "label": "Number",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 8,
+   "x": 683,
+   "y": 201,
+   "width": 97,
+   "height": 41,
+   "label": "DEPARTMENT",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "WeakRelationship",
+   "id": 15,
+   "x": 203,
+   "y": 329,
+   "width": 100,
+   "height": 51,
+   "label": "Dependents_Of",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 13,
+   "x": 410,
+   "y": 313,
+   "width": 72,
+   "height": 51,
+   "label": "Work_On",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "EntityWeak",
+   "id": 16,
+   "x": 163,
+   "y": 435,
+   "width": 91,
+   "height": 41,
+   "label": "DEPENDENT",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 18,
+   "x": 140,
+   "y": 512,
+   "width": 70,
+   "height": 41,
+   "label": "Age",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKeyWeak",
+   "id": 54,
+   "x": 42,
+   "y": 473,
+   "width": 70,
+   "height": 41,
+   "label": "Name",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 19,
+   "x": 254,
+   "y": 507,
+   "width": 86,
+   "height": 41,
+   "label": "RelationShip",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 33,
+   "x": 690,
+   "y": 306,
+   "width": 78,
+   "height": 51,
+   "label": "CONTROL",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 34,
+   "x": 702,
+   "y": 427,
+   "width": 76,
+   "height": 41,
+   "label": "PROJECT",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 35,
+   "x": 600,
+   "y": 489,
+   "width": 70,
+   "height": 41,
+   "label": "Name",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 37,
+   "x": 821,
+   "y": 487,
+   "width": 70,
+   "height": 41,
+   "label": "Location",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 41,
+   "x": 705,
+   "y": 495,
+   "width": 70,
+   "height": 41,
+   "label": "Number",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 23,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "line",
+   "total": "no",
+   "source": 22,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 134,
+     "y": 70
+    },
+    {
+     "x": 152,
+     "y": 117
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 24,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "line",
+   "total": "no",
+   "source": 21,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 88,
+     "y": 83
+    },
+    {
+     "x": 117,
+     "y": 137
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 26,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 5,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 238,
+     "y": 107
+    },
+    {
+     "x": 259,
+     "y": 194
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 20,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 145,
+     "y": 231
+    },
+    {
+     "x": 217,
+     "y": 214
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 25,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 152,
+     "y": 158
+    },
+    {
+     "x": 217,
+     "y": 214
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 27,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 6,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 326,
+     "y": 127
+    },
+    {
+     "x": 259,
+     "y": 194
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 28,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 1,
+   "target": 7,
+   "listHandler": [
+    {
+     "x": 302,
+     "y": 214
+    },
+    {
+     "x": 453,
+     "y": 220
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 47,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 1,
+   "target": 13,
+   "listHandler": [
+    {
+     "x": 302,
+     "y": 214
+    },
+    {
+     "x": 443,
+     "y": 310
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 49,
+   "sourceType": "Entity",
+   "targetType": "WeakRelationship",
+   "label": "line",
+   "total": "no",
+   "source": 1,
+   "target": 15,
+   "listHandler": [
+    {
+     "x": 259,
+     "y": 235
+    },
+    {
+     "x": 250,
+     "y": 326
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 29,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 8,
+   "target": 7,
+   "listHandler": [
+    {
+     "x": 680,
+     "y": 218
+    },
+    {
+     "x": 531,
+     "y": 220
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 30,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 9,
+   "target": 8,
+   "listHandler": [
+    {
+     "x": 638,
+     "y": 109
+    },
+    {
+     "x": 728,
+     "y": 198
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 31,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 12,
+   "target": 8,
+   "listHandler": [
+    {
+     "x": 731,
+     "y": 68
+    },
+    {
+     "x": 728,
+     "y": 198
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 32,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 11,
+   "target": 8,
+   "listHandler": [
+    {
+     "x": 824,
+     "y": 129
+    },
+    {
+     "x": 728,
+     "y": 198
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 44,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 8,
+   "target": 33,
+   "listHandler": [
+    {
+     "x": 728,
+     "y": 239
+    },
+    {
+     "x": 726,
+     "y": 303
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 46,
+   "sourceType": "Attribute",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 45,
+   "target": 13,
+   "listHandler": [
+    {
+     "x": 486,
+     "y": 285
+    },
+    {
+     "x": 443,
+     "y": 310
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 48,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "no",
+   "source": 34,
+   "target": 13,
+   "listHandler": [
+    {
+     "x": 699,
+     "y": 444
+    },
+    {
+     "x": 479,
+     "y": 335
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    },
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 50,
+   "sourceType": "EntityWeak",
+   "targetType": "WeakRelationship",
+   "label": "line",
+   "total": "yes",
+   "source": 16,
+   "target": 15,
+   "listHandler": [
+    {
+     "x": 205,
+     "y": 432
+    },
+    {
+     "x": 250,
+     "y": 377
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    },
+    {
+     "name": "total",
+     "value": "yes"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 55,
+   "sourceType": "AttributeKeyWeak",
+   "targetType": "EntityWeak",
+   "label": "line",
+   "total": "no",
+   "source": 54,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 74,
+     "y": 470
+    },
+    {
+     "x": 160,
+     "y": 452
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 52,
+   "sourceType": "Attribute",
+   "targetType": "EntityWeak",
+   "label": "line",
+   "total": "no",
+   "source": 18,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 172,
+     "y": 509
+    },
+    {
+     "x": 205,
+     "y": 473
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 53,
+   "sourceType": "Attribute",
+   "targetType": "EntityWeak",
+   "label": "line",
+   "total": "no",
+   "source": 19,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 251,
+     "y": 524
+    },
+    {
+     "x": 205,
+     "y": 473
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 38,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 35,
+   "target": 34,
+   "listHandler": [
+    {
+     "x": 632,
+     "y": 486
+    },
+    {
+     "x": 699,
+     "y": 444
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 40,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 37,
+   "target": 34,
+   "listHandler": [
+    {
+     "x": 818,
+     "y": 504
+    },
+    {
+     "x": 775,
+     "y": 444
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 42,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "total": "no",
+   "source": 41,
+   "target": 34,
+   "listHandler": [
+    {
+     "x": 737,
+     "y": 492
+    },
+    {
+     "x": 737,
+     "y": 465
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 43,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "total": "yes",
+   "source": 34,
+   "target": 33,
+   "listHandler": [
+    {
+     "x": 737,
+     "y": 424
+    },
+    {
+     "x": 726,
+     "y": 354
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    },
+    {
+     "name": "total",
+     "value": "yes"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+
+
+@external .gwt-TabLayoutPanelContentContainer, .gwt-TabPanelBottom, .gwt-TabBar, .gwt-TabLayoutPanelTabs, .gwt-TabBarFirst, .gwt-TabBarItem, .gwt-TabLayoutPanelTab, .gwt-TabBarItem-selected, .gwt-TabLayoutPanelTab-selected, .gwt-TabLayoutPanelTabInner, .gwt-TabPanelTabInner;
+@external .placeHolder, .sortablePanel;
+
+.gwt-TabLayoutPanelContentContainer, .gwt-TabPanelBottom {
+	border: 2px solid black;
+}
+
+.gwt-TabBar, .gwt-TabLayoutPanelTabs {
+	padding-top: 2px;
+	background-color: #fff;
+	padding-left: 0 !important;
+}
+
+.gwt-TabLayoutPanelTabs {
+	margin-bottom: -5px;
+	height: 100%;
+}
+
+.gwt-TabBarItem, .gwt-TabLayoutPanelTab {
+  cursor: pointer;
+  background-color: #e8e8e8;
+  border: 1px solid black;
+  color: black;
+  margin: 0 !important;
+  font-weight: bold !important;
+  padding: 5px 8px 4px 8px !important;
+}
+
+.gwt-TabLayoutPanelTabInner, .gwt-TabPanelTabInner {}
+
+.gwt-TabBarItem-selected, .gwt-TabLayoutPanelTab-selected {
+	background-color: #555555;
+}
+
+.gwt-TabBarFirst {
+	display: none;
+}
+
+.placeHolder{
+    border:1px dashed black;
+    margin-top: 5px;
+}
+
+        
+.sortablePanel{
+}
+

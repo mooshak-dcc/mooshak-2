@@ -1,0 +1,22 @@
+		@html2ps {
+		    paper {
+			type: a4;
+		    }       
+		    option {
+			landscape: 1;
+		    }
+		}
+		/* use CSS2 blocks to configure HTML elements */
+		@page {
+		    margin-left:   2.5cm;
+		    margin-right:  2.5cm;
+		    margin-top:    7.5cm;
+		    margin-bottom: 5.0cm;
+		}
+		
+		BODY {  font-size:      24pt;   }
+		H1 {    font-size:      36pt;   }
+		H2 {    font-size:      32pt;   }
+		H3 {    font-size:      18pt;   }
+		
+	    

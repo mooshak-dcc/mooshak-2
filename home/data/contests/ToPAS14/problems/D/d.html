@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problema D: Indicador mais-ou-menos</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="271" HEIGHT="277" ALIGN="BOTTOM" BORDER="0"
+ SRC="./stats.jpg"
+ ALT="Image stats">
+
+</DIV>
+
+<P>
+
+
+
+A empresa ComputerWave decidiu implementar um novo sistema para a gestão mensal do seu stock de computadores, pedindo ao engenheiro informático Bernardo para tratar do assunto. O Bernardo, que é um engenheiro inovador, implementou um indicador, a que deu o nome de indicador mais-ou-menos, que calcula, mensalmente, o número de computadores que deverá haver em stock. O indicador baseia-se nas vendas dos últimos três meses e nas vendas do mesmo mês nos dois anos anteriores. O cálculo do indicador não é mais do que a média entre esses dois valores: a média das vendas nos últimos três meses e a média das vendas do mesmo mês nos dois anos anteriores. Estas médias devem ser truncadas, isto é, devem ser arredondadas para o maior número inteiro menor ou igual ao valor exato.
+Para construir o indicador para o mês corrente, o Bernardo extrai da
+base de dados de vendas os valores das vendas nos últimos 24 meses. 
+
+<P>
+
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+Escrever um programa para ajudar o engenheiro Bernardo a calcular o indicador mais-ou-menos. 
+
+
+
+
+
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+O input é constituído por uma sequência de 24 linhas. Em cada linha há dois números: a data e o valor das vendas. A data aparece no formato AAAAMM, por exemplo 201401. O input está por ordem cronológica e não há meses, do mesmo ano, repetidos. Sabemos ainda que o número de vendas em cada mês não ultrapassa o valor 1000.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+Uma linha com apenas um número inteiro que representa o número de computadores que é necessário ter em stock no próximo mês, isto é o valor do indicador mais-ou-menos.
+
+
+
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+201205 28
+201206 33
+201207 28
+201208 28
+201209 28
+201210 28
+201211 28
+201212 28
+201301 28
+201302 28
+201303 28
+201304 28
+201305 26
+201306 17
+201307 28
+201308 28
+201309 28
+201310 28
+201311 28
+201312 28
+201401 28
+201402 70
+201403 43
+201404 28
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+37
+</PRE>
+
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2014
+</ADDRESS>
+</BODY>
+</HTML>

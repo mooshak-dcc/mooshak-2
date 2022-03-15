@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eshu xmlns="http://www.example.org/EshuConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/EshuConfig EshuConfig.xsd ">
+  <style>
+    <editorStyle width="700" height="400" borderWidth="1" 
+          borderColor="#000" background="white"  
+          gridVisible="false" gridColorLine="#c0c0c0"/>
+    
+    <toolbarStyle width="500" height="300" borderWidth="1"
+       				borderColor="black" background="WhiteSmoke"
+       				position="vertical"  />
+      
+    <vertice width="70" height="40" background="white"
+        		backgroundSelected="blue" borderWidth="1" borderColor="red"/> 
+      
+    <textBox font="Georgia" color="Green" colorSelected="Black" align="left"
+        		spacing="3px" backgroundSelected="Blue"/>
+    
+  </style>
+  
+   <diagram name="EER" pathFile="./EERConfig.xml">
+    <nodeTypes>
+    
+      <nodeConfig>
+        <type>Attribute</type>
+        <iconTollbarSVGPath>./image/eer/atributo.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/atributo.svg</imgSVGPath>
+         <label defaultValue="Attribute" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false">
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Attribute</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Entity" with="Line"/> 
+          <connect max="unbounded" min="0" to="EntityWeak" with="Line"/> 
+          <connect max="unbounded" min="0" to="AttributeDerived" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeMultivalue" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKey" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKeyWeak" with="Line"/>
+          <connect max="unbounded" min="0" to="Relationship" with="Line"/>
+          <connect max="unbounded" min="0" to="weakRelationship" with="Line"/>
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+      </nodeConfig>
+      
+     <nodeConfig>
+        <type>AttributeDerived</type>
+        <iconTollbarSVGPath>./image/eer/atributo_derivado_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/atributo_derivado.svg</imgSVGPath>
+         <label defaultValue="Attribute" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false">
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Attribute</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="1" min="0" to="Attribute" with="Line"/> 
+          <connect max="1" min="0" to="Entity" with="Line"/> 
+          <connect max="1" min="0" to="EntityWeak" with="Line"/> 
+          <connect max="1" min="0" to="Relationship" with="Line"/>
+          <connect max="1" min="0" to="weakRelationship" with="Line"/>
+          
+        </connects>
+        <degreeIn>1</degreeIn>
+        <degreeOut>1</degreeOut>
+      </nodeConfig>
+     
+      <nodeConfig>
+       
+        <type>AttributeMultivalue</type>
+        <iconTollbarSVGPath>./image/eer/atributo_multivalor_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/atributo_multivalor.svg</imgSVGPath>
+         <label defaultValue="Attribute" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" >
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Attribute</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="1" min="0" to="Attribute" with="Line"/>   
+          <connect max="1" min="0" to="Entity" with="Line"/> 
+          <connect max="1" min="0" to="EntityWeak" with="Line"/> 
+          <connect max="1" min="0" to="Relationship" with="Line"/>
+          <connect max="1" min="0" to="weakRelationship" with="Line"/>
+        </connects>
+        
+        <degreeIn>1</degreeIn>
+        <degreeOut>1</degreeOut>
+        
+      </nodeConfig> 
+      
+      
+      <nodeConfig>
+       <type>AttributeKey</type>
+        <iconTollbarSVGPath>./image/eer/atributoChave.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/atributo.svg</imgSVGPath>
+         <label defaultValue="Attribute" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" >
+         <underlined controler="none" value="1"/>
+        </label>
+        <group>Attribute</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="1" min="0" to="Entity" with="Line"/> 
+          <connect max="1" min="0" to="EntityWeak" with="Line"/> 
+          <connect max="1" min="0" to="Relationship" with="Line"/>
+          <connect max="1" min="0" to="weakRelationship" with="Line"/>
+        </connects>
+        <degreeIn>1</degreeIn>
+        <degreeOut>1</degreeOut>
+     </nodeConfig>  
+      
+      
+    <nodeConfig>
+         <type>AttributeKeyWeak</type>
+        <iconTollbarSVGPath>./image/eer/atributoChaveFraca.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/atributo.svg</imgSVGPath>
+         <label defaultValue="Attribute" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false">
+         <underlined controler="none" value="2"/>
+        </label>
+        <group>Attribute</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="1" min="0" to="Attribute" with="Line"/>   
+          <connect max="1" min="0" to="Entity" with="Line"/> 
+        </connects>
+        <degreeIn>1</degreeIn>
+        <degreeOut>1</degreeOut>     
+    </nodeConfig>  
+      
+    <nodeConfig>
+        <type>Entity</type>
+        <iconTollbarSVGPath>./image/eer/entidade_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/entidade.svg</imgSVGPath>
+         <label defaultValue="Entity" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" >
+		 <underlined controler="none" value="0"/>
+        </label>
+        <group>Entity</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Attribute" with="Line"/> 
+          <connect max="unbounded" min="0" to="AttributeDerived" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeMultivalue" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKey" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKeyWeak" with="Line"/>
+          <connect max="unbounded" min="0" to="Relationship" with="Line"/>
+          <connect max="unbounded" min="0" to="weakRelationship" with="Line"/>
+        </connects>
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+             
+    </nodeConfig>  
+    
+       
+      
+     <nodeConfig>
+         
+         <type>EntityWeak</type>
+        <iconTollbarSVGPath>./image/eer/entidade_fraca_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/entidade_fraca.svg</imgSVGPath>
+         <label defaultValue="Entity" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" >
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Entity</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Attribute" with="Line"/> 
+          <connect max="unbounded" min="0" to="AttributeDerived" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeMultivalue" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKey" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKeyWeak" with="Line"/>
+          <connect max="unbounded" min="0" to="Relationship" with="Line"/>
+          <connect max="unbounded" min="0" to="weakRelationship" with="Line"/>
+        </connects>
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>     
+    </nodeConfig>  
+         
+         
+    <nodeConfig>
+       
+       <type>Relationship</type>
+        <iconTollbarSVGPath>./image/eer/relacionamento_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/relacionamento.svg</imgSVGPath>
+         <label defaultValue="Entity" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false">
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Relationship</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Attribute" with="Line"/> 
+          <connect max="unbounded" min="0" to="AttributeDerived" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeMultivalue" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKey" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKeyWeak" with="Line"/>
+          <connect max="unbounded" min="0" to="Entity" with="Line"/>
+          <connect max="unbounded" min="0" to="EntityWeak" with="Line"/>
+          <connect max="" min="" to="" with=""/>
+        </connects>
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+      </nodeConfig>
+      
+      <nodeConfig>
+          
+          <type>weakRelationship</type>
+        <iconTollbarSVGPath>./image/eer/relacionamento_fraca_icon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/eer/relacionamento_fraca.svg</imgSVGPath>
+         <label defaultValue="Entity" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false">
+          <underlined controler="weakRel" value="0"/>
+        </label>
+        <group>Relationship</group>
+        <isconfigurable>true</isconfigurable>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~fds/aulas/BD/1516/Slides/parteII.pdf</url>
+         	<url>https://www.google.pt</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Attribute" with="Line"/> 
+          <connect max="unbounded" min="0" to="AttributeDerived" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeMultivalue" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKey" with="Line"/>
+          <connect max="unbounded" min="0" to="AttributeKeyWeak" with="Line"/>
+          <connect max="unbounded" min="0" to="Entity" with="Line"/>
+          <connect max="unbounded" min="0" to="EntityWeak" with="Line"/>
+          <connect max="" min="" to="" with=""/>
+        </connects>
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>  
+          
+          
+        
+      </nodeConfig>
+  	</nodeTypes>
+  	
+    <edgeTypes>
+      <edgeConfig>
+        <type>Line</type>
+        <iconTollbarSVGPath>./image/associationIcon.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+		 <label defaultValue="line" firstLetterCase="" letterCase="" position="center" disabled="false">
+         <underlined controler="none" value="0"/>
+        </label>
+        <group>Line</group>
+        <isConfigurable>true</isConfigurable>
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge>
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+        
+      </edgeConfig>
+    </edgeTypes>
+  </diagram>
+</eshu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Financial Risk</exercise>
+    <compilationErrors>/home/josepaiva/workspace/Mooshak2.1Maven/home/data/contests/proto_icpc/validations/263534168_J_team/risk.java:33: error: cannot find symbol
+       nf    = NumberFormat.getNumberInstance(Locale.EN);
+                                                    ^
+  symbol:   variable EN
+  location: class Locale
+1 error
+</compilationErrors>
+</reportType>

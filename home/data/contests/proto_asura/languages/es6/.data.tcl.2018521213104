@@ -1,0 +1,15 @@
+set Fatal {}
+set Warning {}
+set Name {EcmaScript 6}
+set Extension js
+set Compiler {}
+set Version {}
+set Compile {$home/js-asura-compiler.sh $programFolder $gameExtras $gameArtifact es6}
+set Execute {$home/workspace/Mooshak2.1Maven/js-asura-executor.sh $programFolder $file es6}
+set Data 6147483647
+set Fork 100
+set Omit {}
+set UID {}
+set EditFileContents {}
+set Configuation {}
+set frozen false

@@ -1,0 +1,17 @@
+set Fatal {}
+set Warning {}
+set Name team2
+set Password q6fhB1sVSxgFM
+set Email {}
+set Location {}
+set Qualifies yes
+set Start 1622403187
+set Rank {}
+set Profile team
+set PrintoutsTransactions 0
+set SubmissionsTransactions 0
+set ValidationsTransactions 0
+set BalloonsTransactions 0
+set QuestionsTransactions 0
+set Person {}
+set frozen false

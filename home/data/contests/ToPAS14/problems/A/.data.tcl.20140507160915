@@ -1,0 +1,19 @@
+set        Fatal {}
+set      Warning {}
+set         Name A
+set        Color Green
+set        Title {Quantos dias fazes?}
+set   Difficulty Easy
+set         Type ad-hoc
+set  Description a.html
+set          PDF PDF.pdf
+set      Program Juliano.java
+set  Environment Environment
+set      Timeout 4
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

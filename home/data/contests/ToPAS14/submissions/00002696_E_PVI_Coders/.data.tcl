@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399634096
+set Time 2696
+set Problem E
+set Team PVI_Coders
+set Classify ACCEPTED
+set Mark 0
+set Size 1277
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C++
+set Program 2.cpp
+set UserTestData {}
+set Report 2.html
+set Elapsed 1.0
+set CPU 0.002
+set Memory 64.0
+set Signals {}
+set Feedback {{1 test with <b>Presentation Error</b>}}

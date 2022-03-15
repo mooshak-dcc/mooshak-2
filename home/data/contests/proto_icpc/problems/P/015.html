@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+<TITLE>Rotations and Reflections</title>
+<META NAME="description" CONTENT="Rotations and Reflections">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2K.1beta">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+</head>
+
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+
+<H1>Rotations and Reflections</h1>
+
+<P>
+Many games, tricks and puzzles depend on determining whether two
+patterns on a rectangular grid are the ``same'' or not. For
+instance, the 96 different ways of arranging 8 queens safely on a
+chessboard can be shown to consist of rotations and/or reflections of
+only 12 basic patterns.
+
+<P>
+
+<P>
+<BR>
+Write a program that will read in pairs of patterns and determine
+whether there is a simple transformation that will convert one into
+the other. Because symmetrical patterns bear many relationships to
+each other, the transformations must be checked in a specific order.
+The possible transformations (in order) are:
+
+<P>
+
+<P>
+<BR>
+<TABLE COLS=2 BORDER FRAME=BOX RULES=GROUPS>
+<COLGROUP><COL ALIGN=LEFT><COLGROUP><COL ALIGN=JUSTIFY WIDTH="9cm">
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP>
+Preservation </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The patterns are identical </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+90 degree rotation </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The pattern was rotated clockwise by 90 degrees </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+180 degree rotation </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The pattern was rotated clockwise by 180 degrees </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+270 degree rotation </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The pattern was rotated clockwise by 270 degrees </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+Reflection </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The pattern was reflected about the horizontal axis (effectively by a mirror held at the top of the pattern) </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+Combination </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> A reflection (as above), followed by one of the above rotations </td></tr>
+<TR><TD VALIGN=BASELINE ALIGN=LEFT NOWRAP> 
+Improper </td><TD VALIGN=BASELINE ALIGN=LEFT WIDTH="255"> The patterns do not match under any of the above transformations </td></tr>
+</table>
+
+<P>
+
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">
+Input</a> </font>
+</h2>
+Input will consist of a
+series of pairs of patterns. Each set will consist of a line
+containing a single integer <SPAN CLASS="MATH"><I>N</i></span> (<!-- MATH
+ $2 \le N \le 10$
+ -->
+<SPAN CLASS="MATH">2<IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="15img1.png"
+ ALT="$ \le$"><I>N</i><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="15img1.png"
+ ALT="$ \le$">10</span>) giving the size of
+the patterns, followed by <SPAN CLASS="MATH"><I>N</i></span> lines. Each line will consist of <SPAN CLASS="MATH"><I>N</i></span> dots or
+`<TT>x</tt>'s (specifying a line of the original pattern), a
+space, and another set of <SPAN CLASS="MATH"><I>N</i></span> dots and `<TT>x</tt>'s (specifying a
+line of the transformed pattern). The file will be terminated by a
+line consisting of a single zero (<TT>0</tt>).
+
+<P>
+
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">
+Output</a> </font>
+</h2>
+Output will consist of a series of lines, one for each pattern pair in
+the input. Each line will consist of one of the following: 
+`<TT>Preserved</tt>', `<TT>Rotated through <SPAN CLASS="MATH"><I>m</i></span> degrees</tt>' (where <SPAN CLASS="MATH"><I>m</i></span>
+is one of 90, 180 or 270), `<TT>Reflected</tt>', 
+`<TT>Reflected and rotated through <SPAN CLASS="MATH"><I>m</i></span> degrees</tt>',
+`<TT>Improper</tt>'.
+
+<P>
+
+<P>
+
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">
+Sample Input</a> </font>
+</h2>
+
+<P>
+<PRE> 
+5
+x...x ....x
+.x... ...x.
+...x. .x...
+..x.x ..x..
+....x xx..x
+2
+x. xx
+x. xx
+4
+..x. ...x
+xx.. ....
+.... xx..
+...x ..x.
+4
+.x.. ..x.
+.x.x x...
+.... ..xx
+..x. ....
+0
+</pre>
+
+<P>
+
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001004000000000000000">
+Sample Output</a> </font>
+</h2>
+
+<P>
+<PRE>
+Rotated through 90 degrees
+Improper
+Reflected
+Reflected and rotated through 270 degrees
+</pre>
+
+<P>
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+Miguel Revilla
+2001-10-30
+</address>
+</body>
+</html>
+</html>
+

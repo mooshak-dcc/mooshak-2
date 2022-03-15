@@ -1,0 +1,11 @@
+set        Fatal {}
+set      Warning {Variável indefinida <code>Email</code><br>}
+set         Name CyberProgramadores
+set     Password 4eb3am
+set        Email {}
+set     Location {}
+set    Qualifies {}
+set       Person {}
+set        Start {}
+set         Rank {}
+set      Profile team

@@ -1,0 +1,9 @@
+set        Fatal {}
+set      Warning {Consider <a target='_parent' href='810243208804281?operation+cleanup+data/contests/ToPAS14/problems/B/tests/T01'> cleaning up test files</a> since they have<ul><li>non unix end-of-line characters<br><li>non unix end-of-line characters<br></ul>}
+set         args {}
+set        input bb_in_01.txt
+set       output bb_out_01.txt
+set      context context
+set       Points {}
+set     Feedback {}
+set         Show yes

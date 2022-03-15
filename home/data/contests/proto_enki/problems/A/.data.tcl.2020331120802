@@ -1,0 +1,23 @@
+set Fatal {}
+set Warning {}
+set Name A
+set Color #00FFFF
+set Title {Olá Mundo}
+set Difficulty {Very Easy}
+set Type {}
+set Description {P01 - OlaMundo.pdf}
+set PDF {P01 - OlaMundo.pdf}
+set Program HelloWorld.cs
+set solutions {}
+set Environment {}
+set Timeout 5
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set Editor_kind CODE
+set Start {}
+set Stop {}
+set images {}
+set tests {}
+set skeletons {}
+set frozen false

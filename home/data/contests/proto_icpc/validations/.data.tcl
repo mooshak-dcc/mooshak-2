@@ -1,0 +1,12 @@
+set Fatal {}
+set Warning {}
+set Default_state {}
+set Run_all_tests {}
+set Show_own_code {}
+set Give_feedback {}
+set Show_errors {}
+set Feedback_delay {}
+set Minimum_interval {}
+set Maximum_pending {}
+set Submission {}
+set frozen false

@@ -1,0 +1,11 @@
+set Fatal {}
+set Warning {}
+set Designation Default
+set Acronym DFLT
+set Color #008080
+set Flag {}
+set Authentication BASIC
+set LDAP {}
+set Basic {}
+set Team {}
+set frozen false

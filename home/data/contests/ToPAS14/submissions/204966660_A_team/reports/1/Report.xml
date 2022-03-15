@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Quantos dias fazes?</exercise>
+    <compilationErrors>/home/josepaiva/workspace/Mooshak2.1Maven/home/data/contests/ToPAS14/submissions/204966660_A_team/MainTelepatia.java:21: error: cannot find symbol
+		first.close();
+		^
+  symbol:   variable first
+  location: class MainTelepatia
+/home/josepaiva/workspace/Mooshak2.1Maven/home/data/contests/ToPAS14/submissions/204966660_A_team/MainTelepatia.java:22: error: cannot find symbol
+		second.close();
+		^
+  symbol:   variable second
+  location: class MainTelepatia
+2 errors
+</compilationErrors>
+</reportType>

@@ -1,0 +1,262 @@
+{
+ "reducibles": [
+  "AttributeKey",
+  "Attribute",
+  "AttributeMultivalue",
+  "AttributeDerived",
+ ],
+ "nodes": [
+  {
+   "type": "AttributeKey",
+   "id": 9,
+   "x": 97,
+   "y": 156,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo12",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Relationship",
+   "id": 3,
+   "x": 391,
+   "y": 158,
+   "width": 100,
+   "height": 50,
+   "label": "relacionamento",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 4,
+   "x": 150,
+   "y": 232,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo13",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 243,
+   "y": 154,
+   "width": 75,
+   "height": 41,
+   "label": "Entidade1",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Entity",
+   "id": 2,
+   "x": 563,
+   "y": 153,
+   "width": 75,
+   "height": 41,
+   "label": "Entidade2",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 8,
+   "x": 695,
+   "y": 244,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo23",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 6,
+   "x": 688,
+   "y": 58,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo21",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeDerived",
+   "id": 10,
+   "x": 691,
+   "y": 147,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo22",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "",
+   "source": 9,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 169,
+     "y": 174
+    },
+    {
+     "x": 240,
+     "y": 172
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 14,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 1,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 315,
+     "y": 172
+    },
+    {
+     "x": 388,
+     "y": 180
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 15,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 2,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 560,
+     "y": 171
+    },
+    {
+     "x": 488,
+     "y": 180
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 20,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 184,
+     "y": 229
+    },
+    {
+     "x": 240,
+     "y": 172
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 6,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 685,
+     "y": 76
+    },
+    {
+     "x": 597,
+     "y": 150
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 17,
+   "sourceType": "AttributeDerived",
+   "targetType": "Entity",
+   "label": "",
+   "source": 10,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 688,
+     "y": 165
+    },
+    {
+     "x": 635,
+     "y": 171
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 18,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "",
+   "source": 8,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 729,
+     "y": 241
+    },
+    {
+     "x": 597,
+     "y": 191
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  }
+ ]
+}

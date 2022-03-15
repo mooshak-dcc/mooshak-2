@@ -1,0 +1,51 @@
+
+
+On the unix shell, as root, execute <code>install --user test1--install </code>
+Installed
+
+<a href="?admin">Login as admin in test1</a>
+View admin screen
+
+Open network
+View network record
+
+Create server for this server, fill in <b>User</b> and <b>Address</b> and set <b>Receive</b> to <b>yes</b>
+Vew server record
+
+Check <b>Public_key</b>
+View a log line starting with "ssh-rsa" and ending with the server's address
+
+Open network
+View network record
+
+Execute <b>Local...</b> from menu <b>Connections</b>
+View a window with <b>receiving from <i>server address</i></b> (and not sending to anyone)
+
+<a href="?admin">Login as admin in this server</a>
+View admin screen
+
+Create server <code>test1</code>, fill in <b>User</b> and <b>Address</b> and set <b>Send</b> to <b>yes</b>
+Vew server record
+
+Open network
+View network record
+
+Execute <b>Local...</b> from menu <b>Connections</b>
+View a window with <b>sending to <i>test 1server address</i></b>
+
+Execute <b>Global...</b> from menu <b>Connections</b>
+View a window with table showing all detected servers. Connection to<code>test1</code> green.
+Create a new user
+Check new user in other server
+
+Freeze user directory
+Check frozzen user in other server
+
+Unfreeze user directory
+Check frozzen user in other server
+
+Cut off <code>test1</code> server directory
+View network record
+
+Execute <b>Global...</b> from menu <b>Connections</b>
+View a window with table showing all detected servers. Connection to<code>test1</code> red.

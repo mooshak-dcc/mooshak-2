@@ -1,0 +1,297 @@
+{
+  "reducibles": [
+  "AttributeKey",
+  "Attribute",
+  "AttributeMultivalue",
+  "AttributeDerived",
+ ],
+ 
+ "nodes": [
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 237,
+   "y": 152,
+   "width": 75,
+   "height": 41,
+   "label": "Entidade1",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 4,
+   "x": 147,
+   "y": 231,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo13",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 5,
+   "x": 120,
+   "y": 82,
+   "width": 74,
+   "height": 41,
+   "label": "atributo11",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeKey",
+   "id": 9,
+   "x": 94,
+   "y": 155,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo12",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Relationship",
+   "id": 3,
+   "x": 387,
+   "y": 156,
+   "width": 100,
+   "height": 50,
+   "label": "relacionamento",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Entity",
+   "id": 2,
+   "x": 560,
+   "y": 152,
+   "width": 75,
+   "height": 41,
+   "label": "Entidade2",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 8,
+   "x": 692,
+   "y": 243,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo23",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 6,
+   "x": 685,
+   "y": 57,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo21",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeDerived",
+   "id": 10,
+   "x": 688,
+   "y": 146,
+   "width": 75,
+   "height": 41,
+   "label": "Atributo22",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 11,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 5,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 154,
+     "y": 120
+    },
+    {
+     "x": 234,
+     "y": 169
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "",
+   "source": 9,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 166,
+     "y": 172
+    },
+    {
+     "x": 234,
+     "y": 169
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 13,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 181,
+     "y": 228
+    },
+    {
+     "x": 234,
+     "y": 169
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 14,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 1,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 309,
+     "y": 169
+    },
+    {
+     "x": 384,
+     "y": 178
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 15,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 2,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 557,
+     "y": 169
+    },
+    {
+     "x": 484,
+     "y": 178
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 6,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 682,
+     "y": 74
+    },
+    {
+     "x": 594,
+     "y": 149
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 17,
+   "sourceType": "AttributeDerived",
+   "targetType": "Entity",
+   "label": "",
+   "source": 10,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 685,
+     "y": 163
+    },
+    {
+     "x": 632,
+     "y": 169
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 18,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "",
+   "source": 8,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 726,
+     "y": 240
+    },
+    {
+     "x": 594,
+     "y": 190
+    }
+   ],
+   "features": [],
+   "featuresSource": [],
+   "featuresTarget": []
+  }
+ ]
+}

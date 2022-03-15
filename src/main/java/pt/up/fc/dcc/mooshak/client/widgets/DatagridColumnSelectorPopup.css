@@ -1,0 +1,48 @@
+
+
+.columns {
+	display: block;
+	margin:	auto;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.columns span {
+	vertical-align: top;
+}
+
+.columnList {
+	width: 200px;
+	min-height: 100px;
+	max-height: 300px;
+	margin: 10px;
+	display: block;
+	background-color: white;
+	overflow-y: auto;
+}
+
+.columnList > * {
+	display: block;
+}
+
+.lblSelectColumns {
+	vertical-align: top;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.close {
+    float: right;
+	margin-top: -28px;
+	margin-right: -19px;
+	cursor: pointer;
+	color: white;
+	border: 1px solid #AEAEAE;
+	background: #605F61;
+	font-size: large;
+	padding: 6px 10px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 1em;    
+}
+

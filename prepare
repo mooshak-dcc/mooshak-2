@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#	Mooshak 2.0
+#
+# Execute this script as root to prepare this project for testing
+# Working directory must be the project's home directory
+#
+#		José Paulo Leal <zp@dcc.fc.up.pt>
+#		October 2012
+
+chown 30001 testFiles/hello
+
+(cd home/bin ; make clean ; make)

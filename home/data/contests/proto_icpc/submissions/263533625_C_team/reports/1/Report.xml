@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>C</programmingLanguage>
+    <exercise href="TODO">Buddy Memory Allocator</exercise>
+    <compilationErrors>SafeExec error during compilation:Memory Limit Exceeded</compilationErrors>
+</reportType>

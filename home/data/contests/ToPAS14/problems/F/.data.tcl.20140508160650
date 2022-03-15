@@ -1,0 +1,19 @@
+set        Fatal {Variável com valor inválido <code>Tempo_limite</code>: <br>}
+set      Warning {}
+set         Name F
+set        Color Cyan
+set        Title {Lançado às feras }
+set   Difficulty Medium
+set         Type {}
+set  Description f.html
+set          PDF PDF.pdf
+set      Program prog.c
+set  Environment Environment
+set      Timeout {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

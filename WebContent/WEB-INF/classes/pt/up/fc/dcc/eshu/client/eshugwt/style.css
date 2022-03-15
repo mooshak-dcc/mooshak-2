@@ -1,0 +1,322 @@
+@CHARSET "ISO-8859-1";
+
+#title{
+	margin: 0.5em 0 0.0em 0;
+
+	text-align: left;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 36px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+
+#test{
+	margin: inherit;
+    
+}
+#mygraph{
+
+    width: 700px; 
+    height:500px;
+    margin: 0px;
+    display: inline;
+  	float: left;
+  /*	overflow: auto;
+  	/*none*/
+   
+}
+/*
+canvas {
+    display:block;
+    margin:0 auto;
+    background: #CCCCCC;
+}*/
+.optProp{
+	/*width   : 30px;*/
+  margin-right  : 15px;
+  padding : 0;
+  /*opacity : 0;*/
+}
+
+#exportGraph{
+	display: none;
+	
+}
+.buttonOp{
+	
+	position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:5px;
+    background-color:#585858;
+    border-bottom:2px solid #7b8b2f;
+    
+} 
+
+#settings{
+	background:#C8C8C8   ;
+	margin: auto;
+    width: 100%;
+    width: 600px; 
+    height:30px;
+    border:3px solid #B0B0B0  ;
+  
+  
+}
+
+#note{
+	background:#FFFFFC;
+	text-align: center;
+	text-indent: 16px;
+	overflow: auto;
+}
+
+#test{
+	 width: 300px;
+	 
+	
+}
+#positionGraph{
+	 display: inline;
+	/*  border:1px solid #585858 ;*/
+	  margin: 10px;
+	  padding: 3px;
+}
+#positionG{
+	 border:1px solid #585858 ;
+	  margin: 5px;
+	 /* padding: 2px;*/
+	 display: inline;
+}
+#toolbar{
+	/*background:#787878;*/
+	 padding: 0px;
+	 display: block;
+	 float: left;
+	 margin: 2px;
+	
+}
+
+
+#display{
+	width: 1200px; 
+    height:420px;
+    margin:0 auto; 
+    /*margin-top: 5px;*/
+    
+}
+#editor{
+    
+    margin-left: 30px;
+    display: inline;
+  	border-style: solid;
+    border-width: 1px;
+    float: right;
+    background:#F5F5F5;
+    display: none;
+}
+
+
+.elementToolbar
+{
+	
+  /*  width: 25px; 
+    height:40px;
+    display:inline;
+    border: 1px solid;
+    margin:auto;
+	*/
+}
+/*
+.inputProperties{
+	
+    width: 80px; 
+    height:12px;
+	
+}
+
+/*
+.primary-header {
+  padding: 24px 0;
+  text-align: center;
+  border-bottom: solid 2px #cfcfcf;
+}
+
+.primary-header__title {
+  color: #393939;
+  font-size: 36px;
+}*/
+
+#graph{
+/*	width: 900px;
+    height: 900px;
+    border-style: solid;
+    border-width: 1px;*/
+    background: #F5F5F5;
+   
+}
+
+/*
+#graphDiv{
+	width: 705px;
+    height: 405px;
+    border-style: solid;
+    border-width: 1px;
+	overflow-y: auto; 
+}*/
+
+#menuButton{
+    display: none;
+}
+
+.gwt-Button {
+	background-color: #C8C8C8;
+    padding: 2px 4px;
+    font: 13px sans-serif;
+    border: 1px solid #000;
+    border-bottom:2px solid #7b8b2f;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    color: #000;
+    cursor:pointer;
+    margin: 10px;
+    
+   /* font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    
+    outline:none;*/
+  /*  text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:5px;
+    background-color:#C8C8C8;
+    border-bottom:2px solid #7b8b2f;*/
+}
+/*
+#OKProperties{
+	width:40px;
+    height:20px;
+     width:80%
+}
+#CancelProperties{
+	width:50px;
+    height:20px;
+     width:100%
+}
+*/
+#listbox{
+
+/*display: none;*/
+ 
+
+}
+
+.Button{
+	display:block; /* change this from inline-block */
+  	margin:0 auto; /* this will center  it */
+    width:100%;
+    
+	
+}
+#selectedEspGenCat{
+	display:block; /* change this from inline-block */
+  	margin:0 auto; /* this will center  it */
+    width:220%;
+    
+}
+
+#selectedType{
+	/*display:block; /* change this from inline-block */
+  /*	margin:0 auto; /* this will center  it */
+    /*width:85px;*/
+}
+/*button {
+    display:block; /* change this from inline-block */
+    /*width:20%; /* setting the width */
+    /*margin:0 auto; /* this will center  it 
+  
+    position:relative;
+    font-style:normal;
+    font-weight:normal;
+    font-family:"Open Sans";
+    font-size:14px;
+    outline:none;
+    color:#fff;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    background-color:#96aa39;
+    border-bottom:1px solid #7b8b2f;
+}
+*/
+
+.buttonMenu{
+    /*background:url(./images/but.png) no-repeat;*/
+    background: #3498db;
+    cursor:pointer;
+    border:none;
+    width:20px;
+    height:20px;
+}
+
+.buttonMenu:active  /* use Dot here */
+{   
+	border:1px solid #7b8b2f;;
+    /*width:20px;
+    height:20x;*/
+}
+
+
+#btnCopy{
+	background:url(./image/copy.PNG) center no-repeat; background-size: 100% 100%;
+	/*background: #3498db;*/
+}
+
+#btnPaste{  
+    background:url(./image/paste.PNG)  center no-repeat; background-size: 100% 100%;
+}
+
+#btnCut{  
+    background:url(./image/cut.PNG)  center no-repeat; background-size: 100% 100%;
+}
+
+#btnDelete{  
+    background:url(./image/delete.PNG)  center no-repeat; background-size: 100% 100%;
+}
+#btnClear{  
+    background:url(./image/clear.PNG)  center no-repeat; background-size: 100% 100%;
+}
+
+#btnUndo{  
+    background:url(./image/undo.PNG)  center no-repeat; background-size: 100% 100%;
+}
+
+#btnRedo{  
+    background:url(./image/redo.PNG)  center no-repeat; background-size: 100% 100%;
+}
+
+.btn-l {
+	width:24px;
+	heigth:24px;
+	background:url(./image/btn_l.png)  center no-repeat; background-size: 100% 100%;	
+}

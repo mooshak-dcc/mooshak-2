@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='replay'>
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name='com.smartgwt.SmartGwt'/>  -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean'/>
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.google.gwt.xml.XML" />
+	<!--<inherits name="com.google.gwt.logging.Logging"/> -->
+	
+	<extend-property name="locale" values="pt"/>
+	
+	<source path="client"/>
+	<source path="shared"/>
+		
+	<entry-point 
+		class="pt.up.fc.dcc.mooshak.client.guis.replay.ReplayEntryPoint"/>
+
+	<add-linker name="xsiframe" />
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+
+	<!-- enable source maps -->
+	<set-property name="compiler.useSourceMaps" value="true" />
+
+	<!-- Remote services used during a JUnit run  -->
+  <servlet 
+  	path='/basicCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.BasicCommandServiceImpl'/>
+  <servlet 
+  	path='/adminCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.AdminCommandServiceImpl'/>
+  <servlet 
+  	path='/participantCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.ParticipantCommandServiceImpl'/>
+  <servlet 
+  	path='/enkiCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.EnkiCommandServiceImpl'/>
+  <servlet 
+  	path='/creatorCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.CreatorCommandServiceImpl'/>
+  <servlet 
+  	path='/judgeCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.JudgeCommandServiceImpl'/>
+  <servlet 
+  	path='/event' 
+  	class='pt.up.fc.dcc.mooshak.server.events.EventServiceImpl'/>
+</module>

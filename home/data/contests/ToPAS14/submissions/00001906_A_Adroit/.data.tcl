@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633306
+set Time 1906
+set Problem A
+set Team Adroit
+set Classify PRESENTATION_ERROR
+set Mark 0
+set Size 382
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program B.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.001
+set Memory 64.0
+set Signals {}
+set Feedback {{ 6 tests with <b>Presentation Error</b>}}

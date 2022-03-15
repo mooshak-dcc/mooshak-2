@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c='urn:import:com.google.gwt.user.cellview.client'
+	xmlns:w='urn:import:pt.up.fc.dcc.mooshak.client.widgets'>
+
+	<ui:with field='i18n'
+		type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="OkCancelDialog.css"/>
+
+    <g:HTMLPanel>
+	<g:DialogBox ui:field='dialogBox' autoHide="false" modal="true">
+		<g:caption styleName='{style.caption}'>
+			<b>Type specific command</b>
+		</g:caption>
+		<g:HTMLPanel styleName='{style.base}' ui:field='basePanel'>
+			<g:HTMLPanel ui:field='dialogContentPanel'/>
+			<div class="{style.buttons}">
+				<g:Button ui:field='okButton' styleName='{style.button}'>Ok</g:Button>
+				<g:Button ui:field='cancelButton' styleName='{style.button}'>Cancel</g:Button>
+			</div>
+		</g:HTMLPanel>
+	</g:DialogBox>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

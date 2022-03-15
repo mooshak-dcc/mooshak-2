@@ -1,0 +1,16 @@
+/* Global configuration file for html2ps */
+
+@html2ps {
+  package {
+    geturl: "lynx -source -mime_header";
+
+  }
+  paper {
+    type: A4;
+  }
+  hyphenation {
+    en {
+      file: "/usr/local/src/html2ps-1.0b1/lib/html2ps/hyphen.tex";
+    }
+  }
+}

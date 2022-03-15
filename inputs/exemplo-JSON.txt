@@ -1,0 +1,39 @@
+{
+ "nodesJson": [
+  {
+   "name": "",
+   "x": 63,
+   "y": 128,
+   "id": 0,
+   "width": 55,
+   "height": 55,
+   "type": "circle",
+   "color": "#33CC33"
+  },
+  {
+   "name": "",
+   "x": 322,
+   "y": 225,
+   "id": 1,
+   "width": 55,
+   "height": 55,
+   "type": "diamond",
+   "color": "#009999",
+   "h0": 2,
+   "h1": -1,
+   "h2": -1,
+   "h3": -1
+  }
+ ],
+ "edgesJson": [
+  {
+   "id": 2,
+   "nodeI": 0,
+   "handleI": 1,
+   "nodeF": 1,
+   "handleF": 0,
+   "type": "line",
+   "color": "#A0522D"
+  }
+ ]
+}

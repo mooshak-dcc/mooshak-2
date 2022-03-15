@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:a="urn:import:pt.up.fc.dcc.mooshak.client.form.admin" 
+	xmlns:m="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+	<ui:style src="Dropfilemanager.css" />
+
+	<g:HTMLPanel styleName="{style.base}">
+		<g:FileUpload ui:field="fileUpload" name="file" styleName="{style.fileupload}" />
+		<span>Progam file name</span>
+		<a:CustomTextBox ui:field='filename' styleName="{style.filename}" />
+		<m:TabbedMultipleEditor styleName='{style.editor}' ui:field='editor' widgetHeight="385" widgetWidth="500" />
+	</g:HTMLPanel>
+</ui:UiBinder>

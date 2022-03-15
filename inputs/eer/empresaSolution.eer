@@ -1,0 +1,338 @@
+{
+ "reducibles": [
+  "AttributeKey",
+  "Attribute",
+  "AttributeMultivalue",
+  "AttributeDerived",
+  "AttributeDerived",
+  "AttributeKeyWeak"
+ ],
+ "nodes": [
+  {
+   "type": "Attribute",
+   "id": 3,
+   "x": 58,
+   "y": 97,
+   "width": 80,
+   "height": 41,
+   "label": "Nome",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 4,
+   "x": 157,
+   "y": 100,
+   "width": 80,
+   "height": 41,
+   "label": "Sexo",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 5,
+   "x": 268,
+   "y": 145,
+   "width": 80,
+   "height": 41,
+   "label": "Morada",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 6,
+   "x": 230,
+   "y": 18,
+   "width": 83,
+   "height": 41,
+   "label": "Locqalidade",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 7,
+   "x": 342,
+   "y": 23,
+   "width": 80,
+   "height": 41,
+   "label": "Rua",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Attribute",
+   "id": 8,
+   "x": 418,
+   "y": 72,
+   "width": 80,
+   "height": 41,
+   "label": "Numero",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 9,
+   "x": 361,
+   "y": 194,
+   "width": 80,
+   "height": 41,
+   "label": "Telefone",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 165,
+   "y": 240,
+   "width": 80,
+   "height": 41,
+   "label": "Entity",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "AttributeKey",
+   "id": 2,
+   "x": 48,
+   "y": 216,
+   "width": 80,
+   "height": 41,
+   "label": "NumBI",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 15,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "",
+   "source": 6,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 268,
+     "y": 56
+    },
+    {
+     "x": 305,
+     "y": 142
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "",
+   "source": 7,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 379,
+     "y": 61
+    },
+    {
+     "x": 305,
+     "y": 142
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 17,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "",
+   "source": 8,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 415,
+     "y": 89
+    },
+    {
+     "x": 305,
+     "y": 142
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 13,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 3,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 95,
+     "y": 135
+    },
+    {
+     "x": 202,
+     "y": 237
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 10,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 194,
+     "y": 138
+    },
+    {
+     "x": 202,
+     "y": 237
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "",
+   "source": 5,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 265,
+     "y": 163
+    },
+    {
+     "x": 202,
+     "y": 237
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 11,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 125,
+     "y": 233
+    },
+    {
+     "x": 162,
+     "y": 257
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 14,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "",
+   "source": 9,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 358,
+     "y": 211
+    },
+    {
+     "x": 242,
+     "y": 257
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+
+
+PROLOG=/usr/local/bin/yap	;# prolog compiler
+LINES=7				;# number of header lines to ignore
+
+
+echo consult\(\'$1\'\), save\('state'\). | $PROLOG 2>&1 | tail  +$LINES

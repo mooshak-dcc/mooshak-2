@@ -1,0 +1,346 @@
+switch (d) {
+		case "north" :
+			return 0 ;
+			break;
+		case "northnortheast" :
+			return 1 ;
+			break;	
+		case "northeast" :
+			return 2 ;
+			break;
+		case "eastnortheast" :
+			return 3 ;
+			break;		
+		case "east" :
+			return 4 ;
+			break;
+		case "eastsoutheast" :
+			return 5 ;
+			break;
+		case "southeast" :
+			return 6 ;
+			break;
+		case "southsoutheast" :
+			return 7 ;
+			break;	
+		case "south" :
+			return 8 ;
+			break;
+		case "southsouthwest" :
+			return 9 ;
+			break;	
+		case "southwest" :
+			return 10 ;
+			break;
+		case "westsouthwest" :
+			return 11 ;
+			break;
+		case "west" :
+			return 12 ;
+			break;
+		case "northnorthwest" :
+			return 13 ;
+			break;	
+		case "northwest" :
+			return 14 ;
+			break;
+		case "westnorthwest" :
+			return 15 ;
+			break;	
+		case "center" :
+			return 16 ;
+			break;	
+		default:
+			throw new Error("Direction invalid:"+type);
+			break;
+		} 
+		
+		
+		
+		/**
+	 * 
+	 * switch (d) {
+		case "north" :
+			return 0 ;
+			break;
+		case "northeast" :
+			return 1 ;
+			break;	
+		case "east" :
+			return 2 ;
+			break;		
+		case "southeast" :
+			return 3 ;
+			break;
+		case "south" :
+			return 4 ;
+			break;
+		case "southwest" :
+			return 5 ;
+			break;
+		case "west" :
+			return 6 ;
+			break;
+		case "northwest" :
+			return 7 ;
+			break;
+		case "center" :
+			return 8 ;
+			break;	
+		default:
+			throw new Error("Direction invalid:"+type);
+			break;
+		} 
+	 * 
+	 */
+	 
+	 
+	 
+	 switch (this.handlerSelected) {
+		
+		case 0:
+			this.y = my;
+			this.height += oldy - my;
+			document.body.style.cursor = "n-resize";
+			break;
+		case 1:
+			
+			this.y = my;
+			this.width = mx - oldx;
+			this.height += oldy - my;
+			document.body.style.cursor = "ne-resize";
+			break;
+			
+		case 2:
+			this.width = mx - oldx;
+			document.body.style.cursor = "e-resize";
+			break;
+		case 3:
+			this.width = mx - oldx;
+			this.height = my - oldy;
+			document.body.style.cursor = "nw-resize";
+			break;
+		case 4:
+			this.height = my - oldy;
+			document.body.style.cursor = "n-resize";
+			break;
+		case 5:
+			this.x = mx;
+			this.width += oldx - mx;
+			this.height = my - oldy;
+			document.body.style.cursor = "ne-resize";
+			break;
+		case 6:
+			this.x = mx;
+			this.width += (oldx - mx);
+			document.body.style.cursor = "e-resize";
+			break;
+		case 7:
+			this.x = mx;
+			this.y = my;
+			this.width += oldx - mx;
+			this.height += oldy - my;
+			document.body.style.cursor = "nw-resize";
+			break;
+
+		}
+		if (this.width < sizeMin) {
+			this.width = sizeMin;
+			this.x = oldx
+		}
+		if (this.height < sizeMin) {
+			this.height = sizeMin;
+			this.y = oldy
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		updateHandles () {
+		this.handlers = new Array();
+		var half = this.selectionBoxSize / 2;
+		var x1 = this.x-half;
+		var y1 = this.y-half;
+		var halfWidth=this.width / 2;
+		var halfHeight = this.height / 2;
+		var quarterWidth =this.width / 4;
+		var quarterHeight =this.height / 4;
+		
+		
+		for (var i = 0; i < this.numberHandles; i++) {
+			
+			switch (i) {
+			case 0: //north N
+				this.handlers.push(new Box(x1 + halfWidth , y1 ));
+				break;
+			case 1: //North-northeast NNE
+				this.handlers.push(new Box( (x1 + quarterWidth + halfWidth), y1  ));
+			break;
+			case 2: //northeast NE
+				this.handlers.push(new Box(x1 + this.width , y1 ));
+				break;
+			case 3: //East-northeast ENE
+				this.handlers.push(new Box( (x1 + this.width), (y1 + quarterHeight)  ));
+			break;
+			case 4: //east E
+				this.handlers.push(new Box(x1 + this.width , y1 + halfHeight));
+			break;
+			case 5: //East-southeast ESE
+				this.handlers.push(new Box( (x1 + this.width), (y1 + quarterHeight + halfHeight)  ));
+			break;
+			
+			case 6: //southeast SE
+				this.handlers.push(new Box(x1 + this.width , y1 + this.height ));
+				break;
+			
+			case 7: //South-southeast SSE 
+				this.handlers.push(new Box( (x1 + quarterWidth + halfWidth), (y1 + this.height)  ));
+			break;	
+			
+			case 8: // south S
+				this.handlers.push(new Box(x1 + halfWidth , y1 + this.height ));
+				break;
+			
+			case 9: //South-southwest SSW 
+				this.handlers.push(new Box( (x1 + quarterWidth), (y1 + this.height)  ));
+			break;
+			
+			case 10: // southwest SW
+				this.handlers.push(new Box(x1 , y1 + this.height ));
+				break;
+			
+			case 11: //West-southwest WSW
+				this.handlers.push(new Box( x1 , (y1 + quarterHeight + halfHeight) ));
+			break;
+				
+			case 12: // west
+				this.handlers.push(new Box(x1 , y1 + halfHeight ));
+				break;
+				
+			case 13: //North-northwest NNW
+				this.handlers.push(new Box(x1, y1+quarterHeight  ));
+			break;
+			
+			case 14: //northwest NW
+				this.handlers.push(new Box(x1 , y1 ));
+				break;
+				
+			case 15: //West-northwest WNW
+				this.handlers.push(new Box(x1 +quarterWidth, y1  ));
+			break;
+			
+			case 16: // center C
+				this.handlers.push(new Box(x1+halfWidth , y1+halfHeight  ));
+				break;
+				
+			default:
+				continue;
+			}
+			
+		}
+		this.updateAnchor();
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	updateHandles () {
+		var half = this.selectionBoxSize / 2;
+		var x1 = this.x-half;
+		var y1 = this.y-half;
+		var halfWidth=this.width / 2;
+		var halfHeight = this.height / 2;
+		var quarterWidth =this.width / 4;
+		var quarterHeight =this.height / 4;
+		
+		
+		for (var i = 0; i < this.handlers.length; i++) {
+//			console.log("this.handlers[i].getId() "+this.handlers[i].getId())
+			switch (this.handlers[i].getId()) {
+			case 0: //north N
+				this.handlers[i].updatePosition(x1 + halfWidth , y1);
+				break;
+			case 1: //North-northeast NNE
+				this.handlers[i].updatePosition( (x1 + quarterWidth + halfWidth), y1  );
+			break;
+			case 2: //northeast NE
+				this.handlers[i].updatePosition(x1 + this.width , y1 );
+				console.log("ererer")
+				break;
+			case 3: //East-northeast ENE
+				this.handlers[i].updatePosition( (x1 + this.width), (y1 + quarterHeight)  );
+			break;
+			case 4: //east E
+				this.handlers[i].updatePosition(x1 + this.width , y1 + halfHeight);
+			break;
+			case 5: //East-southeast ESE
+				this.handlers[i].updatePosition((x1 + this.width), (y1 + quarterHeight + halfHeight)  );
+			break;
+			
+			case 6: //southeast SE
+				this.handlers[i].updatePosition(x1 + this.width , y1 + this.height);
+				break;
+			
+			case 7: //South-southeast SSE 
+				this.handlers[i].updatePosition( (x1 + quarterWidth + halfWidth), (y1 + this.height));
+			break;	
+			
+			case 8: // south S
+				this.handlers[i].updatePosition(x1 + halfWidth , y1 + this.height );
+				break;
+			
+			case 9: //South-southwest SSW 
+				this.handlers[i].updatePosition( (x1 + quarterWidth), (y1 + this.height));
+			break;
+			
+			case 10: // southwest SW
+				this.handlers[i].updatePosition(x1 , y1 + this.height);
+				break;
+			
+			case 11: //West-southwest WSW
+				this.handlers[i].updatePosition( x1 , (y1 + quarterHeight + halfHeight));
+			break;
+				
+			case 12: // west
+				this.handlers[i].updatePosition(x1 , y1 + halfHeight);
+				break;
+				
+			case 13: //North-northwest NNW
+				this.handlers[i].updatePosition(x1, y1+quarterHeight );
+			break;
+			
+			case 14: //northwest NW
+				this.handlers[i].updatePosition(x1 , y1 );
+				break;
+				
+			case 15: //West-northwest WNW
+				this.handlers[i].updatePosition(x1 +quarterWidth, y1);
+			break;
+			
+			case 16: // center C
+				this.handlers[i].updatePosition(x1+halfWidth , y1+halfHeight );
+				break;
+				
+			default:
+				continue;
+			}
+			
+		}
+		this.updateAnchor();
+	},
+	
+	
+	

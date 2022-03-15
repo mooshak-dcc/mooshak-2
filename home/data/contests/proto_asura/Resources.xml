@@ -1,0 +1,13 @@
+<course id='proto_asura' name='Asura Prototype' author='José Carlos Paiva' creationDate='2018-08-07T00:00:00.000+01:00' startDate='2018-08-07T00:30:00.000+01:00' mode='RELAX' recommender='pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender' xmlns='http://www.example.org/Seqins' xml:space='preserve'>
+
+	<coursepart id='materials' name='Materials' xml:space='preserve'>
+		<resource id='overview' title='Overview' href='https://mooshak2.dcc.fc.up.pt/asura/static/es6-course/asteroids-overview.pdf' type='PDF' tags='variables,destructuring,arrowfunctions,promises,classes'/>
+		<resource id='how-to' title='How to use Asura' href='https://www.youtube.com/watch?v=-Dts806ML2g' type='VIDEO'/>
+	</coursepart>
+	<coursepart id='exercises' name='Exercises' xml:space='preserve'>
+		<resource id='A' title='War Of Asteroids - Chapter I' href='A' type='PROBLEM'/>
+		<resource id='B' title='War Of Asteroids - Chapter II' href='B' type='PROBLEM'/>
+		<resource id='C' title='War Of Asteroids - Chapter III' href='C' type='PROBLEM'/>
+		<resource id='D' title='War Of Asteroids - Chapter IV' href='D' type='PROBLEM'/>
+	</coursepart>
+</course>

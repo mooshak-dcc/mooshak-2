@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE Problem [
+	<!ELEMENT Problem (Images, Tests)>
+		<!ATTLIST Problem
+			xmlns           CDATA    #FIXED "http://www.ncc.up.pt/mooshak/"
+			xmlns:ct        CDATA    #FIXED "http://www.ncc.up.pt/mooshak/clear_text_password"
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Name            (A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | X | Y | W | Z) #IMPLIED
+			Color           CDATA    #IMPLIED
+			Title           CDATA    #IMPLIED
+			Difficulty      CDATA    #IMPLIED
+			Type            (sorting | graphs | geometry | combinatorial | strings | mathematics | ad-hoc) #IMPLIED
+			Description     CDATA    #IMPLIED
+			PDF             CDATA    #IMPLIED
+			Program         CDATA    #IMPLIED
+			Environment     CDATA    #IMPLIED
+			Timeout         CDATA    #IMPLIED
+			Static_corrector CDATA    #IMPLIED
+			Dynamic_corrector CDATA    #IMPLIED>
+	<!ELEMENT Images EMPTY>
+		<!ATTLIST Images
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Image           CDATA    #IMPLIED>
+	<!ELEMENT Tests (Test*)>
+		<!ATTLIST Tests
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Definition      CDATA    #IMPLIED>
+	<!ELEMENT Test EMPTY>
+		<!ATTLIST Test
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			args            CDATA    #IMPLIED
+			input           CDATA    #IMPLIED
+			output          CDATA    #IMPLIED
+			context         CDATA    #IMPLIED
+			Points          CDATA    #IMPLIED
+			Feedback        CDATA    #IMPLIED
+			Show            (yes | no) #IMPLIED>
+]>
+<Problem xmlns="http://www.ncc.up.pt/mooshak/"
+          Name="B"
+          Color="red"
+          Title="Buddy Memory Allocator"
+          Difficulty="Medium"
+          Type="ad-hoc"
+          Description="buddy.html"
+          PDF="PDF.pdf"
+          Program="buddy_v1.c"
+          Environment="Environment"
+          Timeout="2">
+     <Images xml:id="images"
+               Image="buddy_fig.gif"/>
+     <Tests xml:id="tests"
+               Definition="Definition">
+          <Test xml:id="tests.D1"
+                    input="in.1"
+                    output="output"
+                    context="context"/>
+          <Test xml:id="tests.D2"
+                    input="in.2"
+                    output="output"/>
+          <Test xml:id="tests.D3"
+                    input="in.3"
+                    output="output"/>
+          <Test xml:id="tests.D4"
+                    input="in.4"
+                    output="output"/>
+          <Test xml:id="tests.D5"
+                    input="in.5"
+                    output="output"/>
+          <Test xml:id="tests.D6"
+                    input="in.6"
+                    output="output"/>
+     </Tests>
+</Problem>
+

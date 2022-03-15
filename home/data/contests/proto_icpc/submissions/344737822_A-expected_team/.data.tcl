@@ -1,0 +1,26 @@
+set Consider yes
+set Date 1623834922
+set EvaluatedAt 1623834922
+set Time 344737822
+set Problem A-expected
+set Team team
+set Classify {Wrong Answer}
+set Mark 0
+set Size 150
+set Lines 7
+set Observations {}
+set Execution {}
+set State pending
+set Language Python
+set Program ff.py
+set UserTestData {}
+set Report Report.xml
+set reports {}
+set Elapsed {}
+set CPU {}
+set Memory {}
+set Signals {}
+set Feedback {}
+set ReviewerObservations {}
+set ReviewerFeedback {}
+set frozen false

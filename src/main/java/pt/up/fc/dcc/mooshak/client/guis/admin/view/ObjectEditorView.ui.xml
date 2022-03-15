@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:f='urn:import:pt.up.fc.dcc.mooshak.client.form.admin'
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+
+	<ui:style src="ObjectEditor.css" 
+type ="pt.up.fc.dcc.mooshak.client.guis.admin.view.ObjectEditorViewImpl.BaseStyle"/>
+
+	<g:HTMLPanel styleName='{style.editor}'>
+		<div class='{style.state}'>
+			<div class='{style.texts}'>
+				<g:Label ui:field='typeName' styleName='{style.typeName}'/>
+				<g:Label ui:field='message' styleName='{style.message}'/>
+				<g:Label ui:field='idLabel' styleName='{style.id}'/>
+			</div>
+			<div class='{style.buttons}'>
+				<w:CustomImageButton 
+					ui:field="createButton" 
+					title="Create" 
+					url='{images.create.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="destroyButton" 
+					title="Destroy" 
+					url='{images.destroy.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="renameButton" 
+					title="Rename" 
+					url='{images.rename.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="copyButton" 
+					title="Copy" 
+					url='{images.copy.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="pasteButton" 
+					title="Paste" 
+					url='{images.paste.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="undoButton" 
+					title="Undo" 
+					url='{images.undo.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="redoButton" 
+					title="Redo" 
+					url='{images.redo.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="importButton" 
+					title="Import" 
+					url='{images.upload.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="exportButton" 
+					title="Export" 
+					url='{images.download.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="freezeButton" 
+					title="Freeze" 
+					url='{images.freeze.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="unfreezeButton" 
+					title="Unfreeze" 
+					url='{images.unfreeze.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<w:CustomImageButton 
+					ui:field="menuButton" 
+					title="Type specific commands" 
+					url='{images.menu.getSafeUri.asString}' 
+					pixelSize="48,48" />
+				<!--
+				<g:Button ui:field="createButton">Create</g:Button>  
+				<g:Button ui:field="destroyButton">Destroy</g:Button>
+				-->
+			</div>
+		</div>
+		
+		<f:ObjectForm ui:field='form' styleName='{style.form}'/>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

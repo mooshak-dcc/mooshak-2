@@ -1,0 +1,6 @@
+2
+ola
+mundo
+1 2 ola mundo
+2 2 1 2
+0

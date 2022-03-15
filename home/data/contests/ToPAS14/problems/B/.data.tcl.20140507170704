@@ -1,0 +1,19 @@
+set        Fatal {Variável com valor inválido <code>Tempo_limite</code>: <br>Ficheiro ilegível <code>Descrição</code>: Description.html<br>Verifique <a target='select' href='810243208804281?data+data/contests/ToPAS14/problems/B/tests'><code>tests</code></a><br>}
+set      Warning {Ficheiro ilegível <code>Programa</code>: Program<br>}
+set         Name B
+set        Color Blue
+set        Title {CaixaNegra }
+set   Difficulty {Very Easy}
+set         Type {}
+set  Description Description.html
+set          PDF PDF.pdf
+set      Program Program
+set  Environment Environment
+set      Timeout {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

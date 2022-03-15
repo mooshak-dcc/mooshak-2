@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client" 
+	xmlns:m="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+
+	<ui:with field='i18n'
+		type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+
+	<ui:style src="RegisterFormDialog.css" />
+	
+	<g:HTMLPanel styleName="{style.register}">
+		<g:Label ui:field="domain" styleName="{style.title}"></g:Label>
+		
+		<div class="{style.fields}">
+			<div>
+				<div class="{style.label}">
+					<ui:text from="{i18n.user}" />
+				</div>
+				<div class="{style.value}" id="user">
+					<g:TextBox ui:field="user" styleName="{style.authTextbox}"></g:TextBox>
+				</div>
+			</div>
+			<div>
+				<div class="{style.label}">
+					<ui:text from="{i18n.password}" />
+				</div>
+				<div class="{style.value}" id="password">
+					<g:PasswordTextBox ui:field="password" styleName="{style.authTextbox}"></g:PasswordTextBox>
+				</div>
+			</div>
+			<div>
+				<div class="{style.label}">
+					<ui:text from="{i18n.confirmPassword}" />
+				</div>
+				<div class="{style.value}">
+					<g:PasswordTextBox ui:field="confirmPassword" styleName="{style.authTextbox}"></g:PasswordTextBox>
+				</div>
+			</div>
+			<div>
+				<div class="{style.value} {style.captchaContainer}">
+					<g:Image ui:field="captcha" styleName="{style.captcha}"></g:Image>
+					<m:CustomImageButton ui:field="reload"
+						title="refresh"
+						url='{images.refresh.getSafeUri.asString}' 
+						pixelSize="32,32" ></m:CustomImageButton>
+					<g:Label styleName="{style.info}">(Write the number above)</g:Label>
+					<g:TextBox ui:field="captchaResponse"></g:TextBox>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

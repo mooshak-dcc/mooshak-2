@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.AsuraCommandService
+path: DC4C9CFA65E62E1889BD08113A3A96C1.gwt.rpc

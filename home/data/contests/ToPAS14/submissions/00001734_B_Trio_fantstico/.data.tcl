@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633134
+set Time 1734
+set Problem B
+set Team Trio_fantstico
+set Classify TIME_LIMIT_EXCEEDED
+set Mark 0
+set Size 335
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program fich2.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 4.0
+set CPU 4.0
+set Memory 156.0
+set Signals {}
+set Feedback {{1 test with <b>Time Limit Exceeded</b>}}

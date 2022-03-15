@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:my='urn:import:pt.up.fc.dcc.mooshak.client.guis.icpc.view'
+	xmlns:ace='urn:import:edu.ycp.cs.dh.acegwt.client.ace'
+	xmlns:f="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+	
+	<ui:style src="Program.css" />
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<div class="{style.identify}">
+			<g:Label ui:field="idNameLabel"/> -
+			<g:Label ui:field="titleLabel"/>
+		</div>
+	
+		<div class="{style.left}">
+			<f:FileContent ui:field="editor" />
+			<div class="{style.response}">
+				<g:HTML styleName='{style.observations}' ui:field='observations' />
+				<f:CustomImageButton 
+					ui:field="feedback" 
+					title="{i18n.feedback}" 
+					url='{images.feedback.getSafeUri.asString}' 
+					height="50px"
+					styleName='{style.button} {style.feedback}' />
+			</div>
+		</div>
+		<div class="{style.right}">
+			<c:DataGrid styleName='{style.iodata}' ui:field='iodata'/>
+			<div class="{style.commands}">
+				<f:CustomImageButton 
+					ui:field="submit" 
+					title="{i18n.submit}" 
+					url='{images.submitButton.getSafeUri.asString}' 
+					height="50px"
+					styleName='{style.button}' />
+				<f:CustomImageButton 
+					ui:field="print" 
+					title="{i18n.print}" 
+					url='{images.printButton.getSafeUri.asString}' 
+					height="50px"
+					styleName='{style.button}' />
+				<f:CustomImageButton 
+					ui:field="validate" 
+					title="{i18n.validate}" 
+					url='{images.validateButton.getSafeUri.asString}' 
+					height="50px"
+					styleName='{style.button}' />
+			</div>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

@@ -1,0 +1,203 @@
+	Closed contest
+
+<a target="check" href="?admin">Login as admin</a>
+View admin screen
+
+Select contest/test
+View contest record
+
+Clear all date fields
+View contest record with status <b>created</b>
+
+<a target="check" href="?team">Login as admin</a>
+Try login in a contest names <b>ConTest</b> (should fail)
+
+	Open contest
+
+<a target="check" href="?admin">Login as admin</a>
+View admin screen
+
+Select contest/test
+View contest record
+
+Press <b>now</b> in <b>Open</b> field
+View contest record with status <b>ready</b>
+
+<a target="check" href="?team">Login as admin</a>
+Login in a contest names <b>ConTest</b> (User: <code>team</code> Password: <code>team</code>)
+
+Select a problem
+View a message "Problem description ...: <i>Problem description not available</i>"
+
+Press Button <b>View</b>
+View a message "Problem description ...: <i>Problem description not available</i>"
+
+Press Button <b>Ask</b>
+View a message "Questions NOT allowed, contest ready"
+
+Submit file  [accepted.c]
+View a message "Submissions NOT allowed, contest ready"
+
+Press Button <b>Help</b>
+View FAQ
+
+	Start contest
+
+<a target="check" href="?admin">Login as admin</a>
+View admin screen
+
+Select contest/test
+View contest record
+
+Press <b>now</b> in <b>Start</b> field
+View contest record with status <b>running</b>
+
+
+	Select problems 
+
+Choose problem C
+View problem description
+
+Press button "view"
+View problem description
+
+	Ask questions
+
+Press button "Ask"
+Questions forms
+
+Press button "Submit" (don't fill fields)
+Alert "Without subject"
+
+Fill "Subject" and press "Submit"
+Alert "Without question"
+
+Fill text and submit
+Questions listing
+
+	Submit invalid programs
+
+Press button "Submit"
+Alert "Program not specified"
+
+Choose [invalid_extension.fpc] and submit
+Alert "Program with invalid extension"
+
+Choose [xxl.cpp] and submit
+Message "UPLOAD FAILED (file too long?) please try again"
+
+
+Choose [long_program.cpp] and submit
+Message "UPLOAD FAILED (file too long?) please try again"
+
+	Submit programs for : C
+
+Choose problema C
+Enunciado do problema
+
+Choose [comp_err.c]
+Listing: "compile time error"
+
+Choose [exec_err.c]
+Listing: "run-time error"
+
+Choose [large.c]
+Listing: "run-time error"
+
+Choose [out_of_memory.c]
+Listing: "Memory Limit Exceeded"
+
+
+Choose [fork.c]
+Listing: "run-time error" ou "time-limit..."
+
+Choose [loop.c]
+Listing: "time-limit exceeded"
+
+Choose [long_output.c]
+Listing: "output too long"
+
+Choose [filename with spaces.c] 
+Listing: "Wrong Answer"
+
+Choose [accepted.c]
+Listing: "Accepted"
+
+		Submit programs for : C++
+
+Choose problema M
+Enunciado do problema
+
+Choose [comp_err.cpp]
+Listing: "compile time error"
+
+Choose [exec_err.cpp]
+Listing: "run-time error"
+
+Choose [large.cpp]
+Listing: "run-time error"
+
+Choose [loop.cpp]
+Listing: "time-limit exceeded"
+
+Choose [long_output.cpp]
+Listing: "output too long"
+
+Choose [accepted.cpp]
+Listing: "Accepted"
+
+		Submit programs for : Java
+
+Choose problema J
+Enunciado do problema
+
+Choose [comp_err.java]
+Listing: "compile time error"
+
+Choose [exec_err.java]
+Listing: "run-time error"
+
+Choose [large.java]
+Listing: "run-time error"
+
+Choose [fork.java]
+Listing: "run-time error" ou "time-limit ..."
+
+Choose [loop.java]
+Listing: "time-limit exceeded"
+
+Choose [long_output.java]
+Listing: "output too long"
+
+Choose [accepted.java]
+Listing: "Accepted"
+
+
+		Submit programs for : Pascal
+
+Choose problema P
+Enunciado do problema
+
+Choose [comp_err.pp]
+Listing: "compile time error"
+
+Choose [exec_err.pp]
+Listing: "run-time error"
+
+Choose [large.pp]
+Listing: "run-time error"
+
+Choose [loop.pp]
+Listing: "time-limit exceeded"
+
+Choose [long_output.pp]
+Listing: "output too long"
+
+Choose [accepted.pp]
+Listing: "Accepted"
+
+	Print
+
+Press button "Print"
+Printout listing and printout (in printer ;-)
+

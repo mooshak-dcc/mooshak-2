@@ -1,0 +1,19 @@
+set        Fatal {Variável com valor inválido <code>Tempo_limite</code>: <br>Ficheiro ilegível <code>Descrição</code>: Description.html<br>}
+set      Warning {}
+set         Name A
+set        Color Green
+set        Title {Quantos dias fazes?}
+set   Difficulty Easy
+set         Type ad-hoc
+set  Description Description.html
+set          PDF PDF.pdf
+set      Program Juliano.java
+set  Environment Environment
+set      Timeout {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

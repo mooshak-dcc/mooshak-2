@@ -1,0 +1,472 @@
+{
+ "reducibles": [ ],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Attribute",
+   "id": 2,
+   "x": 170,
+   "y": 29,
+   "width": 70,
+   "height": 51,
+   "label": "3",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 3,
+   "x": 73,
+   "y": 30,
+   "width": 70,
+   "height": 51,
+   "label": "2",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 4,
+   "x": 51,
+   "y": 124,
+   "width": 70,
+   "height": 51,
+   "label": "1",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 5,
+   "x": 177,
+   "y": 121,
+   "width": 70,
+   "height": 51,
+   "label": "4",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 24,
+   "x": 174,
+   "y": 204,
+   "width": 70,
+   "height": 51,
+   "label": "5",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 9,
+   "x": 374,
+   "y": 46,
+   "width": 70,
+   "height": 51,
+   "label": "10",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 14,
+   "x": 503,
+   "y": 94,
+   "width": 70,
+   "height": 51,
+   "label": "11",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 15,
+   "x": 582,
+   "y": 28,
+   "width": 70,
+   "height": 51,
+   "label": "12",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 16,
+   "x": 605,
+   "y": 92,
+   "width": 70,
+   "height": 51,
+   "label": "13",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 10,
+   "x": 380,
+   "y": 146,
+   "width": 70,
+   "height": 51,
+   "label": "9",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 17,
+   "x": 607,
+   "y": 193,
+   "width": 70,
+   "height": 51,
+   "label": "14",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 23,
+   "x": 178,
+   "y": 289,
+   "width": 70,
+   "height": 51,
+   "label": "6",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 27,
+   "x": 293,
+   "y": 300,
+   "width": 70,
+   "height": 51,
+   "label": "8",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 29,
+   "x": 64,
+   "y": 312,
+   "width": 70,
+   "height": 51,
+   "label": "7",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 7,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 3,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 140,
+     "y": 52
+    },
+    {
+     "x": 209,
+     "y": 118
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 6,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 2,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 202,
+     "y": 77
+    },
+    {
+     "x": 209,
+     "y": 118
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 11,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 5,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 244,
+     "y": 143
+    },
+    {
+     "x": 371,
+     "y": 68
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 8,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 4,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 118,
+     "y": 146
+    },
+    {
+     "x": 174,
+     "y": 143
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineTotal",
+   "id": 13,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 5,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 244,
+     "y": 143
+    },
+    {
+     "x": 377,
+     "y": 168
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 25,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 5,
+   "target": 24,
+   "listHandler": [
+    {
+     "x": 209,
+     "y": 169
+    },
+    {
+     "x": 206,
+     "y": 201
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 26,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 23,
+   "target": 24,
+   "listHandler": [
+    {
+     "x": 210,
+     "y": 286
+    },
+    {
+     "x": 206,
+     "y": 252
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 18,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 15,
+   "target": 14,
+   "listHandler": [
+    {
+     "x": 579,
+     "y": 50
+    },
+    {
+     "x": 570,
+     "y": 116
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 19,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 16,
+   "target": 14,
+   "listHandler": [
+    {
+     "x": 602,
+     "y": 114
+    },
+    {
+     "x": 570,
+     "y": 116
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 20,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 17,
+   "target": 14,
+   "listHandler": [
+    {
+     "x": 639,
+     "y": 190
+    },
+    {
+     "x": 570,
+     "y": 116
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineTotal",
+   "id": 21,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 14,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 500,
+     "y": 116
+    },
+    {
+     "x": 441,
+     "y": 68
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 22,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 14,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 500,
+     "y": 116
+    },
+    {
+     "x": 447,
+     "y": 168
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 30,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 27,
+   "target": 23,
+   "listHandler": [
+    {
+     "x": 290,
+     "y": 322
+    },
+    {
+     "x": 245,
+     "y": 311
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 31,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 29,
+   "target": 23,
+   "listHandler": [
+    {
+     "x": 131,
+     "y": 334
+    },
+    {
+     "x": 175,
+     "y": 311
+    }
+   ],
+   "features": []
+  }
+ ]
+}

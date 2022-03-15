@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problema A: Quantos dias fazes?</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="147" HEIGHT="119" ALIGN="BOTTOM" BORDER="0"
+ SRC="./Birthday_Cake_3_Candles.jpg"
+ ALT="Image Birthday_Cake_3_Candles">
+
+</DIV>
+
+<P>
+
+Todos sabemos quantos anos temos mas raramente nos damos ao trabalho de
+saber quantos dias temos exatamente.  E isso é importante porque há anos
+que não só parecem custar mais a passar como realmente têm mesmo mais
+dias, como os anos bissextos.
+
+<P>
+
+Na verdade há o conceito de data juliana, ou dia juliano, que conta o
+número de dias seguidos a partir de uma data arbitraria. A data juliana
+é  usada sobretudo para referenciar observações astronómicas, mas
+simplifica também o cálculo do número de dias entre datas. Por exemplo,
+para calcular o número de dias passados desde o nosso nascimento até
+hoje basta subtrair as respetivas datas julianas.
+
+
+
+
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+
+
+Calcular a data juliana para datas da nossa era.
+São dados o ano, mês e dia como inteiros (janeiro = 1).  A data
+juliana é calculada usando o algoritmo seguinte.
+
+Se o mês for anterior a março (mês 3) então
+<ul>
+ano := ano - 1<br>
+mes := mes + 12
+</ul>
+
+A partir destes valores calcula-se
+<ul>
+A := ano / 100    (divisão inteira) <br>
+B := A / 4        (divisão inteira)
+</ul>
+
+Se a data for posterior a 15/10/1582, quando teve início o Calendário
+Gregoriano que usamos atualmente, então
+
+<ul>
+C := 2 - A + B
+</ul>
+
+No calendário Gregoriano foram introduzidos os anos bissextos para
+compensar o facto de um ano não ter um número inteiro de dias, evitando
+o desajuste progressivo entre o calendário e as observações astronómicas.
+
+Se for uma data igual ou anterior a 4/10/1582, o fim do calendário
+juliano, então
+
+<ul>
+C := 0
+</ul>
+
+
+No calendário juliano, anteriormente em vigor, os anos tinham sempre 365
+dias. De notar que em Portugal ao dia 4/10/1582 seguiu-se o dia
+15/10/1582, para reajustar o calendário.
+
+A partir destes valores calcula-se
+
+<ul>
+D := parte inteira de [ 365,25 x (ano + 4716) ] <br>
+E := parte inteira de [ 30,6001 x (mes + 1) ]
+</ul>
+
+sendo que a data juliana (DJ) é dada por
+
+<ul>
+DJ := D + E + dia + C - 1524
+</ul>
+
+
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+Uma linha com três inteiros (ano, mês e dia) que definem uma data válida. Podemos
+assumir que não são fornecidas datas inválidas, como as datas entre
+4/10/1582 e 15/10/1582. Também não serão fornecidas datas anteriores à nossa
+era.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+
+A data juliana referente à data lida.
+
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+2014 5 9
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+2456787
+</PRE>
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2014
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,9 @@
+set        Fatal {}
+set      Warning {}
+set         args {}
+set        input test12.txt
+set       output test12-sol.txt
+set      context context
+set       Points {}
+set     Feedback {}
+set         Show {}

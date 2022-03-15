@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><q:quiz xmlns:q="http://www.example.org/Quiz" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:fun="http://example.org/xslt/functions" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+   <q:group id="d2e1" maxScore="0" name="superquiz" numberQuestion="2" score="0" shuffle="true"><q:QA type="numeric" id="d15e1" shuffle="true"><q:question>What is a number from 1 to 5?</q:question><q:answer>
+            <q:choice high="5" low="1" score="1" selected="0" id="d17e12"/>
+         </q:answer><q:response>
+            <q:value>null</q:value>
+         </q:response></q:QA><q:QA type="numeric" id="d11e1" shuffle="true"><q:question>What is a number from 1 to 5?</q:question><q:answer>
+            <q:choice minimumValue="2" maximumValue="3" score="1" selected="0" id="d12e12"/>
+         </q:answer><q:response>
+            <q:value>null</q:value>
+         </q:response></q:QA></q:group>
+   <q:group id="d23e1" maxScore="0" name="group2" numberQuestion="2" score="0" shuffle="true"><q:QA type="shortAnswer" id="d34e1" shuffle="true"><q:question> Deep Thought said "<q:missingWord>d35e12</q:missingWord>  is the Ultimate Answer to the Ultimate Question of Life, The Universe, and Everything."</q:question><q:answer id="d35e12">
+            <q:choice score="1" id="d35e122" selected="false">
+               <q:feedback>Correct according to The Hitchhiker's Guide to the Galaxy!  </q:feedback>forty two</q:choice>
+            <q:choice score="1" id="d35e123" selected="false">
+               <q:feedback>Correct, as told to Loonquawl and Phouchg  </q:feedback>42</q:choice>
+            <q:choice score="1" id="d35e124" selected="false">
+               <q:feedback>Correct!</q:feedback>forty-two</q:choice>
+         </q:answer><q:response>
+            <q:value>null</q:value>
+         </q:response></q:QA><q:QA type="single" id="d32e1" shuffle="true"><q:question>What's the answer to this multiple-choice question?</q:question><q:answer><q:choice score="1" id="d33e14" selected="false">
+               <q:feedback>Very good!</q:feedback>right answer </q:choice><q:choice score="0" id="d33e13" selected="false">
+               <q:feedback>feedback comment on this wrong answer </q:feedback>another wrong answer </q:choice><q:choice score="0" id="d33e12" selected="false">
+               <q:feedback>feedback comment on the wrong answer </q:feedback>wrong answer </q:choice></q:answer></q:QA></q:group>
+   <q:group id="d38e1" maxScore="0" name="HTML" numberQuestion="2" score="0" shuffle="true"><q:QA type="boolean" id="d45e1" shuffle="true"><q:question>42 is the Absolute Answer to everything.</q:question><q:answer><q:choice value="true" score="0" id="d46e12" selected="false"> True
+		                   	<q:feedback>You gave the right answer.}</q:feedback>
+            </q:choice><q:choice value="false" score="1" id="d46e11" selected="false"> False
+	                   	<q:feedback>42is the Ultimate Answer.</q:feedback>
+            </q:choice></q:answer></q:QA><q:QA type="single" id="d43e1" shuffle="true"><q:question>Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</q:question><q:answer><q:choice score="0" id="d44e14" selected="false">longdesc</q:choice><q:choice score="1" id="d44e13" selected="false">alt </q:choice><q:choice score="0" id="d44e12" selected="false">src </q:choice></q:answer></q:QA></q:group>
+</q:quiz>

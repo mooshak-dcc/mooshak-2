@@ -1,0 +1,24 @@
+
+	@html2ps {
+	    
+	    paper {
+		type: a4;
+	    }       
+	}
+	/* use CSS2 blocks to configure HTML elements */	
+	@page {
+	    margin {
+		left:   2.0cm;
+		right:  2.0cm;
+		top:    2.0cm;
+		bottom: 2.0cm;
+	    }
+	}    
+
+	BODY {
+	    font-size:	24pt;
+	}
+	TD TH {
+	    font-size:	24pt;
+	}
+    

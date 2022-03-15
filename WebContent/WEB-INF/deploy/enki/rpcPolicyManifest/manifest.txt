@@ -1,0 +1,10 @@
+# Module enki
+# RPC service class, partial path of RPC policy file
+pt.up.fc.dcc.mooshak.client.events.EventService, 3B6C0DA09B90AFDF1B1C6B98A7B24AAA.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.AsuraCommandService, DC4C9CFA65E62E1889BD08113A3A96C1.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.QuizCommandService, 3EF8DABCA2C5F36D80B117AFE1AF06D9.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.EnkiCommandService, 80719C61B45B08727436BA4184799FC8.gwt.rpc
+com.google.gwt.logging.shared.RemoteLoggingService, CA823D69D5710E23C5FE7555D4DDE696.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.ParticipantCommandService, 9957E528292D04F773ADB85E130E87E9.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.BasicCommandService, 6CECCD8579E8C5B0B043B96130572D43.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.KoraCommandService, E87A7E2A1A709766C4BABE3FDDDF05DB.gwt.rpc

@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<TITLE>MIUP'2001: Problem D</title>
+</head>
+
+<BODY bgcolor="white">
+
+<h1>Buddy Memory Allocator</h1></font>
+
+<P align="justify">
+Memory management, specially memory allocation to processes, is a
+fundamental issue in operating systems. A fixed partitioning scheme
+limits the number of active processes and may use space inefficiently
+if there is a poor match between available partition sizes and process
+sizes. A dynamic partitioning scheme is more complex to maintain and
+includes the overhead of compaction. An interesting compromise is the
+buddy system.
+
+<P align="justify">
+In a buddy system, the entire memory space available for allocation is
+initially treated as a single block whose size is a power of 2. When
+the first request is made, if its size is greater than half of the
+initial block then the entire block is allocated. Otherwise, the block
+is split in two equal companion buddies. If the size of the request is
+greater than half of one of the buddies, then allocate one to
+it. Otherwise, one of the buddies is split in half again. This method
+continues until the smallest block greater than or equal to the size
+of the request is found and allocated to it.
+
+<P align="justify">
+In this method, when a process terminates the buddy block that was
+allocated to it is freed. Whenever possible, an unnallocated buddy is
+merged with a companion buddy in order to form a larger free
+block. Two blocks are said to be companion buddies if they resulted
+from the split of the same direct parent block.
+
+<P align="justify">
+The following figure illustrates the buddy system at work, considering
+a 1024k (1-megabyte) initial block and the process requests as shown
+at the left of the table.
+
+<P align="center"><img SRC="buddy_fig.gif"></p>
+
+<font color="#0000FF"><H2>Problem</h2></font>
+
+<P align="justify">
+Your task is to implement a buddy memory manager and simulate it at
+work. You will be given the upper and lower sizes admissible for
+blocks in the system and a list of requests. A request is made for a
+process and it may either be for a block of a certain size or just an
+indication of termination. Requests should be attended in a first-come
+first-served basis. After serving all requests, your program should
+display the state of the buddy system at that point, indicating which
+processes are in memory and which blocks are free.
+
+<P align="justify">
+Notice that, whenever there is a request that corresponds to a block
+of size <i>s</i>, your program should select the block of that size that
+was most recently declared free. Furthermore, when a block is split in
+two, the left-one (lower addresses) should be selected before the
+right-one.</p>
+
+<P align="justify">
+You can assume that the list of requests is such that all requests can
+always be served. In other words, you can make the following
+assumptions: no process will request more than the available memory;
+processes are uniquely identified while active; and no request for
+process termination is issued before its corresponding request for
+memory allocation.</p>
+
+<font color="#0000FF"><H2>Input</h2></font>
+
+<P align="justify">
+The first line of input consists of two numbers, <tt>U</tt> and <tt>L</tt>,
+that determine the upper (2^U k) and lower (2^L k) block sizes
+admissable. You can assume <tt>U > L > 0</tt>. The following
+input lines are requests being made, one per line. A request is
+defined by two values, <tt>P</tt> and <tt>S</tt>, where <tt>P</tt> is
+a capital letter that identifies the process associated with the
+request, and <tt>S</tt> (<tt> >= 0</tt>) is a number. If <tt>S >
+0</tt> then it is a memory block request; Otherwise (<tt>S=0</tt>) it is a
+request indicating that process <tt>P</tt> has terminated. </p>
+
+<font color="#0000FF"><H2>Output</h2></font>
+
+<P align="justify">
+The output must list the state of the buddy immediatly after having served
+the last request. This corresponds to listing the processes still in
+memory, if any, and the free blocks (holes) available. Processes and
+holes must be listed in a left to right order as you traverse the
+buddy (i.e. from lower addresses towards upper memory addresses).
+The output format for processes is <TT>P:S</tt>, <TT>P</tt> is the process
+identifier and <TT>S</tt> its size, and for holes is <TT>Hole:S</tt> where
+<TT>S</tt> is the size of the free block. 
+
+<font color="#0000FF"><H2>Sample Input</h2></font>
+
+<PRE>
+10 4
+A 70
+B 35
+C 80
+A 0
+D 60
+B 0
+</pre>
+
+<font color="#0000FF"><H2>Sample Output</h2></font>
+
+<PRE>
+Hole:128
+Hole:64
+D:60
+C:80
+Hole:128
+Hole:512
+</pre>
+
+<hr>
+<FONT SIZE=4>
+<center>MIUP'2001: 1st. Portuguese National ACM Programming Contest<br>
+http://acm.up.pt/miup<br>
+Departamento de Ciência de Computadores / Faculdade
+de Ciências da Universidade do Porto
+</center>
+</font>
+<hr>
+
+</body>
+</html>
+

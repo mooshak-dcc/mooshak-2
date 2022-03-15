@@ -1,0 +1,235 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 87,
+   "y": 97,
+   "width": 70,
+   "height": 41,
+   "label": "Aulas",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 3,
+   "x": 422,
+   "y": 95,
+   "width": 70,
+   "height": 41,
+   "label": "Turma",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 2,
+   "x": 260,
+   "y": 90,
+   "width": 75,
+   "height": 51,
+   "label": "aulas_turma",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 6,
+   "x": 426,
+   "y": 212,
+   "width": 70,
+   "height": 51,
+   "label": "turma_sala",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 4,
+   "x": 582,
+   "y": 96,
+   "width": 98,
+   "height": 51,
+   "label": "turma_professoar",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 5,
+   "x": 754,
+   "y": 100,
+   "width": 72,
+   "height": 41,
+   "label": "professores",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 7,
+   "x": 423,
+   "y": 354,
+   "width": 70,
+   "height": 41,
+   "label": "Sala",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 8,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 1,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 154,
+     "y": 114
+    },
+    {
+     "x": 257,
+     "y": 112
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 9,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 3,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 419,
+     "y": 112
+    },
+    {
+     "x": 332,
+     "y": 112
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 10,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 3,
+   "target": 6,
+   "listHandler": [
+    {
+     "x": 454,
+     "y": 133
+    },
+    {
+     "x": 458,
+     "y": 209
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 11,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 7,
+   "target": 6,
+   "listHandler": [
+    {
+     "x": 455,
+     "y": 351
+    },
+    {
+     "x": 458,
+     "y": 260
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 3,
+   "target": 4,
+   "listHandler": [
+    {
+     "x": 489,
+     "y": 112
+    },
+    {
+     "x": 579,
+     "y": 118
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 13,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 5,
+   "target": 4,
+   "listHandler": [
+    {
+     "x": 751,
+     "y": 117
+    },
+    {
+     "x": 677,
+     "y": 118
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  }
+ ]
+}

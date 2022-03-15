@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399635469
+set Time 4069
+set Problem B
+set Team CyberProgramadores
+set Classify COMPILE_TIME_ERROR
+set Mark 0
+set Size 1
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program Topasb.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.0
+set Memory 0.0
+set Signals {}
+set Feedback {{Observation of <b>Compile Time Error</b> <pre>/usr/lib/gcc/x86_64-redhat-linux/4.7.2/../../../../lib64/crt1.o: In function `_start':}

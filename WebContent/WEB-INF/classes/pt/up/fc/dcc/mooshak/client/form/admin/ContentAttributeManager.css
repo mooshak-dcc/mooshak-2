@@ -1,0 +1,15 @@
+
+.filesPanel {
+	width: 300px;
+	height: 150px;
+	overflow: auto;
+}
+
+.message {
+	text-align: center;
+	color: orange;
+	margin: auto;
+	margin-top: 10px;
+	display: block;
+	font-size: x-large;
+}

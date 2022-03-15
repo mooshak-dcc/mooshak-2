@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.ParticipantCommandService
+path: 9957E528292D04F773ADB85E130E87E9.gwt.rpc

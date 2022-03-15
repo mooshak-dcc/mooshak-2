@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Problem xmlns="http://www.ncc.up.pt/mooshak/" Color="#000000" Description="prime.html" Difficulty="MEDIUM" Editor_kind="FILL_IN_GAPS" Environment="" Name="Demo - Prime" Original_location="https://fgpe-project.usz.edu.pl/authorkit/ui/exercises/ac23a27d-289f-4a4b-8cf1-ee98063da42b" PDF="" Program="" Start="" Stop="" Static_corrector="./check_avg.sh $program" Timeout="" Title="Prime" Type="" Fatal="" Warning="">
+  <Tests xml:id="tests" Definition="" Fatal="" Warning=""/>
+  <Skeletons Show="yes" xml:id="skeletons">
+    <Skeleton Skeleton="skeleton.java" Show="yes" Extension="java" xml:id="skeletons.SK1"/>
+  </Skeletons>
+  <Solutions xml:id="solutions" Fatal="" Warning=""/>
+  <Images Fatal="" Warning="" xml:id="images"/>
+</Problem>

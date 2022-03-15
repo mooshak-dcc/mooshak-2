@@ -1,0 +1,32 @@
+
+.base {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.halfHeight {
+	height:49%;
+	padding: 5px 0 0;
+	position: relative;
+}
+
+.halfHeight:first-child {
+	padding: 20px 0 0;
+}
+
+
+
+.message {
+    text-align: center;
+    color: orange;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EEE;
+	font-size: x-large;
+	padding: 25px 0 0;
+}

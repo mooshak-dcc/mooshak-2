@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399632933
+set Time 1533
+set Problem B
+set Team Mete_Olhinhos
+set Classify RUNTIME_ERROR
+set Mark 0
+set Size 390
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program BB.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 4.0
+set CPU 4.0
+set Memory 152.0
+set Signals {}
+set Feedback {{1 test with <b>Runtime Error</b>}}

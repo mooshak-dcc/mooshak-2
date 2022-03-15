@@ -1,0 +1,19 @@
+set        Fatal {Variável com valor inválido <code>Tempo_limite</code>: <br>}
+set      Warning {}
+set         Name E
+set        Color Orange
+set        Title {Código d'Avintes }
+set   Difficulty Easy
+set         Type {}
+set  Description e.html
+set          PDF PDF.pdf
+set      Program Avintes.java
+set  Environment Environment
+set      Timeout {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

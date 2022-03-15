@@ -1,0 +1,70 @@
+{
+	"nodes": [
+		{
+			"label": "Morada",
+			"id": 0,
+			"type": "attribute",
+			"x": 197,
+			"y": 92,
+			"features": [
+				{
+					"name": "derived",
+					"value": false
+				},
+				{
+					"name": "multivalued",
+					"value": false
+				},
+				{
+					"name": "key",
+					"value": false
+				},
+				{
+					"name": "weakKey",
+					"value": false
+				}
+			]
+		},
+		{
+			"label": "Localidade",
+			"id": 1,
+			"type": "attribute",
+			"x": 114,
+			"y": 29,
+			"features": [
+				{
+					"name": "derived",
+					"value": false
+				},
+				{
+					"name": "multivalued",
+					"value": false
+				},
+				{
+					"name": "key",
+					"value": false
+				},
+				{
+					"name": "weakKey",
+					"value": false
+				}
+			]
+		}
+	],
+	"edges": [
+		{
+			"id": 0,
+			"source": 1,
+			"anchorSource": 2,
+			"target": 0,
+			"anchorTarget": 0,
+			"type": "line",
+			"features": [
+				{
+					"name": "simpleLine",
+					"value": true
+				}
+			]
+		}
+	]
+}

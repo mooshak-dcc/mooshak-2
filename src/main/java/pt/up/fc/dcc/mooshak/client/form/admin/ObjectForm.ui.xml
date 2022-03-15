@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	
+	<ui:style>
+		.label {
+			width: 800px;
+			text-align: center;
+			padding: 80px;
+			font-size: 24px;
+			color: orange;
+		}
+	</ui:style>
+	
+	<g:VerticalPanel>
+		<g:Label ui:field="label" styleName="{style.label}">Loading ...</g:Label>
+		<g:Grid ui:field="grid" />
+	</g:VerticalPanel>
+
+
+</ui:UiBinder>

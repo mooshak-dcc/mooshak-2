@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633211
+set Time 1811
+set Problem A
+set Team CyberProgramadores
+set Classify COMPILE_TIME_ERROR
+set Mark 0
+set Size 477
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program TopasA.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.0
+set Memory 0.0
+set Signals {}
+set Feedback {{Observation of <b>Compile Time Error</b> <pre>TopasA.c: In function 'main':}

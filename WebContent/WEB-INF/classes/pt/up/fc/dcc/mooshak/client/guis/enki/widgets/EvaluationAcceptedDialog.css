@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+
+/** Top **/
+
+
+.base {
+	width: 600px;
+	/**height: 100px;**/
+	
+	background: #BBC;
+	color: #669;
+	font-size: large;
+    padding: 50px;	
+    text-align: center;
+}	
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	
+    text-align: center;
+	padding: 10px;
+}
+
+.flow {
+	display: inline;
+}
+
+.buttons {
+	width: 500px;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button {
+	width: 200px;
+    font-size: large;
+    color: #669;
+    height: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+    vertical-align: bottom;
+	
+}
+
+.rounded, .button {
+	border-radius: 5px;
+	border-color: #BCC;
+}
+
+.caption {
+	font-weight: bold;
+}
+
+.msgHeader {
+	font-weight: bold;
+}

@@ -1,0 +1,26 @@
+
+.base {
+	position: relative;
+}
+
+.commands {
+	position: absolute;
+	height: 90px;
+	min-height: 90px;
+	text-align: center;
+	top: 10px;
+	right: 50px;
+}
+
+.button {
+	padding-left: 10px;	
+	padding-right: 10px;
+	display: inline-block;
+	font-weight: bold;
+    color: #aab;
+	font-size: 12px;
+}
+
+.hide {
+	display: none;
+}

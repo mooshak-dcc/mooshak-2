@@ -1,0 +1,9 @@
+set        Fatal {}
+set      Warning {}
+set         args {}
+set        input bb_in_05.txt
+set       output bb_out_05.txt
+set      context context
+set       Points {}
+set     Feedback {}
+set         Show {}

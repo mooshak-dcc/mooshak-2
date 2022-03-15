@@ -1,0 +1,70 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "CasoUso",
+   "id": 0,
+   "x": 83,
+   "y": 50,
+   "width": 70,
+   "height": 40,
+   "label": "a",
+   "key": "false",
+   "features": []
+  },
+  {
+   "type": "Actor",
+   "id": 1,
+   "x": 236,
+   "y": 101,
+   "width": 70,
+   "height": 40,
+   "label": "b",
+   "key": "false",
+   "features": []
+  },
+  {
+   "type": "Actor",
+   "id": 3,
+   "x": 359,
+   "y": 164,
+   "width": 70,
+   "height": 40,
+   "label": "d",
+   "key": "false",
+   "features": []
+  },
+  {
+   "type": "CasoUso",
+   "id": 4,
+   "x": 476,
+   "y": 54,
+   "width": 70,
+   "height": 40,
+   "label": "c",
+   "key": "false",
+   "features": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Association",
+   "id": 2,
+   "label": "text",
+   "source": 0,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 150,
+     "y": 67
+    },
+    {
+     "x": 268,
+     "y": 98
+    }
+   ],
+   "features": []
+  }
+ ]
+}

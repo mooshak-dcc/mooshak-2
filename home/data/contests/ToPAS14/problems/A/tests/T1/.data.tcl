@@ -1,0 +1,13 @@
+set Fatal {}
+set Warning {}
+set args {}
+set input in1.txt
+set output out1.txt
+set Points 20
+set context {}
+set Feedback {}
+set Show yes
+set Result {}
+set Timeout {}
+set SolutionErrors {}
+set frozen false

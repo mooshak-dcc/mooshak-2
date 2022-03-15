@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils">
+
+	<ui:style src="../Dialogs.css" />
+
+	<g:HTMLPanel styleName="{style.runTournament}">
+		<g:HTMLPanel styleName="{style.container}">
+			<g:HTMLPanel styleName="{style.container} {style.container-left} {style.col-4}">
+				<g:Label styleName="{style.lbl-title}">Select Players</g:Label>
+				<g:Label styleName="{style.lbl-desc}">Only players with at least 1 accepted submission are listed</g:Label>
+				
+				<g:ListBox multipleSelect="true" ui:field="lbPlayersSelector" width="100%" />
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName="{style.container} {style.container-right} {style.col-8}">
+				<g:Label styleName="{style.lbl-title}">Tournament Format</g:Label>
+				<g:Label styleName="{style.lbl-desc}">There are multiple types of tounaments that you can choose from, such 
+				as knockout, groups or multiple stages with different formats.</g:Label>
+				
+				<g:HTMLPanel width="100%" styleName="{style.configuration-fields}">
+					
+					<g:HTMLPanel styleName="{style.container}">
+						<g:Label styleName="{style.lbl-title} {style.container-left}">Number of Players</g:Label>
+						<g:Label styleName="{style.lbl-desc} {style.container-right} {style.text-right}" ui:field="lblPlayersCount" />
+					</g:HTMLPanel>
+					<hr />
+					<g:HTMLPanel styleName="{style.container}">
+						<g:Label styleName="{style.lbl-title} {style.container-left}">Max. Players per Match</g:Label>
+						<g:Label styleName="{style.lbl-desc} {style.container-right} {style.text-right}" ui:field="lblMaxPlayersMatch" />
+					</g:HTMLPanel>
+					<hr />
+					<g:HTMLPanel styleName="{style.container}">
+						<g:Label styleName="{style.lbl-title} {style.container-left}">Min. Players per Match</g:Label>
+						<g:Label styleName="{style.lbl-desc} {style.container-right} {style.text-right}" ui:field="lblMinPlayersMatch" />
+					</g:HTMLPanel>
+					<hr />
+					<g:HTMLPanel styleName="{style.container}">
+						<g:Label styleName="{style.lbl-title} {style.container-left}">Number of Stages</g:Label>
+						<w:StrictIntegerBox styleName="{style.lbl-desc} {style.container-right}" ui:field="tbNrStages" />
+					</g:HTMLPanel>
+					<hr />
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+		<br/>
+		<g:TabPanel ui:field="stagePanel" styleName="{style.container} {style.col-12} {style.pnl-stage}">
+			
+		</g:TabPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

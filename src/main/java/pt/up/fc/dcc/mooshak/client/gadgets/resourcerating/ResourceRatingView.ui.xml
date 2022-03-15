@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets" 
+	xmlns:r="urn:import:pt.up.fc.dcc.mooshak.client.widgets.rating" 
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	
+	<ui:style src="ResourceRatingView.css" />
+
+	<w:ResizableHtmlPanel styleName='{style.base}' ui:field="container">
+		
+		
+		<g:TextArea ui:field="comment" stylePrimaryName="{style.comment}" />
+		<r:FullRatingWidget ui:field="rating" stylePrimaryName="{style.rating}" />
+		<b:Button ui:field="submit" type="PRIMARY" 
+			styleName="{style.submitBtn}">Submit</b:Button>
+		<g:Label ui:field='message' styleName='{style.message}'/>
+	</w:ResizableHtmlPanel>
+
+
+</ui:UiBinder>

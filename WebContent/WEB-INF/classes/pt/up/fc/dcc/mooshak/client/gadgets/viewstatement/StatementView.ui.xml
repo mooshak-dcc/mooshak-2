@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:my='urn:import:pt.up.fc.dcc.mooshak.client.guis.icpc.view'>
+	
+	<ui:style src="Statement.css"  
+	   type ="pt.up.fc.dcc.mooshak.client.gadgets.viewstatement.StatementViewImpl.BaseStyle" />
+
+	<g:HTMLPanel styleName='{style.base}'>
+	
+		<div class="{style.identify}">
+			<g:Label ui:field="idNameLabel"/> -
+			<g:Label ui:field="titleLabel"/>
+		</div>
+		
+		<g:HTML styleName='{style.htmlContent}' ui:field="htmlContent"></g:HTML>
+		
+		<g:HTMLPanel ui:field="buttonsPanel" styleName="{style.panel-buttons}">
+			<div class="addthis_sharing_toolbox" id="share_box_video"
+				style="vertical-align: bottom;display: table-cell;"></div>
+			<!-- <b:Button type="PRIMARY" icon="SHARE" ui:field="btnShare" text="Share"
+				addStyleNames="{style.button-share}" /> -->
+				
+  
+			<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55b8ec3a5bd800cc" async="async"></script>
+		</g:HTMLPanel>
+	
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

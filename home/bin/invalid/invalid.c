@@ -1,0 +1,24 @@
+#define SIGHUP 1
+sleep () { kill (getpid (), SIGHUP); }
+usleep () { kill (getpid (), SIGHUP); }
+mmap () { kill (getpid (), SIGHUP); }
+bind () { kill (getpid (), SIGHUP); }
+connect () { kill (getpid (), SIGHUP); }
+socket () { kill (getpid (), SIGHUP); }
+wait () { kill (getpid (), SIGHUP); }
+clone () { kill (getpid (), SIGHUP); }
+ptrace () { kill (getpid (), SIGHUP); }
+signal () { kill (getpid (), SIGHUP); }
+wait4 () { kill (getpid (), SIGHUP); }
+waitpid () { kill (getpid (), SIGHUP); }
+vfork () { kill (getpid (), SIGHUP); }
+fork () { kill (getpid (), SIGHUP); }
+execve () { kill (getpid (), SIGHUP); }
+execl () { kill (getpid (), SIGHUP); }
+execlp () { kill (getpid (), SIGHUP); }
+execle () { kill (getpid (), SIGHUP); }
+execv () { kill (getpid (), SIGHUP); }
+execvp () { kill (getpid (), SIGHUP); }
+chmod () { kill (getpid (), SIGHUP); }
+open () { kill (getpid (), SIGHUP); }
+close () { kill (getpid (), SIGHUP); }

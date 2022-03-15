@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<q:quiz xmlns:q="http://www.example.org/Quiz"
+        xmlns:h="http://www.w3.org/1999/xhtml"
+        xmlns:fun="http://example.org/xslt/functions"
+        xmlns:fn="http://www.w3.org/2005/xpath-functions">
+ <q:config name="superquiz NAME"
+   duration="90"
+   revision="true"
+   shuffle="true"
+  >
+  </q:config>
+   <q:group id="d2e1"
+            maxScore="0"
+            name="superquiz"
+            numberQuestion="1"
+            score="0"
+            shuffle="true">
+      <q:QA type="boolean" id="d3e1" shuffle="true">
+         <q:question>1+1=2 <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" /></q:question>
+         <q:answer>
+            <q:choice value="true" score="1" id="d4e11" selected="false">True
+		                   	<q:feedback>comment1 hh jo</q:feedback>
+            </q:choice>
+            <q:choice value="false" score="0" id="d4e12" selected="false">False
+							<q:feedback>comment2}</q:feedback>
+            </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="single" id="d5e1" shuffle="true">
+         <q:question>What's between orange and green in the spectrum?</q:question>
+         <q:answer>
+            <q:choice score="1" id="d6e12" selected="false">
+               <q:feedback> right; good! </q:feedback>yellow </q:choice>
+            <q:choice score="0" id="d6e13" selected="false">
+               <q:feedback> wrong, it's yellow </q:feedback>red </q:choice>
+            <q:choice score="0" id="d6e14" selected="false">
+               <q:feedback> wrong, it's yellow</q:feedback>blue </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="shortAnswer" id="d7e1" shuffle="true">
+         <q:question>  Two plus<q:missingWord>d8e12</q:missingWord> equals four.</q:question>
+         <q:answer id="d8e12">
+            <q:choice score="1" id="d8e121" selected="false">two </q:choice>
+            <q:choice score="1" id="d8e122" selected="false">2</q:choice>
+            <q:choice score="1" id="d8e123" selected="false">4w</q:choice>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="matching" id="d9e1">
+         <q:question>Which animal eats which food?</q:question>
+         <q:answer>
+            <q:choice mappedValue=" cat food " mapKey="cat " score="1" id="d10e12"/>
+            <q:choice mappedValue=" dog food" mapKey="dog " score="1" id="d10e13"/>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="numeric" id="d11e1" shuffle="true">
+         <q:question>What is a number from 1 to 5?</q:question>
+         <q:answer>
+            <q:choice minimumValue="2"
+                      maximumValue="3"
+                      score="1"
+                      selected="0"
+                      id="d12e12"/>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="numeric" id="d15e1" shuffle="true">
+         <q:question>What is a number from 1 to 5?</q:question>
+         <q:answer>
+            <q:choice high="5" low="1" score="1" selected="0" id="d17e12"/>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="numeric" id="d19e1" shuffle="true">
+         <q:question>When was Ulysses S. Grant born?
+         </q:question>
+         <q:answer>
+            <q:choice minimumValue="0"
+                      maximumValue="1822"
+                      score="1"
+                      selected="0"
+                      id="d22e12">
+               <q:feedback> Correct! Full credit. </q:feedback>
+            </q:choice>
+            <q:choice minimumValue="2"
+                      maximumValue="1822"
+                      score="1"
+                      selected="0"
+                      id="d22e13"
+                      tolerance="50">
+               <q:feedback> He was born in 1822. Half credit for being close.</q:feedback>
+            </q:choice>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+   </q:group>
+   <q:group id="d23e1"
+            maxScore="0"
+            name="group2"
+            numberQuestion="1"
+            score="0"
+            shuffle="true">
+      <q:QA type="multiple" id="d24e1" shuffle="true">
+         <q:question>What two people are entombed in Grant's tomb?</q:question>
+         <q:answer>
+            <q:choice score="-100" id="d25e12" selected="false">No one    </q:choice>
+            <q:choice score="50" id="d25e13" selected="false">Grant     </q:choice>
+            <q:choice score="50" id="d25e14" selected="false">Grant's wife    </q:choice>
+            <q:choice score="-100" id="d25e15" selected="false">Grant's father </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="fillInTheBlank" id="d26e1" shuffle="true">
+         <q:question>The American holiday of Thanksgiving is celebrated on the<q:missingWord>d27e12</q:missingWord> Thursday of November</q:question>
+         <q:answer id="d27e12">
+            <q:choice score="0" id="d27e121" selected="false">second</q:choice>
+            <q:choice score="1" id="d27e122" selected="false">third\=fjgnf </q:choice>
+            <q:choice score="1" id="d27e123" selected="false">fourt</q:choice>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="fillInTheBlank" id="d28e1" shuffle="true">
+         <q:question> Mahatma Gandhi birthday is an Indian holiday on <q:missingWord>d29e12</q:missingWord> of October. Since<q:missingWord>d29e14</q:missingWord> the town of Hastings England has been "famous with visitors".</q:question>
+         <q:answer id="d29e12">
+            <q:choice score="0" id="d29e122" selected="false">15th</q:choice>
+            <q:choice score="0" id="d29e123" selected="false">3rd</q:choice>
+            <q:choice score="1" id="d29e124" selected="false">2nd</q:choice>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+         <q:answer id="d29e14">
+            <q:choice score="0" id="d29e142" selected="false">495 AD  </q:choice>
+            <q:choice score="1" id="d29e143" selected="false">1066 AD  </q:choice>
+            <q:choice score="0" id="d29e144" selected="false">1215 AD  </q:choice>
+            <q:choice score="0" id="d29e145" selected="false">43 AD</q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="fillInTheBlank" id="d30e1" shuffle="true">
+         <q:question>Difficult multiple choice question<q:missingWord>d31e12</q:missingWord> teste test</q:question>
+         <q:answer id="d31e12">
+            <q:choice score="0" id="d31e122" selected="false">wrong answer              </q:choice>
+            <q:choice score="0" id="d31e123" selected="false">half credit answer      </q:choice>
+            <q:choice score="1" id="d31e124" selected="false">full credit answer    </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="single" id="d32e1" shuffle="true">
+         <q:question>What's the answer to this multiple-choice question?
+         <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" />
+         </q:question>
+         <q:answer>
+            <q:choice score="0" id="d33e12" selected="false">
+               <q:feedback>feedback comment on the wrong answer </q:feedback>wrong answer </q:choice>
+            <q:choice score="0" id="d33e13" selected="false">
+               <q:feedback>feedback comment on this wrong answer </q:feedback>another wrong answer </q:choice>
+            <q:choice score="1" id="d33e14" selected="false">
+               <q:feedback>Very good!</q:feedback>right answer </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="shortAnswer" id="d34e1" shuffle="true">
+         <q:question> Deep Thought said "<q:missingWord>d35e12</q:missingWord>  is the Ultimate Answer to the Ultimate Question of Life, The Universe, and Everything."</q:question>
+         <q:answer id="d35e12">
+            <q:choice score="1" id="d35e122" selected="false">
+               <q:feedback>Correct according to The Hitchhiker's Guide to the Galaxy!  </q:feedback>forty two</q:choice>
+            <q:choice score="1" id="d35e123" selected="false">
+               <q:feedback>Correct, as told to Loonquawl and Phouchg  </q:feedback>42</q:choice>
+            <q:choice score="1" id="d35e124" selected="false">
+               <q:feedback>Correct!</q:feedback>forty-two</q:choice>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+      <q:QA type="essay" id="d36e1" shuffle="true">
+         <q:question>How are you? 
+         <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" />
+         </q:question>
+         <q:answer>
+            <q:choice score="1" id="d37e1" rows="10" cols="60" selected="false"/>
+         </q:answer>
+         <q:response>
+            <q:value>null</q:value>
+         </q:response>
+      </q:QA>
+   </q:group>
+   <q:group id="d38e1"
+            maxScore="0"
+            name="HTML"
+            numberQuestion="5"
+            score="0"
+            shuffle="true">
+      <q:QA type="single" id="d39e1" shuffle="true">
+         <q:question>What does HTML stand for?</q:question>
+         <q:answer>
+            <q:choice score="0" id="d40e12" selected="false">Hyperlinks and Text Markup Language 
+            <h:img
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"
+						src="img.jpg" alt="a piano" />
+						</q:choice>
+            <q:choice score="1" id="d40e13" selected="false">Hyper Text Markup Language </q:choice>
+            <q:choice score="0" id="d40e14" selected="false">Home Tool Markup Language</q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="single" id="d41e1" shuffle="true">
+         <q:question>Who is making the Web standards?</q:question>
+         <q:answer>
+            <q:choice score="0" id="d42e12" selected="false">Microsoft Language </q:choice>
+            <q:choice score="1" id="d42e13" selected="false">The World Wide Web Consortium </q:choice>
+            <q:choice score="0" id="d42e14" selected="false">Google</q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="single" id="d43e1" shuffle="true">
+         <q:question>Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</q:question>
+         <q:answer>
+            <q:choice score="0" id="d44e12" selected="false">src </q:choice>
+            <q:choice score="1" id="d44e13" selected="false">alt </q:choice>
+            <q:choice score="0" id="d44e14" selected="false">longdesc
+            <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" /></q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="boolean" id="d45e1" shuffle="true">
+         <q:question>42 is the Absolute Answer to everything.</q:question>
+         <q:answer>
+            <q:choice value="false" score="1" id="d46e11" selected="false"> <h:img
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"
+						src="img.jpg" alt="a piano" /> False 
+	                   	<q:feedback>42is the Ultimate Answer.</q:feedback>
+            </q:choice>
+            <q:choice value="true" score="0" id="d46e12" selected="false"> True
+            <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" />
+		                   	<q:feedback>You gave the right answer.}</q:feedback>
+            </q:choice>
+         </q:answer>
+      </q:QA>
+      <q:QA type="multiple" id="d47e1" shuffle="true">
+         <q:question>Jesus Christ was from</q:question>
+         <q:answer>
+            <q:choice score="0" id="d48e12" selected="false">
+               <q:feedback>This was an important city, but the wrong answer. 
+               <h:img style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" src="img.jpg" alt="a piano" />   </q:feedback>Jerusalem</q:choice>
+            <q:choice score="25" id="d48e13" selected="false">
+               <q:feedback>He was born here, but not raised here.    </q:feedback>Bethlehem</q:choice>
+            <q:choice score="50" id="d48e14" selected="false">
+               <q:feedback>You need to be more specific.    </q:feedback>Galilee</q:choice>
+            <q:choice score="100" id="d48e15" selected="false">
+               <q:feedback>Yes! That's right! </q:feedback>Nazareth</q:choice>
+         </q:answer>
+      </q:QA>
+   </q:group>
+</q:quiz>

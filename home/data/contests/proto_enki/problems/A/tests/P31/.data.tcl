@@ -1,0 +1,13 @@
+set Fatal {}
+set Warning {}
+set args {}
+set input input.in
+set output output.out
+set Points {}
+set context {}
+set Feedback {}
+set Show {}
+set Result {}
+set Timeout {}
+set SolutionErrors {}
+set frozen false

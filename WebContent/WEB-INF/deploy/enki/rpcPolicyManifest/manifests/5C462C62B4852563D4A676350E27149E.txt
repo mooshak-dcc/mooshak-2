@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.EnkiCommandService
+path: 80719C61B45B08727436BA4184799FC8.gwt.rpc

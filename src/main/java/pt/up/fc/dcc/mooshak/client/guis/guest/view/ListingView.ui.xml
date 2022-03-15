@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="Listing.css" />
+
+	<g:HTMLPanel styleName='{style.listingPanel}'>
+		<!-- <g:Label styleName='{style.headerGrid}' ui:field='headerRanking'/> -->
+		<c:DataGrid styleName='{style.grid}' ui:field='grid'/>
+		<c:SimplePager styleName='{style.pagerGrid}' ui:field='pager'/>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Informe del env&iacute;o 54474146_J_team</title>
+<link
+rel ="stylesheet"
+href    ="../../styles/base.css"
+type    ="text/css">
+</head>
+<body>
+<h2>Informe #5</h2>
+
+<table>
+<tr>
+<th>Env&iacute;o</th>
+<td>
+<a href="11952950345330383?inspect+data/contests/proto_icpc/submissions/54474146_J_team">54474146_J_team</a>
+</td>
+</tr>
+<tr>
+<th>Fichero</th>
+<td>
+<a href="11952950345330383?inspect+data/contests/proto_icpc/submissions/54474146_J_team/Security.java">Security.java</a>
+<a href="11952950345330383/data/contests/proto_icpc/submissions/54474146_J_team/Security.java">[Descargar]</a>
+</td>
+
+<tr><th>Recibido</td>   <td>Wed Apr 04 11:42:26 +0100 2012</td></tr>
+<tr><th>Analizado</td>   <td>Fri May 04 12:45:22 +0100 2012 (721:02:56)</td></tr><tr>
+<th>Equipo</th>
+<td>
+<a href="11952950345330383?inspect+data/contests/proto_icpc/groups/myGroup/team">
+team
+</a> Login: <code>team</code> Grupo: myGroup [myGroup]
+</td><tr>
+<th>Lenguaje</th>
+<td>
+<a href="11952950345330383?inspect+data/contests/proto_icpc/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problema</th>
+<td>
+<a href="11952950345330383?inspect+data/contests/proto_icpc/problems/J">
+J: Financial Risk
+</a>
+</td><tr>
+<th>Compilaci&oacute;n</th>
+<td>error: Operation not permitted</td>
+</tr>
+</table><table>
+<tr>    <th>CPU   </th><td>0.071 (1) seg.</td> </tr>
+<tr>    <th>Memoria    </th><td>15656 kbytes</td>          </tr>
+<tr>    <th>Clasificaci&oacute;n</th><td>Compile Time Error</td>       </tr>
+<tr>    <th>Nota</th>     <td>0</td>        </tr>
+<tr>
+<th valign="top">Observaciones</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th>C&oacute;digo</th>
+<td></td>
+</table>
+<pre>
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+
+
+public class Security {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws Exception {
+		
+
+			URL url = new URL("http://mooshak.dcc.fc.up.pt/index.html");
+			URLConnection connection = url.openConnection();
+			InputStream stream = connection.getInputStream();
+			InputStreamReader reader = new InputStreamReader(stream);
+			BufferedReader in = new BufferedReader(reader);
+			String line;
+			
+			while((line = in.readLine()) != null)
+				System.out.println(line);
+
+	}
+
+}
+
+</pre>
+
+</body>

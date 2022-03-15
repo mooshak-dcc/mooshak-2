@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.QuizCommandService
+path: 3EF8DABCA2C5F36D80B117AFE1AF06D9.gwt.rpc

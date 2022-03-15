@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+.base {
+	position: relative;
+}
+
+.commands {
+	position: absolute;
+	height: 90px;
+	min-height: 90px;
+	text-align: center;
+	top: 10px;
+	right: 100px;
+}
+
+.button {
+	padding-left: 10px;	
+	padding-right: 10px;
+	display: inline-block;
+	font-weight: bold;
+    color: #aab;
+	font-size: 12px;
+}
+
+.timeBar {
+	position: absolute;
+	top: 3mm;
+	right: 4cm;
+	
+	
+}
+
+.fullscreenButton {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 10;
+}
+
+.hide {
+	display: none;
+}
+
+.container {
+    height: 100%;
+	width: 100%;
+    padding-top: 60px;
+    position: relative;
+}
+
+.container > div {
+    overflow: auto;	
+    height: 100%;
+	width: 100%;
+	position:relative;
+}
+

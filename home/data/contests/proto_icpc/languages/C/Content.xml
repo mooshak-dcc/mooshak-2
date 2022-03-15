@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE Language [
+	<!ELEMENT Language EMPTY>
+		<!ATTLIST Language
+			xmlns           CDATA    #FIXED "http://www.ncc.up.pt/mooshak/"
+			xmlns:ct        CDATA    #FIXED "http://www.ncc.up.pt/mooshak/clear_text_password"
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Name            CDATA    #IMPLIED
+			Extension       CDATA    #IMPLIED
+			Compiler        CDATA    #IMPLIED
+			Version         CDATA    #IMPLIED
+			Compile         CDATA    #IMPLIED
+			Execute         CDATA    #IMPLIED
+			Data            CDATA    #IMPLIED
+			Fork            CDATA    #IMPLIED
+			Omit            CDATA    #IMPLIED
+			UID             CDATA    #IMPLIED>
+]>
+<Language xmlns="http://www.ncc.up.pt/mooshak/"
+          Name="C"
+          Extension="c"
+          Compiler="gcc"
+          Version="2.96"
+          Compile="/usr/bin/gcc -Wall -lm $file"
+          Execute="a.out"/>
+

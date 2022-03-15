@@ -1,0 +1,7 @@
+# Module runner
+# RPC service class, partial path of RPC policy file
+pt.up.fc.dcc.mooshak.client.events.EventService, 3B6C0DA09B90AFDF1B1C6B98A7B24AAA.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.JudgeCommandService, EFE4A386B9CE826AD8EA1BAD2A006AD5.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.AdminCommandService, 76E2D032F245911B5BD898BA6793F592.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.ParticipantCommandService, 9957E528292D04F773ADB85E130E87E9.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.BasicCommandService, 6CECCD8579E8C5B0B043B96130572D43.gwt.rpc

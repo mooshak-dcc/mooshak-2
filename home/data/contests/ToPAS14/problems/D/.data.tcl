@@ -1,0 +1,19 @@
+set        Fatal {}
+set      Warning {}
+set         Name D
+set        Color Yellow
+set        Title {indicador mais-ou-menos }
+set   Difficulty Easy
+set         Type {}
+set  Description d.html
+set          PDF PDF.pdf
+set      Program indicador.c
+set  Environment Environment
+set      Timeout 4
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

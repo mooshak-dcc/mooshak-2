@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE LDAPs [
+	<!ELEMENT LDAPs (LDAP*)>
+		<!ATTLIST LDAPs
+			xmlns           CDATA    #FIXED "http://www.ncc.up.pt/mooshak/"
+			xmlns:ct        CDATA    #FIXED "http://www.ncc.up.pt/mooshak/clear_text_password"
+			xml:id          ID       #IMPLIED>
+	<!ELEMENT LDAP EMPTY>
+		<!ATTLIST LDAP
+			xml:id          ID       #IMPLIED
+			Command         CDATA    #IMPLIED
+			Host            CDATA    #IMPLIED
+			Bind_DN         CDATA    #IMPLIED
+			Base_DN         CDATA    #IMPLIED>
+]>
+<LDAPs xmlns="http://www.ncc.up.pt/mooshak/">
+     <LDAP xml:id="profs"
+               Command="/usr/bin/ldapsearch"
+               Host="ldap.dcc.fc.up.pt"
+               Bind_DN="ou=Pessoas,dc=docentes,dc=dcc"
+               Base_DN="dc=docentes,dc=dcc"/>
+     <LDAP xml:id="alunos"
+               Command="/usr/bin/ldapsearch"
+               Host="servicos-labcc.dcc.fc.up.pt"
+               Bind_DN="ou=Pessoas,dc=alunos,dc=dcc"
+               Base_DN="dc=alunos,dc=dcc"/>
+</LDAPs>
+

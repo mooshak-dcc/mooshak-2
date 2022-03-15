@@ -1,0 +1,7 @@
+set        Fatal {}
+set      Warning {Variável indefinida <code>Sexo</code><br>}
+set         Name {Evanina Coelho}
+set         Role Coach
+set          Sex {}
+set         Born {}
+set      Contact {}

@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.AdminCommandService
+path: 76E2D032F245911B5BD898BA6793F592.gwt.rpc

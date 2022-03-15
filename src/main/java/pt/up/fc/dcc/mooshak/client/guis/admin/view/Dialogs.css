@@ -1,0 +1,304 @@
+@CHARSET "UTF-8";
+
+
+/** Top **/
+
+
+.base {
+	width: 500px;
+	height: 100px;
+	
+	background: #BBC;
+	color: #669;
+	font-size: large;
+    padding: 50px;	
+}	
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 10px;
+}
+
+.flow {
+	display: inline;
+}
+
+.buttons {
+	width: 300px;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button {
+	width: 100px;
+	font-size: large;
+	color: #669;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.rounded, .button {
+	border-radius: 5px;
+	border-color: #BCC;
+}
+
+
+.grid {
+		width: 100%;
+		height: 80%;
+}
+
+.header, .pager {
+		width: 100%;
+		height: 10%;
+}
+
+.importTeam {
+	font-size: medium;
+}
+
+.runTournament {
+	font-size: medium;
+	color: #fff;
+	overflow: hidden;
+}
+
+.setUpProblemBots {
+	font-size: medium;
+	color: #fff;
+	overflow: hidden;
+}
+
+.flex-centered > select,
+.flex-centered > input {
+	display: block;
+	padding: 5px 4px;
+    flex: 1;
+}
+
+.pnl-stage {
+}
+
+.runTournament hr {
+	border-top: 2px solid #fff;
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container-left {
+	width: 50%;
+	float: left;
+	margin-left: -15px !important;
+  	margin-right: -15px !important;
+}
+
+.container-right {
+	width: 50%;
+	float: right;
+	margin-left: -15px !important;
+  	margin-right: -15px !important;
+}
+
+.container,
+.container:before,
+.container:after,
+.container *,
+.container *:before,
+.container *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.col-11 {
+	width: 91.66666667%;
+}
+
+.col-10 {
+	width: 83.33333333%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-8 {
+  width: 66.66666667%;
+}
+
+.col-7 {
+  width: 58.33333333%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-5 {
+  width: 41.66666667%;
+}
+
+.col-4 {
+  width: 33.33333333%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 16.66666667%;
+}
+
+.col-1 {
+  width: 8.33333333%;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text--align: left;
+}
+
+.lbl-title {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 2px 0;
+	vertical-align: middle;
+	line-height: 20px;
+    display: inline-block;
+}
+
+.lbl-desc {
+	font-size: 10px;
+	font-style: italic;
+	margin: 2px 0;
+    line-height: 16px;
+	vertical-align: middle;
+}
+
+.stage div.lbl-desc {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+select.lbl-desc {
+	border: 0;
+    padding: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border-image-width: 0;
+    height: 22px;
+}
+
+input.lbl-desc,
+.lbl-desc > input,
+select.lbl-desc {	
+	display: block;
+    padding: 1px 2px;
+    font-style: normal;
+    height: 18px;
+    font-size: 11px;
+    border-radius: 0;
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+}
+
+.htmlContent {
+	overflow: 		auto;
+	width: 			100%;
+	height: 		95%;
+	background: 	white;
+}
+
+.pdfContent {
+	overflow: 		hidden;
+	margin: 		0px;
+	border-width: 	0px;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-centered {
+	display: flex;
+    flex: 1;
+    align-items: center;
+    align-content: center;
+}
+
+/** TabPanel Overrides **/
+
+@external .gwt-TabBar, .gwt-TabBarItem, .gwt-TabBarItem-selected;
+
+.gwt-TabBar {
+	background: #fff;
+	padding-top: 6px;
+}
+
+.gwt-TabBar .gwt-TabBarItem {
+	background: #bbc;
+	font-size: 14px;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected {
+	color: #fff;
+}
+
+.generateOutputs {
+	display: flex;
+	flex-direction: row;
+}
+
+.generateOutputs > div {
+	display: flex;
+	flex: 1;
+}
+
+.generateOutputs select, .generateOutputs input {
+	flex: 1;
+}
+
+.runTournament .flex.points {
+	justify-content: space-between;
+}
+
+.runTournament .flex.points > div {
+	margin-left: -15px !important;
+  	margin-right: -15px !important;
+  	display: flex;
+    flex-direction: column;
+}
+
+.runTournament .flex.points > div input {
+	margin: 0;
+	float: right;
+}
+
+.runTournament hr {
+	margin: 1px 0 2px;
+}
+
+.runTournament .configuration-fields .lbl-desc {
+	line-height: 20px;
+}
+

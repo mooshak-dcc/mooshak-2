@@ -1,0 +1,11 @@
+set        Fatal {}
+set      Warning {}
+set         Name Java
+set    Extension java
+set     Compiler OpenJDK
+set      Version 1.7.0-internal
+set      Compile {/usr/bin/javac $file}
+set      Execute {/usr/bin/java -classpath . $name}
+set         Data 700000000
+set         Fork 12
+set         Omit {}

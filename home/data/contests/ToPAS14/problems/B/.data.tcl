@@ -1,0 +1,19 @@
+set        Fatal {}
+set      Warning {}
+set         Name B
+set        Color Blue
+set        Title {CaixaNegra }
+set   Difficulty Easy
+set         Type {}
+set  Description b.html
+set          PDF PDF.pdf
+set      Program m_black_box.c
+set  Environment Environment
+set      Timeout 4
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

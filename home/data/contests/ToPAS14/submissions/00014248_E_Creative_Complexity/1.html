@@ -1,0 +1,198 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00014248_E_Creative_Complexity</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00014248_E_Creative_Complexity">00014248_E_Creative_Complexity</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00014248_E_Creative_Complexity/problemaE.pas">problemaE.pas</a>
+<a href="data/contests/ToPAS14/submissions/00014248_E_Creative_Complexity/problemaE.pas">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 15:27:28 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 15:27:28 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/EPI/Creative_Complexity">
+Creative Complexity
+</a> Login: <code>Creative_Complexity</code> Group: EPI [EPI]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/Pascal">
+Pascal
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/E">
+E: Código d'Avintes 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+problemaE.pas(48,23) Warning: Variable "conta" does not seem to be initialized
+problemaE.pas(58,22) Warning: Variable "text_temp" does not seem to be initialized
+problemaE.pas(67,23) Warning: Variable "outputF" does not seem to be initialized
+problemaE.pas(68,31) Warning: Variable "conta_palavra" does not seem to be initialized
+problemaE.pas(93,34) Warning: Variable "y" does not seem to be initialized
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{Observation of <b>Compile Time Error</b> <pre>Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+problemaE.pas(48,23) Warning: Variable "conta" does not seem to be initialized
+problemaE.pas(58,22) Warning: Variable "text_temp" does not seem to be initialized
+problemaE.pas(67,23) Warning: Variable "outputF" does not seem to be initialized
+problemaE.pas(68,31) Warning: Variable "conta_palavra" does not seem to be initialized
+problemaE.pas(93,34) Warning: Variable "y" does not seem to be initialized
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?</pre>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+program problemaE;
+
+uses crt, strutils, sysutils;
+
+var
+
+  dic                  : array [1..1000] of string;
+
+
+  n                    : integer;
+  i                    : integer;
+  k                    : integer;
+  conta                : integer;
+  x                    : integer;
+  conta_palavra        : integer;
+  y                    : integer;
+
+  TT                   : integer;
+
+  linha                : string;
+  text_temp            : string;
+  outputF              : string;
+  ytemp                : string;
+
+  C                    : string;
+begin
+
+readln(n);
+
+ For i:= 1 to n do
+  begin
+    readln (dic[i]);
+  end;
+
+  Repeat
+
+   readln(linha);
+
+   C:= copy(linha,2,1);
+
+   If copy(linha,1,1) = '1' then
+      begin
+        TT := length(linha);
+       for k:= 1 to tt do
+         begin
+           if copy(linha,k,1) = ' ' then
+             begin
+               conta:=conta+1;
+
+             end;
+           if conta = 2 then x := k +1;
+
+         end;//end do for
+       repeat
+       x:= x+1;
+       if copy(linha,x,1) &lt;&gt; ' ' then
+        begin
+          text_temp:=text_temp + copy(linha,x,1);
+
+        end
+        else
+        begin
+        for i :=1 to n-1 do
+         begin
+           if dic[i] = text_temp then
+            begin
+             outputF:=outputF +' '+ IntToStr(i);
+             conta_palavra := conta_palavra +1 ;
+            end;
+         end;
+        end;
+       until inttostr(conta_palavra) = c;
+
+      end;
+   If copy (linha,1,1) = '2' then
+      begin
+       for k:= 1 to tt do
+        begin
+         if copy(linha,k,1) = ' ' then
+          begin
+           conta := conta+1;
+
+          end;
+
+          if conta = 2 then x:= k+1;
+
+          repeat
+
+          x:=x+1;
+          if copy(linha,x,1) &lt;&gt; ' '  then
+           begin
+            ytemp:= copy(linha,x,1);
+            outputF:=outputf+dic[y];
+
+            end
+            else
+            begin
+
+            conta_palavra:= conta_palavra+1;
+           end;
+          until inttostr(conta_palavra) = c;
+
+           end;
+
+        end;
+
+
+   Until copy(linha,1,1) = '0';
+
+
+
+
+end.
+</pre>
+
+</body>

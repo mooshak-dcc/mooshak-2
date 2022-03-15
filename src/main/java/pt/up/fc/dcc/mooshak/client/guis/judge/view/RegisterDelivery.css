@@ -1,0 +1,31 @@
+.base {
+	width: 100%;
+	height: 100%;
+}
+
+.deliveryform {
+	width: 70%;
+	height: 80%;
+	margin: auto;
+}
+
+.deliveryform span{
+	margin:10px 0 0 0 !important;
+	font-size: medium !important;
+	min-width: 100px;
+	display: inline-block;
+}
+
+.datainfo {
+	display: inline-block;
+	font-size: medium !important;
+}
+
+.message {
+	text-align: center;
+	color: orange;
+	margin: auto;
+	margin-top: 50px;
+	display: block;
+	font-size: x-large;
+}

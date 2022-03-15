@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils">
+
+	<ui:with field='i18n'
+		type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="../Dialogs.css" />
+	
+	<g:HTMLPanel styleName="{style.runTournament} {style.stage}">
+		<g:HTMLPanel styleName="{style.container} {style.col-12}">
+
+			<g:HTMLPanel width="100%">
+
+				<g:HTMLPanel styleName="{style.container}">
+					<g:Label styleName="{style.lbl-title} {style.container-left}">Type of Stage</g:Label>
+					<u:SelectOneListBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="modeSelector" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Nr. of Players per Match</g:Label>
+					</g:HTMLPanel>
+					<w:StrictIntegerBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="nrPlayersMatch" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Min. Number of Players per Group</g:Label>
+					</g:HTMLPanel>
+					<w:StrictIntegerBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="minPlayersGroup" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Max. Number of Rounds</g:Label>
+					</g:HTMLPanel>
+					<w:StrictIntegerBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="maxRounds" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Nr. of Qualified to Next Stage</g:Label>
+					</g:HTMLPanel>
+					<w:StrictIntegerBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="nrQualified" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Match Result Type</g:Label>
+					</g:HTMLPanel>
+					<u:SelectOneListBox styleName="{style.lbl-desc} {style.container-right}"
+						ui:field="resultTypeSelector" />
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Match Tie Breakers</g:Label>
+						<span style="display:inline-block;font-size:10px">(comma separated - use ! before the name to invert order)</span>
+					</g:HTMLPanel>
+					<g:TextBox ui:field="matchTiebreakers" styleName="{style.lbl-desc} {style.container-right}"/>
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Ranking Points per Match Position</g:Label>
+					</g:HTMLPanel>
+					<g:HTMLPanel styleName="{style.lbl-desc} {style.container-right}" ui:field="rankingPointsPnl">
+						
+					</g:HTMLPanel>
+				</g:HTMLPanel>
+				<hr />
+				<g:HTMLPanel styleName="{style.container}">
+					<g:HTMLPanel styleName="{style.container-left}">
+						<g:Label styleName="{style.lbl-title}">Ranking Tie Breakers</g:Label>
+						<span style="display:inline-block;font-size:10px">(comma separated - use ! before the name to invert order)</span>
+					</g:HTMLPanel>
+					<g:TextBox ui:field="rankingTiebreakers" styleName="{style.lbl-desc} {style.container-right}"/>
+				</g:HTMLPanel>
+				<hr />
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

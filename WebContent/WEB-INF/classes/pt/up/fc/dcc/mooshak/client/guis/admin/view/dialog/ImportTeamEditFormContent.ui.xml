@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="../Dialogs.css" />
+
+
+	<g:HTMLPanel>
+		<g:ListBox ui:field="separator">
+			<g:item value="\t">\t</g:item>
+			<g:item value=",">,</g:item>
+			<g:item value=";">;</g:item>
+		</g:ListBox>
+		<g:CheckBox ui:field="useHeader">Use header</g:CheckBox>
+		<g:CheckBox ui:field="genId">Genearate ID</g:CheckBox>
+		
+		
+		<g:Label styleName='{style.header}' ui:field='header'/>
+		<c:DataGrid styleName='{style.grid}' ui:field='grid'/>
+		<c:SimplePager styleName='{style.pager}' ui:field='pager'/>
+			
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

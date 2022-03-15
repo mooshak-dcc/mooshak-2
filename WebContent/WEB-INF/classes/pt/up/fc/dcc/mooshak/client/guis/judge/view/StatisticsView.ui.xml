@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:v="urn:import:pt.up.fc.dcc.mooshak.client.guis.judge.view" >
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="StatisticsView.css" />
+
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<g:HTMLPanel styleName='{style.halfHeight}'>
+			<v:SubmissionsPiledBarCharts ui:field="submissionsChart"/>
+		</g:HTMLPanel>
+		<g:HTMLPanel styleName='{style.halfHeight}'>
+			<v:ContestProgressLineChart ui:field="progressChart"/>
+		</g:HTMLPanel>
+		<g:Label ui:field='message' styleName='{style.message}'/>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

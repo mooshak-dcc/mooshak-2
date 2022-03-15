@@ -1,0 +1,261 @@
+
+
+<div id="container-quizzes">
+	<div id="quiz">
+		<div id="quiz-head">
+			<!--button class="btn-submit" onclick="submit()">Submit</button>
+			<div id="progress-bar">
+				<progress id="_progress" value="22" max="100"></progress>
+			</div>
+			< div id="contenedor">
+				<div class="reloj" id="Horas">00</div>
+				<div class="reloj" id="Minutos">:00</div>
+				<div class="reloj" id="Segundos">:00</div>
+			</div -->
+			<div id="question-line"></div>
+		</div>
+		<div id="groups">
+			<div class="group" id="d2e1">
+				<p class="group-name">===============Grupo:1 ===============</p>
+				<div class="qa boolean" id="d3e1">
+					<div class="question-text">
+
+						Q1: 1+1=2 <b></b>
+					</div>
+					<input type="radio" name="d3e1" class="w3-radio"
+						onclick="inputBoolean(this)">True <br> <input
+						type="radio" name="d3e1" class="w3-radio"
+						onclick="inputBoolean(this)">False <br>
+				</div>
+				<div class="qa single" id="d5e1">
+					<div class="question-text">
+
+						Q2: What's between orange and green in the spectrum?<b></b>
+					</div>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d5e1" id="d6e12"> yellow
+					<br> <input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d5e1" id="d6e13"> red <br>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d5e1" id="d6e14"> blue <br>
+				</div>
+				<div class="qa shortAnswer" id="d7e1">
+					<div class="question-text">
+
+						Q3: Two plus<input type="text" onblur="inputShort(this)"
+							name="d8e12" id="d8e12"> equals four.<b></b>
+					</div>
+				</div>
+				<div class="qa matching" id="d9e1">
+					<div class="question-text">
+
+						Q4: Which animal eats which food?<b></b>
+					</div>
+					<table style="width: '100px'">
+						<tr>
+							<th>Option 1</th>
+							<th>Option 2</th>
+						</tr>
+						<tr>
+							<td><input type="text" name="mappedValue"
+								class="input-macthing" onblur="inputMatching(this)" id="d10e12">
+								cat food</td>
+							<td>1. cat</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="mappedValue"
+								class="input-macthing" onblur="inputMatching(this)" id="d10e13">
+								dog food</td>
+							<td>2. dog</td>
+						</tr>
+					</table>
+				</div>
+				<div class="qa numeric" id="d11e1">
+					<div class="question-text">
+
+						Q5: What is a number from 1 to 5?<b></b>
+					</div>
+					<input type="text" name="d11e1" onblur="inputNumeric(this)">
+				</div>
+				<div class="qa numeric" id="d15e1">
+					<div class="question-text">
+
+						Q6: What is a number from 1 to 5?<b></b>
+					</div>
+					<input type="text" name="d15e1" onblur="inputNumeric(this)">
+				</div>
+				<div class="qa numeric" id="d19e1">
+					<div class="question-text">
+
+						Q7: When was Ulysses S. Grant born?<b></b>
+					</div>
+					<input type="text" name="d19e1" onblur="inputNumeric(this)">
+
+				</div>
+			</div>
+			<div class="group" id="d23e1">
+				<p class="group-name">===============Grupo:2 ===============</p>
+				<div class="qa multiple" id="d24e1">
+					<div class="question-text">
+
+						Q1: What two people are entombed in Grant's tomb?<b></b>
+					</div>
+					<input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d24e1" id="d25e12">No
+					one <br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d24e1" id="d25e13">Grant
+					<br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d24e1" id="d25e14">Grant's
+					wife <br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d24e1" id="d25e15">Grant's
+					father <br>
+				</div>
+				<div class="qa fillInTheBlank" id="d26e1">
+					<div class="question-text">
+
+						Q2: The American holiday of Thanksgiving is celebrated on the<select
+							onclick="inputfillInTheBlank(this)" id="d27e12">
+							<option value="second" id="d27e121">second</option>
+							<option value="third\=fjgnf " id="d27e122">third\=fjgnf
+							</option>
+							<option value="fourt" id="d27e123">fourt</option>
+						</select> Thursday of November<b></b>
+					</div>
+				</div>
+				<div class="qa fillInTheBlank" id="d28e1">
+					<div class="question-text">
+
+						Q3: Mahatma Gandhi birthday is an Indian holiday on <select
+							onclick="inputfillInTheBlank(this)" id="d29e12">
+							<option value="15th" id="d29e122">15th</option>
+							<option value="3rd" id="d29e123">3rd</option>
+							<option value="2nd" id="d29e124">2nd</option>
+						</select> of October. Since<select onclick="inputfillInTheBlank(this)"
+							id="d29e14">
+							<option value="495 AD  " id="d29e142">495 AD</option>
+							<option value="1066 AD  " id="d29e143">1066 AD</option>
+							<option value="1215 AD  " id="d29e144">1215 AD</option>
+							<option value="43 AD" id="d29e145">43 AD</option>
+						</select> the town of Hastings England has been "famous with visitors".<b></b>
+					</div>
+				</div>
+				<div class="qa fillInTheBlank" id="d30e1">
+					<div class="question-text">
+
+						Q4: Difficult multiple choice question<select
+							onclick="inputfillInTheBlank(this)" id="d31e12">
+							<option value="wrong answer              " id="d31e122">wrong
+								answer</option>
+							<option value="half credit answer      " id="d31e123">half
+								credit answer</option>
+							<option value="full credit answer    " id="d31e124">full
+								credit answer</option>
+						</select> teste test<b></b>
+					</div>
+				</div>
+				<div class="qa single" id="d32e1">
+					<div class="question-text">
+
+						Q5: What's the answer to this multiple-choice question?<b></b>
+					</div>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d32e1" id="d33e12">
+					wrong answer <br> <input type="radio" class="w3-radio"
+						value="false" onclick="inputSingle(this)" name="d32e1" id="d33e13">
+					another wrong answer <br> <input type="radio" class="w3-radio"
+						value="false" onclick="inputSingle(this)" name="d32e1" id="d33e14">
+					right answer <br>
+				</div>
+				<div class="qa shortAnswer" id="d34e1">
+					<div class="question-text">
+
+						Q6: Deep Thought said "<input type="text"
+							onblur="inputShort(this)" name="d35e12" id="d35e12"> is
+						the Ultimate Answer to the Ultimate Question of Life, The
+						Universe, and Everything."<b></b>
+					</div>
+				</div>
+				<div class="qa essay" id="d36e1">
+					<div class="question-text">
+
+						Q7: How are you? \{\}<b></b>
+					</div>
+					<textarea class="w3-input w3-border essay-textarea" rows="10"
+						cols="20" id="AWQ1" onblur="inputEssayChoice(this)"></textarea>
+				</div>
+			</div>
+			<div class="group" id="d38e1">
+				<p class="group-name">===============Grupo:3 ===============</p>
+				<div class="qa single" id="d39e1">
+					<div class="question-text">
+
+						Q1: What does HTML stand for?<b></b>
+					</div>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d39e1" id="d40e12">Hyperlinks
+					and Text Markup Language <br> <input type="radio"
+						class="w3-radio" value="false" onclick="inputSingle(this)"
+						name="d39e1" id="d40e13">Hyper Text Markup Language <br>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d39e1" id="d40e14">Home
+					Tool Markup Language<br>
+				</div>
+				<div class="qa single" id="d41e1">
+					<div class="question-text">
+
+						Q2: Who is making the Web standards?<b></b>
+					</div>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d41e1" id="d42e12">Microsoft
+					Language <br> <input type="radio" class="w3-radio"
+						value="false" onclick="inputSingle(this)" name="d41e1" id="d42e13">The
+					World Wide Web Consortium <br> <input type="radio"
+						class="w3-radio" value="false" onclick="inputSingle(this)"
+						name="d41e1" id="d42e14">Google<br>
+				</div>
+				<div class="qa single" id="d43e1">
+					<div class="question-text">
+
+						Q3: Which HTML attribute specifies an alternate text for an image,
+						if the image cannot be displayed?<b></b>
+					</div>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d43e1" id="d44e12">src <br>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d43e1" id="d44e13">alt <br>
+					<input type="radio" class="w3-radio" value="false"
+						onclick="inputSingle(this)" name="d43e1" id="d44e14">longdesc<br>
+				</div>
+				<div class="qa boolean" id="d45e1">
+					<div class="question-text">
+
+						Q4: 42 is the Absolute Answer to everything.<b></b>
+					</div>
+					<input type="radio" name="d45e1" class="w3-radio"
+						onclick="inputBoolean(this)"> False <br> <input
+						type="radio" name="d45e1" class="w3-radio"
+						onclick="inputBoolean(this)"> True <br>
+				</div>
+				<div class="qa multiple" id="d47e1">
+					<div class="question-text">
+
+						Q5: Jesus Christ was from<b></b>
+					</div>
+					<input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d47e1" id="d48e12">
+					Jerusalem<br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d47e1" id="d48e13">
+					Bethlehem<br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d47e1" id="d48e14">
+					Galilee<br> <input type="checkbox" class="w3-check"
+						onclick="inputMultiple(this)" name="d47e1" id="d48e15">
+					Nazareth<br>
+				</div>
+			</div>
+		</div>
+
+
+		===============And of Question=================
+
+	</div>
+</div>

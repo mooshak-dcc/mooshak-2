@@ -1,0 +1,45 @@
+
+                                    X-html2ps
+
+                           A GUI frontend for html2ps,
+                         a HTML-to-PostScript converter
+                                   Version 1.0
+
+                      Copyright 1997, Jean-Philippe Argaud
+
+
+ TABLE OF CONTENTS
+
+   I.   Introduction
+   II.  Installation
+   III. Requirements
+
+
+ I. INTRODUCTION
+
+   X-html2ps is freely-available GUI frontend for html2ps, a HTML-to-PostScript
+   converter made available by Jan Karrman (e-mail: jan@tdb.uu.se). html2ps is
+   available at the WWW location "http://www.tdb.uu.se/~jan/html2ps.html".
+
+   X-html2ps is covered by the GNU General Public License insuring that it
+   will remain in the capable hands of the internet community. Please read the
+   LICENSE file for more information.
+
+
+ II. INSTALLATION
+
+                                    UNIX
+
+    o  edit "xhtml2ps" shell script
+       Change the initial command line to the location of the wish binary
+
+    o  Put "xhtml2ps" in your path
+
+    o  Make sure your display is set and type "xhtml2ps".
+
+
+
+ III. REQUIREMENTS
+
+    Tcl7.6 and Tk4.2 or later.
+

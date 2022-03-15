@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00004289_D_Bits_Please</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00004289_D_Bits_Please">00004289_D_Bits_Please</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00004289_D_Bits_Please/D.cpp">D.cpp</a>
+<a href="data/contests/ToPAS14/submissions/00004289_D_Bits_Please/D.cpp">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 12:41:29 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 12:41:29 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/AEDS/Bits_Please">
+Bits Please
+</a> Login: <code>Bits_Please</code> Group: AEDS [AEDS]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/C++">
+C++
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.002 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>38<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>3<font color='red'><U>7</U></font><font color='red'><S>8</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>228<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>173</U></font><font color='red'><S>228</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.000 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>17<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>1<font color='red'><U>5</U></font><font color='red'><S>7</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>581<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>62</U></font><font color='red'><S>5</S></font>2<font color='red'><S>1</S></font><font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.002 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>64 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Wrong Answer</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{ 4 tests with <b>Wrong Answer</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string&gt;
+#include &lt;string.h&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main()
+{
+    int data[24],pc[24],i,res2=0;
+    float med1=0,med2=0,res=0;
+    for(i=0;i&lt;24;i++)
+    {
+    scanf("%d %d",&amp;data[i],&amp;pc[i]);
+
+
+    }
+    for(i=0;i&lt;24;i++)
+    {
+    med1=med1+pc[i];
+    }
+    med1=med1/24;
+    med2=(pc[21]+pc[22]+pc[23])/3;
+    res=(med1+med2)/2;
+    res2=res;
+    cout &lt;&lt; res2 &lt;&lt; endl;
+    return 0;
+}
+
+</pre>
+
+</body>

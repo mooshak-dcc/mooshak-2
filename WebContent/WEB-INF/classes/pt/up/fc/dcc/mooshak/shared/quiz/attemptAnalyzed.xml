@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><q:quiz xmlns:q="http://www.example.org/Quiz" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:fun="http://example.org/xslt/functions">
+   <q:group id="d2e1" maxScore="0" name="superquiz" numberQuestion="1" score="0" shuffle="true"><q:QA id="d9e1" type="matching" score="0"><q:question>Which animal eats which food?</q:question><q:answer score="0">
+            <q:choice id="d10e12" mapKey="cat " mappedValue=" cat food " score="1"/>
+            <q:choice id="d10e13" mapKey="dog " mappedValue=" dog food" score="1"/>
+         </q:answer><q:response>
+            <q:value>null</q:value>
+         </q:response></q:QA></q:group>
+   <q:group id="d23e1" maxScore="0" name="group2" numberQuestion="1" score="1" shuffle="true"><q:QA id="d30e1" shuffle="true" type="fillInTheBlank" score="1"><q:question>Difficult multiple choice question<q:missingWord>d31e12</q:missingWord> teste test</q:question><q:answer score="1" id="d31e12"><q:choice id="d31e122" score="0" selected="false">wrong answer              </q:choice><q:choice id="d31e123" score="0" selected="false">half credit answer      </q:choice><q:choice correct="true" id="d31e124" score="1" selected="true">full credit answer    </q:choice></q:answer></q:QA></q:group>
+   <q:group id="d38e1" maxScore="0" name="HTML" numberQuestion="5" score="1" shuffle="true"><q:QA id="d43e1" shuffle="true" type="single" score="1"><q:question>Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</q:question><q:answer score="1"><q:choice correct="true" id="d44e13" score="1" selected="true">alt </q:choice><q:choice id="d44e14" score="0" selected="false">longdesc
+            <h:img alt="a piano" src="img.jpg" style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"/></q:choice><q:choice id="d44e12" score="0" selected="false">src </q:choice></q:answer></q:QA><q:QA id="d45e1" shuffle="true" type="boolean" score="0"><q:question>42 is the Absolute Answer to everything.</q:question><q:answer score="0"><q:choice correct="false" id="d46e12" score="0" selected="true" value="true"> True
+            <h:img alt="a piano" src="img.jpg" style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"/>
+		                   	<q:feedback>You gave the right answer.}</q:feedback>
+            </q:choice><q:choice id="d46e11" score="1" selected="false" value="false"> <h:img alt="a piano" src="img.jpg" style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"/> False 
+	                   	<q:feedback>42is the Ultimate Answer.</q:feedback>
+            </q:choice></q:answer></q:QA><q:QA id="d41e1" shuffle="true" type="single" score="0"><q:question>Who is making the Web standards?</q:question><q:answer score="0"><q:choice id="d42e13" score="1" selected="false">The World Wide Web Consortium </q:choice><q:choice id="d42e14" score="0" selected="false">Google</q:choice><q:choice id="d42e12" score="0" selected="false">Microsoft Language </q:choice></q:answer></q:QA><q:QA id="d47e1" shuffle="true" type="multiple" score="0"><q:question>Jesus Christ was from</q:question><q:answer score="0"><q:choice id="d48e14" score="50" selected="false">
+               <q:feedback>You need to be more specific.    </q:feedback>Galilee</q:choice><q:choice id="d48e13" score="25" selected="false">
+               <q:feedback>He was born here, but not raised here.    </q:feedback>Bethlehem</q:choice><q:choice id="d48e15" score="100" selected="false">
+               <q:feedback>Yes! That's right! </q:feedback>Nazareth</q:choice><q:choice id="d48e12" score="0" selected="false">
+               <q:feedback>This was an important city, but the wrong answer. 
+               <h:img alt="a piano" src="img.jpg" style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"/>   </q:feedback>Jerusalem</q:choice></q:answer></q:QA><q:QA id="d39e1" shuffle="true" type="single" score="0"><q:question>What does HTML stand for?</q:question><q:answer score="0"><q:choice id="d40e13" score="1" selected="false">Hyper Text Markup Language </q:choice><q:choice id="d40e14" score="0" selected="false">Home Tool Markup Language</q:choice><q:choice id="d40e12" score="0" selected="false">Hyperlinks and Text Markup Language 
+            <h:img alt="a piano" src="img.jpg" style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;"/>
+						</q:choice></q:answer></q:QA></q:group>
+</q:quiz>

@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399634890
+set Time 3490
+set Problem D
+set Team No_Interessa
+set Classify RUNTIME_ERROR
+set Mark 0
+set Size 1036
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Java
+set Program d.java
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.098
+set Memory 1805132.0
+set Signals {}
+set Feedback {{Observation of <b>Runtime Error</b> <pre>Exception in thread "main" java.lang.ArithmeticException: / by zero}

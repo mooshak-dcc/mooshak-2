@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.CreatorCommandService
+path: 3C916188DA6A0327B008AE0BAA59A3CE.gwt.rpc

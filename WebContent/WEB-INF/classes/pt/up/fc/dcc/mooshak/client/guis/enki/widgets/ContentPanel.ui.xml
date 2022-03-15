@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:p="urn:import:pt.up.fc.dcc.mooshak.client.guis.enki.widgets">
+
+	<ui:style src="ContentPanel.css" />
+	
+	<p:ScrollableTabLayoutPanel ui:field="tabPanel"
+			  animationDuration="100" />		
+
+</ui:UiBinder> 

@@ -1,0 +1,7 @@
+set       checks {}
+set      network {}
+set     profiles {}
+set     sessions {}
+set        users {}
+set        flags {}
+set         ldap {}

@@ -1,0 +1,15 @@
+set Fatal {}
+set Warning {}
+set Name {EcmaScript 6}
+set Extension js
+set Compiler {}
+set Version {}
+set Compile {$home/js-asura-compiler.sh $programFolder $gameExtras $gameArtifact es6}
+set Execute {/usr/bin/js $programFolder/wrappers/es6/PlayerWrapper.js $file 38605058_A_MyTicTacToePlayerES6}
+set Data 6147483647
+set Fork 100
+set Omit {}
+set UID {}
+set EditFileContents {}
+set Configuation {}
+set frozen false

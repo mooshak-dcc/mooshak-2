@@ -1,0 +1,12 @@
+#!/bin/sh
+# imprime um ficheiros HTML produzido pelo Mooshak
+LPR=/usr/bin/lpr
+PRINTER=lp
+HTML2PS=bin/html2ps-1.0b1/html2ps
+TMP=/tmp/print$$
+
+trap "rm -f $TMP" 0 9 11 5
+$HTML2PS $1 > $TMP 2> /dev/null 
+$LPR -P$PRINTER $TMP
+
+

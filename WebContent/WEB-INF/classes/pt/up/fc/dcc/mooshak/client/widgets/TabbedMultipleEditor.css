@@ -1,0 +1,25 @@
+
+.panel {
+	width: 100%;
+	height: 100%;
+}
+
+.codeEditor {
+	width: 100%;
+	height: 100%;
+}
+
+.diagramEditor {
+	width: 100%;
+	height: 100%;
+}
+
+.statementViewer {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.diagram-language-selector {
+	
+}

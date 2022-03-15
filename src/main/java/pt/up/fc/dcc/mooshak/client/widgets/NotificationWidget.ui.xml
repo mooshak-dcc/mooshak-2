@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  <ui:style>
+    .container {
+		position: fixed;
+		height: 0;
+		width: 200px;
+		right: 50px;
+		top: 10px;
+		z-index: 20;
+		display: block;
+    }
+	.centered {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 5px;
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		background-color: white;
+		border: 3px solid orange;
+		color: black;
+	}
+	.notificationText {
+		font-size: 1em;
+		display: block;
+		width: 200px;
+	}
+	.closeNotification {
+		margin-top: 20px;
+		font-size: 0.8em;
+		display: block;
+		width: 200px;
+		text-align: center;
+		cursor: pointer;
+	}
+  </ui:style>
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+    	
+  <g:HTMLPanel styleName='{style.container}'>
+    <div class='{style.centered}' style='display:none' ui:field='borderElement'>
+      <div ui:field='heightMeasure'>
+        <span class='{style.notificationText}' ui:field='notificationText'></span>
+        
+        <g:Label styleName='{style.closeNotification}' ui:field='closeNotification' text="({i18n.close})"></g:Label>
+      </div>
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder>

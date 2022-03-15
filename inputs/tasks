@@ -1,0 +1,134 @@
+->DL2: 
+   ****opção de marcar alguns nós como não avaliados
+   ****inserir numero mínimo de componentes 
+   ****adicionar opção de validação sintatica no campo fields container
+   ****adicionar exprex label
+   ****adicionar extensão do diagrama
+   ****tipo de validação sintatica que queremos 
+
+-->Eshu: 
+  	
+   -inserir o algoritmo de deposição dos nós
+   -eliminar os underfined nos if 
+   -corrigir a parte da toolbar(ao seleccionar passar para inicio )
+   -feedback visual (adicionar estilo ao nós e arestas)
+   -duplo click desselecionar edge, corrigir erro da sete que fica cruz
+   -converter tipos no mesmo variante 
+   ****comentar o codigo
+   ****alinhar a direita, centro
+   ****Equalizar elementos
+   ****estilo na janela de propriedades
+   ****verificar o erro do rectângulo de seleccionar 
+   ****eliminar as funcões com function
+   ****posicionar os elementos na vertical
+   ****toolbar, ao passar o rato mudar o fundo nós 
+   ****corrigir edges, ao clicar muda posição sozinho, (distância mínima para alterar handler )
+   ****alterar handler para 5 em vez de 9 
+   ****add info text na toolbar
+   ****verificar connect all nodetype
+   ****configurar linguagem EER
+   ****multilinhas no label 
+   ****corrigir a janela de propriedades inserir texto
+   ****corrigir erro no import rectangle
+   ****novos tipos de edges
+   ****inserir textos e setas nas edges
+   ****inserir a cardinalidade
+   ****corrigir o import (a aparte de ficar todos elementos ficarem todos seleccionados) 
+   ****corrigir o import (reedimensionar o eshu)
+   ****criar o elemento retângulo que seleciona muitos tipos
+   ****criar os tipos para diagrama de class
+   ****reedimensionar um nó 
+   ****adicionar opção configuração auto-resize nodes no confignode
+   ****adicionar a janela de propriedades
+   ???? interface para criar nodes e edges
+   ???? interface para linguagem de configuração
+   ???? validação me real time
+   
+  
+--> Kora
+   --verificar a parte de avançar no feedback
+   --testar espaço no caminho das imagens no ficheiro configuração
+   ****alterar o svg Arrow para ser fixo
+   ****fazer os casos testes
+   ****ajustar o feedback - propriedades
+   ****gerar diferença no caso de editar um nó
+   ****verificar o caso de feedback para editar propriedades
+   ****file configuration no KoraEvaluator.
+   ****Validação do label e container
+
+--> Enki
+   ****corrigir a janela propriedades
+   ****corrigir o erro do editor que as vezes não aparece
+   
+   
+--> Trabalho para fazer após a tese 
+  Reduzir o grafo no EER
+  Enviar as cardinalidade com os nós
+  Ver o default size, não está funcionar quando for o caso de nó ser autoriseze 
+  Reajustar o texto inicial no relacionamento
+  Rotação dos elementos
+  Testar o impacto dos tipos das arestas
+  Implementar o kora com Material Design 
+  
+  ****Configurar Err
+  ****Inserir o novo Eshu no Enki   
+     
+   
+   
+   
+   
+ RegExp
+ Attribute--> (\+|-|#):(\w+):(\w+)
+ Operation--> (\+|-|#):(\w+)\(((\w+):(\w+)+,?)*?\):(\w+ee) 
+ name --> (\w+) 
+ 
+ Evaluator 382
+   adiciounei o  if
+   if(mapper!=null)
+		mapper.setRunning(false);	
+ 	
+solutions
+/home/hcorreia/workspace/Mooshak2.1/home/data/contests/proto_diagram/problems/CasoUso/solutions/SolutionCasoUso.json
+[INFO] /home/hcorreia/workspace/Mooshak2.1/home/data/contests/proto_diagram/problems/CasoUso/SolutionCasoUso.json
+
+ 	
+   
+   Insertir regra par union no ficheiro configuration
+   
+   não pode ligar aos mesmo nós /home/hcorreia/workspace/ESHU2.0/image/associationIcon.svg
+/home/hcorreia/workspace/ESHU2.0/image/associationIconOnly.svg
+/home/hcorreia/workspace/ESHU2.0/image/Class.svg
+/home/hcorreia/workspace/ESHU2.0/image/ClassSimple.svg
+/home/hcorreia/workspace/ESHU2.0/image/Composition.svg
+/home/hcorreia/workspace/ESHU2.0/image/CompositionOnly.svg
+/home/hcorreia/workspace/ESHU2.0/image/Object.svg
+   
+   
+   
+   Julho
+   -- melhor o feeback principalmente cardinalidade , separar feedback cardinalidade de participação 
+   -- Validação sintatico automatico 
+   -- ** Adicionar cardinalidade a depender de um nó 
+   -- Melhorar o texto no feedback
+   -- Melhorar  a janela de propriedade
+   -- Janelea de propriedade deve aparcer em cima do Enki 
+   -- feedback VISUAL
+   --ensina o que sabes a quem pedir e sem ignorancia pede par ensinaram-te o que não sabes
+   
+   
+   
+   
+   Use case 
+   https://www.ibm.com/support/knowledgecenter/SS8PJ7_9.6.1/com.ibm.xtools.modeler.doc/topics/crelsme_ucd.html?view=embed
+   
+  Link par todos os relacionamentos 
+   https://www.ibm.com/support/knowledgecenter/SS8PJ7_9.6.1/com.ibm.xtools.modeler.doc/topics/rreltyp.html
+   https://www.ibm.com/support/knowledgecenter/SS8PJ7_9.6.1/com.ibm.xtools.modeler.doc/topics/twrkrel.html
+   
+  Object 
+  https://www.ibm.com/support/knowledgecenter/en/SS5JSH_9.0.0/com.ibm.xtools.modeler.doc/topics/cobjdiags.html 
+  
+  
+  
+  
+  

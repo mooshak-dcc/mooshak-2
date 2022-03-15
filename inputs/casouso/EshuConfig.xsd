@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.example.org/EshuConfig"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:conf="http://www.example.org/EshuConfig">
+
+	<element name="eshu" type="conf:Eshu"></element>
+
+	<complexType name="Eshu">
+		<sequence>
+			<element name="style" type="conf:Style" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="diagram" type="conf:Diagram" maxOccurs="1"
+				minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Style">
+		<all>
+			<element name="editorStyle" type="conf:Editor_style"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="toolbarStyle" type="conf:Toolbar_style"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="vertice" type="conf:Vertice" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="textBox" type="conf:Text_box" maxOccurs="1"
+				minOccurs="1">
+			</element>
+		</all>
+	</complexType>
+
+	<complexType name="Editor_style">
+		<attribute name="width" type="integer" use="required" />
+		<attribute name="height" type="integer" use="required" />
+		<attribute name="borderWidth" type="integer" use="required" />
+		<attribute name="borderColor" type="string" use="required" />
+		<attribute name="background" type="string" use="required" />
+		<attribute name="gridVisible" type="boolean" use="required" />
+		<attribute name="gridColorLine" type="string" use="required" />
+
+	</complexType>
+
+	<complexType name="Toolbar_style">
+		<attribute name="width" type="integer" use="required" />
+		<attribute name="height" type="integer" use="required" />
+		<attribute name="borderWidth" type="integer" use="required" />
+		<attribute name="borderColor" type="normalizedString"
+			use="required" />
+		<attribute name="background" type="normalizedString"
+			use="required" />
+		<attribute name="position" type="normalizedString"
+			use="required" />
+
+	</complexType>
+
+
+
+	<complexType name="Vertice">
+
+		<attribute name="width" type="integer" use="required" />
+		<attribute name="height" type="integer" use="required" />
+		<attribute name="background" type="normalizedString"
+			use="required" />
+		<attribute name="backgroundSelected" type="normalizedString"
+			use="required" />
+		<attribute name="borderWidth" type="integer" use="required" />
+		<attribute name="borderColor" type="normalizedString"
+			use="required" />
+
+	</complexType>
+
+
+	<complexType name="Text_box">
+		<attribute name="font" type="normalizedString"
+			use="required" />
+		<attribute name="color" type="normalizedString"
+			use="required" />
+		<attribute name="colorSelected" type="normalizedString"
+			use="required" />
+		<attribute name="align" type="normalizedString"
+			use="required" />
+		<attribute name="spacing" type="normalizedString"
+			use="required" />
+		<attribute name="backgroundSelected" type="normalizedString"
+			use="required" />
+
+
+	</complexType>
+
+	<complexType name="Diagram">
+		<sequence>
+			<element name="nodeTypes" type="conf:Node_types"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+
+			<element name="edgeTypes" type="conf:Edge_types"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+		<attribute name="name" type="string" use="required" />
+		<attribute name="pathFile" type="string" use="required" />
+	</complexType>
+
+	<complexType name="Node_types">
+		<sequence>
+			<element name="nodeConfig" type="conf:Node_config"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Node_config">
+
+		<sequence>
+
+			<element name="type" type="string" maxOccurs="1"
+				minOccurs="1" default="class">
+			</element>
+
+			<element name="iconTollbarSVGPath" type="string"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="imgSVGPath" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="label" type="conf:Label" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="group" type="string" maxOccurs="1"
+				minOccurs="1" default="class">
+			</element>
+
+			<element name="isconfigurable" type="boolean" maxOccurs="1"
+				minOccurs="1" default="true">
+			</element>
+
+			<element name="infoUrlNode" type="conf:Info_url"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<!-- 7 0 1 northwest north northeast 6 8 2 west center east 5 4 3 southwest 
+				south southeast -->
+			<element name="anchors" type="conf:Anchors" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+
+			<element name="propertiesNode" type="conf:Properties"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+
+			<element name="featuresNode" type="conf:Features"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="connects" type="conf:Connects" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="degreeIn" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="degreeOut" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+
+
+		</sequence>
+
+	</complexType>
+
+	<complexType name="Anchors">
+		<sequence>
+			<element name="anchor" type="conf:Anchor"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+
+	</complexType>
+
+	<complexType name="Anchor">
+		<attribute name="position" type="string" use="required" />
+	</complexType>
+
+
+	<complexType name="Features">
+		<sequence>
+			<element name="feature" type="conf:Feature"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Properties">
+		<sequence>
+			<element name="property" type="conf:Property"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Property">
+		<attribute name="name" type="string" use="required" />
+		<attribute name="type" type="string" use="required" />
+		<attribute name="typeShow" type="string" use="required" />
+		<attribute name="disabled" type="string" use="required" />
+		<attribute name="view" type="boolean" use="required" />
+		<attribute name="impExp" type="boolean" use="required" />
+
+
+	</complexType>
+
+
+
+
+
+
+	<complexType name="Label">
+		<all>
+			<element name="underlined" type="conf:Underlined"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+		</all>
+		<attribute name="defaultValue" type="string" use="required" />
+		<attribute name="position" type="string" use="required" />
+		<attribute name="letterCase" type="string" use="required" />
+		<attribute name="firstLetterCase" type="string"
+			use="required" />
+		<attribute name="disabled" type="boolean" use="required" />
+
+	</complexType>
+
+	<complexType name="Underlined">
+		<attribute name="value" type="string" use="required" />
+		<attribute name="controler" type="string" use="required" />
+	</complexType>
+
+	<complexType name="Feature">
+		<attribute name="name" type="string" use="required" />
+		<attribute name="type" type="string" use="required" />
+		<attribute name="value" type="string" use="required" />
+		<attribute name="view" type="boolean" use="required" />
+		<attribute name="impExp" type="boolean" use="required" />
+		<attribute name="imgPath" type="string" use="optional" />
+
+	</complexType>
+
+	<complexType name="Info_url">
+		<sequence>
+			<element name="url" type="string" maxOccurs="unbounded"
+				minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Connects">
+		<sequence>
+			<element name="connect" type="conf:Connect"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Connect">
+		<attribute name="with" type="string" use="required" />
+		<attribute name="to" type="string" use="required" />
+		<attribute name="max" type="string" use="required" />
+		<attribute name="min" type="string" use="required" />
+	</complexType>
+
+	<complexType name="Edge_types">
+		<sequence>
+			<element name="edgeConfig" type="conf:Edge_config"
+				maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Edge_config">
+		<sequence>
+			<element name="type" type="string" maxOccurs="1"
+				minOccurs="1" default="class">
+			</element>
+
+			<element name="iconTollbarSVGPath" type="string"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="lineDuple" type="boolean" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="label" type="conf:Label" maxOccurs="1"
+				minOccurs="1">
+			</element>
+
+			<element name="group" type="string" maxOccurs="1"
+				minOccurs="1" default="class">
+			</element>
+
+			<element name="isConfigurable" type="boolean" maxOccurs="1"
+				minOccurs="1" default="true">
+			</element>
+
+			<element name="infoUrlEdge" type="conf:Info_url"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="propertiesEdge" type="conf:Properties"
+				maxOccurs="1" minOccurs="1">
+			</element>
+
+			<element name="featuresEdge" type="conf:Features"
+				maxOccurs="1" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+</schema>

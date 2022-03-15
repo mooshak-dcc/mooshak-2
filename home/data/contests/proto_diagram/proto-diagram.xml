@@ -1,0 +1,10 @@
+<course id='proto_diagram' name='Diagram Course Prototype' author='José Carlos Paiva' creationDate='2019-01-01T00:00:00.000Z' startDate='2019-01-01T00:30:00.000Z' mode='RELAX' recommender='pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender' xmlns='http://www.example.org/Seqins' xml:space='preserve'>
+
+	<coursepart id='diagram' name='Diagrams' start='example' xml:space='preserve'>
+		<resource id='example' title='Editing example' href='https://www.youtube.com/watch?v=7SCsKsfQ8EA' type='VIDEO' tags='video'/>
+		<resource id='A' title='A - Student&apos;s Profile' href='A' type='PROBLEM' onSuccess='B'/>
+		<resource id='B' title='B - Classes' href='B' type='PROBLEM'/>
+		
+		
+	</coursepart>
+</course>

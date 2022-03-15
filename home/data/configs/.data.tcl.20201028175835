@@ -1,0 +1,9 @@
+set checks {}
+set network {}
+set profiles {}
+set sessions {}
+set users {}
+set flags {}
+set achievements {}
+set ldap {}
+set frozen false

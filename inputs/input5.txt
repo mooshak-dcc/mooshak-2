@@ -1,0 +1,18 @@
+0 ClassE 2
+S multiplicity 3
+C 2 attribute age
+type int
+visibility true
+Node
+1 InterfaceB 1
+S multiplicity 1
+Node
+4 ClassB 1
+S multiplicity 1
+Node
+2 ClassA 1
+S age 1
+Node
+3 Interface 1
+S age 1
+Node

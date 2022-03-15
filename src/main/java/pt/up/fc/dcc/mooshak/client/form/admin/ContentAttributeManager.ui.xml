@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+    
+	<ui:style src="ContentAttributeManager.css" />
+	
+	<g:HTMLPanel ui:field="container">
+		<g:Button ui:field="openPopup">Edit</g:Button>
+	
+		<g:DecoratedPopupPanel autoHideEnabled="true" animationEnabled="true"
+			ui:field="popup">
+			
+			<g:HTMLPanel>
+				<g:HTMLPanel ui:field="filesList" styleName="{style.filesPanel}">
+				
+				</g:HTMLPanel>
+				<g:FileUpload ui:field="fileUpload" />
+				<g:Label ui:field="message" styleName="{style.message}"></g:Label>
+				<g:Button ui:field="ok">OK</g:Button>
+			</g:HTMLPanel>
+			
+		</g:DecoratedPopupPanel>
+		
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

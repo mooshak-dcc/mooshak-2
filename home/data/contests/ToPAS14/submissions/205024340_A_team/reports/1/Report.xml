@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Quantos dias fazes?</exercise>
+    <tests>
+        <test id="T1">
+            <input>2014 5 9
+</input>
+            <expectedOutput>2456787
+</expectedOutput>
+            <obtainedOutput>2456787
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.094"/>
+                <environmentValue name="memory" label="25696.0"/>
+                <environmentValue name="TestOrder" label="0"/>
+            </environmentValues>
+        </test>
+        <test id="T2">
+            <input>1600 1 1
+</input>
+            <expectedOutput>2305448
+</expectedOutput>
+            <obtainedOutput>2305448
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.1"/>
+                <environmentValue name="memory" label="26516.0"/>
+                <environmentValue name="TestOrder" label="1"/>
+            </environmentValues>
+        </test>
+        <test id="T3">
+            <input>1500 1 1
+</input>
+            <expectedOutput>2268933
+</expectedOutput>
+            <obtainedOutput>2268933
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.087"/>
+                <environmentValue name="memory" label="27072.0"/>
+                <environmentValue name="TestOrder" label="2"/>
+            </environmentValues>
+        </test>
+        <test id="T4">
+            <input>1 1 1
+</input>
+            <expectedOutput>1721424
+</expectedOutput>
+            <obtainedOutput>1721424
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.087"/>
+                <environmentValue name="memory" label="25324.0"/>
+                <environmentValue name="TestOrder" label="3"/>
+            </environmentValues>
+        </test>
+        <test id="T5">
+            <input>2014 3 1
+</input>
+            <expectedOutput>2456718
+</expectedOutput>
+            <obtainedOutput>2456718
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.081"/>
+                <environmentValue name="memory" label="28356.0"/>
+                <environmentValue name="TestOrder" label="4"/>
+            </environmentValues>
+        </test>
+        <test id="T6">
+            <input>2014 2 28
+</input>
+            <expectedOutput>2456717
+</expectedOutput>
+            <obtainedOutput>2456717
+</obtainedOutput>
+            <classify>Accepted</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="0.0"/>
+                <environmentValue name="cpu" label="0.09"/>
+                <environmentValue name="memory" label="26500.0"/>
+                <environmentValue name="TestOrder" label="5"/>
+            </environmentValues>
+        </test>
+    </tests>
+    <summary>
+        <mark obtainedValue="0"/>
+        <classify>Accepted</classify>
+    </summary>
+</reportType>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Buddy Memory Allocator</exercise>
+    <tests>
+        <test id="D1">
+            <input>10 5
+A 70
+B 35
+C 80
+D 60
+B 0
+</input>
+            <expectedOutput>A:70
+Hole:64
+D:60
+C:80
+Hole:128
+Hole:512
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29676.0"/>
+                <environmentValue name="TestOrder" label="0"/>
+            </environmentValues>
+        </test>
+        <test id="D2">
+            <input>10 2
+A 100
+B 240
+C 64
+D 256
+B 0
+A 0
+E 75
+C 0
+E 0
+D 0
+</input>
+            <expectedOutput>Hole:1024
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29928.0"/>
+                <environmentValue name="TestOrder" label="1"/>
+            </environmentValues>
+        </test>
+        <test id="D3">
+            <input>10 6
+A 100
+B 240
+C 64
+D 256
+B 0
+A 0
+E 75
+F 30
+C 0
+</input>
+            <expectedOutput>E:75
+Hole:64
+F:30
+Hole:256
+D:256
+Hole:256
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29492.0"/>
+                <environmentValue name="TestOrder" label="2"/>
+            </environmentValues>
+        </test>
+        <test id="D4">
+            <input>10 6
+A 100
+B 240
+C 64
+D 256
+B 0
+A 0
+E 75
+F 30
+C 0
+E 0
+D 0
+F 0
+
+</input>
+            <expectedOutput>Hole:1024
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29596.0"/>
+                <environmentValue name="TestOrder" label="3"/>
+            </environmentValues>
+        </test>
+        <test id="D5">
+            <input>10 5
+A 50
+B 100
+C 100
+D 200
+E 100
+B 0
+C 0
+F 110
+
+
+
+</input>
+            <expectedOutput>A:50
+Hole:64
+Hole:128
+F:110
+E:100
+D:200
+Hole:256
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29664.0"/>
+                <environmentValue name="TestOrder" label="4"/>
+            </environmentValues>
+        </test>
+        <test id="D6">
+            <input>10 6
+</input>
+            <expectedOutput>Hole:1024
+</expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="5.0"/>
+                <environmentValue name="cpu" label="5.0"/>
+                <environmentValue name="memory" label="29632.0"/>
+                <environmentValue name="TestOrder" label="5"/>
+            </environmentValues>
+        </test>
+    </tests>
+    <summary>
+        <mark obtainedValue="0"/>
+        <classify>Time Limit Exceeded</classify>
+    </summary>
+</reportType>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	>
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="../Dialogs.css" />
+
+
+	<g:HTMLPanel styleName="{style.importTeam}">
+		<p>Import a Comma-Separated Values (CSV) file with teams data. 
+		The file content must have 1 record per line and columns separated by commas, semi-colons or tabs. 
+		Separators are automatically detected.</p>
+		<p>An optional header line may assign names to columns. 
+		The type of each column is automatically inferred from the headers, if possible. 
+		Available types are the following.</p>
+		<ul>
+			<li> <b>id</b> - of participant (may be generated on import, if omitted)</li>
+			<li> <b>first_name</b> - of participant</li>
+			<li> <b>last_name</b> - of participant</li>
+			<li> <b>name</b> - of participant (concatenation of the previous, if omitted)</li>
+			<li> <b>email</b> of participant</li>
+			<li> <b>gender</b> - of participant ("Male"/"M" or "Female"/"F")</li>
+			<li> <b>role</b> - of participant ("Coach" or "Contestant")</li>
+			<li> <b>team</b> - identification (<b>mandatory</b>)</li>
+			<li> <b>password</b> in clear text for team authentication</li>
+			<li> <b>group</b> - of team (University, Country, etc)</li>
+			<li> <b>flag</b> - of group</li>
+			<li> <b>color</b> - of group</li>
+			<li> <b>acronym</b> - of group (generated from name, if omitted)</li>
+			<li> <b>country</b> - of team (unused)</li>
+			<li> <b>status</b> - of participant (unused)</li>
+		</ul>
+		<p>If an header line is not available, or if types cannot be inferred from headers, 
+		then you must assign a type to each column. 
+		Even if a type for every column is automatically inferred you should always double 
+		check them and make the appropriate changes, if needed.</p>
+		<g:CheckBox ui:field="clear">Clear existing teams</g:CheckBox>
+		<g:FileUpload ui:field="fileUpload"></g:FileUpload>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

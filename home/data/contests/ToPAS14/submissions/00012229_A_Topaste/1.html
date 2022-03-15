@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00012229_A_Topaste</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00012229_A_Topaste">00012229_A_Topaste</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00012229_A_Topaste/exA7.pas">exA7.pas</a>
+<a href="data/contests/ToPAS14/submissions/00012229_A_Topaste/exA7.pas">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 14:53:49 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 14:53:49 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/DE/Topaste">
+Topas-te
+</a> Login: <code>Topaste</code> Group: DE [DE]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/Pascal">
+Pascal
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/A">
+A: Quantos dias fazes?
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+exA7.pas(23,11) Error: Illegal expression
+exA7.pas(23,12) Fatal: Syntax error, ")" expected but "ordinal const" found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode (normal if you did not specify a source file to be compiled)Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+exA7.pas(23,11) Error: Illegal expression
+exA7.pas(23,12) Fatal: Syntax error, ")" expected but "ordinal const" found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode (normal if you did not specify a source file to be compiled)</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{Observation of <b>Compile Time Error</b> <pre>Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+exA7.pas(23,11) Error: Illegal expression
+exA7.pas(23,12) Fatal: Syntax error, ")" expected but "ordinal const" found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode (normal if you did not specify a source file to be compiled)Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64
+Copyright (c) 1993-2011 by Florian Klaempfl and others
+exA7.pas(23,11) Error: Illegal expression
+exA7.pas(23,12) Fatal: Syntax error, ")" expected but "ordinal const" found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode (normal if you did not specify a source file to be compiled)</pre>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+Program ola;
+var ano,mes,dia,a,b,p,c,d,e,dj:double;
+Begin
+   read(ano);
+   read(mes);
+   read(dia);
+
+
+   ano:=trunc(ano);
+   mes:=trunc(mes);
+   dia:=trunc(dia);
+
+   if(mes&lt;3)then
+   begin
+        ano:=ano-1;
+        mes:=mes+12;
+   end;
+
+   a:=trunc(ano/100);
+   b:=trunc(a/4);
+
+
+   if(ano=&gt;1582)then
+   begin
+    c:=2-a+b;
+   end else
+
+   if(mes=&gt;10)then
+   begin
+    c:=2-a+b;
+   end else
+
+   if(dia=&gt;15)then
+   begin
+    c:=2-a+b;
+   end else
+
+   begin
+    c:=0;
+   end;
+
+   d:=trunc(365.25*(ano+4716));
+   e:=trunc(30.6001*(mes+1));
+   dj:=trunc(d+e+dia+c-1524);
+
+   writeln(trunc(dj));
+end.
+
+</pre>
+
+</body>

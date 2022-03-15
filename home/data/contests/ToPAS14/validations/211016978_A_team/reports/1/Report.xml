@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Quantos dias fazes?</exercise>
+    <tests>
+        <test>
+            <input>1
+84549 7
+33515  174  223 
+48236  238  244 
+21785  200  227 
+42307  168  238 
+42959  157  162 
+37340  243  246 
+45157  64   247 
+</input>
+            <expectedOutput></expectedOutput>
+            <obtainedOutput></obtainedOutput>
+            <classify>Time Limit Exceeded</classify>
+            <mark totalValue="TotalValue?" obtainedValue="0">content?</mark>
+            <environmentValues>
+                <environmentValue name="elapsed" label="10.0"/>
+                <environmentValue name="cpu" label="10.001"/>
+                <environmentValue name="memory" label="29332.0"/>
+                <environmentValue name="TestOrder" label="0"/>
+            </environmentValues>
+        </test>
+    </tests>
+    <summary>
+        <mark obtainedValue="0"/>
+        <classify>Time Limit Exceeded</classify>
+    </summary>
+</reportType>

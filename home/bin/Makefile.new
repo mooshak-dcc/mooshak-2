@@ -1,0 +1,27 @@
+
+all: pass safeexec pkgIndex.tcl
+
+pass: pass.c
+	cc -o pass -g pass.c -lcrypt -ltcl -ldl
+
+pkgIndex.tcl: pass.so
+	echo "pkg_mkIndex . pass.so" | tclsh
+
+pass.so: pass.o
+	cc -shared -o pass.so pass.o
+
+pass.o: pass.c 
+	cc -fPIC -c pass.c
+
+# new safeexec not being used yet 
+#safeexec:
+#	cd SafeExec ; make 
+#	cp SafeExec/safeexec .
+#	chmod u+s,o+x safeexec
+
+safeexec: safeexec.c
+	cc -o safeexec safeexec.c
+	chmod u+s,o+x safeexec
+
+clean:
+	rm -f safeexec pass pass.o pass.so

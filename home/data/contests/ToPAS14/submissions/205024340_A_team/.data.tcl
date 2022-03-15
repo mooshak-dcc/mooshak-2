@@ -1,0 +1,25 @@
+set Consider yes
+set Date 1604655740
+set EvaluatedAt 1604655740
+set Time 205024340
+set Problem A
+set Team team
+set Classify Accepted
+set Mark 0
+set Size 767
+set Observations {}
+set Execution {}
+set State pending
+set Language Java
+set Program Juliano.java
+set UserTestData {}
+set Report Report.xml
+set reports {}
+set Elapsed {}
+set CPU 0.1
+set Memory 28356.0
+set Signals {}
+set Feedback { 6 tests with <b>Accepted</b>}
+set ReviewerObservations {}
+set ReviewerFeedback {}
+set frozen false

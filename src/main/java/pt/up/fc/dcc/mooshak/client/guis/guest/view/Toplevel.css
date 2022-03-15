@@ -1,0 +1,297 @@
+
+
+/** Top **/
+
+.body-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.base {
+	position: relative;
+}
+
+.base {
+	width: 1200px;
+	height: 800px;
+	margin: auto;
+	color: #669;
+}
+
+.base {	
+	background: -webkit-linear-gradient(#BBC,white); /* For Safari */
+    background: -o-linear-gradient(#BBC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BBC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BBC, white); /* Standard syntax (must be last) */
+}	
+
+.header {
+	width: 100%;
+	height: 10%;
+	
+	position: relative;
+
+}
+
+.center, .bottom {
+	width: 100%;
+	height: auto;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 0.3m;
+	font-size: xx-small;
+	color: grey;
+}
+
+/** Header **/
+
+.mooshakButtons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px;
+	z-index: 10;
+}
+
+.banner {
+	
+	width: 	40%;
+	height: auto;
+	float: left;
+	
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.contest {
+	margin-top: 10px;
+	font-size: xx-large;
+	font-weight: bold;
+	
+	color: #0AA;
+	text-align: center;
+}
+
+.team {
+	margin-top: 20px;
+	font-size: x-large;
+	color: #666;
+}
+
+.team .selector {
+	font-size: large;
+	color: #0AA;
+	font-weight: bold;
+	text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.problemsLabel {
+	display: inline-block;
+	font-size: large;
+	color: #666;
+}
+.problemsLabel:AFTER {
+	content: ":";
+}
+
+.problems {
+	float: left;
+	
+	width: 60%;
+	height: auto;
+	
+	margin-top: 45px;
+	
+}
+
+
+.problem {
+	display: inline-block;
+	
+	width: 40px;
+	height: 80%;
+	
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	border-top-left-radius: 10px 10px;
+	border-top-right-radius: 10px 10px;
+		
+	padding-top: 10px;
+	padding-bottom: 10px;
+		
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	cursor: pointer;
+	
+}
+
+/** Center **/
+
+.tabs, .content {
+	float: left;
+}
+
+.tabs {
+	width: 11%;
+	margin-top: 100px;
+}
+
+.tab {
+	position: relative;
+	
+	float: right;
+	clear: both;
+	
+	width:  70px;
+	height: 50px;
+	
+	margin-top:10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	
+	font-weight: bold;
+	text-align: right;
+	vertical-align: text-top;
+	line-height: 50px;
+	
+	padding-right: 10px;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	
+	cursor: pointer;
+}
+
+.tab:BEFORE {
+	position: absolute;
+	
+	left: 0px;
+	margin-top: 25px;
+	margin-left:-50px;
+	
+	width: 49px;
+	height: 0px;
+	content: "";
+	
+	background: #AAA;
+	
+	border: 1px;
+	border-style: solid;
+	border-color: #AAA;
+}
+
+.spacer {
+	float: right;
+	width: 100%;
+	height: 50px;
+}
+
+.content {
+	width: 75%;
+	height: 630px;
+	background: #EEE;	
+	
+	padding: 50px;
+	
+	overflow: hidden;
+}
+
+.ranking, .submission {
+	width: 100%;
+}
+
+.submission {
+	height: 26%;
+	padding-top: 5px;
+}
+
+.ranking {
+	height: 74%;
+}
+
+.content, .selected {
+	background: #EFEFEA;
+	color: #666;
+}
+
+/** Bottom **/
+
+.listings {
+	margin-left: 15%;
+	width: 1000px;
+}
+
+
+.listing {
+	display: inline-block;
+	
+	width: 150px;
+	
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	border-bottom-left-radius: 10px 10px;
+	border-bottom-right-radius: 10px 10px;
+		
+	padding-top: 10px;
+	padding-bottom: 10px;
+		
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	cursor: pointer;
+	
+}
+
+.mooshakButtons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px;
+	z-index: 10;
+}
+
+
+/** Footer **/
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	margin-right: 1cm;	
+}
+
+.middle {
+	float: left;
+	width: 10cm;
+	margin-left: 10cm;
+}
+
+.logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 3cm;
+	margin: 5mm;
+	z-index: 1;
+}

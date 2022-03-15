@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:e="urn:import:pt.up.fc.dcc.eshu.client.eshugwt"
+	xmlns:ace="urn:import:edu.ycp.cs.dh.acegwt.client.ace"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils">
+
+
+	<ui:style src="TabbedMultipleEditor.css"
+		type="pt.up.fc.dcc.mooshak.client.widgets.TabbedMultipleEditor.BaseStyle" />
+		
+	<g:TabPanel addStyleNames="{style.panel}" ui:field="panel">
+		<g:Tab text="File Editor">
+			<ace:AceEditor styleName='{style.codeEditor}'
+					ui:field='codeEditor' />
+		</g:Tab>
+		<g:Tab text="Diagram Editor">
+			<w:ResizableHtmlPanel ui:field="diagramEditorTab">
+				<u:SelectOneListBox 
+							ui:field="diagramLanguageSelector" 
+							styleName="{style.diagram-language-selector}">
+				</u:SelectOneListBox>
+				<e:Eshu styleName='{style.diagramEditor}' ui:field='diagramEditor' />
+			</w:ResizableHtmlPanel>
+		</g:Tab>
+		<g:Tab text="Preview">
+			<w:StatementViewer styleName='{style.statementViewer}' ui:field='statementViewer' />
+		</g:Tab>
+	</g:TabPanel>
+</ui:UiBinder> 

@@ -1,0 +1,90 @@
+
+.base {
+		width: 100%;
+		height: 100%;
+	
+}
+
+.identify {
+	width: 100%;
+	height: 0px;
+	color: white;
+	font-size: x-large;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-shadow: 1px 1px 2px #BBC;
+	display: inline-block;
+	position: relative;
+	top: -30px;
+	margin-left: 100px;
+}
+
+.identify > div {
+	display: inline;
+}
+
+.left, .right {
+	float: left;
+	height: 100%;
+}
+
+.left {
+	width: 65%;
+}
+
+.right {
+	width: 35%;
+}
+
+.filename {
+	
+}
+
+.left .code {
+	width: 95%;
+	height: 88%;
+	margin-top: 5px;
+}
+
+.response {
+	position: relative;
+	height: 15%;
+}
+
+.observations {
+	width: 75%;
+	height: 100%;
+	overflow: auto;
+}
+.feedback {
+	visibility: hidden;
+	position: absolute;
+	top: 6mm;
+	right: 10mm;
+}
+
+.iodata {
+	width: 95%;
+	height: 90%;
+	border: 1px;
+	border-style: solid;
+}
+
+.commands {
+	width: 100%;
+	height: 10%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+.button {
+	padding-left: 10px;	
+	padding-right: 10px;
+}
+
+.left .fileupload {
+	display: block;
+	width: 100%;	
+	margin-bottom: 5px;
+}

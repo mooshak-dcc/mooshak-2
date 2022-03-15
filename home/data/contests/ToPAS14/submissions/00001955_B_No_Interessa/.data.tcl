@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633355
+set Time 1955
+set Problem B
+set Team No_Interessa
+set Classify ACCEPTED
+set Mark 0
+set Size 428
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Java
+set Program b.java
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.221
+set Memory 1937232.0
+set Signals {}
+set Feedback {{10 tests with <b>Accepted</b>}}

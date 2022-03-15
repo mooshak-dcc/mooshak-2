@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399634924
+set Time 3524
+set Problem B
+set Team Pied_Piper
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 423
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program b1.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.0
+set Memory 64.0
+set Signals {}
+set Feedback {{1 test with <b>Wrong Answer</b>} {1 test with <b>Wrong Answer</b>}

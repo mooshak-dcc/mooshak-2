@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+
+	<ui:style>
+	@external .datetimepicker, .next, .prev, .glyphicon-arrow-right, .glyphicon-arrow-left;
+	
+	div.datetimepicker {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 1000;
+		display: none;
+		float: left;
+		min-width: 160px;
+		padding: 5px 0;
+		margin: 2px 0 0;
+		font-size: 14px;
+		text-align: left;
+		list-style: none;
+		background-color: #fff;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		border: 1px solid #ccc;
+		border: 1px solid rgba(0, 0, 0, .15);
+		border-radius: 4px;
+		-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+	
+	.dateBox {
+		border-radius: 5px;
+		border-color: #BCC;
+		padding-left: 2mm;
+		padding-right: 2mm;
+		background-color: white;
+		font-family: Arial Unicode MS, Arial, sans-serif;
+		font-size: small;
+		width: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	div.datetimepicker th.next span,
+	div.datetimepicker th.prev span {
+		border: solid black;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+	}
+	
+	div.datetimepicker th.next span.glyphicon-arrow-right {
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		height: auto;
+	}
+	
+	div.datetimepicker th.prev span.glyphicon-arrow-left {
+		transform: rotate(135deg);
+		-webkit-transform: rotate(135deg);
+		height: auto;
+	}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<w:CustomDateTimePicker ui:field="dateTextBox"
+			highlightToday="true" autoClose="true"
+			format="dd/mm/yyyy hh:ii:ss" addStyleNames="{style.dateBox}" />
+			
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

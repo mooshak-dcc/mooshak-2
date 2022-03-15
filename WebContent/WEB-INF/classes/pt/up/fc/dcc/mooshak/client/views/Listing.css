@@ -1,0 +1,36 @@
+
+
+.flag {
+	height: 32px;
+}
+
+.columnSelector {
+	position: absolute;
+	right: 0;
+	top: -5px;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	vertical-align: middle;
+	color: blue;
+}
+
+.exportBtn {
+	position: absolute;
+	right: -30px;
+	top: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.timeBtn {
+	position: absolute;
+	left: -30px;
+	top: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	vertical-align: middle;
+}

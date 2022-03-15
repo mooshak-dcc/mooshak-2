@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dl2 xmlns="http://www.example.org/EshuConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/EshuConfig DL2.xsd ">
+  <style>
+    <editorStyle width="900" height="500" borderWidth="1" 
+          borderColor="#000" background="white"  
+          gridVisible="false" gridColorLine="#c0c0c0"/>
+    
+    <toolbarStyle width="500" height="300" borderWidth="1"
+       				borderColor="black" background="WhiteSmoke"
+       				position="vertical"  />
+     <windowsProperties disabled="false" startVisible="false"/>  				
+  </style>
+  <diagram extension="" name="">
+    
+   
+    
+    
+    
+    <nodeTypes>
+      <type>Action</type>
+      <variant>Action</variant>
+      <label alignment="center" defaultValue="Action" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="30" iconTollbarSVGPath="./image/Activity/ActionIcon.svg" imgSVGPath="./image/Activity/Action.svg" width="60"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Activation"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+    
+    <nodeTypes>
+      <type>Activity</type>
+      <variant>Activity</variant>
+      <label alignment="center" defaultValue="Activity" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0"  underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="40" iconTollbarSVGPath="./image/Activity/ActivityIcon.svg" imgSVGPath="./image/Activity/Activity.svg" width="100"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Activation"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+    
+    
+     <nodeTypes>
+      <type>Decision</type>
+      <variant>Decision</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="40" iconTollbarSVGPath="./image/Activity/DecisionIcon.svg" imgSVGPath="./image/Activity/Decision.svg" width="40"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+     <nodeTypes>
+      <type>Initial</type>
+      <variant>Initial</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/InitialIcon.svg" imgSVGPath="./image/Activity/Initial.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+        
+  
+      <nodeTypes>
+      <type>Final</type>
+      <variant>Initial</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="center"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/FinalIcon.svg" imgSVGPath="./image/Activity/Final.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+     
+      <nodeTypes>
+      <type>HorizontalForkJoin</type>
+      <variant>HorizontalForkJoin</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors fixed="true"> 
+         <anchor  position="northnorthwest"/>
+         <anchor  position="northnortheast"/> 
+         <anchor  position="south"/>
+          
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="15" iconTollbarSVGPath="./image/Activity/HorizontalForkJoinIcon.svg" imgSVGPath="./image/Activity/HorizontalForkJoin.svg" width="60"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+       
+        <nodeTypes>
+      <type>VerticalForkJoin</type>
+      <variant>HorizontalForkJoin</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0"  underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors fixed="true"> 
+         <anchor  position="westsouthwest"/>
+         <anchor  position="east"/> 
+         <anchor  position="westnortwest"/>
+          <!--  anchor  position="northwest"/> 
+          <anchor  position="northeast"/>
+          <anchor  position="southeast"/>
+          <anchor  position="southwest"/>
+          -->
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="60" iconTollbarSVGPath="./image/Activity/VerticalForkJoinIcon.svg" imgSVGPath="./image/Activity/VerticalForkJoin.svg" width="15"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+       
+      
+        <nodeTypes>
+      <type>FlowFinal</type>
+      <variant>FlowFinal</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/FlowFinalIcon.svg" imgSVGPath="./image/Activity/FlowFinal.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+     
+        
+      <nodeTypes>
+      <type>Frequency</type>
+      <variant>FlowFinal</variant>
+      <label alignment="center" defaultValue="Frequency" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="bottom" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors fixed="true"> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+         <anchor  position="center"/>
+         
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="45" iconTollbarSVGPath="./image/Activity/FrequencyIcon.svg" imgSVGPath="./image/Activity/Frequency.svg" width="30"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+     
+     
+
+      
+      
+        
+        <nodeTypes>
+      <type>HistoryPseudostate</type>
+      <variant>HistoryPseudostate</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/HistoryPseudostateIcon.svg" imgSVGPath="./image/Activity/HistoryPseudostate.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes> 
+      
+      <nodeTypes>
+      <type>Jump</type>
+      <variant>HistoryPseudostate</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/JumpIcon.svg" imgSVGPath="./image/Activity/Jump.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+    
+        
+      
+       <nodeTypes>
+      <type>ReceiveSinal</type>
+      <variant>ReceiveSinal</variant>
+      <label alignment="left" defaultValue="ReceiveSinal" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors fixed="true"> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="40" iconTollbarSVGPath="./image/Activity/ReceiveSinalIcon.svg" imgSVGPath="./image/Activity/ReceiveSinal.svg" width="75"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+        
+       
+      <nodeTypes>
+      <type>SendSinal</type>
+      <variant>ReceiveSinal</variant>
+      <label alignment="center" defaultValue="SendSinal" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors fixed="true"> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="40" iconTollbarSVGPath="./image/Activity/SendSinalIcon.svg" imgSVGPath="./image/Activity/SendSinal.svg" width="65"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+      
+       <nodeTypes>
+      <type>Region</type>
+      <variant>Region</variant>
+      <label alignment="center" defaultValue="" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="50" iconTollbarSVGPath="./image/Activity/RegionIcon.svg" imgSVGPath="./image/Activity/Region.svg" width="70"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+       <nodeTypes>
+      <type>InterruptingEdge</type>
+      <variant>InterruptingEdge</variant>
+      <label alignment="center" defaultValue="" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+       <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="35" iconTollbarSVGPath="./image/Activity/InterruptingEdgeIcon.svg" imgSVGPath="./image/Activity/InterruptingEdge.svg" width="35"/>
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+       
+      <nodeTypes>
+      <type>Swimline</type>
+      <variant>Swimline</variant>
+      <label alignment="center" defaultValue="Swimline" disabled="true" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="top" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="%1"/>
+      </label>
+       <containers>
+       
+         <container alignment="left" name="Condition" disabled="true" pattern="" underlined="0" default_text="" numberDefaultTextbox="1" addTextBoxes="false" lineDash="false">
+          <field name="condition" value="1"/>
+        </container>
+
+	   </containers>
+      <isConfigurable>false</isConfigurable>
+      <includeElement>true</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html</url>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+      <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+        <anchor  position="north"/>
+        <anchor  position="south"/> 
+        <anchor  position="east"/>
+        <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="160" iconTollbarSVGPath="./image/Activity/SwimlineIcon.svg" imgSVGPath="./image/Activity/SwimlineIcon.svg"  width="180" />
+      <nodeValidation allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+         <connect max="unbounded" min="0" to="InterruptingEdge" with="all"/>
+        </connects>
+      </nodeValidation>
+    </nodeTypes>
+    
+    
+     <nodeTypes>
+      <type>Label</type>
+      <variant>Label</variant>
+      <label alignment="center" defaultValue="text" disabled="false" firstLetterCase="lowercase" letterCase="lowercase" pattern="(\w+)" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial" >
+        <field name="name" value="1"/>
+      </label>
+      <isConfigurable>false</isConfigurable>
+      <includeElement>false</includeElement>
+       <rotation>false</rotation>
+      <infoUrlNode>
+        <url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+      </infoUrlNode>
+       <handlers> 
+         <handler  position="northwest"/> 
+         <handler  position="northeast"/>
+         <handler  position="southeast"/>
+         <handler  position="southwest"/> 
+      </handlers>
+      <anchors> 
+         <anchor  position="north"/>
+         <anchor  position="south"/> 
+          <anchor  position="east"/>
+          <anchor  position="west"/> 
+      </anchors>
+      <propertiesNode>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesNode>
+       <featuresNode>
+        </featuresNode>
+      <nodeStyle autoresize="false" height="30" iconTollbarSVGPath="./image/Activity/LabelIcon.svg" imgSVGPath="./image/Activity/Label.svg" width="90"/>
+      <nodeValidation notAvailable="false" allAnchorsConnect="false" degreeIn="unbounded" degreeOut="unbounded">
+        <connects>
+          <connect max="unbounded" min="0" to="Component" with="Decision"/>
+        </connects>
+      </nodeValidation>
+      
+    </nodeTypes>
+    
+    
+      <edgeTypes>
+      <type>ActivityEdges</type>
+      <variant>ActivityEdges</variant>
+      <label alignment="center" defaultValue="text" disabled="false" firstLetterCase="" letterCase="" pattern="" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial">
+        <field name="name" value="%1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <infoUrlEdge>
+        <url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+      </infoUrlEdge>
+      <propertiesEdge>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesEdge>
+     <featuresEdge>
+     	<feature name="key0" type="boolean" value="false" imgPath="none" impExp="true" view="true" /> 
+     	<feature name="key1" type="boolean" value="false" imgPath="none" impExp="true" view="true" source="true"/> 
+     	<feature name="key2" type="boolean" value="false" imgPath="none" impExp="true" view="true" target= "true"/>    
+     </featuresEdge>
+     <cardinality>false</cardinality>
+      <edgeStyle iconTollbarSVGPath="./image/Activity/ActivityEdges.svg" lineDuple="false" lineDash="false" >
+        <headSource dash="false" fill="false" type="none"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+      </edgeStyle>
+    </edgeTypes>
+    
+    
+       <edgeTypes>
+      <type>ObjectFlowEdge</type>
+      <variant>ObjectFlowEdge</variant>
+      <label alignment="center" defaultValue="text" disabled="false" firstLetterCase="" letterCase="" pattern="" position="center" marginHeight="0" marginWidth="0" underlined="0"  textColor="black" textFont="11px Arial">
+        <field name="name" value="%1"/>
+      </label>
+      <isConfigurable>true</isConfigurable>
+      <infoUrlEdge>
+        <url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+      </infoUrlEdge>
+      <propertiesEdge>
+         <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+      </propertiesEdge>
+     <featuresEdge>
+     	<feature name="key0" type="boolean" value="false" imgPath="none" impExp="true" view="true" /> 
+     	<feature name="key1" type="boolean" value="false" imgPath="none" impExp="true" view="true" source="true"/> 
+     	<feature name="key2" type="boolean" value="false" imgPath="none" impExp="true" view="true" target= "true"/>    
+     </featuresEdge>
+     <cardinality>false</cardinality>
+      <edgeStyle iconTollbarSVGPath="./image/Activity/ActivityEdges.svg" lineDuple="false" lineDash="false" >
+        <headSource dash="false" fill="false" type="none"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+      </edgeStyle>
+    </edgeTypes>
+    
+    
+    
+    
+     <syntaxeValidation  
+    	syntaxeValidationIn="inKora" 
+    	edgesValidation="true" 
+    	nodesValidation="true">
+      <reducibles>
+      <elementType>Node1</elementType>
+      </reducibles>
+      <componentValidation disable="false" numberMinComponent="unbounded" numberMaxComponent="unbounded"/>
+    </syntaxeValidation>
+  </diagram>
+</dl2>

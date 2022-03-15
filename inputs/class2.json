@@ -1,0 +1,128 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Class",
+   "id": 0,
+   "x": 87,
+   "y": 82,
+   "width": 71,
+   "height": 79,
+   "label": "Name",
+   "key": "false",
+   "features": [],
+   "containers": [
+    {
+     "name": "Attribute",
+     "value": [
+      "+pessoa:int",
+      "-size:int"
+     ]
+    },
+    {
+     "name": "Operation",
+     "value": [
+      "+increase():int"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "Interface",
+   "id": 1,
+   "x": 339,
+   "y": 46,
+   "width": 90,
+   "height": 85,
+   "label": "Name",
+   "key": "false",
+   "features": [],
+   "containers": [
+    {
+     "name": "Attribute",
+     "value": []
+    },
+    {
+     "name": "Operation",
+     "value": [
+      "+increase():int"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "DataType",
+   "id": 2,
+   "x": 210,
+   "y": 147,
+   "width": 90,
+   "height": 85,
+   "label": "Name",
+   "key": "false",
+   "features": [],
+   "containers": [
+    {
+     "name": "Attribute",
+     "value": [
+      "#length:int"
+     ]
+    },
+    {
+     "name": "Operation",
+     "value": [
+      "+increase()"
+     ]
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "type": "Association",
+   "id": 3,
+   "label": "text",
+   "source": 0,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 119.712890625,
+     "y": 158
+    },
+    {
+     "x": 207,
+     "y": 186.5
+    }
+   ],
+   "features": [
+    {
+     "name": "key",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "type": "AssociationOnly",
+   "id": 4,
+   "label": "text",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 252,
+     "y": 144
+    },
+    {
+     "x": 381,
+     "y": 128
+    }
+   ],
+   "features": [
+    {
+     "name": "key",
+     "value": "false"
+    }
+   ]
+  }
+ ]
+}

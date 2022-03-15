@@ -1,0 +1,4 @@
+# Module scoreboard
+# RPC service class, partial path of RPC policy file
+pt.up.fc.dcc.mooshak.client.events.EventService, 3B6C0DA09B90AFDF1B1C6B98A7B24AAA.gwt.rpc
+pt.up.fc.dcc.mooshak.client.services.BasicCommandService, 6CECCD8579E8C5B0B043B96130572D43.gwt.rpc

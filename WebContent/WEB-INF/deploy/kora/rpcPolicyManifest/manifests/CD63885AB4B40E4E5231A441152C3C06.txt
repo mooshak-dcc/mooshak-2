@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.KoraCommandService
+path: E87A7E2A1A709766C4BABE3FDDDF05DB.gwt.rpc

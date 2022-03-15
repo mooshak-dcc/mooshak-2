@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	>
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="../Dialogs.css">
+	    .header {
+			color: black;
+			background: gray;
+		}
+		.headerTypes {
+			color: white;
+			font-weight: bold;
+			background: gray;
+		}
+	    .listing {
+			border: 0;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+	
+		<p>
+			Use this dialog to set a <b>type</b> to your contest. A number of
+			fields in different folders will be automatically set according to the
+			following table. Set one of the available types using the radio
+			buttons in the table's heading and then press Submit
+		</p>
+		<table class="{style.listing}" cellpadding="1" cellspacing="0" width="80%" style="margin:auto;">
+		<tbody>
+			<tr class="{style.header}">
+				<th rowspan="2">Folder</th>
+				<th rowspan="2">Field</th>
+				<th colspan="9">Types</th>
+			</tr>
+			<tr class="{style.headerTypes}" ui:field="header">
+				
+			</tr>
+			<tr bgcolor="white" ui:field="policy">
+				<td><code>.</code></td>
+				<td>Policy</td>
+				
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="hidelistings">
+				<td><code>.</code></td>
+				<td>HideListings</td>
+				
+			</tr>
+			<tr bgcolor="white" ui:field="virtual">
+				<td><code>.</code></td>
+				<td>Virtual</td>
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="service">
+				<td><code>.</code></td>
+				<td>Service</td>
+			</tr>
+			<tr bgcolor="white" ui:field="challenge">
+				<td><code>.</code></td>
+				<td>Challenge</td>
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="printoutsList">
+				<td><code>printouts</code></td>
+				<td>List-Pending</td>
+			</tr>
+			<tr bgcolor="white" ui:field="balloonsList">
+				<td><code>balloons</code></td>
+				<td>List-Pending</td>
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="submissionsFeedback">
+				<td><code>submissions</code></td>
+				<td>Give_feedback</td>
+			</tr>
+			<tr bgcolor="white" ui:field="submissionsErrors">
+				<td><code>submissions</code></td>
+				<td>Show_errors</td>
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="submissionsState">
+				<td><code>submissions</code></td>
+				<td>Default_state</td>
+			</tr>
+			<tr bgcolor="white" ui:field="submissionsMultiAccepts">
+				<td><code>submissions</code></td>
+				<td>Multiple_accepts</td>
+			</tr>
+			<tr bgcolor="lightGrey" ui:field="maxProg">
+				<td><code>languages</code></td>
+				<td>MaxProg</td>
+			</tr>
+		</tbody></table>
+	
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

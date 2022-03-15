@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>risk</title>
+<META NAME="description" CONTENT="risk">
+<META NAME="keywords" CONTENT="risk">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+
+</head>
+
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Financial Risk</a>
+</h1>
+
+<P>
+As a rule the ACME Corporation clients pay within 30 days from shipment. Nevertheless,
+there is the risk that a client may be unable to fulfill its responsibility.
+The ACME Corporation transfered this risk to a financial insurance company that
+covers the responsibility of each customer up to a certain debt ceiling, depending
+on the customer financial record.  
+
+<P>
+In order not to displease its clients the policy of the ACME Corporation is
+to continue selling to a client after reaching the debt ceiling imposed by the
+financial insurance company. In this case the risk above the debt ceiling is
+assumed by the ACME Corporation. 
+
+<P>
+The CEO of the ACME Corporation has to decide if the client's debt ceiling needs
+to be renegotiated with the financial insurance company. For that she wants
+to know what percentage of the client's debt is not being covered by the insurance
+company in the present deal.  
+
+<P>
+The ACME Financial Department came up with a formula to measure a client risk.
+Consider the step function <IMG
+ WIDTH="42" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="\( D_{c}(t) \)"> - the debt of client <IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="\( c \)"> at
+time <IMG
+ WIDTH="10" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\( t \)">, as exemplified bellow.
+
+<P>
+<BR>
+<BR>
+<DIV ALIGN="CENTER"><!-- MATH
+ $\resizebox*{0.8\textwidth}{!}{\includegraphics{risk.eps}}$
+ -->
+<IMG
+ WIDTH="431" HEIGHT="228" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\resizebox*{0.8\textwidth}{!}{\includegraphics{risk.eps}}"> </div>
+<P>
+<DIV ALIGN="CENTER"></div>
+<BR>
+<BR>
+
+<P>
+The risk associated with a debt is the area defined by function and the x axis,
+i.e. the risk between time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="\( t_{0} \)"> and <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="\( t_{1} \)"> the integral <!-- MATH
+ $\int ^{t_{1}}_{t_{0}}D_{c}(t)$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="\( \int ^{t_{1}}_{t_{0}}D_{c}(t) \)">.
+Considering that each client <IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="\( c \)"> has a debt ceiling <IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="\( L_{c} \)"> the uncovered
+risk is just the area above the debt ceiling that can be defined as the integral 
+
+<P>
+<BR><P></p>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\int ^{t_{1}}_{t_{0}}p(D_{c}(t)-L_{c})\qquad \qquad where\qquad \qquad p(x)=\left\{ _{0\Leftarrow x<0}^{x\Leftarrow x\geq 0}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="408" HEIGHT="47" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}
+\int ^{t_{1}}_{t_{0}}p(D_{c}(t)-L_{c})\qquad \qquad where\qq...
+...d p(x)=\left\{ _{0\Leftarrow x&lt;0}^{x\Leftarrow x\geq 0}\right) \end{displaymath}">
+</div>
+<BR CLEAR="ALL">
+<P></p>
+
+<P>
+Thus, the percentage of uncovered risk for all clients is quotient of the sum
+of all uncovered risks by the sum of all risks, as given by the following formula:
+
+<P>
+<BR><P></p>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\sum _{c}\: \int ^{t_{1}}_{t_{0}}\: p(D_{c}(t)-L_{c})}{\sum _{c}\: \int ^{t_{1}}_{t_{0}}\: D_{c}(t)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="153" HEIGHT="57" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}
+\frac{\sum _{c}\: \int ^{t_{1}}_{t_{0}}\: p(D_{c}(t)-L_{c})}{\sum _{c}\: \int ^{t_{1}}_{t_{0}}\: D_{c}(t)}\end{displaymath}">
+</div>
+<BR CLEAR="ALL">
+<P></p>
+
+<P>
+You where was asked to write a program to compute the percentage of uncovered
+risk in the last fiscal year, using the formula above and the data provided
+by a listing of the ACME's ERP.
+
+<P>
+
+<H2><A NAME="SECTION00011000000000000000">
+Input description</a>
+</h2>
+
+<P>
+The listing you will use as input starts with the number of clients with sales
+in the last fiscal year. For each client the first line has the debt limit and
+the number of sales. In the following lines, one for each sale, there is the
+sale's value, the day of the year of the invoice and the day of the year of
+the receipt. 
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Output description</a>
+</h2>
+
+<P>
+You program must write the percentage of uncovered risk, truncated to 2 fractional
+digits.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Sample input</a>
+</h2>
+
+<P>
+
+<DL COMPACT>
+<DT>
+<DD>1 
+
+<P>
+40000 3 
+
+<P>
+35000 30 60 
+
+<P>
+15000 40 70 
+
+<P>
+40000 90 120
+</dd>
+</dl>
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Sample output</a>
+</h2>
+
+<P>
+
+<DL COMPACT>
+<DT>
+<DD>7.40%
+</dd>
+</dl>
+<P>
+
+
+2001-09-24
+</address>
+</body>
+</html>
+
+
+

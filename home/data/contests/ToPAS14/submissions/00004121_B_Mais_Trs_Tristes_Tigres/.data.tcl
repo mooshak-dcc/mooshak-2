@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399635521
+set Time 4121
+set Problem B
+set Team Mais_Trs_Tristes_Tigres
+set Classify ACCEPTED
+set Mark 0
+set Size 318
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program main.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.001
+set Memory 64.0
+set Signals {}
+set Feedback {{10 tests with <b>Accepted</b>}}

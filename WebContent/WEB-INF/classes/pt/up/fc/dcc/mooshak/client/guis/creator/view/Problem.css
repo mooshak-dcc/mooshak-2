@@ -1,0 +1,363 @@
+
+.base {
+		width: 100%;
+		height: 100%;
+		position: relative;
+}
+
+.form {
+		width: 100%;
+		height: 95%;
+}
+
+.left, .right {
+	float: left;
+	width: 49%;
+	height: 80%;
+}
+
+.left {
+	width: 42%;
+}
+
+.right {
+	width: 57%;
+}
+
+.left {
+	clear: both;
+	margin-right: 1%;
+}
+
+.problemdata {
+	width: 25%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	display: inline-block;
+	
+	float: left;
+}
+
+.problemdata span {	
+	font-weight: bold;
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+}
+
+.problemdata .name {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .name input {
+	width: 90%;
+}
+
+.problemdata .title {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .title input {
+	width: 90%;
+}
+
+.problemdata .colorpicker {
+	border: 0;
+	width: 80px;
+	height: 25px;
+	font-size: small;
+	display: inline-block;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+.problemdata .difficulty {
+	display: inline-block;
+	width: 60%;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+.problemdata .type {
+	display: inline-block;
+	width: 60%;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+.problemdata .editorKind {
+	display: inline-block;
+	width: 60%;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+.problemdata .environment {
+	display: inline-block;
+	width: 60%;
+	cursor: pointer;
+	margin: 2px 0;
+}
+
+.problemdata .timeout {
+	text-align: right;
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .timeout input {
+	width: 90%;
+}
+
+.problemdata .start {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .start input {
+	width: 100%;
+}
+
+.problemdata .stop {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .stop input {
+	width: 100%;
+}
+
+.problemdata .staticCor {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .staticCor input {
+	width: 90%;
+}
+
+.problemdata .dynamicCor {
+	display: inline-block;
+	width: 60%;
+	margin: 2px 0;
+}
+
+.problemdata .dynamicCor input {
+	width: 90%;
+}
+
+.filename {
+	
+}
+
+.tip {
+	font-weight: normal !important;
+	font-style: italic;
+}
+
+.problemdesc {
+	width: 63%;
+	margin-bottom: 4%;
+	margin-top: 24px;
+	vertical-align: top;
+	position: relative;
+	float: left;
+	display: table;
+}
+
+.problemdesc > div {
+	display: flex;
+}
+
+.problemdesc span {
+	font-weight: bold;
+	flex:1;
+	padding-right: 5px;
+}
+
+.descriptions {
+	flex:1;
+	height: 32px;
+}
+
+.descSet {
+	position: relative;
+	display: table-row;
+	height: 16px;
+}
+
+.descriptions span {
+	font-weight: bold;
+}
+
+.spnDesc {
+	display: table-cell;
+	height: 1.5em;
+	vertical-align: top;
+	padding-top: 0.5em;
+}
+
+.lblDesc, .lblenv, .lblpdf {
+	display: table-cell;
+	height: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+}
+
+.code {
+	width: 95%;
+	height: 85%;
+}
+
+
+.leftGrid {
+	position: relative;
+	width: 45%;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.rightGrid {
+	position: relative;
+	width: 37%;
+	float: right;
+}
+
+.grid-container {
+	position: relative;
+	width: 100%;
+	padding: 0 0 5px;
+	clear: both;
+}
+
+.iodata th, .programdata th, .solutiondata th, .imagedata th {
+	height: 22px;
+}
+
+.iodata {
+	width: 95%;
+	height: 175px;
+	border: 0;
+	border-style: solid;
+}
+
+.observations {
+	width: 100%;
+	height: 85px;
+	border: 0;
+	resize:none;
+	background-color: white;
+}
+
+.programdata {
+	height: 160px;
+	border: 0;
+	border-style: solid;
+}
+
+.solutiondata {
+	height: 95px;
+	border: 0;
+	border-style: solid;
+}
+
+.imagedata {
+	width: 95%;
+	height: 88px;
+	border: 0;
+	border-style: solid;
+}
+
+ .selected {
+	border: 0;
+	color: orange;
+	font-weight: bold;
+ }
+
+.commands {
+	width: 100%;
+	height: 20%;
+}
+
+.button {
+	background: #AAA;
+	color: #FFF;
+	
+	border-radius: 10px 10px;
+	border-radius: 10px 10px;
+	
+	font-size: x-large;
+	margin: 20px;
+	padding: 10px;	
+}
+
+.fileupload {
+	display: block;
+	margin-top: 2%;
+	margin-bottom: 4%;
+	width: 100%;	
+	cursor: pointer;
+}
+
+.message {
+	text-align: center;
+	color: orange;
+	margin: auto;
+	display: block;
+	font-size: x-large;
+	position: absolute;
+	bottom:-50px;
+	width: 100%;
+	z-index: 99999;
+}
+
+.addBtn:after {
+	content: '+';
+	color: #1ff14a;	
+	font-weight: bold;
+	line-height: 0;
+}
+
+.addImage:after {
+	content: '+';
+	color: #1ff14a;	
+	font-weight: bold;
+	line-height: 0;
+}
+
+.addBtn, .addImage {
+	float: right;
+	font-size: medium;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	border: 0;
+}
+
+.deselect {
+	display: block;
+	position: relative;
+	float: right;
+	margin-right: 25px;
+}
+
+.deleteBtn {
+	color: red;
+	border: 0;
+	padding: 2px;
+	display: block;
+}
+
+.hide {
+	display: none;
+}

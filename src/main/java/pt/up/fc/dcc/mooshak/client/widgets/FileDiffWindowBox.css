@@ -1,0 +1,52 @@
+
+.diffPanel {
+	width: 100%;
+	min-height: 480px;
+	min-width: 590px;
+}
+
+.filePanel {
+	width: 32%;
+	height: 100%;
+	overflow-y: auto;
+	background-color: white;
+	padding: 5px;
+	border: 1px solid #ededed;
+	box-sizing: border-box;
+}
+
+.left {
+	margin-right: 1%;
+	float: left;
+}
+
+.center {
+	margin: 0 1%;
+	float: left;
+}
+
+.right {
+	margin-left: 1%;
+	float: right;
+}
+
+.okBtn {
+	margin: 5px;
+	float: right;
+	height: 30px;
+}
+
+.headers {
+	width: 100%;
+	height: 30px;
+	font-weight: bold;
+}
+.headers >div{
+	width: 32%;
+	float: left;
+	text-align: center;
+}
+
+del {
+	color: red;
+}

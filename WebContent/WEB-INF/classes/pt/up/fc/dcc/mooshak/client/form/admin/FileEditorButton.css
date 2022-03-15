@@ -1,0 +1,76 @@
+
+.base {
+	width: 100%;
+	height: 90%;
+}
+
+.code {
+	margin: 5px;
+	
+}
+
+.naming {
+	margin: 5px;
+}
+
+.menu {
+	display: flex;
+	margin: 5px;
+	overflow: hidden;
+}
+
+.menu > input {
+	flex-grow: 1;
+}
+
+.menu > button {
+	flex-grow: 0;
+}
+
+.fileupload {
+	display: block;
+	float: left;	
+	margin:5px;
+	margin-bottom: 10px;
+}
+
+.filename {
+	display: inline-block;
+}
+
+.naming span {
+	width: 30%;
+	min-width: 110px;
+}
+
+.naming .filenameInput {
+	width: 69%;
+	min-width: 110px;
+}
+
+.naming .filenameInput input{
+	-webkit-box-sizing : border-box;‌​
+    -moz-box-sizing: border-box;
+    box-sizing : border-box;
+    width: 100%;
+}
+
+.okBtn {
+	margin: 5px;
+	height: 30px;
+}
+
+.downloadBtn {
+	margin: 5px;
+	height: 30px;
+}
+
+.cancelBtn {
+	margin: 5px;
+	height: 30px;
+}
+
+.removeBtn {
+	margin: 5px;
+	height: 30px;
+}

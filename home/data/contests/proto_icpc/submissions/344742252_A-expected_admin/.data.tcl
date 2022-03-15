@@ -1,0 +1,26 @@
+set Consider yes
+set Date 1623839352
+set EvaluatedAt 1623839352
+set Time 344742252
+set Problem A-expected
+set Team admin
+set Classify Accepted
+set Mark 0
+set Size 126
+set Lines 5
+set Observations {}
+set Execution {}
+set State pending
+set Language Python
+set Program solution.py
+set UserTestData {}
+set Report Report.xml
+set reports {}
+set Elapsed 1.0
+set CPU 0.033
+set Memory 64.0
+set Signals {}
+set Feedback { 6 tests with <b>Accepted</b>}
+set ReviewerObservations {}
+set ReviewerFeedback {}
+set frozen false

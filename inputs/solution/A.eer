@@ -1,0 +1,236 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "AttributeKey",
+   "id": 1,
+   "x": 105,
+   "y": 104,
+   "width": 110,
+   "height": 41,
+   "label": "num_mecanografico",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 4,
+   "x": 349,
+   "y": 150,
+   "width": 75,
+   "height": 41,
+   "label": "nome_aluno",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 2,
+   "x": 219,
+   "y": 202,
+   "width": 70,
+   "height": 41,
+   "label": "Aluno",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 3,
+   "x": 240,
+   "y": 79,
+   "width": 70,
+   "height": 41,
+   "label": "telefones",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 5,
+   "x": 213,
+   "y": 306,
+   "width": 70,
+   "height": 41,
+   "label": "endereco",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 7,
+   "x": 200,
+   "y": 424,
+   "width": 70,
+   "height": 41,
+   "label": "rua",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 8,
+   "x": 293,
+   "y": 389,
+   "width": 81,
+   "height": 41,
+   "label": "codigo_postal",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 6,
+   "x": 120,
+   "y": 373,
+   "width": 70,
+   "height": 41,
+   "label": "cidade",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 9,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 3,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 272,
+     "y": 117
+    },
+    {
+     "x": 251,
+     "y": 199
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 10,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 1,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 157,
+     "y": 142
+    },
+    {
+     "x": 251,
+     "y": 199
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 11,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 4,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 346,
+     "y": 167
+    },
+    {
+     "x": 251,
+     "y": 199
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 12,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 5,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 245,
+     "y": 303
+    },
+    {
+     "x": 251,
+     "y": 240
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 14,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "line",
+   "source": 6,
+   "target": 5,
+   "listHandler": [
+    {
+     "x": 152,
+     "y": 370
+    },
+    {
+     "x": 210,
+     "y": 323
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 15,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "line",
+   "source": 5,
+   "target": 7,
+   "listHandler": [
+    {
+     "x": 245,
+     "y": 344
+    },
+    {
+     "x": 232,
+     "y": 421
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Attribute",
+   "targetType": "Attribute",
+   "label": "line",
+   "source": 5,
+   "target": 8,
+   "listHandler": [
+    {
+     "x": 245,
+     "y": 344
+    },
+    {
+     "x": 330,
+     "y": 386
+    }
+   ],
+   "features": []
+  }
+ ]
+}

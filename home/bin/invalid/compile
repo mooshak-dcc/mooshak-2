@@ -1,0 +1,26 @@
+#!/bin/sh
+# This script takes two arguments
+#   - Id
+#   - Language Name
+#
+# Return zero on success, non-zero on failure
+
+ROOT="/home/v2"
+
+if [ $# -ne 2 ]
+    then
+    exit 2
+fi
+
+case $2 in
+    C)
+        $ROOT/compile/compile-c.sh "$ROOT/v/$1/sourcecode" "$ROOT/v/$1/executable"
+        exit $? ;;
+    C++)
+        $ROOT/compile/compile-c++.sh "$ROOT/v/$1/sourcecode" "$ROOT/v/$1/executable"
+        exit $? ;;
+    *)
+        exit 1 ;;
+esac
+
+exit 1

@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00008105_D_PVI_Coders</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008105_D_PVI_Coders">00008105_D_PVI_Coders</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008105_D_PVI_Coders/1.cpp">1.cpp</a>
+<a href="data/contests/ToPAS14/submissions/00008105_D_PVI_Coders/1.cpp">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 13:45:05 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 13:45:05 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/CPV/PVI_Coders">
+PVI Coders
+</a> Login: <code>PVI_Coders</code> Group: CPV [CPV]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/C++">
+C++
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.002 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.002 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>64 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Accepted</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{ 4 tests with <b>Accepted</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; valores;
+    vector&lt;int&gt; datas;
+    for (int i = 0; i&lt; 24; i++) {
+        int valor,data;
+        cin &gt;&gt; data &gt;&gt; valor;
+        valores.push_back(valor);
+        datas.push_back(data);
+    }
+    int soma3meses = 0;
+    for (int i = 0; i &lt;= 2; i++) {
+        soma3meses += valores[23-i];
+    }
+    int media3meses = soma3meses/3;
+    int mediaanos = (valores[0] + valores[12])/2;
+    int media = (media3meses + mediaanos)/2;
+    cout &lt;&lt; media &lt;&lt; endl;
+    return 0;
+}
+
+</pre>
+
+</body>

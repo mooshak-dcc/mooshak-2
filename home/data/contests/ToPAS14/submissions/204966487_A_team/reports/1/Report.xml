@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO">Quantos dias fazes?</exercise>
+    <compilationErrors>/home/josepaiva/workspace/Mooshak2.1Maven/home/data/contests/ToPAS14/submissions/204966487_A_team/MainTelepatia.java:26: error: unreachable statement
+		if (ant==1) 
+		^
+1 error
+</compilationErrors>
+</reportType>

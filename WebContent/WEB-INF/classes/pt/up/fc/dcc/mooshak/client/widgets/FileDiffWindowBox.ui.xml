@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+	<ui:style src="FileDiffWindowBox.css" />
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.judge.i18n.JudgeConstants' />
+	
+	<w:ResizableHtmlPanel ui:field="popupContainer">
+		<g:HTMLPanel styleName="{style.diffPanel}" ui:field="diffPanel">
+			<g:HTMLPanel styleName="{style.headers}">
+				<g:Label styleName="{style.left}">Expected</g:Label>
+				<g:Label styleName="{style.center}">Obtained</g:Label>
+				<g:Label styleName="{style.right}">Diff</g:Label>
+			</g:HTMLPanel>
+			<g:HTML ui:field="expectedOutputPanel" styleName="{style.filePanel} {style.left}"></g:HTML>
+			<g:HTML ui:field="obtainedOutputPanel" styleName="{style.filePanel} {style.center}"></g:HTML>
+			<g:HTML ui:field="diffOutputPanel" styleName="{style.filePanel} {style.right}"></g:HTML>
+		</g:HTMLPanel>
+		<g:Button ui:field="ok" stylePrimaryName="{style.okBtn}">OK</g:Button>
+	</w:ResizableHtmlPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,28 @@
+
+
+.base {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.data {
+	margin-bottom: 5px;
+	-webkit-margin-after: 0.5em;
+}
+
+.data dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.data dt, .data dl, .data-name dt, .data-name dl {
+    width: 49%;
+}
+
+.data-name {
+	margin-bottom: 5px;
+	-webkit-margin-after: 0.5em;
+}

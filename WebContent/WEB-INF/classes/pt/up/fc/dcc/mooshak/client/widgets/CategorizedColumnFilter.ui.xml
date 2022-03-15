@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.judge.i18n.JudgeConstants' />
+	
+	<ui:style src="CategorizedColumnFilter.css" />
+	<g:HTMLPanel styleName="{style.filters}">
+		<g:Button ui:field="close" styleName="{style.close}">x</g:Button>
+		<g:Label ui:field="filterName" styleName="{style.filterName}"></g:Label>
+		<g:ListBox styleName='{style.filterList}' ui:field="filterList"></g:ListBox>
+		<g:CheckBox ui:field="filterCheck" checked="true">All</g:CheckBox>
+	</g:HTMLPanel>
+</ui:UiBinder>  

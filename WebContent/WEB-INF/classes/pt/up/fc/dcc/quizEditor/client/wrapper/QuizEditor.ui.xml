@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w="urn:import:pt.up.fc.dcc.quizEditor.client.wrapper">
+
+	<ui:with field="resources" type="pt.up.fc.dcc.quizEditor.client.resources.Resources" />
+	
+	
+	<ui:style
+		type="pt.up.fc.dcc.quizEditor.client.wrapper.QuizEditor.BaseStyle">
+		
+		.hide {
+			display: none;
+		}
+		
+		.base {
+			height: 100%;
+			width: 100%;
+			background-color: inherit;
+			overflow-y: scroll;
+		}
+	</ui:style>
+
+
+
+	<w:ResizeHtmlPanel ui:field="base" styleName="{style.base}">
+		
+	</w:ResizeHtmlPanel>
+</ui:UiBinder> 

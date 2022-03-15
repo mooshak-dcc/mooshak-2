@@ -1,0 +1,32 @@
+
+
+.duration {
+	display: inline-block;
+	
+	width: 10cm;
+	height: 3mm;
+	
+	background: #0AA;
+	
+	border-radius: 1mm 1mm;
+}
+
+.elapsed {
+	
+	width: 0%;
+	height: 3mm;
+	
+	background: orange;
+	
+	border-radius: 1mm 1mm;
+	font-size: xx-small;
+}
+
+.timeLabel {
+	display: inline-block;
+	
+	width: 1cm;
+		
+	font-size: x-small;
+	font-family: monospace;
+}

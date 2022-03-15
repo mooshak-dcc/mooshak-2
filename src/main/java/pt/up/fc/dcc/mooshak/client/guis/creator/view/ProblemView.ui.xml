@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:my="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:a="urn:import:pt.up.fc.dcc.mooshak.client.form.admin"
+	xmlns:ace='urn:import:edu.ycp.cs.dh.acegwt.client.ace'
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils"
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.creator.i18n.CreatorConstants' />
+
+	<ui:style src="Problem.css" 
+		type="pt.up.fc.dcc.mooshak.client.guis.creator.view.ProblemView.BaseStyle" />
+
+
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<my:ProblemForm ui:field="form" styleName='{style.form}' />
+		
+		<g:Label ui:field='message' styleName='{style.message}'/>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

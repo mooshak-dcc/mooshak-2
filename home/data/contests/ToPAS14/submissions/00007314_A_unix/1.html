@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00007314_A_unix</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00007314_A_unix">00007314_A_unix</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00007314_A_unix/t.c">t.c</a>
+<a href="data/contests/ToPAS14/submissions/00007314_A_unix/t.c">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 13:31:54 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 13:31:54 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/ESFC/unix">
+unix
+</a> Login: <code>unix</code> Group: ESFC [ESFC]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/C">
+C
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/A">
+A: Quantos dias fazes?
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>t.c: In function 'main':
+t.c:34:4: warning: incompatible implicit declaration of built-in function 'round' [enabled by default]</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{Observações de <b>Erro de Compilação</b> <pre>t.c: In function 'main':
+t.c:34:4: warning: incompatible implicit declaration of built-in function 'round' [enabled by default]</pre>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+#include &lt;stdio.h&gt;
+
+main()
+{
+
+int a,m,d,ta,tb,tc,td,te,dj;
+scanf("%d %d %d",&amp;a,&amp;m,&amp;d);
+
+if(m&lt;3)
+{
+	a=a-1;
+	m=m+12;
+}
+ta=a/100;
+tb=ta/4;
+if(a&gt;1582){
+	tc= 2 - 2 -ta + tb;
+}
+else if(m&gt;10 &amp;&amp; a==1582){
+    tc= 2 - 2 -ta + tb;
+}
+else if(d&gt;15 &amp;&amp; m==10 &amp;&amp; a==1582){
+    tc= 2 - 2 -ta + tb;
+}
+if(a&lt;=1582){
+	tc=0;
+}
+else if(m&lt;=10 &amp;&amp; a==1582){
+    tc=0;
+}
+else if(d&lt;=4 &amp;&amp; m==10 &amp;&amp; a==1582){
+    tc=0;
+}
+td=round(365.25*(a+4716));
+te=round(30.6001*(m+1));
+dj= td + te + d + tc - 1524;
+printf("%d\n",dj);
+return 0;
+}
+
+</pre>
+
+</body>

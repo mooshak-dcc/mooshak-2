@@ -1,0 +1,126 @@
+
+
+
+Execute teams tests first in order to submissions and questions
+-----
+
+<a target="_blanc" href="?judge">Enter as user</a> using this authentication
+View judge window
+
+	
+Using form in bottom right fill in <b>Subject</b> and text and press <b>Submit</b>
+Question listing updated in upper right corner
+
+Press <code>answered</code> link in listing
+Question displayed in bottom left
+
+Select question <b>Q1</b>
+View quation form in bottom left
+
+Type answer and press  <b>Submit</b>
+Question listing updated in upper right corner
+
+Press <code>answered</code> link in <b>Q1</b> listing line
+Question displayed in bottom left
+
+Press problem letter in in <b>Q1</b> listing line
+View problem description in bottom left
+
+Select <b>Pending</b> in left panel
+View Pending listing
+
+Select a question for a different problem
+View question form in bottom left
+
+Select <b>Already ansered</b> in form
+Press OK in dialog "No macting questions ... "
+
+Wait a few seconds...
+Question automatically removed from pending listing
+
+Select <b>Answered</b>, fill in answer and press <b>Submit</b>
+(This time Pending is not updated since question was already removed)
+
+Select another question for the same problem
+View form with a selector instead of a text area
+
+Select a question in the selector and press <b>Submit</b>
+Question automatically removed from pending listing
+
+Select question listing
+View question listing
+
+Press the "alread answered" link
+View the corresponding description in the lower right
+
+     Submissions
+
+Select <b>Pending</b> in left panel
+View Pending listing
+
+Press problem letter in <b>S1</b> listing line
+View problem description in bottom left
+
+Press in <b>S1</b> listing line
+View report in lower right
+
+Press <b>final</b> in report
+Submission desapears from listing
+
+Select another submission 
+View report in lower right
+
+Press <b>Reevaluate</b>
+View report #2
+
+Check report
+----
+
+Select <b>Submissions</b> in left panel
+View submissions listing
+
+Select a problem leter in left panel
+View listing restricted to selected problem
+
+Check <b>All</b>  problems  in left panel
+View listing with all problems
+
+Select a team  in left panel
+View listing restricted to selected team
+
+Check <b>All</b> teams  in left panel
+View listing with all problems
+
+	Ballons
+
+Select <b>Balloons</b> in left panel
+View empty balloons listing
+
+Select <b>Pending</b> in left panel
+View Pending listing
+
+Select pending accepted problem
+View report in lower right
+
+Press <b>final</b> in report
+Submission desapears from listing
+
+Select <b>Balloons</b> in left panel
+View  balloons listing with on entry
+
+Select <b>B1</b>
+View form in bottom right
+
+Press <b>delivered</b>
+View state changing in listing
+
+         Other	listings
+
+Press <b>Evolution</b> in the left panel
+View evolution listing
+
+Press <b>Statistics</b> in the left panel
+View statistics listing
+
+Press <b>Ranking</b> in the left panel
+View ranking listing

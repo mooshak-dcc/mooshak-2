@@ -1,0 +1,4 @@
+set        Fatal {Nenhum problema definido<br>}
+set      Warning {}
+set     Presents {}
+set      Problem {}

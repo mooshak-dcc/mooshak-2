@@ -1,0 +1,15 @@
+set Fatal {}
+set Warning {}
+set Name {}
+set Extension {}
+set Compiler {}
+set Version {}
+set Compile {}
+set Execute {}
+set Data {}
+set Fork {}
+set Omit {}
+set UID {}
+set EditFileContents {}
+set Configuation {}
+set frozen false

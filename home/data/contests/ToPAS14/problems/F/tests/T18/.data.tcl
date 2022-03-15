@@ -1,0 +1,9 @@
+set        Fatal {}
+set      Warning {}
+set         args {}
+set        input T18
+set       output T18.out
+set      context context
+set       Points {}
+set     Feedback {}
+set         Show {}

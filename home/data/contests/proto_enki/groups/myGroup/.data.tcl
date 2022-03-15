@@ -1,0 +1,11 @@
+set Fatal {}
+set Warning {}
+set Designation myGroup
+set Acronym myGroup
+set Color #000000
+set Flag 00
+set Authentication BASIC
+set LDAP {}
+set Basic {}
+set Team {}
+set frozen false

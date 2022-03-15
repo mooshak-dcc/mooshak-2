@@ -1,0 +1,74 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:e="urn:import:pt.up.fc.dcc.eshu.client.eshugwt"
+	xmlns:u='urn:import:pt.up.fc.dcc.mooshak.client.utils'>
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.enki.i18n.EnkiConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+	<ui:with field="imagesEnki" 
+		type="pt.up.fc.dcc.mooshak.client.guis.enki.resources.EnkiResources"/>
+	
+	<ui:style src="Kora.css" />
+	
+	
+	<w:ResizableHtmlPanel ui:field="panel" styleName='{style.base}'>
+		<u:SelectOneListBox 
+					ui:field="skeleton" 
+					styleName="{style.skeleton-select}">
+		</u:SelectOneListBox>
+		<w:CustomImageButton 
+					ui:field="fullscreen" 
+					title="{i18n.fullscreenTip}" 
+					url='{imagesEnki.fullScreen.getSafeUri.asString}' 
+					height="20px"
+					styleName='{style.fullscreenButton}' />
+		<w:CustomImageButton 
+					ui:field="exitFullscreen" 
+					title="{i18n.exitFullscreenTip}" 
+					url='{imagesEnki.exitFullScreen.getSafeUri.asString}' 
+					height="20px"
+					styleName='{style.fullscreenButton} {style.hide}' />
+		<e:Eshu width="700" height="400" ui:field="editor"></e:Eshu>
+		<g:HTMLPanel styleName="{style.commands}" ui:field="commandsPanel">
+			<!-- <g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton 
+					ui:field="clear" 
+					title="{i18n.clearDiagramTip}" 
+					url='{images.clearButton.getSafeUri.asString}' 
+					height="35px" />
+				<g:Label text="{i18n.clear}" title="{i18n.clearDiagramTip}" ></g:Label>
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton 
+					ui:field="copy" 
+					title="CTRL + C" 
+					url='{imagesEnki.copy.getSafeUri.asString}' 
+					height="35px" />
+				<g:Label text="{i18n.copy}" title="CTRL + C" ></g:Label>
+			</g:HTMLPanel>
+			<g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton 
+					ui:field="paste" 
+					title="CTRL + V" 
+					url='{imagesEnki.paste.getSafeUri.asString}' 
+					height="35px" />
+				<g:Label text="{i18n.paste}" title="CTRL + V" ></g:Label>
+			</g:HTMLPanel> -->
+			<g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton
+					ui:field="submit" 
+					url='{images.submitButton.getSafeUri.asString}' 
+					title="{i18n.submitTip}" 
+					height="35px"
+					styleName='{style.button}' />
+				<g:Label text="{i18n.submit}" title="{i18n.submitTip}"></g:Label>
+			</g:HTMLPanel>
+			
+		</g:HTMLPanel>
+	</w:ResizableHtmlPanel>
+</ui:UiBinder> 

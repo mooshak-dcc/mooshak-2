@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/fpc -v0w -oprog $* | /bin/grep -v "Free Pascal Compiler"| /bin/grep -v "Copyright (c) 1993-2000 by Florian Klaempfl"

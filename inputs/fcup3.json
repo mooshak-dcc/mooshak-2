@@ -1,0 +1,1356 @@
+{
+ "reducibles": ["attribute"],
+ "nodes": [
+  {
+   "label": "Morada",
+   "id": 0,
+   "type": "attribute",
+   "x": 249,
+   "y": 127,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Localidade",
+   "id": 1,
+   "type": "attribute",
+   "x": 120,
+   "y": 84,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": " Numero",
+   "id": 3,
+   "type": "attribute",
+   "x": 344,
+   "y": 78,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "ALUNO",
+   "id": 4,
+   "type": "entity",
+   "x": 270,
+   "y": 323,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Nome",
+   "id": 5,
+   "type": "attribute",
+   "x": 109,
+   "y": 239,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "NumBI",
+   "id": 6,
+   "type": "attribute",
+   "x": 124,
+   "y": 318,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Telefone",
+   "id": 7,
+   "type": "attribute",
+   "x": 363,
+   "y": 249,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "true"
+    },
+    {
+     "name": "key",
+     "value": "false"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Sexo",
+   "id": 8,
+   "type": "attribute",
+   "x": 208,
+   "y": 221,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "FAZ",
+   "id": 17,
+   "type": "relationship",
+   "x": 487,
+   "y": 319,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "cardinalityUp",
+     "value": ""
+    },
+    {
+     "name": "cardinalityRight",
+     "value": "N"
+    },
+    {
+     "name": "cardinalityDown",
+     "value": ""
+    },
+    {
+     "name": "cardinalityLeft",
+     "value": "1"
+    },
+    {
+     "name": "identifier",
+     "value": "false"
+    },
+    {
+     "name": "idEdgeCardinalityUp",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityRight",
+     "value": 20
+    },
+    {
+     "name": "idEdgeCardinalityDown",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityLeft",
+     "value": 19
+    }
+   ]
+  },
+  {
+   "label": "INSCRICAO",
+   "id": 18,
+   "type": "entity",
+   "x": 742,
+   "y": 321,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "NumMecanografico",
+   "id": 21,
+   "type": "attribute",
+   "x": 673,
+   "y": 200,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Media",
+   "id": 22,
+   "type": "attribute",
+   "x": 806,
+   "y": 223,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "true"
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": "false"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "CORRESPONDE",
+   "id": 25,
+   "type": "relationship",
+   "x": 941,
+   "y": 320,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "cardinalityUp",
+     "value": ""
+    },
+    {
+     "name": "cardinalityRight",
+     "value": "1"
+    },
+    {
+     "name": "cardinalityDown",
+     "value": ""
+    },
+    {
+     "name": "cardinalityLeft",
+     "value": "N"
+    },
+    {
+     "name": "identifier",
+     "value": "false"
+    },
+    {
+     "name": "idEdgeCardinalityUp",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityRight",
+     "value": 33
+    },
+    {
+     "name": "idEdgeCardinalityDown",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityLeft",
+     "value": 27
+    }
+   ]
+  },
+  {
+   "label": "CURSO",
+   "id": 28,
+   "type": "entity",
+   "x": 1019,
+   "y": 608,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Nome",
+   "id": 29,
+   "type": "attribute",
+   "x": 880,
+   "y": 714,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Grau",
+   "id": 30,
+   "type": "attribute",
+   "x": 1047,
+   "y": 723,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "TEM",
+   "id": 34,
+   "type": "relationship",
+   "x": 748,
+   "y": 622,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "cardinalityUp",
+     "value": ""
+    },
+    {
+     "name": "cardinalityRight",
+     "value": "M"
+    },
+    {
+     "name": "cardinalityDown",
+     "value": ""
+    },
+    {
+     "name": "cardinalityLeft",
+     "value": "N"
+    },
+    {
+     "name": "identifier",
+     "value": "false"
+    },
+    {
+     "name": "idEdgeCardinalityUp",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityRight",
+     "value": 39
+    },
+    {
+     "name": "idEdgeCardinalityDown",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityLeft",
+     "value": 38
+    }
+   ]
+  },
+  {
+   "label": "DISCIPLINA",
+   "id": 35,
+   "type": "entity",
+   "x": 549,
+   "y": 631,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Codigo",
+   "id": 36,
+   "type": "attribute",
+   "x": 510,
+   "y": 766,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "weakKey",
+     "value": "false"
+    }
+   ]
+  },
+  {
+   "label": "Nome",
+   "id": 37,
+   "type": "attribute",
+   "x": 642,
+   "y": 762,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "PERTENCE",
+   "id": 42,
+   "type": "relationship",
+   "x": 388,
+   "y": 631,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "cardinalityUp",
+     "value": ""
+    },
+    {
+     "name": "cardinalityRight",
+     "value": "1"
+    },
+    {
+     "name": "cardinalityDown",
+     "value": ""
+    },
+    {
+     "name": "cardinalityLeft",
+     "value": "N"
+    },
+    {
+     "name": "identifier",
+     "value": "true"
+    },
+    {
+     "name": "idEdgeCardinalityUp",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityRight",
+     "value": 43
+    },
+    {
+     "name": "idEdgeCardinalityDown",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityLeft",
+     "value": 45
+    }
+   ]
+  },
+  {
+   "label": "ENTIDADE",
+   "id": 44,
+   "type": "entity",
+   "x": 136,
+   "y": 630,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "label": "Dia",
+   "id": 46,
+   "type": "attribute",
+   "x": 42,
+   "y": 724,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "Data",
+   "id": 47,
+   "type": "attribute",
+   "x": 141,
+   "y": 716,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": "false"
+    },
+    {
+     "name": "multivalued",
+     "value": "false"
+    },
+    {
+     "name": "key",
+     "value": "false"
+    },
+    {
+     "name": "weakKey",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "label": "Hora",
+   "id": 48,
+   "type": "attribute",
+   "x": 126,
+   "y": 793,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  },
+  {
+   "label": "E_REALIZADO",
+   "id": 52,
+   "type": "relationship",
+   "x": 354,
+   "y": 441,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "cardinalityUp",
+     "value": ""
+    },
+    {
+     "name": "cardinalityRight",
+     "value": "M"
+    },
+    {
+     "name": "cardinalityDown",
+     "value": ""
+    },
+    {
+     "name": "cardinalityLeft",
+     "value": "N"
+    },
+    {
+     "name": "identifier",
+     "value": "false"
+    },
+    {
+     "name": "idEdgeCardinalityUp",
+     "value": -1
+    },
+    {
+     "name": "idEdgeCardinalityRight",
+     "value": 55
+    },
+    {
+     "name": "idEdgeCardinalityDown",
+     "value": 56
+    },
+    {
+     "name": "idEdgeCardinalityLeft",
+     "value": 57
+    }
+   ]
+  },
+  {
+   "label": "Nota",
+   "id": 53,
+   "type": "attribute",
+   "x": 366,
+   "y": 526,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "derived",
+     "value": false
+    },
+    {
+     "name": "multivalued",
+     "value": false
+    },
+    {
+     "name": "key",
+     "value": false
+    },
+    {
+     "name": "weakKey",
+     "value": false
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "id": 10,
+   "type": "line",
+   "source": 3,
+   "target": 0,
+   "anchorSource": 3,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "type": "line",
+   "source": 0,
+   "target": 4,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "type": "line",
+   "source": 1,
+   "target": 0,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "type": "line",
+   "source": 7,
+   "target": 4,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "type": "line",
+   "source": 8,
+   "target": 4,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "type": "line",
+   "source": 5,
+   "target": 4,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "type": "line",
+   "source": 6,
+   "target": 4,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "type": "line",
+   "source": 4,
+   "target": 17,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "type": "line",
+   "source": 18,
+   "target": 17,
+   "anchorSource": 3,
+   "anchorTarget": 1,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "type": "line",
+   "source": 22,
+   "target": 18,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "type": "line",
+   "source": 21,
+   "target": 18,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "type": "line",
+   "source": 18,
+   "target": 25,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "type": "line",
+   "source": 29,
+   "target": 28,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "type": "line",
+   "source": 30,
+   "target": 28,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "type": "line",
+   "source": 28,
+   "target": 25,
+   "anchorSource": 0,
+   "anchorTarget": 1,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "false"
+    },
+    {
+     "name": "total",
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "type": "line",
+   "source": 28,
+   "target": 34,
+   "anchorSource": 3,
+   "anchorTarget": 1,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "type": "line",
+   "source": 35,
+   "target": 34,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "type": "line",
+   "source": 37,
+   "target": 35,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "type": "line",
+   "source": 36,
+   "target": 35,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "type": "line",
+   "source": 35,
+   "target": 42,
+   "anchorSource": 3,
+   "anchorTarget": 1,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "type": "line",
+   "source": 47,
+   "target": 44,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "type": "line",
+   "source": 47,
+   "target": 48,
+   "anchorSource": 2,
+   "anchorTarget": 0,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "type": "line",
+   "source": 46,
+   "target": 47,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "type": "line",
+   "source": 53,
+   "target": 52,
+   "anchorSource": 0,
+   "anchorTarget": 2,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "type": "line",
+   "source": 44,
+   "target": 42,
+   "anchorSource": 1,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "true"
+    },
+    {
+     "name": "total",
+     "value": true
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "type": "line",
+   "source": 44,
+   "target": 52,
+   "anchorSource": 0,
+   "anchorTarget": 3,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "false"
+    },
+    {
+     "name": "total",
+     "value": false
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "type": "line",
+   "source": 18,
+   "target": 52,
+   "anchorSource": 2,
+   "anchorTarget": 1,
+   "features": [
+    {
+     "name": "color",
+     "value": "#484848"
+    },
+    {
+     "name": "simpleLine",
+     "value": "false"
+    },
+    {
+     "name": "total",
+     "value": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+@external .correct, .wrong;
+
+@sprite .correct {
+	gwt-image: "correct";
+    display: inline-block;
+}
+
+@sprite .wrong {
+	gwt-image: "wrong";
+    display: inline-block;
+}

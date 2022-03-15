@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+    xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.enki.i18n.EnkiConstants' />
+	<ui:style src="MyData.css" />
+
+	<w:ResizableHtmlPanel styleName='{style.base}'>
+		<b:Description horizontal="true" styleName='{style.data-name}'>
+			<b:DescriptionTitle text="{i18n.participantName}: " />
+			<b:DescriptionData text="" ui:field="name" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.regDate}: " />
+			<b:DescriptionData text="" ui:field="register" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.solvedExercises}: " />
+			<b:DescriptionData text="" ui:field="solved" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.seenVideos}: " />
+			<b:DescriptionData text="" ui:field="seenVideos" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.seenStatic}: " />
+			<b:DescriptionData text="" ui:field="seenStatic" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.numberSubmissions}: " />
+			<b:DescriptionData text="" ui:field="submissions" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.numberAcceptedSubmissions}: " />
+			<b:DescriptionData text="" ui:field="acceptedSubmissions" />
+		</b:Description>
+		<b:Description horizontal="true" styleName='{style.data}'>
+			<b:DescriptionTitle text="{i18n.currentPart}: " />
+			<b:DescriptionData text="" ui:field="part" />
+		</b:Description>
+		<!-- Number of Exercises Not Solved: <g:Label ui:field="unsolved" /> -->
+	</w:ResizableHtmlPanel>
+
+
+</ui:UiBinder>

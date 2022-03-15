@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="schemaDoc_v1.xsl"?>
+<xsd:schema
+           xmlns="http://www.edujudge.eu/ejmd_v2"
+           xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:sch="http://www.ascc.net/xml/schematron"
+           xmlns:doc="http://www.edujudge.eu/doc"
+           xmlns:xhtml="http://www.w3.org/2001/xhtml"
+           targetNamespace="http://www.edujudge.eu/ejmd_v2"
+           attributeFormDefault="qualified"
+           elementFormDefault="qualified"
+           doc:href="example.xml example2.xml"
+           doc:source="ejmd_v2_source.xsd">
+
+ <xsd:annotation>
+      <xsd:documentation doc:type="description-extensive">The EduJudge Meta-data (EJ MD) specification extends the IMS CP specification with new meta-data regarding the automatic evaluation of programming problems (such as, problem descriptions, program solutions, test cases, among others). These new elements are included in the metadata section of the IMS CP manifest. The compound schema can be viewed as a new application profile that will use the IMS CP specification as the content packaging standard and will extend it with the EJ MD specification, combining meta-data elements selected from several schemas. This approach is similar to the SCORM 1.2 application profile that extends IMS CP with more sophisticated sequencing and Contents-to-LMS communication.
+        <xhtml:br/>
+      </xsd:documentation>
+      <xsd:documentation doc:type="description-summary">Schema documentation here...</xsd:documentation>
+ </xsd:annotation>
+ 
+  <xsd:import schemaLocation="http://www.w3.org/2001/xml.xsd" namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:import schemaLocation="http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd" namespace="http://www.w3.org/1999/xhtml"/>
+
+  <xsd:element name="metadata" type="metadataType" doc:order="1" doc:childDepth="2" doc:parentDepth="1">
+    <xsd:annotation>
+      <xsd:documentation doc:type="description-extensive">The meta-data element act as the container node for the EduJudge Meta-Data (EJ MD).
+        <xhtml:br/>
+      </xsd:documentation>
+      <xsd:documentation doc:type="description-summary">Root node</xsd:documentation>
+
+      <xsd:appinfo>
+        <sch:pattern name="p1">
+          <sch:rule context="ejmd:metadata">
+            <sch:assert test="parent::imscp:metadata">The parent of the element ejmd:metadata must be imscp:metadata.</sch:assert>
+          </sch:rule>
+        </sch:pattern>
+
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="metadataType">
+    <xsd:sequence>
+      <xsd:element name="general" type="generalType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The general category holds all the overall information of the programming problem as a learning object (LO).
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Generic data of the LO.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="presentation" type="presentationType" doc:order="1" doc:childDepth="2" doc:parentDepth="2">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The presentation category defines all the useful data to visualization by the e-learning systems.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Presentation data of the LO.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="evaluation" type="evaluationType"  doc:order="1" doc:childDepth="2" doc:parentDepth="1">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The evaluation category defines all the resources needed to judge the problem.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Evaluation data of the LO.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="generalType">
+    <xsd:sequence>
+      <xsd:element name="hints" type="hintsType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The hints element aggregates a set of recommendations regarding the submission, compilation and execution of the programming problem.
+            <xhtml:br/>The hints are not mandatory and could be used, for example, as basic information to the search process by the other e-Learning systems.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">General recommendations to LOs use.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="hintsType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="submission" type="submissionType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The submission element defines some guidelines to follow in the response and in the process of submission.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">General submission recommendations.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="compilation" type="compilationType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The compilation element defines some hints regarding the compilation of a programming problem.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">General compilation recommendations.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="execution" type="executionType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The execution element defines some hints regarding the execution of a programming problem.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">General execution recommendations.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="submissionType">
+    <xsd:attribute name="time-solve" type="xsd:duration" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The time-solve attribute defines the maximum of time available to solve the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Limit time to solve the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+
+      <xsd:appinfo>
+        <sch:pattern name="p2">
+          <sch:rule context="ejmd:time-solve">
+            <sch:assert test="following-sibling::*[1]=ejmd:time-submit">If the element ejmd:time-solve appears in the document, then the ejmd:timesubmit must also appear.</sch:assert>
+          </sch:rule>
+        </sch:pattern>
+      </xsd:appinfo>
+      </xsd:annotation>
+
+    </xsd:attribute>
+    <xsd:attribute name="time-submit" type="xsd:duration" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The time-submit attribute defines a timeout to the maximum time allowed for sending the answer.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Limit time to submit the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="attempts" type="xsd:integer" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The attempts element defines the maximum number of attempts that the user have to submit the resolution of the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Maximum number of attempts to submit the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="code-lines" type="xsd:integer" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The code-lines element defines the maximum number of code lines included in the user's code.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Maximum number of code lines in the user's code.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="length" type="xsd:integer" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The length element defines the maximum number of bytes allowed in the submission process.
+          <xhtml:br/>Measured in bytes.
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Maximum length in the user's code.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="compilationType">
+    <xsd:attribute name="time" type="xsd:duration" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The time attribute defines the maximum of time available to compile the user's resolution.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Limit time to compile the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="size" type="xsd:integer" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The size attribute defines the maximum size of the executable generated in the compilation process.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Maximum size of the execution code.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="executionType">
+    <xsd:attribute name="time" type="xsd:duration" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The time attribute defines the maximum of time available to execute the user's resolution.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Limit time to execute the problem.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  <xsd:complexType name="presentationType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="description" type="resourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The description element identifies the resource(s) with the description of the programming problem to be presented to the learner.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Description of the problem.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="1" name="skeleton" type="resourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The skeleton element refer to resource(s) containing a part of the problem's resolution.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Partial solution of a problem.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="evaluationType">
+    <xsd:sequence>
+      <xsd:element name="tests" type="testsType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">Contains several test types.
+            <xhtml:br/>The tests could be based in:
+            <xhtml:br/>
+            <xhtml:ul>
+              <xhtml:li>
+                <xhtml:b>Test Files:</xhtml:b>set of tests (input and output files);
+              </xhtml:li>
+			  <xhtml:li>
+                <xhtml:b>Test Group:</xhtml:b>groups of test files;
+              </xhtml:li>
+              <xhtml:li>
+                <xhtml:b>Test Description:</xhtml:b>test file codified in a language that describes test cases;
+              </xhtml:li>
+              <xhtml:li>
+                <xhtml:b>Test Generation:</xhtml:b>tests generated through a program;
+              </xhtml:li>
+              <xhtml:li>
+                <xhtml:b>Test Program:</xhtml:b>a program with a suite of unit tests.
+              </xhtml:li>
+            </xhtml:ul>
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Available test types.
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="correctors" type="correctorsType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The element correctors refers to custom programs that change the general evaluation pattern for a given problem.
+            <xhtml:br/>There are two types of correctors:
+            <xhtml:br/>
+            <xhtml:ul>
+              <xhtml:li>
+                <xhtml:b>Static:</xhtml:b>invoked immediately after compilation, before any execution. Can be used to:
+                <xhtml:ul>
+                  <xhtml:li>
+                    <xhtml:b>Software metrics:</xhtml:b>compute software metrics on the source code, judging the quality of source code;
+                  </xhtml:li>
+                  <xhtml:li>
+                    <xhtml:b>Unit testing:</xhtml:b>perform unit testing on the program, testing the pieces separately as well as together (can skip execution ?);
+                  </xhtml:li>
+                  <xhtml:li>
+                    <xhtml:b>Structural validation:</xhtml:b>check the structure of the program's source code.
+                  </xhtml:li>
+                </xhtml:ul>
+              </xhtml:li>
+              <xhtml:li>
+                <xhtml:b>Dynamic:</xhtml:b>invoked after each execution with a test case. Deals with non-determinism (e.g., the solution is a set of values unordered, in this case the corrector normalizes the response).
+              </xhtml:li>
+            </xhtml:ul>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Special correctors of the problem.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+
+      <xsd:element minOccurs="0" maxOccurs="1" name="solution" type="programResourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The solution element refers to a file containing the problem solution.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">The solution of the problem.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+	<xsd:attribute name="evaluationModel" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive"> Identification of the module used to judge the problem. The EE will have plugins to hold the different models of problems, and each plugin will be identified by an UniqueID and a version number.
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Identification of problem's evaluation module.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+	<xsd:attribute name="evaluationModelVersion" type="xsd:integer" use="required">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">Identification of the module used to judge the problem. The EE will have plugins to hold the different models of problems, and each plugin will be identified by an UniqueID and a version number.
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Version identification of the judge module.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+  
+  <xsd:complexType name="resourceType">
+    <xsd:attribute name="resource" type="xsd:IDREF">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The resource attribute identifies the IMS CP resource used by the context element.
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Resource identification.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="programResourceType">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="resourceType">
+        <xsd:attribute name="compilationLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The compilationLine element defines a command line to compile the source code.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Compilation line to the related program.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="executionLine" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The executionLine element defines a command line to execute the compiled code.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Execution line to the related program.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="language" type="languageType">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The language element describes the programming language used in the program.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Programming language of the program.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="languageVersion" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The attribute languageVersion identifies the version of the programming language.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Language version.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="testsType">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="testFiles" type="testFilesType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The element testFiles contains a set of tests (input and output files) for the evaluation process of the learner's submission.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Test files.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+ <xsd:element minOccurs="1" maxOccurs="unbounded" name="testGroup" type="testGroupType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The element testGroup contains an unbound collection of testFiles and an attribute for valorization. .
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Test Group.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+
+      <xsd:element name="testDescription" type="resourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">
+                                The testDescription element identifies a file that is codified through a TestCases Description Language (TDL).
+                        </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">
+                                Tests described through a language.
+                        </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="testGenerator" type="programResourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">
+                                The testGenerator element identifies a program that will generate input files for test cases.
+                        </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">
+                                Tests generated by a given program.
+                        </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="testProgram" type="programResourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">
+                                The testProgram element identifies a program that includes unit test to be sistematically invoked.
+                        </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">
+                                Tests invoked using a program that includes unit tests.
+                        </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  
+
+<xsd:complexType name="testFilesType">
+    <xsd:sequence>
+      <xsd:element name="input" type="resourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The input element describes the input for a test.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">The file input of a test.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="output" type="resourceType">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The output element describes the output for a test.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">The file output of a test.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="feedback" type="feedbackType" maxOccurs="unbounded" minOccurs="0" doc:order="1" doc:childDepth="2" doc:parentDepth="2">
+        <xsd:annotation>
+          <xsd:documentation doc:type="description-extensive">The feedback element defines the message(s) sent to the learner after the test execution result.
+            <xhtml:br/>
+          </xsd:documentation>
+          <xsd:documentation doc:type="description-summary">Feedback of a test execution result.
+            <xhtml:br/>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="arguments" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The arguments attribute defines the needed parameters to pass in the test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Arguments of the execution test.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="valorization" type="xsd:float">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The valorization element defines the score for a successful test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Valorization of a sucessful test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="feedbackType" mixed="true">
+
+        <xsd:sequence>
+          <xsd:element name="output" type="resourceType" maxOccurs="1" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation doc:type="description-extensive">The output element describes an alternative output for a test.
+                <xhtml:br/>
+              </xsd:documentation>
+              <xsd:documentation doc:type="description-summary">Alternative output.
+                <xhtml:br/>
+              </xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="error" type="errorType">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The error attribute describes the error type.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Error type.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="valorization" type="xsd:float" use="optional">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The valorization attribute defines the score for an alternative output.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Valorization of an alternative output.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="showAfterNumberAttempts" type="xsd:int">
+          <xsd:annotation>
+            <xsd:documentation doc:type="description-extensive">The showAfterNumberAttempts attribute defines when the feedback message is shown to the learner based in the actual number of attempts.
+              <xhtml:br/>
+            </xsd:documentation>
+            <xsd:documentation doc:type="description-summary">Visibility of the feedback.
+              <xhtml:br/>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+  </xsd:complexType>
+
+ <xsd:complexType name="testGroupType">
+        <xsd:sequence>
+          <xsd:element name="testFiles" type="testFilesType" maxOccurs="unbounded" minOccurs="1">            
+          </xsd:element>
+        </xsd:sequence>
+<xsd:attribute name="valorization" type="xsd:float">
+      <xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The valorization element defines the score for a successful group test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Valorization of a sucessful group test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+
+  </xsd:complexType>
+
+<xsd:complexType name="correctorsType">
+
+             <xsd:sequence>
+          <xsd:element name="corrector" type="correctorType"  maxOccurs="unbounded" minOccurs="1">
+			
+<xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The corrector element includes an attribute ID and an attribute depends of type IDREFS to specify how correctors are related.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Contains a corrector.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+
+         
+          </xsd:element>
+        </xsd:sequence>
+  </xsd:complexType>
+
+
+<xsd:complexType name="correctorType">
+	<xsd:complexContent mixed="false">
+      	<xsd:extension base="programResourceType">
+        		<xsd:attribute name="id" type="xsd:ID"/>
+				<xsd:attribute name="depends" type="xsd:IDREFS">
+<xsd:annotation>
+        <xsd:documentation doc:type="description-extensive">The depends attribute defines the list of correctors that need to be excuteded before.
+          <xhtml:br/>
+        </xsd:documentation>
+        <xsd:documentation doc:type="description-summary">Valorization of a sucessful group test execution.
+          <xhtml:br/>
+        </xsd:documentation>
+      </xsd:annotation>
+</xsd:attribute>
+    	</xsd:extension>
+</xsd:complexContent>
+</xsd:complexType>
+
+
+
+
+  <xsd:simpleType name="errorType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Wrong Answer"/>
+      <xsd:enumeration value="Time Limit Exceeded"/>
+      <xsd:enumeration value="Execution Error"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="languageType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="C"/>
+      <xsd:enumeration value="C++"/>
+      <xsd:enumeration value="C#"/>
+      <xsd:enumeration value="JAVA"/>
+      <xsd:enumeration value="PASCAL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

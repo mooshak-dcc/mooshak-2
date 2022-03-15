@@ -1,0 +1,294 @@
+
+
+/** Top **/
+
+.body-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.base {
+	position: relative;
+}
+
+.base, .film {
+	width: 1200px;
+	height: 800px;
+	margin: auto;
+	color: #669;
+}
+
+.base {	
+	background: -webkit-linear-gradient(#BBC,white); /* For Safari */
+    background: -o-linear-gradient(#BBC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BBC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BBC, white); /* Standard syntax (must be last) */   
+}	
+
+.film {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+}
+
+.header {
+	width: 100%;
+	height: 10%;
+	
+	position: relative;
+
+}
+
+.center, .bottom {
+	width: 100%;
+	height: auto;
+	clear: both;
+}
+
+.globalMoveCursor * { 
+    cursor: wait !important; 
+} 
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 0.3m;
+	font-size: xx-small;
+	color: grey;
+}
+
+/** Header **/
+
+.mooshakButtons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px;
+	z-index: 10;
+}
+
+.timeBar {
+	position: absolute;
+	top: 3mm;
+	right: 4cm;
+	
+}
+
+.contest-select {
+	background: transparent;
+	color: teal;
+	vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.banner {
+	float: left;
+	width: 70%;
+	padding: 5mm 0;
+	font-size: xx-large;
+	color: teal;
+	margin-left: 132px;
+}
+
+.contest {
+	margin-top: 10px;
+	font-size: xx-large;
+	font-weight: bold;
+	
+	color: #0AA;
+	text-align: center;
+}
+
+.team {
+	font-size: x-large;
+	color: #666;
+}
+
+.problemsLabel {
+	display: inline-block;
+	font-size: large;
+	color: #666;
+}
+.problemsLabel:AFTER {
+	content: ":";
+}
+
+.comments {
+	float: left;
+	
+	width: 60%;
+	height: auto;
+	
+	margin-top: 45px;
+	
+}
+
+.problem {}
+
+.comments .comment {
+	display: inline-block;
+	
+	height: 80%;
+	
+	float: right;
+	
+	margin-left: 10px;
+	margin-right: 100px;
+	
+	border-top-left-radius: 10px 10px;
+	border-top-right-radius: 10px 10px;
+		
+	padding: 10px;
+		
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	cursor: pointer;
+	
+}
+
+/** Center **/
+
+.tabs, .content {
+	float: left;
+}
+
+.tabs {
+	width: 11%;
+	margin-top: 100px;
+}
+
+.tab {
+	position: relative;
+	
+	float: right;
+	clear: both;
+	
+	width:  70px;
+	height: 50px;
+	
+	margin-top:10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+	
+	font-weight: bold;
+	text-align: right;
+	vertical-align: text-top;
+	line-height: 50px;
+	
+	padding-right: 10px;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	
+	cursor: pointer;
+}
+
+.tab:BEFORE {
+	position: absolute;
+	
+	left: 0px;
+	margin-top: 25px;
+	margin-left:-50px;
+	
+	width: 49px;
+	height: 0px;
+	content: "";
+	
+	background: #AAA;
+	
+	border: 1px;
+	border-style: solid;
+	border-color: #AAA;
+}
+
+.spacer {
+	float: right;
+	width: 100%;
+	height: 50px;
+}
+
+.content {
+	width: 75%;
+	height: 600px;
+	background: #EEE;	
+	
+	padding: 50px;
+	padding-top: 0;
+	
+	overflow: visible;
+}
+
+.content, .selected {
+	background: #EFEFEA;
+	color: #666;
+}
+
+/** Bottom **/
+
+.listings {
+	margin-left: 15%;
+	width: 1000px;
+}
+
+
+.listing {
+	display: inline-block;
+	
+	width: 108px;
+	
+	margin-left: 10px;
+	margin-right: 10px;
+	
+	border-bottom-left-radius: 10px 10px;
+	border-bottom-right-radius: 10px 10px;
+		
+	padding-top: 10px;
+	padding-bottom: 10px;
+		
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	
+	background: #AAA;
+	color: #FFF;
+	
+	cursor: pointer;
+	
+}
+
+
+/** Footer **/
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	margin-right: 1cm;	
+}
+
+.middle {
+	float: left;
+	width: 10cm;
+	margin-left: 10cm;
+}
+
+.logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 3cm;
+	margin: 5mm;
+	z-index: 1;
+}

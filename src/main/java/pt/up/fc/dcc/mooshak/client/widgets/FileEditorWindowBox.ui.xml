@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:a="urn:import:pt.up.fc.dcc.mooshak.client.form.admin" 
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets" 
+	xmlns:v="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:ace="urn:import:edu.ycp.cs.dh.acegwt.client.ace">
+    
+	<ui:style src="FileEditorWindowBox.css" />
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+	
+	<w:ResizableHtmlPanel ui:field="popupContainer">
+		<g:FileUpload ui:field="fileUpload" name="file" styleName="{style.fileupload}" />
+		<g:Button ui:field="ok" stylePrimaryName="{style.okBtn}">OK</g:Button>
+		<g:Button ui:field="cancel" stylePrimaryName="{style.cancelBtn}" text="{i18n.cancel}"></g:Button>
+		<g:Button ui:field="download" stylePrimaryName="{style.downloadBtn}" text="{i18n.download}"></g:Button>
+		<!-- <div class="{style.naming}">
+			<span class="{style.filename}">Progam file name: </span>
+			<a:CustomTextBox ui:field='fileName' styleName="{style.filename} {style.filenameInput}" />
+		</div> -->
+		
+		<ace:AceEditor styleName='{style.code}' ui:field='editor' />
+	</w:ResizableHtmlPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+
+.editor {
+	
+}
+
+.menuBar {
+	/* display: none; /* !!!! */
+	
+	font-size: large;
+	font-weight: bold;
+	padding: 3px;
+	
+	background: #BBC;
+	height:		8%;
+	display: inline-block;
+	float: left;
+}
+
+.form {
+	height:		60%;
+	overflow: 	auto;
+}
+
+.state {
+	background: #EEE;
+	font-size: large;
+	height:		12%;
+	padding:   5px;
+}
+
+.texts {
+	display: block;
+	float: left;
+}
+
+.typeName {
+	display: inline-block;
+	width: 5cm;
+	font-weight: bold;
+}
+
+.id {
+	display: block;
+	text-align: left;    
+	width: 9cm;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.message {
+    text-align: right;
+    color: orange;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+}
+
+.buttons {
+	display: inline-block;
+	float: right;    
+	margin-top: -5px;
+    padding-top: 5px;
+}
+
+.menu {
+	box-shadow: 5px 5px 3px #BBC;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0px;
+	border-color: #BBC;
+	margin-top: -14px;
+}

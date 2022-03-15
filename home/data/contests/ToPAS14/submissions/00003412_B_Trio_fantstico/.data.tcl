@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399634812
+set Time 3412
+set Problem B
+set Team Trio_fantstico
+set Classify ACCEPTED
+set Mark 0
+set Size 320
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program fich2.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.0
+set Memory 64.0
+set Signals {}
+set Feedback {{10 tests with <b>Accepted</b>}}

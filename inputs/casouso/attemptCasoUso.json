@@ -1,0 +1,50 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "UseCase",
+   "id": 1,
+   "x": 51,
+   "y": 82,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "UseCase",
+   "id": 6,
+   "x": 112,
+   "y": 4,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "AssociationOnly",
+   "id": 7,
+   "sourceType": "UseCase",
+   "targetType": "UseCase",
+   "label": "text",
+   "source": 1,
+   "target": 6,
+   "listHandler": [
+    {
+     "x": 83,
+     "y": 79
+    },
+    {
+     "x": 144,
+     "y": 52
+    }
+   ],
+   "features": []
+  }
+ ]
+}

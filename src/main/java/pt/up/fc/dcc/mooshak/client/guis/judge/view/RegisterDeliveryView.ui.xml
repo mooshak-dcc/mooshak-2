@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:s="urn:import:pt.up.fc.dcc.mooshak.shared.commands"
+	xmlns:a='urn:import:pt.up.fc.dcc.mooshak.client.form.admin' 
+	xmlns:v="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.judge.i18n.JudgeConstants' />
+
+	<ui:style src="RegisterDelivery.css" />
+
+
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<div class="{style.deliveryform}">
+
+			<p><span>ID:</span><g:Label ui:field="id" styleName='{style.datainfo}'></g:Label></p>
+			<p><span>Problem:</span><v:CustomLabelPath ui:field="problem" styleName='{style.datainfo}'/></p>
+			<p><span>Team:</span><v:CustomLabelPath ui:field="team" styleName='{style.datainfo}'/></p>
+			<p>
+				<span>State</span>
+				<a:CustomRadioButton ui:field="undelivered" name="state" text="undelivered" checked="true"/>
+				<a:CustomRadioButton ui:field="delivered" name="state" text="delivered"/>
+			</p>
+			
+			
+		
+			<g:Label ui:field='message' styleName='{style.message}'/>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+	version="3.1">
+         
+	<display-name>Mooshak</display-name>
+
+	<!-- Timeout a session when it stops requesting events -->
+	<session-config>
+		<session-timeout>3</session-timeout>
+	</session-config>
+
+	<!-- Servlets -->
+
+	<servlet>
+		<servlet-name>configurator</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.Configurator</servlet-class>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>configurator</servlet-name>
+		<url-pattern>/info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>rest-api</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>pt.up.fc.dcc.mooshak.rest</param-value>
+		</init-param>
+		<init-param>
+	        <param-name>javax.ws.rs.Application</param-name>
+	        <param-value>pt.up.fc.dcc.mooshak.rest.MooshakRestAppConfig</param-value>
+	    </init-param>    
+	    <init-param>
+		    <param-name>jersey.config.server.provider.classnames</param-name>
+		    <param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>sessionCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.SessionCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>basicCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.BasicCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>adminCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.AdminCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>participantCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.ParticipantCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>judgeCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.JudgeCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>creatorCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.CreatorCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>enkiCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.EnkiCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>koraCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.KoraCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>asuraCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.AsuraCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>quizCommands</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.commands.QuizCommandServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>eventService</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.events.EventServiceImpl</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>image</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.Image</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>test-data</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.ProblemIODataServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>pdf</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.PDF</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>script</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.ScriptRecorder</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>certificate</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.CertificatesPDF</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>flag</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.Flag</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>achievements</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.AchievementImage</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>captcha</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.Captcha</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>mathjax</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.MathJaxServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>import-content</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.ImportContentServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>authentication</servlet-name>
+		<servlet-class>pt.up.fc.dcc.mooshak.server.Authentication</servlet-class>
+	</servlet>
+	
+	<!-- remote logging -->
+	<servlet>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <servlet-class>com.google.gwt.logging.server.RemoteLoggingServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Mappings -->
+
+	<servlet-mapping>
+		<servlet-name>authentication</servlet-name>
+		<url-pattern>/authentication</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/authentication/remote_logging</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>sessionCommands</servlet-name>
+		<url-pattern>/*/sessionCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/*/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>image</servlet-name>
+		<url-pattern>/image/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>test-data</servlet-name>
+		<url-pattern>/test-data/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>pdf</servlet-name>
+		<url-pattern>/pdf/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>script</servlet-name>
+		<url-pattern>/script/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>certificate</servlet-name>
+		<url-pattern>/certificate/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+
+		<servlet-name>flag</servlet-name>
+		<url-pattern>/flag/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>achievements</servlet-name>
+		<url-pattern>/achievements/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>captcha</servlet-name>
+		<url-pattern>/captcha/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>mathjax</servlet-name>
+		<url-pattern>/mathjax/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>import-content</servlet-name>
+		<url-pattern>/import-content</url-pattern>
+	</servlet-mapping>
+
+	<!-- Admin client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>adminCommands</servlet-name>
+		<url-pattern>/admin/adminCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/admin/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/admin/event</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ICPC client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/icpc/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/icpc/basicCommand</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/icpc/remote_logging</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/icpc/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- Judge client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>judgeCommands</servlet-name>
+		<url-pattern>/judge/judgeCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/judge/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/judge/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>adminCommands</servlet-name>
+		<url-pattern>/judge/adminCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/judge/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- Runner client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>adminCommands</servlet-name>
+		<url-pattern>/runner/adminCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/runner/event</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>judgeCommands</servlet-name>
+		<url-pattern>/runner/judgeCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/runner/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/runner/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<!-- Creator client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>creatorCommands</servlet-name>
+		<url-pattern>/creator/creatorCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/creator/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>adminCommands</servlet-name>
+		<url-pattern>/creator/adminCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/creator/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>koraCommands</servlet-name>
+		<url-pattern>/creator/koraCommand</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/creator/remote_logging</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/creator/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- authentication mappings -->
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/authentication/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/authentication/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- ScoreBoard client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/scoreboard/basicCommand</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/scoreboard/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- Enki client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/enki/event</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>sessionCommands</servlet-name>
+		<url-pattern>/enki/sessionCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/enki/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>enkiCommands</servlet-name>
+		<url-pattern>/enki/enkiCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/enki/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>koraCommands</servlet-name>
+		<url-pattern>/enki/koraCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>asuraCommands</servlet-name>
+		<url-pattern>/enki/asuraCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>quizCommands</servlet-name>
+		<url-pattern>/enki/quizCommand</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/enki/remote_logging</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Kora client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>koraCommands</servlet-name>
+		<url-pattern>/kora/koraCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/kora/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/kora/basicCommand</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/kora/remote_logging</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/kora/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- Quiz client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>quizCommands</servlet-name>
+		<url-pattern>/quiz/quizCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/quiz/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/quiz/basicCommand</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	    <servlet-name>remoteLogging</servlet-name>
+	    <url-pattern>/quiz/remote_logging</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/quiz/event</url-pattern>
+	</servlet-mapping>
+
+	<!-- Replay client mappings -->
+
+	<servlet-mapping>
+		<servlet-name>basicCommands</servlet-name>
+		<url-pattern>/replay/basicCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>judgeCommands</servlet-name>
+		<url-pattern>/replay/judgeCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/replay/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>enkiCommands</servlet-name>
+		<url-pattern>/replay/enkiCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>adminCommands</servlet-name>
+		<url-pattern>/replay/adminCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>creatorCommands</servlet-name>
+		<url-pattern>/replay/creatorCommand</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>eventService</servlet-name>
+		<url-pattern>/replay/event</url-pattern>
+	</servlet-mapping>
+	
+	<!-- REST API -->
+	<servlet-mapping>
+		<servlet-name>rest-api</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- unfortunately wildcards don't work on directory names -->
+	<servlet-mapping>
+		<servlet-name>participantCommands</servlet-name>
+		<url-pattern>/*/participantCommand</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Mooshak.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

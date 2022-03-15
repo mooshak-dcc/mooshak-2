@@ -1,0 +1,181 @@
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	color: black;
+}
+
+.wrapper {
+	background: -webkit-linear-gradient(#BBC, white); /* For Safari */
+    background: -o-linear-gradient(#BBC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BBC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BBC, white); /* Standard syntax (must be last) */ 
+	position: relative;
+}
+
+.film {
+	margin: auto;
+	color: #669;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+}
+
+.header {
+	height: 50px;
+}
+
+.header-appname {
+	font-size: 24px;
+	font-weight: bold;
+	color: #669;
+}
+
+.header-link {
+	display: inline-block;
+	padding: 0px 5px;
+}
+
+.header-links {
+	padding: 5px 0;
+	text-align: right;
+}
+
+.searchBox {
+}
+
+.searchBtn {
+	cursor: pointer;
+}
+
+.content {
+	
+}
+
+@external .gwt-TabLayoutPanelContentContainer, .gwt-TabPanelBottom, .gwt-TabBar, .gwt-TabLayoutPanelTabs, .gwt-TabBarFirst, .gwt-TabBarItem, .gwt-TabLayoutPanelTab, .gwt-TabBarItem-selected, .gwt-TabLayoutPanelTab-selected, .gwt-TabLayoutPanelTabInner, .gwt-TabPanelTabInner;
+@external .gwt-SplitLayoutPanel-HDragger;
+@external .gwt-SplitLayoutPanel-VDragger;
+
+.gwt-SplitLayoutPanel-HDragger { 
+	width: 2px !important;
+	background: transparent;
+	cursor: col-resize;
+	margin: 1px;
+}
+
+.gwt-SplitLayoutPanel-VDragger { 
+	height: 2px !important;
+	background: transparent;
+	cursor: row-resize;
+	margin: 1px;
+}
+
+.splitPanel {
+	padding: 5px;
+}
+
+.eastPanel {
+	width: 100%;
+	padding: 5px
+}
+
+.westPanel {
+	width: 100%;
+	padding: 5px
+}
+
+.northPanel {
+	width: 100%;
+	padding: 5px
+}
+
+.southPanel {
+	width: 100%;
+	padding: 5px
+}
+
+.centerPanel {
+	width: 100%;
+	padding: 5px
+}
+
+.gwt-TabLayoutPanelContentContainer, .gwt-TabPanelBottom {
+	background: #DDD;	
+	border: 1px solid white;
+	
+}
+
+.gwt-TabBar, .gwt-TabLayoutPanelTabs {
+  padding-top: 2px !important;
+  background-color: transparent !important;
+  padding-left: 0 !important;
+}
+
+.gwt-TabBarItem, .gwt-TabLayoutPanelTab {
+  	cursor: pointer;
+  	background-color: #AAA;
+  	border: 1px solid white;
+  	border-bottom: 0 !important;
+  	color: black;
+  	margin: 0 0 3px 0 !important;
+  	font-weight: bold !important;
+	position: relative;
+	z-index: 1;
+}
+
+.gwt-TabLayoutPanelTabInner, .gwt-TabPanelTabInner {}
+
+.gwt-TabBarItem-selected, .gwt-TabLayoutPanelTab-selected {
+	background: #DDD;	
+	color: black;
+}
+
+.gwt-TabBarFirst {
+	display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.border-top-dashed {
+	border-top: 1px dashed gray;
+}
+
+.footer-link {
+	display: inline-block;
+	padding: 0px 5px;
+}
+
+.footer-links {
+	padding: 3px 0;
+}
+
+.footer {
+	width: 100%;
+	min-height: 40px;
+	padding: 0;
+	position: absolute;
+	font-size: 11px;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.social-box {
+	color: black;
+	margin-top: 10px;
+}
+
+.social-box a {
+	color: #AAA !important;
+	text-decoration: none;
+}
+
+.social-box a:hover {
+	color: #DDD !important;
+}
+

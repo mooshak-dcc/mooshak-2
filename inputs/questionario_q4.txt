@@ -1,0 +1,70 @@
+Coach Class 4
+C 2 attribute name
+type String
+visibility true
+C 2 attribute address
+type String
+visibility true
+C 2 attribute accrediationLevel
+type String
+visibility true
+C 2 attribute yearsExperience
+type int
+visibility true
+Node
+Player Class 4
+C 2 attribute name
+type String
+visibility true
+C 2 attribute address
+type String
+visibility true
+C 2 attribute number
+type int
+visibility true
+C 2 attribute position
+type String
+visibility true
+Node
+Game Class 2
+C 2 attribute location
+type String
+visibility true
+C 2 attribute score
+type String
+visibility true
+Node
+League Class 0
+Node
+Team Class 2
+C 2 attribute name
+type String
+visibility true
+C 2 attribute record
+type int
+visibility true
+Node
+Captain Class 0
+Node
+2 Generalization 0
+Edge Player Captain
+3 Association 2
+S multiplicity_a *
+S multiplicity_b 0..1
+Edge Team Coach
+4 Association 2
+S multiplicity_a *
+S multiplicity_b 2
+Edge Game Team
+5 Aggregation 2
+S multiplicity_a 1
+S multiplicity_b 4..*
+Edge League Team
+6 Aggregation 2
+S multiplicity_a 1
+S multiplicity_b 6..12
+Edge Team Player
+7 Composition 2
+S multiplicity_a 1
+S multiplicity_b 1
+Edge Team Captain

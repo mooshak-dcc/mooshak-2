@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w='urn:import:pt.up.fc.dcc.mooshak.client.widgets'
+	xmlns:v='urn:import:pt.up.fc.dcc.mooshak.client.guis.judge.view' 
+	xmlns:u='urn:import:pt.up.fc.dcc.mooshak.client.utils'
+	xmlns:my="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view"
+	xmlns:t='urn:import:pt.up.fc.dcc.mooshak.client.guis.icpc.view'>
+
+	<ui:with field='i18n'
+		type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+
+	<ui:style src="Toplevel.css"
+		type="pt.up.fc.dcc.mooshak.client.guis.creator.view.TopLevelViewImpl.BaseStyle" />
+	
+	<g:HTMLPanel styleName='{style.body-wrapper}'>
+		<div class='{style.base}'>
+			<div class="{style.mooshakButtons}">
+				<!-- <w:CustomImageButton 
+					ui:field="helpButton" 
+					title="{i18n.tutorialTip}" 
+					url='{images.helpICPC.getSafeUri.asString}' 
+					pixelSize="64,64" /> -->
+				<w:CustomImageButton 
+					ui:field="logout" 
+					title="{i18n.logout}"
+					url='{images.logout.getSafeUri.asString}' 
+					pixelSize="64,64" />
+			</div>
+			<div class="{style.header}">
+				<div class="{style.banner}">
+					<span>Authoring:</span>
+					<w:ContestSelector ui:field="contestsel" styleName="{style.contest-select}" />
+				</div>
+				<my:ProblemSelector styleName="{style.problems}" ui:field="problems">
+					<!-- <g:Label styleName="{style.problemsLabel}" text="{i18n.problems}" /> -->
+					<!-- Create these buttons programmatically -->
+
+				</my:ProblemSelector>
+				<g:HTMLPanel styleName="{style.actions}">
+					<!-- <g:Label styleName="{style.problemsLabel}" text="{i18n.problems}" /> -->
+					<!-- Create these buttons programmatically -->
+
+					<t:TabButton ui:field='delete' text="x" styleName="{style.delTab}"
+								group="problemActions" />
+					<t:TabButton ui:field='add' text="+" styleName="{style.addTab}" 
+								group="problemActions" />
+				</g:HTMLPanel>
+
+			</div>
+
+			<div class="{style.center}">
+				<g:HTMLPanel styleName="{style.tabs}" ui:field="actions">
+					<!-- Do this by java code -->
+				</g:HTMLPanel>
+
+				<w:CardPanel styleName="{style.content}" ui:field='content' />
+		
+				<g:Label ui:field='message' styleName='{style.message}'/>
+
+			</div>
+
+			<div class="{style.bottom}">
+
+			</div>
+		</div>
+
+
+		<img class="{style.logo}" src="images/mooshak.png" />
+
+		<div class="{style.footer}">
+			<div class="{style.left}">Version 2.0</div>
+			<div class="{style.middle}">
+				© Department of Computer Science
+				- Faculty of Science -
+				University of Porto</div>
+			<div class="{style.right}">zp@dcc.fc.up.pt</div>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

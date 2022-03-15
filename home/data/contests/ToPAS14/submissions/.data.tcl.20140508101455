@@ -1,0 +1,12 @@
+set        Fatal {}
+set      Warning {Selecione erros a mostrar ao reportar avaliação<br>}
+set Default_state {}
+set Multiple_accepts {}
+set Run_all_tests {}
+set Show_own_code {}
+set Give_feedback report
+set  Show_errors {}
+set Feedback_delay {}
+set Minimum_interval {}
+set Maximum_pending {}
+set   Submission {}

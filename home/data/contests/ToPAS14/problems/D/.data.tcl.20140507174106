@@ -1,0 +1,19 @@
+set        Fatal {Variável com valor inválido <code>Tempo_limite</code>: <br>}
+set      Warning {}
+set         Name D
+set        Color Yellow
+set        Title {indicador mais-ou-menos }
+set   Difficulty Easy
+set         Type {}
+set  Description d.html
+set          PDF PDF.pdf
+set      Program indicador.c
+set  Environment Environment
+set      Timeout {}
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

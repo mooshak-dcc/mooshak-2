@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+	<ui:style src="ProgramErrorList.css" />
+	
+	<w:ResizableHtmlPanel>
+		<c:DataGrid styleName='{style.grid}' ui:field='errorsGrid'/>
+		<!-- <c:SimplePager styleName='{style.pager}' ui:field='pager'/> -->
+	</w:ResizableHtmlPanel>
+</ui:UiBinder> 

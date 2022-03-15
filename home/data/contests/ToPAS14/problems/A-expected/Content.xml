@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Problem xmlns="http://www.ncc.up.pt/mooshak/" Color="#000000" Description="statement.html" Difficulty="EASY" Editor_kind="CODE" Environment="" Name="Derivative of a Function" Original_location="https://fgpe-project.usz.edu.pl/authorkit/ui/exercises/f925e471-2bd4-4bf3-89d2-cfcf84ee34dd" PDF="" Program="" Start="" Stop="" Static_corrector="/bin/sh static_corrector.sh" Timeout="" Title="Derivative of a Function" Type="" Fatal="" Warning="">
+  <Tests xml:id="tests" Definition="" Fatal="" Warning="">
+    <Test xml:id="tests.T1" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+    <Test xml:id="tests.T2" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+    <Test xml:id="tests.T3" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+    <Test xml:id="tests.T4" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+    <Test xml:id="tests.T5" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+    <Test xml:id="tests.T6" Feedback="" Points="0" Result="" Show="No" SolutionErrors="" Timeout="" args="" context="" input="in.txt" output="out.txt" Fatal="" Warning=""/>
+  </Tests>
+  <Skeletons Show="yes" xml:id="skeletons">
+    <Skeleton Skeleton="solution.py" Show="yes" Extension="py" xml:id="skeletons.SK1"/>
+  </Skeletons>
+  <Solutions xml:id="solutions" Fatal="" Warning=""/>
+  <Images Fatal="" Warning="" xml:id="images"/>
+</Problem>

@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style src="DatagridColumnSelectorPopup.css" />
+	
+	<g:HTMLPanel styleName="{style.columns}">
+		<g:Button ui:field="close" styleName="{style.close}">x</g:Button>
+		<g:Label styleName="{style.lblSelectColumns}"></g:Label>
+		<g:HTMLPanel styleName='{style.columnList}' ui:field="columnList"></g:HTMLPanel>
+		<g:CheckBox ui:field="columnCheck" checked="true">All</g:CheckBox>
+	</g:HTMLPanel>
+</ui:UiBinder>  

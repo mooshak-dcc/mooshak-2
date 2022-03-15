@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00008382_B_Mete_Olhinhos</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008382_B_Mete_Olhinhos">00008382_B_Mete_Olhinhos</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008382_B_Mete_Olhinhos/exB.java">exB.java</a>
+<a href="data/contests/ToPAS14/submissions/00008382_B_Mete_Olhinhos/exB.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 13:49:42 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 13:49:42 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/DE/Mete_Olhinhos">
+Mete_Olhinhos
+</a> Login: <code>Mete_Olhinhos</code> Group: DE [DE]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/B">
+B: CaixaNegra 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td>Note: exB.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.</td>
+</tr>
+</table><table>
+<tr>	<th>CPU	  </th><td>0 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>0 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Compile Time Error</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{Observation of <b>Compile Time Error</b> <pre>Note: exB.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.</pre>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class exB {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		ArrayList&lt;Integer&gt; vet=new ArrayList();
+		
+		int n,x,a=0,b=0,c=0,cont;
+		n=sc.nextInt();
+		cont=0;
+		for (int i =1 ; i &lt;=n ; i++) {
+			x=sc.nextInt();
+			vet.add(x);
+		}
+		for (int j = 1; j &lt;= vet.size(); j++) {
+			if ((j+2&lt;vet.size()) &amp;&amp; (j+1&lt;vet.size())){
+				a=vet.get(j)*2;
+				b=vet.get(j+2)*2;
+				c=vet.get(j+1);
+				if ((c&gt;a) &amp;&amp; (c&gt;b)) {
+					cont++;
+					
+					
+				}
+			}
+		}
+		
+		System.out.println(cont);
+		
+	}
+
+}
+
+</pre>
+
+</body>

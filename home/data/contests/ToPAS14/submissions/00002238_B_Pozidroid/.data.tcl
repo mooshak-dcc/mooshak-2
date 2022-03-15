@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633638
+set Time 2238
+set Problem B
+set Team Pozidroid
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 178
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C++
+set Program B.cpp
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.002
+set Memory 64.0
+set Signals {}
+set Feedback {{ 5 tests with <b>Wrong Answer</b>}}

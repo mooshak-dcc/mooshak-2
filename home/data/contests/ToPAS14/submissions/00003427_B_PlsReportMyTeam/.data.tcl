@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399634827
+set Time 3427
+set Problem B
+set Team PlsReportMyTeam
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 333
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C++
+set Program main.cpp
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.002
+set Memory 64.0
+set Signals {}
+set Feedback {{ 2 tests with <b>Wrong Answer</b>}}

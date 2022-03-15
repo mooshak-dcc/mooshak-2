@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.judge.i18n.JudgeConstants' />
+
+	<ui:style src="CommentProblem.css" />
+
+
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<div class="{style.commentform}">
+			<g:HTMLPanel styleName="{style.problems}" ui:field="problems">
+				<g:Label text="{i18n.problem}"/>
+				<!-- Create these radiobuttons programmatically 
+					
+				-->
+			</g:HTMLPanel>
+			
+			<span>Subject</span>
+			<g:TextBox styleName='{style.subject}' ui:field='subject' />
+			<span>Comment</span>
+			<g:TextArea styleName='{style.comment}' ui:field='comment'  title="Issue a general warning to all teams" />
+		</div>
+		
+		<div class="{style.commands}">
+			<g:Button styleName='{style.button}' 
+				ui:field='submit' text='{i18n.sendWarning}'/>
+			<g:Button styleName='{style.button}' 
+				ui:field='clear' text='{i18n.clear}'/>
+		</div>
+		
+		
+		<g:Label ui:field='message' styleName='{style.message}'/>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

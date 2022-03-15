@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399633410
+set Time 2010
+set Problem A
+set Team GoodGame
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 602
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program A.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.0
+set Memory 64.0
+set Signals {}
+set Feedback {{ 4 tests with <b>Wrong Answer</b>}}

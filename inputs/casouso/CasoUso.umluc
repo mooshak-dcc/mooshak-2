@@ -1,0 +1,63 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "CasoUso",
+   "id": 1,
+   "x": 86,
+   "y": 42,
+   "width": 70,
+   "height": 40,
+   "label": "CasoUso",
+   "key": "false",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Actor",
+   "id": 2,
+   "x": 204,
+   "y": 172,
+   "width": 70,
+   "height": 40,
+   "label": "Actor",
+   "key": "false",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Association",
+   "id": 3,
+   "label": "text",
+   "source": 1,
+   "target": 2,
+   "listHandler": [
+    {
+     "x": 153,
+     "y": 59
+    },
+    {
+     "x": 236,
+     "y": 169
+    }
+   ],
+   "features": [
+    {
+     "name": "key",
+     "value": "true"
+    },
+    {
+     "name": "cardinalitySource",
+     "value": ""
+    },
+    {
+     "name": "cardinalityTarget",
+     "value": ""
+    }
+   ]
+  }
+ ]
+}

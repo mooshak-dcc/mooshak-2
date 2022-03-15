@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w='urn:import:pt.up.fc.dcc.mooshak.client.widgets'
+	xmlns:c='urn:import:com.google.gwt.user.cellview.client'
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="Authentication.css"
+		type="pt.up.fc.dcc.mooshak.client.guis.authentication.AuthenticationView.BaseStyle"/>
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+
+
+	<g:HTMLPanel styleName='{style.body-wrapper}'>
+		<div class='{style.base}'> 
+			<w:MultiLanguageMenu ui:field="langMenu" />
+			<div id="dialog">
+				<div class="{style.title}">Mooshak Authentication</div>
+				<div>
+					<div class="{style.label}"><ui:text from="{i18n.domain}" /></div>
+					<div class="{style.value}" id="domain">
+						<u:SelectOneListBox ui:field="domain"></u:SelectOneListBox>
+					</div>
+				</div>
+				<div>
+					<div class="{style.label}"><ui:text from="{i18n.user}" /></div>
+					<div class="{style.value}" id="user">
+						<g:TextBox ui:field="user" styleName="{style.authTextbox}"></g:TextBox>					
+					</div>
+				</div>
+				<div>
+					<div class="{style.label}"><ui:text from="{i18n.password}" /></div>
+					<div class="{style.value}" id="password">
+						<g:PasswordTextBox ui:field="password" styleName="{style.authTextbox}"></g:PasswordTextBox>	
+					</div>
+				</div>
+
+				<div id="message">
+					<g:TextBox ui:field="message" styleName="{style.message-box}" enabled="false"></g:TextBox>
+				</div>
+				<div id="buttons">
+					<g:Button ui:field="login" addStyleNames="{style.gwt-Button} {style.button}" >
+						<ui:text from="{i18n.login}" />
+					</g:Button>
+					<g:Button ui:field="clear" addStyleNames="{style.gwt-Button} {style.button}">
+						<ui:text from="{i18n.clear}" />
+					</g:Button>
+					<g:Button ui:field="register" addStyleNames="{style.gwt-Button} {style.button}">
+						<ui:text from="{i18n.register}" />
+					</g:Button>
+					<g:Button ui:field="guest" addStyleNames="{style.gwt-Button} {style.button}">
+						<ui:text from="{i18n.guest}" />
+					</g:Button>
+				</div>
+
+			</div>
+		</div>
+
+
+		<img class="{style.logo}" src="images/mooshak.png" />
+
+		<div class="{style.footer}">
+			<div class="{style.left}">Version <g:Label 
+				ui:field="version" styleName="{style.version}"/>
+			</div>
+			<div class="{style.middle}">
+				© Department of Computer Science
+				- Faculty of Science - University of Porto</div>
+			<div class="{style.right}">zp@dcc.fc.up.pt</div>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

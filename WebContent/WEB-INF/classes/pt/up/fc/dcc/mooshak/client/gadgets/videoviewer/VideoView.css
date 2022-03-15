@@ -1,0 +1,42 @@
+
+
+.button-share {
+	margin-top: 10px;
+}
+
+.panel-buttons {
+	text-align: right;
+	padding: 10px;
+	display: table;
+    float: right;
+    min-height: 40px;
+}
+					
+.playBtn {
+	height: 72px;
+	width: 72px;
+	left: 50%;
+	top: 50%;
+	margin-left: -36px;
+	margin-top: -36px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.bgImage img {
+	bottom: 0;
+	display: block;
+	left: 0;
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	height: auto;
+	cursor: pointer;
+	-webkit-transition: .4s all;
+	-moz-transition: .4s all;
+	transition: .4s all;
+}

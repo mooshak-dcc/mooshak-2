@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>
+	
+	Default configurations of Mooshak 2.0.
+	
+	These defaults are meant for debugging only.
+	
+	A similar file is automatically created in the servlet container,
+	under the parent directory of Mooshak's webapp.
+	
+	The file is named  "MooshakProperties.xml"
+	and is initialized with default values adjusted to the server.
+		
+	</comment>	
+	
+	<!-- pathname to home directory --> 
+	<entry key="homeDirectory">home</entry>
+	
+	<!-- IP number or name of host acting as master -->
+	<entry key="masterHostName">127.0.0.1</entry>
+	
+	<!-- Enki Parameter: URL of the gamification service -->
+	<entry key="gamificationServiceURL">https://mooshak2.dcc.fc.up.pt/odin/</entry><!-- http://127.0.0.1:8080/odin/ -->
+	
+	<!-- Enki Parameter: URL of the sequencing service -->
+	<entry key="sequenciationServiceURL">https://mooshak2.dcc.fc.up.pt/seqins/</entry><!-- http://127.0.0.1:8080/seqins/ -->
+	
+</properties>

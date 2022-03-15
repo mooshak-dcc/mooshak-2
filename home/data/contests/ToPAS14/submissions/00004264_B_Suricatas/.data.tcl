@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399635664
+set Time 4264
+set Problem B
+set Team Suricatas
+set Classify COMPILE_TIME_ERROR
+set Mark 0
+set Size 378
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program exb.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.0
+set Memory 0.0
+set Signals {}
+set Feedback {{Observation of <b>Compile Time Error</b> <pre>Free Pascal Compiler version 2.6.0 [2012/07/19] for x86_64}

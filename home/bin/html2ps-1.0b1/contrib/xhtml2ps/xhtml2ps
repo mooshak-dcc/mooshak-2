@@ -1,0 +1,986 @@
+#!/usr/bin/wish
+
+
+##############################################################################
+#
+# X-html2ps - A GUI frontend for html2ps (*), a HTML-to-PostScript converter.
+#
+# Copyright (C) 1997 Jean-Philippe Argaud.
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+#
+##############################################################################
+# (*)  Copyright (C) 1995-1997 Jan Karrman, e-mail: jan@tdb.uu.se.           #
+#      (WWW location : http://www.tdb.uu.se/~jan/html2ps.html)               #
+# (**) This program was done, for some parts, using Visual Tcl v1.10, a      #
+#      great and useful "Application Development Environment For Tcl/Tk"     #
+#      (WWW location : http://www.neuron.com/stewart/vtcl/)                  #
+##############################################################################
+# xhtml2ps (size : 37819 octets, released : June 26, 1997)                   #
+##############################################################################
+
+
+##############################################################################
+# This file contains three parts :
+# 1. the file selection box definition
+# 2. the configuration and useful commands
+# 3. the GUI procedures
+#
+##############################################################################
+#
+##############################################################################
+# 1. FILE SELECTION BOX
+##############################################################################
+  #
+  # Usage : FS_Box <default filename>
+  #         The default filename is optionnal. Output the complete filename
+  #         chosen or nothing if Canceled
+  #           set file [FS_Box $file]
+  #
+  ##############################################################################
+  #
+proc FS_Box {{default ""}} {
+  global fsdata filename
+  #
+  # Initial default values
+  # ----------------------
+  set fsdata(default)  $default
+  set fsdata(filename) [file tail $default]
+  set fsdata(dirname)  [pwd]
+  array set fsdata {
+    filter          *.html
+    hidden          0
+  }
+  #
+  # Bindings of default key actions
+  # -------------------------------
+  bind Entry <ButtonRelease-2> {}
+  bind Entry <Control-k>       " %W delete 0 end "
+  bind Entry <Left>            " FS_EntryCursor %W -1 "
+  bind Entry <Right>           " FS_EntryCursor %W 1 "
+  bind Entry <2>               { %W insert insert "[FS_GetXSelect]" }
+  bind Listbox <1>             {}
+  #
+  FS_GUI
+  #
+}
+  #
+  ##############################################################################
+  #
+proc FS_GUI {} {
+  global fsdata filename
+  #
+  set w .fsl
+  #
+  # Global window definition
+  # ------------------------
+  catch {destroy $w}
+  toplevel    $w -class Toplevel
+  wm title    $w "File Selection Box"
+  wm iconname $w "File Selection Box"
+  wm minsize  $w 1 1
+  wm protocol $w WM_DELETE_WINDOW { }
+  #
+  # Listbox to select the directory and file
+  # ----------------------------------------
+  frame $w.l -borderwidth 2
+  pack [frame $w.l.d -borderwidth 0]\
+        -side left -expand 1 -fill both
+  pack [label $w.l.d.label -relief flat -borderwidth 2 \
+        -text "Directories :" -anchor nw] \
+        -side top -expand 1 -fill both
+  pack [listbox $w.l.d.dirs -relief sunken -borderwidth 2 \
+        -yscrollcommand "$w.l.d.scrolldir set" -setgrid 1] \
+        -side left -expand 1 -fill both
+  pack [scrollbar $w.l.d.scrolldir -relief sunken \
+        -command "$w.l.d.dirs yview" -width 10] \
+        -side left -after $w.l.d.dirs -fill y
+  #
+  pack [frame $w.l.f -borderwidth 0]\
+        -side left -expand 1 -fill both
+  pack [label $w.l.f.label -relief flat -borderwidth 2 \
+        -text "Files :" -anchor nw] \
+        -side top -expand 1 -fill both
+  pack [listbox $w.l.f.files -relief sunken -borderwidth 2 \
+        -yscrollcommand "$w.l.f.scrollfile set" -setgrid 1] \
+        -side right -expand 1 -fill both
+  pack [scrollbar $w.l.f.scrollfile -relief sunken \
+        -command "$w.l.f.files yview" -width 10] \
+        -side right -before $w.l.f.files -fill y
+  pack $w.l -side top -fill both -expand 1 -padx 3 -pady 5
+  #
+  # Directory name entry zone definition
+  # ------------------------------------
+  frame $w.d -borderwidth 2 -relief groove
+  pack [label $w.d.dirtext -text "Directory : "] \
+        -side left -fill x -padx 1m -pady 2m
+  pack [entry $w.d.dirname -width 40 -relief sunken \
+        -bd 2 -textvariable fsdata(dirname) ] \
+        -side left -fill x -padx 1m -pady 2m -expand 1
+  pack $w.d -side top -fill both -padx 5 -pady 5
+  #
+  # Filters
+  # -------
+  frame $w.i -borderwidth 2 -relief groove
+  pack [checkbutton $w.i.hidden -text "View hidden files" \
+        -variable fsdata(hidden) -command FS_ChangeDir] \
+        -side left -fill x -padx 1m -pady 2m
+  pack [label $w.i.lpatt -text "File filter : "] \
+        -side right -fill x -padx 1m -pady 2m
+  pack [entry $w.i.filter -width 10  -relief sunken \
+        -bd 2 -textvariable fsdata(filter)] \
+        -side right -fill x -padx 1m -pady 2m -before $w.i.lpatt
+  pack $w.i -side top -fill both -padx 5 -pady 1
+  #
+  # Buttons
+  # -------
+  set f $w.butt
+  frame $f -borderwidth 2
+  pack  $f -side bottom -anchor w -expand 0 -fill x -padx 1m -pady 1m
+  #
+  pack [button $f.ok  -width 10 -text "OK" \
+        -command " FS_GetFile "] \
+        -anchor center -expand 0 -fill none -side left -padx 1m
+  pack [button $f.can -width 10 -text "Cancel" \
+        -command "set filename \"$fsdata(default)\" ; FS_Exit "] \
+        -anchor center -expand 0 -fill none -side left -padx 1m
+  #
+  # Bindings of defaults key actions
+  # --------------------------------
+  bind $w.d.dirname <Return>          " FS_ChangeDir "
+  bind $w.l.d.dirs  <1>               " FS_GetSelection %W @%x,%y "
+  bind $w.l.f.files <1>               " FS_GetSelection %W @%x,%y "
+  bind $w.l.d.dirs  <Double-Button-1> " FS_GetDir %W @%x,%y "
+  bind $w.l.f.files <Double-Button-1> " FS_GetFile "
+  bind $w.i.filter <Return>           " FS_ChangeDir "
+  #
+  # Set default focus
+  # -----------------
+  set w .fsl
+  wm withdraw $w
+  update idletasks
+  set x [expr [winfo screenwidth $w]/2  - [winfo reqwidth $w]/2  ]
+  set y [expr [winfo screenheight $w]/2 - [winfo reqheight $w]/2 ]
+  wm geom $w +$x+$y
+  wm deiconify $w
+  set fsdata(oldFocus) [focus]
+  set fsdata(oldGrab)  [grab current $w]
+  if {$fsdata(oldGrab) != ""} {
+    set fsdata(grabStatus) [grab status $fsdata(oldGrab)]
+  }
+  grab $w
+  focus $w
+  #
+  FS_ChangeDir
+  #
+  tkwait variable filename
+  return $filename
+}
+  #
+  ##############################################################################
+  #
+proc FS_EntryCursor {w dir} {
+  set x [$w index insert]
+  set x [expr $x + $dir]
+  $w icursor $x
+}
+  #
+  ##############################################################################
+  #
+proc FS_GetXSelect { } {
+  set s ""   
+  catch {set s [selection get STRING]}
+  return "$s"
+}
+  #
+  ##############################################################################
+  #
+proc FS_ChangeDir { } {
+  global fsdata
+  #
+  cd $fsdata(dirname)
+  set w .fsl.l
+  $w.d.dirs delete 0 end
+  $w.f.files delete 0 end
+  if {$fsdata(hidden)} {
+    if {[catch {set allfiles [glob * .?*]}]} {return}
+  } else {
+    $w.d.dirs insert end ".."
+    if {[catch {set allfiles [glob *]}]} {return}
+  }
+  foreach i [lsort $allfiles] {
+    if { [file isdirectory $i] } {
+      $w.d.dirs insert end $i
+    } else {
+      if {[string match $fsdata(filter) $i]} {$w.f.files insert end $i}
+    }
+  }
+}
+  #
+  ##############################################################################
+  #
+proc FS_GetSelection {win pos} {
+  global fsdata
+  #
+  $win selection clear active
+  $win selection set [$win index $pos]
+  #
+  if {[string match $win ".fsl.l.f.files"]} {
+    set f [.fsl.l.f.files curselection]
+    set fsdata(filename) [.fsl.l.f.files get $f]
+  }
+}
+  #
+  ##############################################################################
+  #
+proc FS_GetDir {win pos} {
+  global fsdata
+  #
+  $win selection clear active
+  $win selection set [$win index $pos]
+  #
+  set f [.fsl.l.d.dirs curselection]
+  set d [.fsl.l.d.dirs get $f]
+  cd $d
+  set fsdata(dirname) [pwd]
+  #
+  FS_ChangeDir
+}
+  #
+  ##############################################################################
+  #
+proc FS_GetFile {} {
+  global fsdata filename
+  #
+  set s $fsdata(dirname)
+  set l [string length $s]
+  if {$l > 0} {set s ${s}/}
+  #
+  set dirfile "$s$fsdata(filename)"
+  if {[file exists $dirfile]} {
+    set filename "$s$fsdata(filename)"
+    FS_Exit
+  } else {
+    set filename ""
+  }
+  #
+}
+  #
+  ##############################################################################
+  #
+proc FS_Exit {} {
+  global fsdata
+  #
+  catch {focus $fsdata(oldFocus)}
+  destroy .fsl
+  if {$fsdata(oldGrab) != ""} {
+    if {$fsdata(grabStatus) == "global"} {
+      grab -global $fsdata(oldGrab)
+    } else {
+      grab $fsdata(oldGrab)
+    }
+  }
+}
+##############################################################################
+# END OF FILE SELECTION BOX
+##############################################################################
+#
+#
+##############################################################################
+# 2. CONFIGURATION AND USEFUL COMMANDS
+##############################################################################
+  #
+  ##############################################################################
+  #
+proc UT_Config {} {
+  global stusr
+  #
+  # Default options
+  # ---------------
+  option add *font            "-adobe-helvetica-bold-r-normal--*-120-*" widgetDefault
+  option add *Button.font     "-adobe-helvetica-bold-r-normal--*-120-*" widgetDefault
+  option add *Label.font      "-adobe-helvetica-bold-r-normal--*-120-*" widgetDefault
+  option add *Entry.font      "-adobe-courier-medium-r-normal--*-120-*" widgetDefault
+  option add *Listbox.font    "-adobe-courier-medium-r-normal--*-120-*" widgetDefault
+  option add *Menu.tearOff    0
+  option add *Menu.background #aeaeae
+  #
+  bind all <Control-q> { exit }
+  bind all <Control-h> { UT_Manual }
+  bind all <Control-a> { UT_About }
+  #
+  # html2ps options
+  # ---------------
+  array set stusr {
+    command     "html2ps"
+    checker     "weblint -x Netscape"
+    filename    ""
+    orientation " "
+    colonnes    " "
+    numpages    "-n"
+    infodbg     " "
+    frame       " "
+    greyscale   "-g"
+    tocexist    "-C"
+    tocbegin    "b"
+    tocorig     "h"
+    textonly    " "
+    textcolor   " "
+    linkunder   " "
+    scaledoc    "1.0"
+    scaleimg    "1.0"
+    scalemat    "1.0"
+    imgorig     " "
+  }
+}
+UT_Config
+  #
+  ##############################################################################
+  # Show the About comment
+  #-----------------------------------------------------------------------------
+  #
+proc UT_About {} {
+  #
+  set w .msgwin
+  if [catch {toplevel $w}] {
+    raise $w
+  } else {
+    wm title    $w "About"
+    wm iconname $w "About"
+    set titlefont "-adobe-times-bold-i-normal--*-240-*"
+    set textfont  "-adobe-helvetica-medium-r-normal--*-120-*"
+    pack [label $w.msg1 -text "X-html2ps 1.0" -font $titlefont]\
+         -side top -padx 1m -pady 1m -ipadx 3m
+    pack [label $w.msg2 -font $textfont -text \
+         "Generic Tk/Tcl interface for html2ps 1.0b,\n\
+          a HTML to Postscript translator\n\
+          (from Jan Karrman, e-mail: jan@tdb.uu.se)\n\n\
+          Jean-Philippe ARGAUD - June 1997"]\
+         -side top -padx 1m -pady 1m -ipadx 3m
+    pack [button  $w.ok -text OK -width 10 -command { destroy .msgwin }]\
+         -side top -padx 1m -pady 1m -ipadx 3m
+  }
+}
+  #
+  ##############################################################################
+  #
+proc UT_Manual {} {
+  #
+  set running [open "| man html2ps |& cat" r+]
+  set Output ""
+  flush $running
+  while {[gets $running msg] >= 0} {
+    regsub -all "_" $msg "" msg
+    append Output "  $msg\n"
+  }
+  catch { close $running }
+  #
+  UT_ViewMsg $Output
+}
+  #
+  ##############################################################################
+  #
+proc UT_Checking {} {
+  global stusr
+  #
+  if (![string compare $stusr(filename) ""]) {
+    return
+  }
+  set running [open "| $stusr(checker) $stusr(filename) |& cat" r+]
+  set Output ""
+  flush $running
+  while {[gets $running msg] >= 0} {
+    append Output "  $msg\n"
+  }
+  catch { close $running }
+  #
+  set l [string length $Output]
+  if {$l <= 0} {set Output "Checking done, HTML file OK !"}
+  UT_ViewMsg $Output
+}
+  #
+  ##############################################################################
+  #
+proc UT_Convert {} {
+  global stusr
+  #
+  if (![string compare $stusr(filename) ""]) {
+    return
+  }
+  #
+  set fichier [file tail $stusr(filename)]
+  set fichier [file rootname $fichier]
+  #
+  set stusr(convert) \
+    "$stusr(command)   $stusr(orientation) $stusr(colonnes)  $stusr(numpages) \
+     $stusr(infodbg)   $stusr(frame)       $stusr(greyscale) $stusr(textonly) \
+     $stusr(textonly)  $stusr(imgorig)     $stusr(textcolor) $stusr(linkunder)\
+     -s $stusr(scaledoc) -i $stusr(scaleimg) -m $stusr(scalemat)"
+  if (![string compare $stusr(tocexist) "-C"]) {
+    append stusr(convert) " $stusr(tocexist) $stusr(tocbegin)$stusr(tocorig)"
+  }
+  append stusr(convert) " -o $fichier.ps $stusr(filename)"
+  #
+  set running [open "| $stusr(convert) |& cat" r+]
+  set Output ""
+  flush $running
+  while {[gets $running msg] >= 0} {
+    append Output "  $msg\n"
+  }
+  catch { close $running }
+  #
+  if (![string compare $Output "  \n"]) {
+    UT_ViewMsg $Output
+  }
+  #
+}
+  #
+  ##############################################################################
+  #
+proc UT_ViewMsg { message } {
+  #
+  set width 10
+  set w .msgwin
+  if [catch {toplevel $w}] {
+    raise $w
+  } else {
+    wm title    $w "MiniBrowser"
+    wm iconname $w "MiniBrowser"
+    wm minsize  $w 1 1
+    wm protocol $w WM_DELETE_WINDOW { }
+    #
+    frame $w.frame -borderwidth 2
+    pack $w.frame -side top -fill both -expand 1
+    #
+    # Text zone and scrollbar definition
+    # ----------------------------------
+    frame $w.frame.t -borderwidth 2 -relief groove
+    pack [text $w.frame.t.text -width 80 -height 30 -relief flat \
+          -font fixed -wrap word -padx 5 -pady 5 \
+          -yscrollcommand "$w.frame.t.scroll set" ] \
+          -side left -fill both -expand 1
+    pack [scrollbar $w.frame.t.scroll -relief sunken -width 3m \
+          -command "$w.frame.t.text yview" ] \
+          -side left -fill y
+    pack $w.frame.t -side top -fill both -expand 1 -padx 5 -pady 5
+    #
+    # Button definition
+    # -----------------
+    frame $w.frame.b -borderwidth 2
+    pack [button $w.frame.b.close -width $width -text Close \
+          -command "destroy $w" ] \
+          -side top  -fill x -expand 1
+    pack $w.frame.b -side bottom -fill both -padx 5 -pady 5
+  }
+  #
+  # Editing properties
+  # ------------------
+  set w $w.frame.t.text
+  $w configure -state normal 
+  $w delete 1.0 end
+  # Get the file to see
+  $w insert 1.0 $message
+  $w configure -state disabled 
+  # Move the view to file beginning
+  $w yview -pickplace 1.0
+}
+##############################################################################
+# END OF CONFIGURATION AND USEFUL COMMANDS
+##############################################################################
+#
+#
+##############################################################################
+# 3. GUI PROCEDURES
+##############################################################################
+  # VTCL generated code, and modified
+  #
+  ##############################################################################
+  #
+proc Window {args} {
+    global vTcl
+    set cmd [lindex $args 0]
+    set name [lindex $args 1]
+    set newname [lindex $args 2]
+    set rest [lrange $args 3 end]
+    if {$name == "" || $cmd == ""} {return}
+    if {$newname == ""} {
+        set newname $name
+    }
+    set exists [winfo exists $newname]
+    switch $cmd {
+        show {
+            if {$exists == "1" && $name != "."} {wm deiconify $name; return}
+            if {[info procs vTclWindow(pre)$name] != ""} {
+                eval "vTclWindow(pre)$name $newname $rest"
+            }
+            if {[info procs vTclWindow$name] != ""} {
+                eval "vTclWindow$name $newname $rest"
+            }
+            if {[info procs vTclWindow(post)$name] != ""} {
+                eval "vTclWindow(post)$name $newname $rest"
+            }
+        }
+        hide    { if $exists {wm withdraw $newname; return} }
+        iconify { if $exists {wm iconify $newname; return} }
+        destroy { if $exists {destroy $newname; return} }
+    }
+}
+  #
+  ##############################################################################
+  #
+proc vTclWindow. {base} {
+    if {$base == ""} {
+        set base .
+    }
+    ###################
+    # CREATING WIDGETS
+    ###################
+    wm focusmodel $base passive
+    wm minsize $base 1 1
+    wm overrideredirect $base 0
+    wm resizable $base 1 1
+    wm withdraw $base
+    wm title $base "vt.tcl"
+}
+  #
+  ##############################################################################
+  #
+proc vTclWindow.main {base} {
+    if {$base == ""} {
+        set base .main
+    }
+    if {[winfo exists $base]} {
+        wm deiconify $base; return
+    }
+    ###################
+    # CREATING WIDGETS
+    ###################
+    toplevel $base -class Toplevel
+    wm focusmodel $base passive
+    wm minsize $base 1 1
+    wm overrideredirect $base 0
+    wm resizable $base 1 1
+    wm deiconify $base
+    wm title $base "X-html2ps"
+    frame $base.fra22 \
+        -borderwidth 2 -height 33 -width 125 
+    #
+    # Top buttons and menu
+    # --------------------
+    button $base.fra22.but24 \
+        -cursor hand2 -padx 11 -pady 4 \
+        -command { UT_Convert } -text {Convert to Postscript} 
+    button $base.fra22.but25 \
+        -cursor hand2 -padx 11 -pady 4 \
+        -command { UT_Checking } -text { HTML Check } 
+    button $base.fra22.but26 \
+        -cursor hand2 -padx 11 -pady 4 \
+        -command { exit } -text { Exit } 
+    label $base.fra22.lab26 \
+        -borderwidth 1 -font -Adobe-Times-Medium-I-Normal--*-240-*-*-*-*-*-* \
+        -text {X-html2ps 1.0} 
+    menubutton $base.fra22.men28 \
+        -cursor hand2 -padx 11 -pady 4 \
+        -menu .main.fra22.men28.m -text { Help } -relief raised
+    menu $base.fra22.men28.m
+    $base.fra22.men28.m add command \
+        -accelerator Ctrl+A -command { UT_About } -label { About }
+    $base.fra22.men28.m add command \
+        -accelerator Ctrl+H -command { UT_Manual } -label { Man Page   }
+    #
+    # File entry
+    # ----------
+    frame $base.fra23 \
+        -borderwidth 2 -height 42 -relief groove -width 125 
+    button $base.fra23.02 \
+        -cursor hand2 -padx 11 -pady 4 \
+        -command { set stusr(filename) [ FS_Box $stusr(filename) ] } \
+        -text {File . . . } 
+    entry $base.fra23.ent27 \
+        -textvariable stusr(filename) 
+    #
+    # Options frames
+    # --------------
+    frame $base.fra17 \
+        -borderwidth 2 -height 353 -relief groove -width 117 
+    frame $base.fra17.01 \
+        -borderwidth 2 -height 75 -relief groove -width 125 
+    label $base.fra17.01.02 \
+        -borderwidth 1 -font -adobe-helvetica-bold-r-normal--*-120-* \
+        -text {Appearance :} 
+    frame $base.fra17.01.03 \
+        -borderwidth 2 -height 75 -width 125 
+    frame $base.fra17.01.03.04 \
+        -height 75 -width 125 
+    label $base.fra17.01.03.04.05 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Aspect :} 
+    label $base.fra17.01.03.04.06 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Number of columns :} 
+    label $base.fra17.01.03.04.07 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Page numbers :} 
+    label $base.fra17.01.03.04.lab31 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Images in greyscale :} 
+    label $base.fra17.01.03.04.lab32 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Border frame :} 
+    label $base.fra17.01.03.04.lab33 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Text only :} 
+    label $base.fra17.01.03.04.lab34 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Text in colors :} 
+    label $base.fra17.01.03.04.lab35 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {Links underlined :} 
+    frame $base.fra17.01.03.011 \
+        -height 75 -width 125 
+    frame $base.fra17.01.03.011.012 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.012.013 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Portait \
+        -value { } -variable stusr(orientation) 
+    radiobutton $base.fra17.01.03.011.012.014 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Landscape \
+        -value -L -variable stusr(orientation) 
+    frame $base.fra17.01.03.011.015 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.015.016 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text 1 \
+        -value { } -variable stusr(colonnes) 
+    radiobutton $base.fra17.01.03.011.015.017 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text 2 \
+        -value -2 -variable stusr(colonnes) 
+    frame $base.fra17.01.03.011.018 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.018.019 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -n -variable stusr(numpages) 
+    radiobutton $base.fra17.01.03.011.018.020 \
+        -command {set stusr(tocexist) " "} \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(numpages) 
+    frame $base.fra17.01.03.011.024 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.024.025 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -g -variable stusr(greyscale) 
+    radiobutton $base.fra17.01.03.011.024.026 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(greyscale) 
+    frame $base.fra17.01.03.011.fra36 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.fra36.01 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -F -variable stusr(frame) 
+    radiobutton $base.fra17.01.03.011.fra36.02 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(frame) 
+    frame $base.fra17.01.03.011.fra37 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.fra37.01 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -T -variable stusr(textonly) 
+    radiobutton $base.fra17.01.03.011.fra37.02 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(textonly) 
+    frame $base.fra17.01.03.011.fra38 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.fra38.01 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -U -variable stusr(textcolor) 
+    radiobutton $base.fra17.01.03.011.fra38.02 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(textcolor) 
+    frame $base.fra17.01.03.011.fra39 \
+        -height 75 -width 125 
+    radiobutton $base.fra17.01.03.011.fra39.01 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text Yes \
+        -value -u -variable stusr(linkunder) 
+    radiobutton $base.fra17.01.03.011.fra39.02 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -pady 4 -text No \
+        -value { } -variable stusr(linkunder) 
+    frame $base.fra17.036 \
+        -borderwidth 2 -height 75 -relief groove -width 125 
+    label $base.fra17.036.037 \
+        -borderwidth 1 -font -adobe-helvetica-bold-r-normal--*-120-* \
+        -foreground #000000 -text {Table of contents :} 
+    frame $base.fra17.036.038 \
+        -borderwidth 2 -height 75 -width 125 
+    radiobutton $base.fra17.036.038.039 \
+        -command {set stusr(numpages) "-n"} \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -text Yes -value -C \
+        -variable stusr(tocexist) 
+    radiobutton $base.fra17.036.038.040 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -text No -value { } \
+        -variable stusr(tocexist) 
+    label $base.fra17.036.041 \
+        -borderwidth 1 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -text {... included at the :} 
+    frame $base.fra17.036.042 \
+        -borderwidth 2 -height 75 -width 125 
+    radiobutton $base.fra17.036.042.043 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -text {beginning} \
+        -value b -variable stusr(tocbegin) 
+    radiobutton $base.fra17.036.042.044 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -text {end} \
+        -value { } -variable stusr(tocbegin) 
+    label $base.fra17.036.045 \
+        -borderwidth 1 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -text {... and built from :} 
+    frame $base.fra17.036.046 \
+        -borderwidth 2 -height 75 -width 125 
+    radiobutton $base.fra17.036.046.047 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -text {HTML elements H#} -value h -variable stusr(tocorig) 
+    radiobutton $base.fra17.036.046.048 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -text {links} -value f -variable stusr(tocorig) 
+    radiobutton $base.fra17.036.046.049 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -text {links with attribute} -value t -variable stusr(tocorig) 
+    frame $base.fra17.fra40 \
+        -borderwidth 2 -height 75 -relief groove -width 125 
+    frame $base.fra17.fra40.fra54 \
+        -borderwidth 2 -height 75 -width 177 
+    label $base.fra17.fra40.fra54.lab55 \
+        -borderwidth 1 -font -adobe-helvetica-bold-r-normal--*-120-* \
+        -text {Scale factors for :} 
+    frame $base.fra17.fra40.fra54.fra56 \
+        -borderwidth 2 -height 75 -width 125 
+    label $base.fra17.fra40.fra54.fra56.01 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {the document :} 
+    label $base.fra17.fra40.fra54.fra56.02 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {the images :} 
+    label $base.fra17.fra40.fra54.fra56.03 \
+        -borderwidth 4 -font -adobe-helvetica-medium-r-normal--*-120-* \
+        -pady 4 -text {the formulas :} 
+    frame $base.fra17.fra40.fra54.fra57 \
+        -borderwidth 2 -height 75 -width 125 
+    entry $base.fra17.fra40.fra54.fra57.01 \
+        -font -adobe-courier-medium-r-normal--*-120-* \
+        -textvariable stusr(scaledoc) -width 5 
+    entry $base.fra17.fra40.fra54.fra57.02 \
+        -font -adobe-courier-medium-r-normal--*-120-* \
+        -textvariable stusr(scaleimg) -width 5 
+    entry $base.fra17.fra40.fra54.fra57.03 \
+        -font -adobe-courier-medium-r-normal--*-120-* \
+        -textvariable stusr(scalemat) -width 5 
+    frame $base.fra17.fra40.fra58 \
+        -borderwidth 2 -height 75 -width 125 
+    label $base.fra17.fra40.fra58.lab59 \
+        -borderwidth 1 -font -adobe-helvetica-bold-r-normal--*-120-* \
+        -text {Advanced options :} 
+    checkbutton $base.fra17.fra40.fra58.che60 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -offvalue { } \
+        -onvalue -d -text {Debug infos} -variable stusr(infodbg) 
+    checkbutton $base.fra17.fra40.fra58.che61 \
+        -font -adobe-helvetica-medium-r-normal--*-120-* -text check \
+        -onvalue -O -text {Original postscript images} -variable stusr(imgorig) 
+    ###################
+    # SETTING GEOMETRY
+    ###################
+    pack $base.fra22 \
+        -in .main -anchor n -expand 0 -fill x -padx 4 -pady 4 -side top 
+    pack $base.fra22.men28 \
+        -in .main.fra22 -anchor center -expand 0 -fill none -side right 
+    pack $base.fra22.but24 \
+        -in .main.fra22 -anchor center -expand 0 -fill none -side left 
+    pack $base.fra22.but25 \
+        -in .main.fra22 -anchor center -expand 0 -fill none -side left 
+    pack $base.fra22.but26 \
+        -in .main.fra22 -anchor center -expand 0 -fill none -side left 
+    pack $base.fra22.lab26 \
+        -in .main.fra22 -anchor center -expand 0 -fill none -side top 
+    pack $base.fra23 \
+        -in .main -anchor n -expand 0 -fill x -padx 4 -pady 4 -side top 
+    pack $base.fra23.02 \
+        -in .main.fra23 -anchor center -expand 0 -fill none -side left 
+    pack $base.fra23.ent27 \
+        -in .main.fra23 -anchor center -expand 1 -fill x -side left 
+    pack $base.fra17 \
+        -in .main -anchor nw -expand 0 -fill none -padx 4 -pady 4 -side top 
+    pack $base.fra17.01 \
+        -in .main.fra17 -anchor center -expand 0 -fill y -side left 
+    pack $base.fra17.01.02 \
+        -in .main.fra17.01 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03 \
+        -in .main.fra17.01 -anchor center -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04 \
+        -in .main.fra17.01.03 -anchor nw -expand 0 -fill none -side left 
+    pack $base.fra17.01.03.04.05 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.06 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.07 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.lab31 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.lab32 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.lab33 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.lab34 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.04.lab35 \
+        -in .main.fra17.01.03.04 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011 \
+        -in .main.fra17.01.03 -anchor center -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.012 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.012.013 \
+        -in .main.fra17.01.03.011.012 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.012.014 \
+        -in .main.fra17.01.03.011.012 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.015 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.015.016 \
+        -in .main.fra17.01.03.011.015 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.015.017 \
+        -in .main.fra17.01.03.011.015 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.018 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.018.019 \
+        -in .main.fra17.01.03.011.018 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.018.020 \
+        -in .main.fra17.01.03.011.018 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.024 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.024.025 \
+        -in .main.fra17.01.03.011.024 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.024.026 \
+        -in .main.fra17.01.03.011.024 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.fra36 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.fra36.01 \
+        -in .main.fra17.01.03.011.fra36 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.fra36.02 \
+        -in .main.fra17.01.03.011.fra36 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.fra37 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.fra37.01 \
+        -in .main.fra17.01.03.011.fra37 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.fra37.02 \
+        -in .main.fra17.01.03.011.fra37 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.fra38 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.fra38.01 \
+        -in .main.fra17.01.03.011.fra38 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.fra38.02 \
+        -in .main.fra17.01.03.011.fra38 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.01.03.011.fra39 \
+        -in .main.fra17.01.03.011 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.01.03.011.fra39.01 \
+        -in .main.fra17.01.03.011.fra39 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.01.03.011.fra39.02 \
+        -in .main.fra17.01.03.011.fra39 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.036 \
+        -in .main.fra17 -anchor center -expand 0 -fill y -side left 
+    pack $base.fra17.036.037 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.038 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.038.039 \
+        -in .main.fra17.036.038 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.036.038.040 \
+        -in .main.fra17.036.038 -anchor center -expand 0 -fill none -side top 
+    pack $base.fra17.036.041 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.042 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.042.043 \
+        -in .main.fra17.036.042 -anchor center -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.036.042.044 \
+        -in .main.fra17.036.042 -anchor center -expand 0 -fill none -side top 
+    pack $base.fra17.036.045 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.046 \
+        -in .main.fra17.036 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.046.047 \
+        -in .main.fra17.036.046 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.046.048 \
+        -in .main.fra17.036.046 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.036.046.049 \
+        -in .main.fra17.036.046 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.fra40 \
+        -in .main.fra17 -anchor center -expand 0 -fill y -side left 
+    pack $base.fra17.fra40.fra54 \
+        -in .main.fra17.fra40 -anchor nw -expand 0 -fill x -side top 
+    pack $base.fra17.fra40.fra54.lab55 \
+        -in .main.fra17.fra40.fra54 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.fra40.fra54.fra56 \
+        -in .main.fra17.fra40.fra54 -anchor nw -expand 0 -fill none \
+        -side left 
+    pack $base.fra17.fra40.fra54.fra56.01 \
+        -in .main.fra17.fra40.fra54.fra56 -anchor nw -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.fra40.fra54.fra56.02 \
+        -in .main.fra17.fra40.fra54.fra56 -anchor nw -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.fra40.fra54.fra56.03 \
+        -in .main.fra17.fra40.fra54.fra56 -anchor nw -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.fra40.fra54.fra57 \
+        -in .main.fra17.fra40.fra54 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.fra40.fra54.fra57.01 \
+        -in .main.fra17.fra40.fra54.fra57 -anchor center -expand 0 -fill none \
+        -pady 4 -side top 
+    pack $base.fra17.fra40.fra54.fra57.02 \
+        -in .main.fra17.fra40.fra54.fra57 -anchor center -expand 0 -fill none \
+        -pady 4 -side top 
+    pack $base.fra17.fra40.fra54.fra57.03 \
+        -in .main.fra17.fra40.fra54.fra57 -anchor center -expand 0 -fill none \
+        -pady 4 -side top 
+    pack $base.fra17.fra40.fra58 \
+        -in .main.fra17.fra40 -anchor nw -expand 0 -fill x -side bottom 
+    pack $base.fra17.fra40.fra58.lab59 \
+        -in .main.fra17.fra40.fra58 -anchor center -expand 0 -fill none \
+        -side top 
+    pack $base.fra17.fra40.fra58.che60 \
+        -in .main.fra17.fra40.fra58 -anchor nw -expand 0 -fill none -side top 
+    pack $base.fra17.fra40.fra58.che61 \
+        -in .main.fra17.fra40.fra58 -anchor nw -expand 0 -fill none -side top 
+}
+##############################################################################
+# END OF GUI PROCEDURES
+##############################################################################
+
+
+Window show .
+Window show .main

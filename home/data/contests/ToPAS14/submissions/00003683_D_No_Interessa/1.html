@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00003683_D_No_Interessa</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00003683_D_No_Interessa">00003683_D_No_Interessa</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00003683_D_No_Interessa/d.java">d.java</a>
+<a href="data/contests/ToPAS14/submissions/00003683_D_No_Interessa/d.java">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 12:31:23 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 12:31:23 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/CG/No_Interessa">
+Não Interessa
+</a> Login: <code>No_Interessa</code> Group: CG [CG]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/Java">
+Java
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.098 sec<br>
+E=0 sec<br>
+M=1604412 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.095 sec<br>
+E=0 sec<br>
+M=1738568 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.095 sec<br>
+E=1 sec<br>
+M=1604412 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.102 sec<br>
+E=0 sec<br>
+M=1604412 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>292<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>6</U></font>2<font color='red'><U>8</U></font><font color='red'><S>92</S></font><font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.102 (1) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>1738568 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Wrong Answer</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{1 test with <b>Wrong Answer</b>} {1 test with <b>Wrong Answer</b>
+ 3 tests with <b>Accepted</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+import java.util.Scanner;
+public class d {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int num;
+		int soma = 0;
+		String data;
+		int c = 0;
+		int[][] matriz = new int[24][3];
+		
+		for(int i = 0; i &lt; 24; i++){
+			data = in.next();
+			num = in.nextInt();
+			for(int l=0; l &lt; 3; l++){
+				switch(l){
+				case 0:
+					matriz[i][l] = Integer.parseInt(data.substring(0, 4));
+					break;
+				case 1:
+					matriz[i][l] = Integer.parseInt(data.substring(4));
+					break;
+				case 2:
+					matriz[i][l] = num;
+					break;
+				}
+			}
+		}
+		
+		int media3 = (matriz[23][2] + matriz[22][2] + matriz[21][2])/3;
+		
+		int mes = matriz[23][1] + 1;
+		
+		for(int i = 0; i &lt; 24; i++){
+			if(matriz[i][1] == mes){
+				c++;
+				soma += matriz[i][2];
+			}
+		}
+		if(c==0){
+			c++;
+		}
+		int media = soma/c;
+		int output = (media+media3)/2;
+		/*
+		for(int i = 0; i &lt; 24; i++){
+			for(int l=0; l &lt; 3; l++){
+				System.out.print(matriz[i][l] + " ");
+			}
+			System.out.println();
+		}
+		*/
+		
+		in.close();
+		
+		System.out.println(output);
+	}
+
+}
+</pre>
+
+</body>

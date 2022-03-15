@@ -1,0 +1,15 @@
+<course id='proto_enki' name='ENKI Course Prototype' author='José Carlos Paiva' creationDate='2016-01-01T00:00:00.000Z' startDate='2016-01-01T00:00:00.000Z' mode='RELAX' recommender='pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender' xmlns='http://www.example.org/Seqins' xml:space='preserve'>
+	
+	
+    <coursepart id='m1' name='Tipos de Dados e Variáveis' minimumWeight='0' start='r1' xml:space='preserve'>
+    	<resource id='r1' title='A classe Console' href='https://www.youtube.com/watch?v=OrWPbzJWNBo' type='VIDEO' tags='video, consola'/>
+		<resource id='r2' title='Tipos de Dados' href='https://www.youtube.com/watch?v=mdtZAp_vBFE' type='VIDEO' tags='video, tipos, dados'/>
+		<resource id='r3' title='Variáveis' href='https://www.youtube.com/watch?v=Ndd66U-F2xc' type='VIDEO' tags='video, variáveis'/>
+		<resource id='r4' title='Strings' href='https://www.youtube.com/watch?v=o250B5iqdCQ' type='VIDEO' tags='video, strings'/>
+		<resource id='r5' title='Ciclo de vida de uma variável' href='https://www.youtube.com/watch?v=nvDBy4A92_o' type='VIDEO' tags='video, variáveis'/>
+		<resource id='r6' title='Cálculo da área e perímetro de uma circunferência' href='https://www.youtube.com/watch?v=uKP5iAlro2E' type='VIDEO' tags='video, variáveis'/>
+		<resource id='r7' title='Cálculo da área e perímetro de uma circunferência usando variáveis' href='https://www.youtube.com/watch?v=TOGDoOahMw4' type='VIDEO' tags='video, variáveis'/>
+    	<resource id='A' title='Olá Mundo' href='http://proto_enki/A' type='PROBLEM' onFail='r7' onSuccess='r8'/>
+    	<resource id='r8' title='Leitura Adicional' href='http://cdn.oreilly.com/oreilly/pdfs/hfcsharp3e_book_promo.pdf' type='PDF' tags='pdf, consola, tipos, dados, strings, variáveis'/>
+	</coursepart>
+</course>

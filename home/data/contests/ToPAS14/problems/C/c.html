@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problema&nbsp;C: iFind - a App para encontrares o que queres</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="452" HEIGHT="397" ALIGN="BOTTOM" BORDER="0"
+ SRC="./mapa-iFind-crop.jpg"
+ ALT="Image mapa-iFind-crop">
+
+</DIV>
+
+<P>
+
+Para se encontrar a loja de um certo tipo que se encontra o  mais perto possível de onde
+estamos podemos recorrer a uma <EM>app</EM> para o nosso telemóvel. Foi
+isso que pensaram o Manuel e os seus colegas do curso.  
+Assim resolverem desenvolver uma aplicação dessas para telemóvel esperto
+(vulgo <EM>smart-phone</EM>).
+<P>
+
+Como são organizados decidiram dividir o programa em diversos
+módulos, ficando cada um responsável por uma parte. No fim
+integrá-los-iam numa aplicação.
+
+O Manuel ficou de implementar o módulo para determinar o local do tipo pedido que está a menor distância do
+utilizador. São dadas as coordenadas do local
+onde o utilizador está e o tipo de loja que pretende, bem como a
+descrição dos locais existentes. Para cada local, são dadas as
+coordenadas e tipo 
+(restaurante, centro comercial, bar, café, etc.).
+  Se houver vários locais do tipo pretendido  à mesma distância,
+deve indicar o que ocorreu primeiramente na lista de dados. 
+
+
+
+<P>
+
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+Escrever o programa para processar os dados e dar resposta ao pedido.
+As coordenadas  de cada local, relativas a um mesmo referencial
+(ortonormado), são definidas por um par de inteiros. O tipo de local é
+identificado por uma sequência de maiúsculas (no máximo três).
+
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+A primeira linha contém a descrição da localização atual do utilizador 
+e o tipo de loja pretendido, sendo as coordenadas e o tipo separados
+por um espaço (por exemplo, <TT>100 -160 SM</TT>).
+Na segunda linha, tem o número de locais existentes (nunca terá mais
+de 200).
+Segue-se uma linha por cada local com os dados respetivos: 
+coordenadas do ponto (inteiros) e tipo de local separados por um
+espaço (por exemplo,  <TT>140 120 R</TT>, que indica um Restaurante).
+O tipo é sempre uma sequência de letras maiúsculas (não mais do
+que três).
+Podem aparecer outras lojas que não as indicadas no exemplo.
+As coordenadas pertencem ao intervalo [-300,300].
+
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+Uma linha com as coordenadas do local pedido, 
+ seguido da  indicação do tipo  e de um inteiro que é o <EM> quadrado
+ da distância</EM> a  que está (por exemplo, <TT>220 -140 SM 14800</TT>).
+<b>Não será assim necessário (nem deverá) calcular  
+raízes quadradas</b>. Como se referiu, se houver dois ou mais
+   locais à mesma distância, dará como resposta o que
+   ocorrer primeiro nos dados. Se não houver nenhuma loja do tipo pretendido deve
+    imprimir <TT>Nenhum</TT> (note a maiúscula na primeira letra). 
+
+
+
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo 1</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+100 -160 SM
+15
+140 120 R
+-60 160 C
+200 -200 R
+-160 180 CC
+-100 -100 SM
+220 -140 SM
+-40 160 C
+180 100 CC
+60 40 SM
+180 -20 R
+120 220 SM
+100 -180 R
+180 -100 CC
+200 0 SM
+-120 0 R
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+220 -140 SM 14800
+</PRE>
+
+<P>
+
+
+<H2><A NAME="SECTION00016000000000000000">
+Exemplo 2</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00016100000000000000">
+Input</A>
+</H3>
+<PRE>
+100 -160 SM
+0
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00016200000000000000">
+Output</A>
+</H3>
+<PRE>
+Nenhum
+</PRE>
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+ToPAS'2014
+</ADDRESS>
+</BODY>
+</HTML>

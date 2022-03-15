@@ -1,0 +1,808 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Attribute",
+   "id": 3,
+   "x": 77,
+   "y": 86,
+   "width": 70,
+   "height": 41,
+   "label": "nome",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 2,
+   "x": 87,
+   "y": 23,
+   "width": 90,
+   "height": 41,
+   "label": "numero_Cliente",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 221,
+   "y": 89,
+   "width": 70,
+   "height": 41,
+   "label": "CLIENTE",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "WeakRelationship",
+   "id": 9,
+   "x": 361,
+   "y": 78,
+   "width": 70,
+   "height": 51,
+   "label": "FAZ",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "WeakEntity",
+   "id": 10,
+   "x": 355,
+   "y": 160,
+   "width": 86,
+   "height": 41,
+   "label": "SUBSCRICAO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 4,
+   "x": 77,
+   "y": 183,
+   "width": 70,
+   "height": 41,
+   "label": "telefone",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKeyWeak",
+   "id": 11,
+   "x": 313,
+   "y": 249,
+   "width": 70,
+   "height": 41,
+   "label": "data_inicio",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 12,
+   "x": 410,
+   "y": 250,
+   "width": 70,
+   "height": 41,
+   "label": "data_fim",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 19,
+   "x": 731,
+   "y": 34,
+   "width": 70,
+   "height": 41,
+   "label": "nome",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 16,
+   "x": 577,
+   "y": 82,
+   "width": 70,
+   "height": 41,
+   "label": "PACOTE",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 20,
+   "x": 776,
+   "y": 88,
+   "width": 81,
+   "height": 41,
+   "label": "taxa_ativação",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 21,
+   "x": 778,
+   "y": 174,
+   "width": 82,
+   "height": 41,
+   "label": "preco_mensal",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Specialization",
+   "id": 26,
+   "x": 613,
+   "y": 181,
+   "width": 35,
+   "height": 33,
+   "label": "d",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 25,
+   "x": 548,
+   "y": 282,
+   "width": 70,
+   "height": 41,
+   "label": "BASICO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 29,
+   "x": 666,
+   "y": 276,
+   "width": 74,
+   "height": 51,
+   "label": "PERTENCE",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 31,
+   "x": 814,
+   "y": 252,
+   "width": 81,
+   "height": 41,
+   "label": "COMBINADO",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 42,
+   "x": 824,
+   "y": 335,
+   "width": 70,
+   "height": 41,
+   "label": "oferta",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 36,
+   "x": 333,
+   "y": 481,
+   "width": 70,
+   "height": 41,
+   "label": "TV",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 45,
+   "x": 190,
+   "y": 504,
+   "width": 83,
+   "height": 41,
+   "label": "numero_canal",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 47,
+   "x": 466,
+   "y": 544,
+   "width": 70,
+   "height": 41,
+   "label": "velocidade",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Specialization",
+   "id": 34,
+   "x": 543,
+   "y": 390,
+   "width": 35,
+   "height": 33,
+   "label": "d",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 37,
+   "x": 530,
+   "y": 487,
+   "width": 70,
+   "height": 41,
+   "label": "INTERNET",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 38,
+   "x": 710,
+   "y": 490,
+   "width": 72,
+   "height": 41,
+   "label": "TELEFONE",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 48,
+   "x": 569,
+   "y": 543,
+   "width": 76,
+   "height": 41,
+   "label": "limite_trafico",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 44,
+   "x": 805,
+   "y": 554,
+   "width": 70,
+   "height": 41,
+   "label": "tarifario",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 5,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 3,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 144,
+     "y": 104
+    },
+    {
+     "x": 218,
+     "y": 107
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 6,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 174,
+     "y": 41
+    },
+    {
+     "x": 218,
+     "y": 107
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 7,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 109,
+     "y": 180
+    },
+    {
+     "x": 218,
+     "y": 107
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 15,
+   "sourceType": "Entity",
+   "targetType": "WeakRelationship",
+   "label": "line",
+   "source": 1,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 288,
+     "y": 107
+    },
+    {
+     "x": 358,
+     "y": 101
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 17,
+   "sourceType": "Entity",
+   "targetType": "WeakRelationship",
+   "label": "line",
+   "source": 16,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 574,
+     "y": 100
+    },
+    {
+     "x": 428,
+     "y": 101
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 18,
+   "sourceType": "WeakEntity",
+   "targetType": "WeakRelationship",
+   "label": "line",
+   "source": 10,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 395,
+     "y": 157
+    },
+    {
+     "x": 393,
+     "y": 126
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 13,
+   "sourceType": "AttributeKeyWeak",
+   "targetType": "WeakEntity",
+   "label": "line",
+   "source": 11,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 345,
+     "y": 246
+    },
+    {
+     "x": 395,
+     "y": 198
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 14,
+   "sourceType": "Attribute",
+   "targetType": "WeakEntity",
+   "label": "line",
+   "source": 12,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 442,
+     "y": 247
+    },
+    {
+     "x": 395,
+     "y": 198
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 22,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 19,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 728,
+     "y": 52
+    },
+    {
+     "x": 644,
+     "y": 100
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 23,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 20,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 773,
+     "y": 106
+    },
+    {
+     "x": 644,
+     "y": 100
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 24,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 21,
+   "target": 16,
+   "listHandler": [
+    {
+     "x": 775,
+     "y": 192
+    },
+    {
+     "x": 644,
+     "y": 100
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineTotal",
+   "id": 27,
+   "sourceType": "Entity",
+   "targetType": "Specialization",
+   "label": "line",
+   "source": 16,
+   "target": 26,
+   "listHandler": [
+    {
+     "x": 609,
+     "y": 120
+    },
+    {
+     "x": 627,
+     "y": 178
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineComplex",
+   "id": 28,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 26,
+   "target": 25,
+   "listHandler": [
+    {
+     "x": 627,
+     "y": 211
+    },
+    {
+     "x": 580,
+     "y": 279
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 30,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 25,
+   "target": 29,
+   "listHandler": [
+    {
+     "x": 615,
+     "y": 300
+    },
+    {
+     "x": 663,
+     "y": 298
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 32,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 31,
+   "target": 29,
+   "listHandler": [
+    {
+     "x": 811,
+     "y": 269
+    },
+    {
+     "x": 737,
+     "y": 298
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  },
+  {
+   "type": "LineComplex",
+   "id": 33,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 26,
+   "target": 31,
+   "listHandler": [
+    {
+     "x": 645,
+     "y": 195
+    },
+    {
+     "x": 811,
+     "y": 269
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineTotal",
+   "id": 35,
+   "sourceType": "Entity",
+   "targetType": "Specialization",
+   "label": "line",
+   "source": 25,
+   "target": 34,
+   "listHandler": [
+    {
+     "x": 580,
+     "y": 320
+    },
+    {
+     "x": 557,
+     "y": 387
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 43,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 42,
+   "target": 31,
+   "listHandler": [
+    {
+     "x": 856,
+     "y": 332
+    },
+    {
+     "x": 851,
+     "y": 290
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineComplex",
+   "id": 41,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 34,
+   "target": 36,
+   "listHandler": [
+    {
+     "x": 540,
+     "y": 403
+    },
+    {
+     "x": 365,
+     "y": 478
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 46,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 45,
+   "target": 36,
+   "listHandler": [
+    {
+     "x": 270,
+     "y": 521
+    },
+    {
+     "x": 330,
+     "y": 498
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineComplex",
+   "id": 39,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 34,
+   "target": 37,
+   "listHandler": [
+    {
+     "x": 557,
+     "y": 420
+    },
+    {
+     "x": 562,
+     "y": 484
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineComplex",
+   "id": 40,
+   "sourceType": "Specialization",
+   "targetType": "Entity",
+   "label": "lineComplex",
+   "source": 34,
+   "target": 38,
+   "listHandler": [
+    {
+     "x": 575,
+     "y": 403
+    },
+    {
+     "x": 707,
+     "y": 507
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 49,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 47,
+   "target": 37,
+   "listHandler": [
+    {
+     "x": 498,
+     "y": 541
+    },
+    {
+     "x": 527,
+     "y": 504
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 50,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 48,
+   "target": 37,
+   "listHandler": [
+    {
+     "x": 604,
+     "y": 540
+    },
+    {
+     "x": 562,
+     "y": 525
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 51,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 44,
+   "target": 38,
+   "listHandler": [
+    {
+     "x": 837,
+     "y": 551
+    },
+    {
+     "x": 743,
+     "y": 528
+    }
+   ],
+   "features": []
+  }
+ ]
+}

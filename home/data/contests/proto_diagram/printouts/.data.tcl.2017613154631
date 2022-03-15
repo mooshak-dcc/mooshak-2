@@ -1,0 +1,10 @@
+set Active {}
+set Printer {}
+set Template {}
+set Config {}
+set List-Pending {}
+set TransactionLimit {}
+set TransactionLimitTime {}
+set NextTransactionReset {}
+set Printout {}
+set frozen false

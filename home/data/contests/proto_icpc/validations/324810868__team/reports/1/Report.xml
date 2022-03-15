@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reportType xmlns="http://evae/messages">
+    <programmingLanguage>Java</programmingLanguage>
+    <exercise href="TODO"> ah-hoc exercise or problem</exercise>
+    <tests/>
+    <summary>
+        <mark obtainedValue="0"/>
+        <classify>Accepted</classify>
+    </summary>
+</reportType>

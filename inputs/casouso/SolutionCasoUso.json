@@ -1,0 +1,112 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "UseCase",
+   "id": 1,
+   "x": 51,
+   "y": 82,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "UseCase",
+   "id": 6,
+   "x": 112,
+   "y": 4,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "UseCase",
+   "id": 10,
+   "x": 252,
+   "y": 50,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "UseCase",
+   "id": 11,
+   "x": 240,
+   "y": 184,
+   "width": 70,
+   "height": 51,
+   "label": "UseCase",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "AssociationOnly",
+   "id": 7,
+   "sourceType": "UseCase",
+   "targetType": "UseCase",
+   "label": "text",
+   "source": 1,
+   "target": 6,
+   "listHandler": [
+    {
+     "x": 83,
+     "y": 79
+    },
+    {
+     "x": 144,
+     "y": 52
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "AssociationOnly",
+   "id": 12,
+   "sourceType": "UseCase",
+   "targetType": "UseCase",
+   "label": "text",
+   "source": 6,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 179,
+     "y": 26
+    },
+    {
+     "x": 249,
+     "y": 72
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "AssociationOnly",
+   "id": 13,
+   "sourceType": "UseCase",
+   "targetType": "UseCase",
+   "label": "text",
+   "source": 10,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 284,
+     "y": 98
+    },
+    {
+     "x": 272,
+     "y": 181
+    }
+   ],
+   "features": []
+  }
+ ]
+}

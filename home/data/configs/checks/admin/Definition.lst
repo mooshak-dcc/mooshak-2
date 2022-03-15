@@ -1,0 +1,151 @@
+
+
+Select contests
+View contests record 
+
+Enter new contest name and execute <b>Save</b> in <b>File</b> menu
+View contests record
+
+Select new contests in left tab
+View contest record and its name in upper left corner
+
+Execute Run-all-tests in menu <b>Contest</b>
+View popup with tests (3 fatal errors)
+
+Execute <b>Save</b> in <b>File</b> menu
+Field <b>Status</b> is "created"
+
+Hit <b>now</b> in field <b>Open</b> and then execute <b>Save</b>
+Field <b>Status</b> is "ready"
+
+Hit <b>now</b> in field <b>Start</b> and then execute <b>Save</b>
+Field <b>Status</b> is "running"
+
+Hit <b>now</b> in field <b>Stop</b> and then execute <b>Save</b>
+Field <b>Status</b> is "finished"
+
+Hit <b>now</b> in field <b>Close</b> and then execute <b>Save</b>
+Field <b>Status</b> is "concluded"
+
+Press <b>never</b> in fields <b>Stop</b> and <b>Close</b>
+Fields are empty
+
+Execute <b>Save</b>
+Field <b>Status</b> is "running"
+
+
+	Groups
+
+Select <b>Groups</b>
+View groups record 
+
+Enter group name G1 and press folder icon
+View record with warning "Just one group created"
+
+Select G1 in left Tab
+View G1 record with <b>Warnings</b> "Undefined variable Color ... Flag"
+
+Change field  <b>Designation, Color</b> and <b>Flag</b> and save
+View record without warnings 
+
+Enter a <b>Team</b> anmes T1 and press folder
+View T1 in left tab
+
+Select groups in left tab
+View record
+
+Execute <b>Generate</b> in menu <b>Passwords</b>
+Alert with mesage "Passwords generated"
+
+ <a target="_blanc" href="execute?team">Login</a> as team in this contest using printed authentications
+View team window for user T1
+
+	Groups defaults
+
+Execute <b>Config</b> in menu <b>Defaults</b>
+Message box with "Default config created"
+
+Execute <b>Person-template</b> in menu <b>Defaults</b>
+Message box with "Default person-template created"
+
+Execute <b>Team-template</b> in menu <b>Defaults</b>
+Message box with "Default team-template created"
+
+Clear field <b>Printer</b> and save
+View record with default printer
+
+Enter garbage in field</b>Printer</b> and save
+View record with default printer
+
+Execute <b>Printer</b> in menu <b>Defaults</b>
+View record with default printer
+
+
+     Other group commands
+
+Execute <b>Consolidate</b> in <b>Certificates</b> menu 
+Alert with message "ranking updated"
+
+Execute <b>Print</b> in <b>Certificates</b> menu 
+Alert with message "certificates printer" and certificates printed
+
+Execute <b>Import</b> in <b>Data</b> menu using file [TeamC.tab]
+Report with importeed data and new groups in the left tab
+
+Execute <b>Export</b> in <b>Data</b> menu 
+Dialog with exported data (contestants and coches) grouped by universities
+
+
+     Languages
+
+Select languages directory
+View languages record
+
+Create a language for C 
+Fatal error "check C"
+
+Folow link in Fatal ("check C")
+View record with several Fatal warnings
+
+Fill all relevant fields (those listed in fatal) and save
+View record with no fatal errors or warnings 
+
+
+	Problems
+
+Select problems
+View record with fatal error "No problems defined"
+
+Execute <b>Import</b> from menu <b>Problems</b> with file [problem_set.tgz]
+Report with imported data and new problems in the left tab
+
+Execute <b>Cut</b> from <b>Edit</b> menu
+View contest record
+
+Import problem set h file [problem_set2.tgz]
+Report with imported data and new problems in the left tab
+
+Import problem set h file [problem_set2.zip] (cut out problems first)
+Report with imported data and new problems in the left tab
+
+Import problem set h file [problem_set2.tgz] (cut out problems first)
+Report with imported data and new problems in the left tab
+
+Enter "2" in field <b>Problem</b> and press folder
+View "P1" and "P2" in left tab, and fatal errors in records 
+
+     Users
+
+Select users
+View record
+
+Create user judge
+View record with name and profile created
+
+Execute command <b>Generate</b> from menu <b>Password</b>
+Dialog with password
+
+<a target="_blanc" href="execute?judge">Enter as user</a> using this authentication
+View judge window
+
+#-- END 

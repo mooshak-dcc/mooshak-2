@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+
+.overlay {
+  z-index: 999999;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 100px;
+	z-index: 1;
+}
+
+.button {
+	width: 100px;
+	font-size: large;
+	color: #669;
+	margin:auto;
+	display: block;
+	padding: 10px;
+}
+
+.rounded, .button {
+	border-radius: 5px;
+	border-color: #BCC;
+}
+

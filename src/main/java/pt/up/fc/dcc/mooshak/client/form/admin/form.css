@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+.entry, .label {
+	color: #445;
+    font-family: Arial Unicode MS,Arial,sans-serif;
+	font-size: small;
+}
+
+.entry {
+	border-radius: 5px;
+	border-color: #BCC;
+	padding-left: 2mm;
+	padding-right: 2mm;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.label {
+	min-width: 3cm;
+	overflow: auto;
+	max-width: 5.5cm;
+}	
+
+.helpButton {
+	width: 5mm;
+	height: 5mm;
+	text-align: center;
+}
+	
+.helpPanel {
+	width: 12cm;
+	height: 6cm;
+	
+	padding: 2mm;
+	
+	border-radius: 5px;
+	background: white;
+	box-shadow: rgba(11,11,12,0.4) 5px 5px;
+	
+	overflow: scroll;
+	
+	font-family: monospace;
+    white-space: pre;
+}

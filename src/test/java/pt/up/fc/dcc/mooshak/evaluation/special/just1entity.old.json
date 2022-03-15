@@ -1,0 +1,27 @@
+{
+ "reducibles": [
+  "attribute"
+ ],
+ "note": [],
+ "nodes": [
+  {
+   "label": "ENTIDADE",
+   "id": 0,
+   "type": "entity",
+   "x": 159,
+   "y": 71,
+   "features": [
+    {
+     "name": "color",
+     "value": "#B8B8B8"
+    },
+    {
+     "name": "weak",
+     "value": false
+    }
+   ],
+   "modification": ""
+  }
+ ],
+ "edges": []
+}

@@ -1,0 +1,104 @@
+{
+ "reducibles": [
+  "AttributeKey",
+  "Attribute",
+  "AttributeMultivalue",
+  "AttributeDerived",
+  "AttributeDerived",
+  "AttributeKeyWeak"
+ ],
+ "nodes": [
+  {
+   "type": "Entity",
+   "id": 2,
+   "x": 317,
+   "y": 69,
+   "width": 80,
+   "height": 41,
+   "label": "B",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Relationship",
+   "id": 3,
+   "x": 193,
+   "y": 82,
+   "width": 100,
+   "height": 50,
+   "label": "Relationship",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  },
+  {
+   "type": "Entity",
+   "id": 6,
+   "x": 82,
+   "y": 212,
+   "width": 80,
+   "height": 41,
+   "label": "A",
+   "features": [],
+   "containers": [],
+   "isConfigurable": true
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 5,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 2,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 314,
+     "y": 87
+    },
+    {
+     "x": 290,
+     "y": 104
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  },
+  {
+   "type": "Line",
+   "id": 7,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "",
+   "source": 6,
+   "target": 3,
+   "listHandler": [
+    {
+     "x": 119,
+     "y": 209
+    },
+    {
+     "x": 240,
+     "y": 129
+    }
+   ],
+   "features": [
+    {
+     "name": "total",
+     "value": "no"
+    }
+   ],
+   "featuresSource": [],
+   "featuresTarget": []
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	>
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.icpc.i18n.ICPCConstants' />
+
+	<ui:style src="../Dialogs.css" />
+
+
+	<g:HTMLPanel>
+	
+		Problems <g:ListBox ui:field="problemList" styleName="{style.rounded}"/>
+		
+		Languages <g:ListBox ui:field="languageList"  styleName="{style.rounded}"/>
+		
+		Max delay <g:ListBox ui:field="delayList"  styleName="{style.rounded}">
+		<g:item value="0">0</g:item>
+		<g:item value="1" selected='true'>1</g:item>
+		<g:item value="2">2</g:item>
+		<g:item value="3">3</g:item>
+		<g:item value="4">4</g:item>
+		<g:item value="5">5</g:item>
+		</g:ListBox>
+	
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

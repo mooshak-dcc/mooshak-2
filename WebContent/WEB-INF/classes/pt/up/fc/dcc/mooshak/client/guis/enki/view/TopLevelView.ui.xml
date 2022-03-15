@@ -1,0 +1,108 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+	xmlns:w='urn:import:pt.up.fc.dcc.mooshak.client.widgets'
+	xmlns:p='urn:import:pt.up.fc.dcc.mooshak.client.guis.enki.widgets'
+    xmlns:b="urn:import:org.gwtbootstrap3.client.ui" xmlns:h="urn:import:org.gwtbootstrap3.client.ui.html">
+
+	<ui:style src="TopLevel.css" 
+		type="pt.up.fc.dcc.mooshak.client.guis.enki.view.TopLevelViewImpl.BaseStyle"/>
+	
+	<g:HTMLPanel styleName="{style.wrapper}" ui:field="basePanel">
+		<b:Container styleName="container-fluid {style.header}" ui:field="headerContainer">
+			<b:Row>
+				<b:Column size="LG_4 MD_4 SM_4 XS_4">
+					<g:Label styleName="{style.header-appname}">Enki</g:Label>
+				</b:Column>
+				<b:Column size="LG_8 MD_8 SM_8 XS_8">
+					<b:Row>
+						<b:Column size="LG_4" ui:field="searchColumn" hiddenOn="XS_SM_MD">
+							<!-- <b:InputGroup addStyleNames="{style.searchBox}">
+					  			<b:InputGroupAddon icon="SEARCH" ui:field="searchBtn" addStyleNames="{style.searchBtn}"/>
+					  			<b:TextBox placeholder="Type here" autoComplete="true" ui:field="searchTxt"/>
+							</b:InputGroup> -->
+						</b:Column>
+						<b:Column size="LG_8 MD_12">
+							<g:HTMLPanel styleName="{style.header-links}">
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="help" /> |
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="theming"/> |
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="langPt">PT</b:Anchor>
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="langEn">EN</b:Anchor> |
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="user"/> |
+								<b:Anchor addStyleNames="{style.header-link}" ui:field="logout"/>
+								<!-- <a class="{style.header-link}" href="#">Logout</a> -->
+							</g:HTMLPanel>
+						</b:Column>
+					</b:Row>
+				</b:Column>
+			</b:Row>
+		</b:Container>
+		<g:HTMLPanel ui:field="content" styleName="{style.content}">
+			<g:SplitLayoutPanel ui:field="splitPanel">
+				<g:west size='200' unit="PX">
+					<p:DroppablePanel width="100%" height="100%" ui:field="westWidget">
+						<p:ContentPanel ui:field="westContentPanel" />
+					</p:DroppablePanel>
+				</g:west>
+				<g:east size='300' unit='PX'>
+					<g:SplitLayoutPanel ui:field="splitEastPanel">
+						<g:north size="300" unit="PX">
+							<p:DroppablePanel width="100%" height="100%" ui:field="eastTopWidget">
+								<p:ContentPanel ui:field="eastContentPanelTop" />
+							</p:DroppablePanel>
+						</g:north>
+						<g:center size="400" unit="PX">
+							<p:DroppablePanel width="100%" height="100%" ui:field="eastBottomWidget">
+								<p:ContentPanel ui:field="eastContentPanelBottom" />
+							</p:DroppablePanel>
+						</g:center>
+					</g:SplitLayoutPanel>
+				</g:east>
+				<!-- <g:north size='150' unit='PX'>
+					<p:DroppablePanel width="100%" height="100%" ui:field="northWidget">
+						<p:ContentPanel ui:field="northContentPanel" />
+					</p:DroppablePanel>
+				</g:north> -->
+				<g:south size='150' unit='PX'>
+					<p:DroppablePanel width="100%" height="100%" ui:field="southWidget">
+						<p:ContentPanel ui:field="southContentPanel" />
+					</p:DroppablePanel>
+				</g:south>
+				<g:center size='500' unit='PX'>
+					<p:DroppablePanel width="100%" height="100%" ui:field="centerWidget">
+						<p:ContentPanel ui:field="centerContentPanel" />
+					</p:DroppablePanel>
+				</g:center>
+			</g:SplitLayoutPanel>
+		</g:HTMLPanel>
+		
+		<b:Container styleName="{style.footer}" ui:field="footerContainer">
+			<b:Row>
+				<b:Column size="MD_8" offset="MD_2">
+					<b:Row>
+						<b:Column size="MD_6" offset="MD_3">
+							<g:HTMLPanel styleName="{style.footer-links}">
+								<!-- <a class="{style.footer-link}" href="#">About</a>
+								<a class="{style.footer-link}" href="#">Blog</a>
+								<a class="{style.footer-link}" href="#">FAQ</a>
+								<a class="{style.footer-link}" href="#">Shop</a>
+								<a class="{style.footer-link}" href="#">Guide</a>-->
+							</g:HTMLPanel>
+						</b:Column>
+					</b:Row>
+					<b:Row>
+						<b:Column size="MD_6" offset="MD_3">
+							<g:HTMLPanel>Copyright ©<h:Span ui:field="copyrightYear" /> powered by Mooshak 2.0</g:HTMLPanel>
+						</b:Column>
+					</b:Row>
+				</b:Column>
+				<!-- <b:Column size="MD_2" addStyleNames="{style.social-box}">
+					<b:Anchor icon="FACEBOOK" iconSpin="false" iconSize="TIMES2"/>
+					<b:Anchor icon="TWITTER" iconSpin="false" iconSize="TIMES2"/>
+					<b:Anchor icon="GOOGLE" iconSpin="false" iconSize="TIMES2"/>
+					<b:Anchor icon="FLICKR" iconSpin="false" iconSize="TIMES2"/>
+					<b:Anchor icon="DELICIOUS" iconSpin="false" iconSize="TIMES2"/>
+				</b:Column> -->
+			</b:Row>
+		</b:Container>
+	</g:HTMLPanel>
+</ui:UiBinder>

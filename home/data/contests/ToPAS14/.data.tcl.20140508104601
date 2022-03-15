@@ -1,0 +1,26 @@
+set         Type {}
+set       Status concluded
+set        Fatal {Verifique <a target='select' href='11117559210917707?data+data/contests/ToPAS14/problems'><code>problems</code></a><br>}
+set      Warning {}
+set  Designation {ToPAS 2014}
+set    Organizes {DCC / FCUP}
+set        Email zp@dcc.fc.up.pt
+set         Open 1399630500
+set        Start 1399631400
+set         Stop 1399645800
+set        Close 1368205200
+set HideListings {}
+set       Policy {}
+set      Virtual {}
+set     Register {}
+set      Service {}
+set        Notes {}
+set       groups groups
+set    challenge problems
+set  submissions submissions
+set    questions questions
+set    printouts printouts
+set     balloons balloons
+set    languages languages
+set        users users
+set     problems {}

@@ -1,0 +1,86 @@
+
+html,
+body {
+	margin:0;
+	padding:0 !important;
+	height:100%;
+}
+
+#activity {
+	height: 50px;
+	font-size: xx-large;
+}
+
+#participant {
+	height: 50px;
+}
+
+#version:BEFORE {
+	content: "Version";
+}
+
+#version {
+	height: 50px;
+	font-size: x-small;
+	font-size: xx-large;
+}
+
+#fileContent {
+	font-family: monospace;
+}
+
+.inactive {
+	background: lightGrey;
+	color: grey;
+	text-align: center;
+	font-style: italic;
+}
+
+.active {
+	background: white;
+	color: black;
+	/*text-align: left;*/
+	font-style: normal;
+}
+
+.ok {
+	color: black;
+}
+
+.ko {
+	color: red;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 0.3m;
+	font-size: xx-small;
+	color: grey;
+}
+
+#left {
+	float: left;
+}
+
+
+#right {
+	float: right;
+	margin-right: 1cm;	
+}
+
+#center {
+	float: left;
+	width: 10cm;
+	margin-left: 10cm;
+}
+
+#logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 3cm;
+	margin: 5mm;
+	z-index: 1;
+}

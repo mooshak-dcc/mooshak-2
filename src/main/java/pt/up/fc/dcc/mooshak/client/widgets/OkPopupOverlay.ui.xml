@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:w='urn:import:pt.up.fc.dcc.mooshak.client.widgets'>
+
+	<ui:style src="OkPopupOverlay.css"/>
+
+    <g:HTMLPanel styleName="{style.overlay}" ui:field="base">
+		<div class="{style.buttons}">
+			<g:Button ui:field='okButton' styleName='{style.button}'>Ok</g:Button>
+		</div>
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

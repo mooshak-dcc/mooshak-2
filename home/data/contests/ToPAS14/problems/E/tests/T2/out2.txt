@@ -1,0 +1,6 @@
+1 1 1 1 1
+2 2 2
+d c b a
+a b c d e
+j i g f e d c b a
+k j i g f e d c b a

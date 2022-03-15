@@ -1,0 +1,85 @@
+@IMPORT url("../admin/view/Dialogs.css");
+
+.register {}
+
+.label {
+	width: 35%;
+	height: 1cm;
+	float: left;
+	text-align: right;
+	font-family: sans-serif;
+	font-size: large;
+	font-weight: bold;
+	display: inline;
+	vertical-align: bottom;
+	line-height: 1cm;
+}
+
+.value {
+	width: 55%;
+	height: 1cm;
+	float: right;
+	font-family: monospace;
+}
+
+.value input {
+	max-width: 80%;
+}
+
+.authTextbox {
+	font-size: 12pt;
+}
+
+
+#message {
+	margin: auto;
+}
+
+.gwt-Button {
+	color: #AAB;
+	font-weight: bold;
+}	
+
+.captchaContainer {
+	height: 170px;
+}
+
+.captcha {
+	margin: 15px 0;
+}
+
+.info {
+	font-size: 12px;
+}
+
+.register .fields {
+	height: 250px;
+}
+
+.register .buttons {
+	width: 300px;
+	margin-top: auto;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button {
+	width: 100px;
+	font-size: large;
+	color: #669;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.title {
+	font-family: sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	
+	width: 10cm;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1cm;
+}
+

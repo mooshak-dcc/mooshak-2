@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='admin'>
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name='com.smartgwt.SmartGwt'/>  -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean'/>
+	<inherits name="com.google.gwt.json.JSON" />
+	<!--<inherits name="com.google.gwt.logging.Logging"/> -->
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name='edu.ycp.cs.dh.acegwt.AceGWT'/>
+	<inherits name='pt.up.fc.dcc.xonomygwt.XonomyGWTWrapper'/>
+	<inherits name='pt.up.fc.dcc.quizEditor.QuizEditor'/>
+	<inherits name="com.google.gwt.user.Debug"/> 
+	<inherits name="org.gwtbootstrap3.GwtBootstrap3NoTheme"/>
+	<inherits name="org.gwtbootstrap3.extras.datetimepicker.DateTimePicker"/>
+	
+	<extend-property name="locale" values="pt"/>
+	
+	<source path="client"/>
+	<source path="shared"/>
+		
+	<entry-point 
+		class="pt.up.fc.dcc.mooshak.client.guis.admin.AdminEntryPoint"/>
+
+	<add-linker name="xsiframe" />
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+
+	<!-- enable source maps -->
+	<set-property name="compiler.useSourceMaps" value="true" />
+
+	<!-- Remote services used during a JUnit run  -->
+  <servlet 
+  	path='/adminCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.AdminCommandServiceImpl'/>
+  <servlet 
+  	path='/basicCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.BasicCommandServiceImpl'/>
+  <servlet 
+  	path='/event' 
+  	class='pt.up.fc.dcc.mooshak.server.events.EventServiceImpl'/>	
+</module>

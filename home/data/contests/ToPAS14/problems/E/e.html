@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<script type="text/javascript" src="../mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+</HEAD>
+<BODY >
+
+<H1><A NAME="SECTION00010000000000000000">
+Problema E: Código d'Avintes</A>
+</H1>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="255" HEIGHT="197" ALIGN="BOTTOM" BORDER="0"
+ SRC="./livro_codigos.jpg"
+ ALT="Image livro_codigos">
+
+</DIV>
+
+<P>
+
+
+
+
+
+
+
+
+A julgar pelos filmes e séries de mistério, o melhor para enviar
+ mensagens cifradas é ter um bom livro de códigos. Na verdade qualquer
+ livro serve. Se emissor e recetor tiverem previamente convencionado um
+ livro, podem apenas transmitir o número da página, o número da ordem da
+ linha na página a contar do topo, e o número de ordem da palavra na
+ linha. São mesmo espertos estes tipos que escrevem ficção...
+
+<P>
+
+ O nosso amigo Zé, natural de Avintes, matutava nisto tudo enquanto
+ saboreava um naco da afamada broa da sua região. Subitamente teve uma
+ ideia. Porque não usar um dicionário como livro de código? Bastava
+ enviar um número por palavra, o da ordem da palavra no dicionário.
+ Funcionário público em horário diurno e agente secreto nas horas vagas,
+ o nosso amigo Zé ficou esfuziante. Assim já podia enviar mensagens
+ secretas pelas declarações de IRS!
+
+
+<P>
+
+
+<H2><A NAME="SECTION00011000000000000000">
+Tarefa</A>
+</H2>
+
+ Criar um programa de codifica e descodifica mensagens a partir de um
+ dicionário. O programa começa por ler um dicionário e seguidamente lê
+ uma sequência de mensagens a codificar ou descodificar. No processo de
+ codificação cada palavra é convertida no seu número de ordem no
+ dicionário, sendo a primeira palavra associada ao número 1. O processo
+ de descodificação é o inverso, cada número é convertido na palavra do
+ dicionário na ordem correspondente.
+
+
+<P>
+
+<H2><A NAME="SECTION00012000000000000000">
+Input</A>
+</H2>
+
+ A linha inicial contém um inteiro \(n\), com \(1 \leq n \leq 1000\), o
+ número de palavras do dicionário, seguida de \(n\) linhas contendo as
+ palavras do dicionário.
+
+ As linhas seguintes contêm as ações a efetuar. Estas linhas iniciam-se
+ com um número inteiro \(a\), com \( 0 \leq a \leq 2\),com o seguinte significado:
+
+
+
+
+<ul>
+     <b>0</b> - fim das mensagens;<br>
+     <b>1</b> - linha com mensagem a codificar;<br>
+     <b>2</b> - linha com mensagem a descodificar.
+</ul>
+
+
+ No caso das mensagens a cifrar ou decifrar, o valor inteiro seguinte \(c\)
+ indica o número de palavras da mensagem.  Se \(a\) for \(1\), ou seja cifrar
+ a mensagem, o resto da linha é constituído por \(c\) palavras, com \(2 \leq
+ c \leq 100\). Se \(a\) for \(2\), ou seja decifrar a  mensagem, o resto da linha é constituída por \(c\) inteiros. No máximo haverá 100 mensagens a transmitir.
+Cada palavra não tem mais do que 20 carateres.
+
+<P>
+
+<H2><A NAME="SECTION00013000000000000000">
+Output</A>
+</H2>
+
+ Uma linha por cada mensagem a cifrar ou a decifrar, na mesma ordem em
+ que apareceu no <EM>input</EM>. No primeiro caso contendo uma sequência de
+ inteiros, no segundo uma sequência de palavras.
+
+
+
+
+
+<P>
+
+<H2><A NAME="SECTION00014000000000000000">
+Exemplo</A>
+</H2>
+
+<P>
+
+<H3><A NAME="SECTION00014100000000000000">
+Input</A>
+</H3>
+<PRE>
+3
+AMANHECER
+AO
+ATACAR
+1 3 ATACAR AO AMANHECER
+2 3 3 2 1
+0
+</PRE>
+
+<P>
+
+<H3><A NAME="SECTION00014200000000000000">
+Output</A>
+</H3>
+<PRE>
+3 2 1
+ATACAR AO AMANHECER
+</PRE>
+
+<P>
+
+
+
+<BR><HR>
+<ADDRESS>
+ToPAS'2014
+</ADDRESS>
+</BODY>
+</HTML>

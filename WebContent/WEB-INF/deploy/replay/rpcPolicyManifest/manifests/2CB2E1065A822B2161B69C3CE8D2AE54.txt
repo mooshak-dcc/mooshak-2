@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.services.JudgeCommandService
+path: EFE4A386B9CE826AD8EA1BAD2A006AD5.gwt.rpc

@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eshu xmlns="http://www.example.org/EshuConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/EshuConfig EshuConfig.xsd ">
+  <style>
+    <editorStyle width="700" height="400" borderWidth="1" 
+          borderColor="#000" background="white"  
+          gridVisible="false" gridColorLine="#c0c0c0"/>
+    
+    <toolbarStyle width="500" height="300" borderWidth="1"
+       				borderColor="black" background="WhiteSmoke"
+       				position="vertical"  />
+      
+    <vertice width="70" height="40" background="white"
+        		backgroundSelected="blue" borderWidth="1" borderColor="red"/> 
+      
+    <textBox font="Georgia" color="Green" colorSelected="Black" align="left"
+        		spacing="3px" backgroundSelected="Blue"/>
+     <validation_syntaxe>false</validation_syntaxe> 
+    
+    
+  </style>
+  
+   <diagram name="Class" pathFile="./EERConfig.xml">
+    <nodeTypes>
+
+       <nodeConfig>
+        <type>Class</type>
+        <iconTollbarSVGPath>./image/Class.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Rectangle.svg</imgSVGPath>
+         <label defaultValue="Note" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value=""/>
+        </label>
+         <containers>
+	         <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	         <container alignment="left" name="Operation" pather="porfazer" underlined="0" default_text="Operation()" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	      </containers>
+        <variant>Class</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+      
+       
+       <nodeConfig>
+        <type>ComplexClass</type>
+        <iconTollbarSVGPath>./image/ClassComplete.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/ClassComplete.svg</imgSVGPath>
+         <label defaultValue="Note" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value=""/>
+        </label>
+         <containers>
+	         <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	         <container alignment="left" name="Operation" pather="porfazer" underlined="0" default_text="Operation()" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	          <container alignment="left" name="Responsibility" pather="porfazer" underlined="0" default_text="Responsibility" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	      </containers>
+        <variant>Class</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+       
+       
+       <nodeConfig>
+        <type>SimpleClass</type>
+        <iconTollbarSVGPath>./image/ClassSimple.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/ClassSimple.svg</imgSVGPath>
+         <label defaultValue="Note" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value=""/>
+        </label>
+        
+        <variant>Class</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+       
+      
+        <nodeConfig>
+        <type>Interface</type>
+        <iconTollbarSVGPath>./image/Interface.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Interface.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value=""/>
+        </label>
+         <containers>
+	        <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute"  textbox_default_number="0">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+             
+	         <container alignment="left" name="Operation" pather="porfazer" underlined="0" default_text="Operation()"  textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	      </containers>
+	      <stereotype>interface</stereotype>
+        <variant>Interface</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+      
+      
+       
+       <nodeConfig>
+        <type>Stereotype</type>
+        <iconTollbarSVGPath>./image/StereotypeIcon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/StereotypeIcon.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center">
+          <underlined controler="" value="0"/>
+        </label>
+        <stereotype>stereotype</stereotype>
+        <variant>Stereotype</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+       
+        <nodeConfig>
+        <type>Enumeration</type>
+        <iconTollbarSVGPath>./image/Enumeration.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Enumeration.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center">
+          <underlined controler="" value="0"/>
+        </label>
+        
+         <containers>
+	        
+              <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute"  textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+             
+	         <container alignment="left" name="Operation" pather="porfazer" underlined="0" default_text="Operation()"  textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	        
+	      </containers>
+	      <stereotype>Enumeration</stereotype>
+        <variant>Stereotype</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+      
+       
+       <nodeConfig>
+        <type>DataType</type>
+        <iconTollbarSVGPath>./image/DataType.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/DataType.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center">
+          <underlined controler="" value="0"/>
+        </label>
+         <containers>
+	        
+              <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+             
+	         <container alignment="left" name="Operation" pather="porfazer" underlined="0" default_text="Operation()" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+	        
+	        
+	      </containers>
+	    <stereotype>dataType</stereotype>
+        <variant>Stereotype</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+        
+        
+       
+       
+         <nodeConfig>
+        <type>Object_</type>
+        <iconTollbarSVGPath>./image/Object.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Object.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value="1"/>
+        </label>
+         <containers>
+	        
+              <container alignment="left" name="Attribute" pather="porfazer" underlined="0" default_text="Attribute" textbox_default_number="1">
+	          <field name="visibly" value="%1"/>
+	          <field name="name" value="%2"/>
+	          <field name="type" value="%3"/>
+	        </container>
+             
+	        
+	      </containers>
+        <variant>Object_</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="true"/>
+      </nodeConfig>
+      
+         
+       <nodeConfig>
+        <type>Package</type>
+        <iconTollbarSVGPath>./image/PackageIcon.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Package.svg</imgSVGPath>
+         <label defaultValue="Package" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center">
+          <underlined controler="" value=""/>
+        </label>
+        <variant>Package</variant>
+        <isConfigurable>true</isConfigurable>
+        <includeElement>false</includeElement>
+         <infoUrlNode>
+         	<url>http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?aulas/uml/uso/componentes/actores.html</url>
+         	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+            <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/>  
+         </anchors> 
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Rectangle" with="Association"/>  
+        </connects>
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut> 
+        <nodeStyle autoresize="true"/>
+      </nodeConfig>
+      
+       
+       <nodeConfig>
+        <type>Rectangle</type>
+        <iconTollbarSVGPath>./image/Rectangle.svg</iconTollbarSVGPath>
+        <imgSVGPath>./image/Rectangle.svg</imgSVGPath>
+         <label defaultValue="Name" firstLetterCase="lowercase" letterCase="lowercase" position="center" disabled="false" alignment="center" >
+          <underlined controler="" value=""/>
+        </label>
+        <variant>Rectangle</variant>
+        <isConfigurable>false</isConfigurable>
+        <includeElement>true</includeElement>
+         <infoUrlNode>
+         	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/actores.html </url>
+        	<url>https://www.tutorialspoint.com/uml/uml_basic_notations.htm</url>
+         </infoUrlNode>
+         <anchors> 
+             <anchor  position="north"/>
+             <anchor  position="south"/> 
+             <anchor  position="east"/>
+             <anchor  position="west"/> 
+         </anchors>
+        <propertiesNode> 
+          <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"  />
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" /> 
+          <property name="x" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="y" type="Number" typeShow="input" disabled="false" impExp="true" view="true" />
+	      <property name="width" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="height" type="Number" typeShow="input" disabled="false" impExp="true" view="true" /> 
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	      <property name="key" type="boolean" typeShow="button" disabled="false" impExp="true" view="true"/>
+        </propertiesNode>
+        <featuresNode>
+          <feature name="key" type="boolean" value="false" imgPath="none" impExp="true" view="true"/>
+        </featuresNode>
+        <connects>
+          <connect max="unbounded" min="0" to="Actor" with="Association"/>
+          <connect max="unbounded" min="0" to="CasoUso" with="Association"/>
+          <connect max="unbounded" min="0" to="Note" with="Association"/>  
+        </connects> 
+        <degreeIn>unbounded</degreeIn>
+        <degreeOut>unbounded</degreeOut>
+         <nodeStyle autoresize="false"/>
+      </nodeConfig>
+       
+        
+    </nodeTypes>
+    
+    <edgeTypes>
+      <edgeConfig> 
+        <type>Association</type>
+        <iconTollbarSVGPath>./image/associationIcon.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center" >
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>Association</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+	      <property name="cardinalitySource" type="String" typeShow="input" disabled="false" impExp="false" view="true"/> 
+	     <property name="cardinalityTarget" type="String" typeShow="input" disabled="false" impExp="false" view="true"/> 
+	   
+	     
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+         
+          
+        </featuresEdge>
+         <cardinality>true</cardinality>
+        <headSource dash="false" fill="true" type="none"/>
+        <headTarget dash="false" fill="false" type="none"/>
+      </edgeConfig>
+      
+       <edgeConfig>
+        <type>AssociationOnly</type>
+        <iconTollbarSVGPath>./image/associationIconOnly.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>AssociationOnly</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="true" type="none"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+        
+      </edgeConfig>
+      
+      
+      
+       
+       <edgeConfig>
+        <type>Aggregation</type>
+        <iconTollbarSVGPath>./image/Aggregation.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>Association</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="false" type="rhombus"/>
+        <headTarget dash="false" fill="false" type="none"/>
+        
+        
+      </edgeConfig>
+      
+       
+       
+       <edgeConfig>
+        <type>AggregationOnly</type>
+        <iconTollbarSVGPath>./image/AggregationOnly.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>AssociationOnly</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="false" type="rhombus"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+        
+        
+      </edgeConfig>
+       
+       
+       
+       <edgeConfig>
+        <type>Composition</type>
+        <iconTollbarSVGPath>./image/Composition.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>Association</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="true" type="rhombus"/>
+        <headTarget dash="false" fill="false" type="none"/>
+        
+        
+      </edgeConfig>
+       
+       
+       
+        <edgeConfig>
+        <type>CompositionOnly</type>
+        <iconTollbarSVGPath>./image/CompositionOnly.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>AssociationOnly</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="true" type="rhombus"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+        
+        
+      </edgeConfig>
+      
+        
+      <edgeConfig>
+        <type>Dependency</type>
+        <iconTollbarSVGPath>./image/Dependency.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>true</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>Dependency</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="false" type="none"/>
+        <headTarget dash="false" fill="false" type="arrow-open"/>
+        
+        
+      </edgeConfig>  
+      
+      
+      <edgeConfig>
+        <type>Generalization</type>
+        <iconTollbarSVGPath>./image/Generalization.svg </iconTollbarSVGPath>
+        <lineDuple>false</lineDuple>
+        <lineDash>false</lineDash>
+		 <label defaultValue="text" firstLetterCase="" letterCase="" position="CasoUso" disabled="false" alignment="center">
+         <underlined controler="" value=""/> 
+        </label>
+        <variant>Generalization</variant>
+        <isConfigurable>true</isConfigurable> 
+        <infoUrlEdge> 
+        	<url> http://www.dcc.fc.up.pt/~zp/aulas/1617/asw/indice?./aulas/uml/uso/componentes/relacionamentos.html </url>
+        </infoUrlEdge> 
+        <propertiesEdge> 
+           <property name="type" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="id" type="Number" typeShow="input" disabled="true" impExp="true" view="true" />  
+	      <property name="sourceType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="targetType" type="String" typeShow="input" disabled="true" impExp="true" view="true"/>
+	      <property name="label" type="String" typeShow="input" disabled="false" impExp="true" view="true"/> 
+	     <!--   <property name="key" type="boolean" type_show="button" disabled="false" /> -->
+        </propertiesEdge>
+        <featuresEdge>
+          <feature name="key" type="boolean" value="false" impExp="true" view="true" />
+        </featuresEdge>
+         <cardinality>false</cardinality>
+        <headSource dash="false" fill="false" type="none"/>
+        <headTarget dash="false" fill="false" type="arrow-complete"/>
+        
+      </edgeConfig>  
+      
+       
+       
+    </edgeTypes>
+  </diagram>
+</eshu>

@@ -1,0 +1,136 @@
+11B7D87BA0E199284B619505A3103D12.cache.js
+locale pt
+selectorCapability js
+user.agent ie10
+
+168A33D09B994B2F8EFBAFD8BA4FA541.cache.js
+locale default
+selectorCapability native
+user.agent gecko1_8
+
+189AEA5E4B8EEFC6CE66E717C7084C69.cache.js
+locale default
+selectorCapability native
+user.agent ie8
+
+1DD9BD57E9D3FA42807A6F63BF6C9AEA.cache.js
+locale en
+selectorCapability js
+user.agent ie8
+
+22D9CCFF033CD706901BFCC9E6D66501.cache.js
+locale default
+selectorCapability js
+user.agent ie10
+
+26A7779124B963FDDC80C8486350627A.cache.js
+locale en
+selectorCapability native
+user.agent ie9
+
+4357F1993935494683D1EE31452325C1.cache.js
+locale pt
+selectorCapability native
+user.agent ie8
+
+4449686AF8E935702E2CDE6524EB79A7.cache.js
+locale default
+selectorCapability native
+user.agent ie10
+
+640F0AA1ADEA6CE5AC186C90FE49F9B0.cache.js
+locale en
+selectorCapability native
+user.agent gecko1_8
+
+64F8940EE39DE80AB358A200F303333E.cache.js
+locale pt
+selectorCapability js
+user.agent ie9
+
+6D42A8785F4588F77D9117C1E93B5DC3.cache.js
+locale default
+selectorCapability js
+user.agent ie8
+
+7EF3D75357D796EA9EDA468B6B1040A8.cache.js
+locale pt
+selectorCapability native
+user.agent gecko1_8
+
+883C4BFCAC3BF1B172A26E78E777F155.cache.js
+locale default
+selectorCapability js
+user.agent ie9
+
+90612D1C6F33CE727A42AA3684F2F07C.cache.js
+locale en
+selectorCapability native
+user.agent ie8
+
+94B6C66A1164D560D4DA91848DA5EB23.cache.js
+locale pt
+selectorCapability native
+user.agent ie10
+
+955EEE3E71833685EF431FBC45CABE16.cache.js
+locale en
+selectorCapability js
+user.agent gecko1_8
+
+98FC34E1685101A606256252256038B3.cache.js
+locale en
+selectorCapability js
+user.agent ie10
+
+9AEB3BCC1E781D520AE0F8BDEC3997A1.cache.js
+locale en
+selectorCapability native
+user.agent safari
+
+A9EABABA53CCC346F285DFDF6F46FD10.cache.js
+locale pt
+selectorCapability native
+user.agent safari
+
+AF000FCD0C71F80C772D11F411E04756.cache.js
+locale pt
+selectorCapability native
+user.agent ie9
+
+BB469B14A041026EE7E0B797EE4DE333.cache.js
+locale en
+selectorCapability native
+user.agent ie10
+
+C2BB74BF9587115296D47A09FD3EC66A.cache.js
+locale default
+selectorCapability native
+user.agent ie9
+
+C45174C35ECE68857BE616B4465EDBFC.cache.js
+locale pt
+selectorCapability js
+user.agent ie8
+
+DF8C2CBA0AA6BA583E9F89A19108C13A.cache.js
+locale pt
+selectorCapability js
+user.agent gecko1_8
+
+F35CE76A0FD9C79D8CD9EC58A2ADE6C5.cache.js
+locale default
+selectorCapability native
+user.agent safari
+
+F969D8B78B8E75A0815855D5765C4D31.cache.js
+locale default
+selectorCapability js
+user.agent gecko1_8
+
+FE1AEB4EF8CBA121B2BA3DF56D9E176B.cache.js
+locale en
+selectorCapability js
+user.agent ie9
+
+Devmode:devmode.js

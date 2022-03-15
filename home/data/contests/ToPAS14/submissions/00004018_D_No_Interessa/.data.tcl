@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399635418
+set Time 4018
+set Problem D
+set Team No_Interessa
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 1076
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Java
+set Program d.java
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.107
+set Memory 1870668.0
+set Signals {}
+set Feedback {{ 3 tests with <b>Wrong Answer</b>}}

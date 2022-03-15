@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<LDAP xmlns="http://www.ncc.up.pt/mooshak/"
+          Command="/usr/bin/ldapsearch"
+          Host="ldap.dcc.fc.up.pt"
+          Bind_DN="ou=Pessoas,dc=docentes,dc=dcc"
+          Base_DN="dc=docentes,dc=dcc"
+          Login_Attribute=""/>
+

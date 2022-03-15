@@ -1,0 +1,19 @@
+set        Fatal {}
+set      Warning {}
+set         Name C
+set        Color Red
+set        Title {iFind a App para encontrares o que queres}
+set   Difficulty Easy
+set         Type {}
+set  Description c.html
+set          PDF PDF.pdf
+set      Program IFind.java
+set  Environment Environment
+set      Timeout 4
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

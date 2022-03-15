@@ -1,0 +1,66 @@
+
+	Open a contest
+
+Select data/contests/<i>contest/</i>
+View contest record
+
+Press button "Never" in all date attributes and save
+Contest status is <u>created</u>
+
+Press button "Now" in field <u>Open</u> and save
+Contest status is <u>open</u>
+
+Check email address in <u>Email</u> attibute
+Should be a valid email address
+
+	Register
+
+Open <a target="_blanc" href="execute?register">registration form</a>
+View registration form in new window
+
+Press <u>submit</u>
+Message "Missing team"
+
+Enter a team name in <u>Name</u> field and press <u>Submit</u>
+Message "Missing address"
+
+Enter garbage in <u>Email</u> field and press <u>Submit</u>
+Message "Wrong email address"
+
+Enter correct address in <u>Email</u> field and press <u>Submit</u>
+Message "Missing group"
+
+Select a group in <u>Group</u> selector  and press <u>Submit</u>
+Acceptance page with link to online contest
+
+Follow the link online contest
+Authentication page
+
+	 Email
+
+Open mailer in the email account given in registration
+- (You now what to expect :)
+
+Open message with subject "Registration in <i>contest</i>"
+Message with contest name, team name and generated password
+
+Reply to this message
+-
+
+Open mailer in the email account set for this contest
+-
+
+Open the reply you sent 
+-
+
+     Login
+
+Copy password in Mooshak registration message
+-
+
+Go back to the authentication page
+-
+
+Enter team name in <u>User</u>, <u>Password</u>, and press <u>Submit</u>
+View team interface. (Continue testing team)
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:my="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:a="urn:import:pt.up.fc.dcc.mooshak.client.form.admin"
+	xmlns:ace='urn:import:edu.ycp.cs.dh.acegwt.client.ace'
+	xmlns:u="urn:import:pt.up.fc.dcc.mooshak.client.utils"
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.creator.i18n.CreatorConstants' />
+
+	<ui:style src="Problem.css" 
+		type="pt.up.fc.dcc.mooshak.client.guis.creator.view.ProblemView.BaseStyle" />
+
+
+
+	<g:HTMLPanel styleName='{style.base}'>
+		<div class="{style.problemdata}">
+			<div>
+				<span>Name</span>
+				<a:CustomTextBox ui:field="name" styleName="{style.name}" />
+			</div>
+			<div>
+				<span>Title</span>
+				<a:CustomTextBox ui:field="title" styleName="{style.title}" />
+			</div>
+			<div>
+				<span>Color</span>
+				<a:ColorPicker ui:field="color" styleName="{style.colorpicker}"/>
+			</div>
+		</div>
+		<div class="{style.problemdata}">
+			<div>
+				<span>Difficulty</span>
+				<a:TextListBox ui:field="difficulty" styleName="{style.difficulty}" />
+			</div>
+			<div>
+				<span>Type</span>
+				<a:TextListBox ui:field="type" styleName="{style.type}" />
+			</div>
+			<div>
+				<span>Time out</span>
+				<a:CustomTextBox ui:field="timeout" styleName="{style.timeout}" />
+			</div>
+			<!-- <div>
+				<span>Environment</span>
+				<my:FileEditorButton ui:field="environment" styleName="{style.environment}">
+					Edit file ...
+				</my:FileEditorButton>
+			</div> -->
+		</div>
+		<div class="{style.problemdata}">
+			<div>
+				<span>Start</span>
+				<a:TextDateBox ui:field="start" styleName="{style.start}" />
+			</div>
+			<div>
+				<span>Stop</span>
+				<a:TextDateBox ui:field="stop" styleName="{style.stop}" />
+			</div>
+			<div>
+				<span>Editor</span>
+				<a:TextListBox ui:field="editorKind" styleName="{style.editorKind}" />
+			</div>
+		</div>
+		<div class="{style.problemdata}">
+			<div>
+				<span>Static Corrector</span>
+				<a:CustomTextBox ui:field="staticCor" styleName="{style.staticCor}" />
+			</div>
+			<div>
+				<span>Dynamic Corrector</span>
+				<a:CustomTextBox ui:field="dynamicCor" styleName="{style.dynamicCor}" />
+			</div>
+		</div>
+		<div class="{style.left}">
+			<div class="{style.problemdesc}">
+				<div>
+					<span class="{style.spnDesc}">Description</span>
+					<div class="{style.descriptions}">
+						<div class="{style.descSet}">
+							<span>HTML</span>
+							<my:CustomLabelPath ui:field="description" styleName="{style.lblDesc} {style.tip}">
+								Drop a .html file
+							</my:CustomLabelPath>
+						</div>
+						<div class="{style.descSet}">
+							<span>PDF</span>
+							<my:CustomLabelPath ui:field="pdf" styleName="{style.lblpdf} {style.tip}">
+								Drop a .pdf file
+							</my:CustomLabelPath>
+						</div>
+					</div>
+					<div style="display:table-cell">
+						<g:Button ui:field="delDesc" styleName="{style.deleteBtn}">X</g:Button>
+						<g:Button ui:field="delPdf" styleName="{style.deleteBtn}">X</g:Button>
+					</div>
+				</div>
+				<div class="{style.descSet}">
+					<span>Environment</span>
+					<my:CustomLabelPath ui:field="environment" styleName="{style.lblenv} {style.tip}">
+						Drop a file
+					</my:CustomLabelPath>
+					<g:Button ui:field="delEnv" styleName="{style.deleteBtn}">X</g:Button>
+				</div>
+			</div>
+			<div class="{style.rightGrid}">
+				<c:DataGrid styleName='{style.imagedata}' ui:field='imagedata'/>
+				<g:Button ui:field="addImage" styleName='{style.addImage}' />
+			</div>
+			
+			<div class="{style.grid-container}">
+				<c:DataGrid styleName='{style.programdata}' ui:field='programdata'/>
+				<g:Button ui:field="addProgram" styleName='{style.addBtn}' />
+			</div>
+			
+			<div class="{style.grid-container}">
+				<c:DataGrid styleName='{style.iodata}' ui:field='iodata'/>
+				<g:Button ui:field="addTest" styleName='{style.addBtn}' />
+			</div>
+			
+			<div class="{style.grid-container}">
+				<g:TextArea styleName='{style.observations}' ui:field="observations" enabled="false" />
+			</div>
+		</div>
+		<div class="{style.right}">
+			<g:Button ui:field="deselect" styleName='{style.deselect}'>
+				Deselect
+			</g:Button>
+			<my:DropFileManager ui:field="fileManager" />
+		</div>
+		<!-- <div class="{style.commands}">
+			<g:Button styleName='{style.button}' 
+				ui:field='submit' text='{i18n.submit}'/>
+			<g:Button styleName='{style.button}' 
+				ui:field='print' text='{i18n.print}'/>
+			<g:Button styleName='{style.button}' 
+				ui:field='validate' text='{i18n.validate}'/>
+		</div> -->
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

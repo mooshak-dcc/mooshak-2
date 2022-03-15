@@ -1,0 +1,19 @@
+set        Fatal {}
+set      Warning {}
+set         Name F
+set        Color Cyan
+set        Title {Lançado às feras }
+set   Difficulty Medium
+set         Type {}
+set  Description f.html
+set          PDF PDF.pdf
+set      Program prog.c
+set  Environment Environment
+set      Timeout 4
+set Static_corrector {}
+set Dynamic_corrector {}
+set Original_location {}
+set       images images
+set        tests tests
+set        Start {}
+set         Stop {}

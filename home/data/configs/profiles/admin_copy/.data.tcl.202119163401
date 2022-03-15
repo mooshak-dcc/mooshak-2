@@ -1,0 +1,3 @@
+set Screen admin
+set Authorized {admin view}
+set frozen false

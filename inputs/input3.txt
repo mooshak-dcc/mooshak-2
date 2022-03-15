@@ -1,0 +1,12 @@
+A Class 2
+S multiplicity 3
+C 2 attribute age
+type int
+visibility true
+Node
+B Interface 1
+S multiplicity 1
+Node
+C Class 1
+S multiplicity 1
+Node

@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00006422_D_PlsReportMyTeam</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00006422_D_PlsReportMyTeam">00006422_D_PlsReportMyTeam</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00006422_D_PlsReportMyTeam/main.cpp">main.cpp</a>
+<a href="data/contests/ToPAS14/submissions/00006422_D_PlsReportMyTeam/main.cpp">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 13:17:02 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 13:17:02 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/ESFV/PlsReportMyTeam">
+PlsReportMyTeam
+</a> Login: <code>PlsReportMyTeam</code> Group: ESFV [ESFV]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/C++">
+C++
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>189<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>1<font color='red'><U>73</U></font><font color='red'><S>89</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.002 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>14<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>1<font color='red'><U>5</U></font><font color='red'><S>4</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.002 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>534<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>628</U></font><font color='red'><S>534</S></font><font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.002 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>64 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Wrong Answer</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{ 3 tests with <b>Wrong Answer</b>} {1 test with <b>Accepted</b>
+ 3 tests with <b>Wrong Answer</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main()
+{
+   int meses[24];
+   int stock[24];
+   int media1,media2,media3;
+   for(int i=0;i&lt;24; i++){
+   do{
+   cin&gt;&gt;meses[i]&gt;&gt;stock[i];
+}while(stock[i]&gt;1001);
+   }
+   media1=(stock[22]+stock[21]+stock[20])/3;
+   media2=((stock[12]+stock[0])/2);
+   media3=(media1+media2)/2;
+   round(media3);
+   cout&lt;&lt;media3&lt;&lt;endl;
+   return 0;
+}
+
+</pre>
+
+</body>

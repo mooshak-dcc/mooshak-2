@@ -1,0 +1,32 @@
+
+
+.base {
+	width: 100%;
+	height: 100%;
+}
+
+.comment {
+	background-color: #fff;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #212121;
+    font-size: 13px;
+    padding: 5px 5px;
+    width: 100%;
+    resize: none;
+}
+
+.submitBtn {
+	background-color: #aaaabb;
+	border-color: #aaaaaa;
+	float: right;
+}
+
+.submitBtn:hover {
+	background-color: #aaaabb;
+	border-color: #aaaaaa;
+}
+
+.rating {
+}

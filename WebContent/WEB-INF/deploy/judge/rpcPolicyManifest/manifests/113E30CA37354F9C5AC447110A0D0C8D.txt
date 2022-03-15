@@ -1,0 +1,2 @@
+serviceClass: pt.up.fc.dcc.mooshak.client.events.EventService
+path: 3B6C0DA09B90AFDF1B1C6B98A7B24AAA.gwt.rpc

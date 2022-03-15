@@ -1,0 +1,10 @@
+6
+as
+armas
+e
+os
+baroes
+assinalados
+1 6 as armas e os baroes assinalados
+2 6 1 2 3 4 5 6
+0

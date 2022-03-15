@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Report of submission 00008766_D_Trs_Tristes_Tigres</title>
+<link
+rel	="stylesheet"
+href	="../../styles/base.css"
+type	="text/css">
+</head>
+<body>
+<h2>Report #1</h2>
+
+<table>
+<tr>
+<th>Submission</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008766_D_Trs_Tristes_Tigres">00008766_D_Trs_Tristes_Tigres</a>
+</td>
+</tr>
+<tr>
+<th>File</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/submissions/00008766_D_Trs_Tristes_Tigres/main.c">main.c</a>
+<a href="data/contests/ToPAS14/submissions/00008766_D_Trs_Tristes_Tigres/main.c">[Download]</a>
+</td>
+
+<tr><th>Received</td>	<td>Fri May 09 13:56:06 +0100 2014</td></tr>
+<tr><th>Analyzed</td>	<td>Fri May 09 13:56:06 +0100 2014 (0:00:00)</td></tr><tr>
+<th>Team</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/groups/ESDH/Trs_Tristes_Tigres">
+Três Tristes Tigres
+</a> Login: <code>Trs_Tristes_Tigres</code> Group: ESDH [ESDH]
+</td><tr>
+<th>Language</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/languages/C">
+C
+</a>
+</td><tr>
+<th>Problem</th>
+<td>
+<a href="?inspect+data/contests/ToPAS14/problems/D">
+D: indicador mais-ou-menos 
+</a>
+</td><tr>
+<th>Compilation</th>
+<td></td>
+</tr>
+</table><p>
+<table
+border="1"
+width="100%">
+<tr>
+<th>Test</th>
+<th>Expected</th>
+<th>Obtained</th>
+<th>Differences</th>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T1">
+T1
+</a><br>
+T=0.000 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<br>
+</td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>37<font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T2">
+T2
+</a><br>
+T=0.001 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>173<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>247<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>1</U></font><font color='red'><S>24</S></font><font color='red'><U>3</U></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T3">
+T3
+</a><br>
+T=0.000 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>15<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>20<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>15</U></font><font color='red'><S>20</S></font><font size="-1">\n
+</font></pre></td>
+</tr><tr>
+<td valign="top">
+<a href="?inspect+/home/topas/data/contests/ToPAS14/problems/D/tests/T4">
+T4
+</a><br>
+T=0.000 sec<br>
+E=0 sec<br>
+M=64 Kb<br>
+<font color="red">Wrong Answer</font><br>
+</td>
+<td valign="top"><pre>628<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre>704<font size="-1">\n
+</font></pre></td>
+<td valign="top"><pre><font color='red'><U>628</U></font><font color='red'><S>704</S></font><font size="-1">\n
+</font></pre></td>
+</tr></table>
+<p><table>
+<tr>	<th>CPU	  </th><td>0.001 (0) sec</td>	</tr>
+<tr>	<th>Memory	  </th><td>64 kbytes</td>			</tr>
+<tr>	<th>Classification</th><td>Wrong Answer</td>		</tr>
+<tr>	<th>Mark</th>	  <td>0</td>		</tr>
+<tr>
+<th valign="top">Observations</th>
+<td><pre></pre></td>
+</tr>
+<tr>
+<th valign="top">Feedback</th>
+<td><pre>{ 3 tests with <b>Wrong Answer</b>} {1 test with <b>Accepted</b>
+ 3 tests with <b>Wrong Answer</b>}</pre></td>
+</tr>
+
+<tr>
+<th>Code</th>
+<td></td>
+</table>
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;math.h&gt;
+
+int main()
+{
+    int i, vendas, datas[24][3], media1, media2, contaMeses;
+    char dataInput[7], tmpAno[5], tmpMes[3];
+
+    for(i=0; i&lt;24; i++){
+        scanf("%s %d", dataInput, &amp;vendas);
+
+        tmpAno[0] = dataInput[0];
+        tmpAno[1] = dataInput[1];
+        tmpAno[2] = dataInput[2];
+        tmpAno[3] = dataInput[3];
+        tmpAno[4] = '\0';
+
+        tmpMes[0] = dataInput[4];
+        tmpMes[1] = dataInput[5];
+        tmpMes[2] = '\0';
+
+        datas[i][0] = atoi(tmpAno);
+        datas[i][1] = atoi(tmpMes);
+        datas[i][2] = vendas;
+    }
+
+
+    media1 = (datas[21][2] + datas[22][2] + datas[23][2]) / 3;
+
+    media2 = 0; contaMeses = 0;
+    for(i=0; i&lt;24; i++) {
+        if( datas[i][0] &gt;= (datas[23][0]-2) &amp;&amp; datas[i][1] == datas[23][1]) {
+            media2 += datas[i][2];
+            contaMeses++;
+        }
+    }
+
+
+    media2 = media2 / contaMeses;
+
+    printf("%d\n", (media1+media2)/2);
+
+    return 0;
+}
+
+</pre>
+
+</body>

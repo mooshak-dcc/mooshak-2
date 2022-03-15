@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client" 
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.enki.i18n.EnkiConstants' />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+	
+	<ui:style src="ProgramTestCases.css" 
+		type='pt.up.fc.dcc.mooshak.client.gadgets.programtestcases.ProgramTestCasesViewImpl.BaseStyle'/>
+	
+	<w:ResizableHtmlPanel ui:field="panel">
+		<c:DataGrid styleName='{style.iodata}' ui:field='iodata'/>
+		<g:HTMLPanel styleName="{style.commands}" ui:field="commandsPanel">
+			<g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton
+					ui:field="submit" 
+					url='{images.submitButton.getSafeUri.asString}' 
+					title="{i18n.submitTip}" 
+					height="40px"
+					styleName='{style.button}' />
+				<g:Label text="{i18n.submit}" title="{i18n.submitTip}"></g:Label>
+			</g:HTMLPanel>
+			<!-- <w:CustomImageButton 
+				ui:field="print" 
+				title="{i18n.print}" 
+				url='{images.printButton.getSafeUri.asString}' 
+				height="50px"
+				styleName='{style.button}' /> -->
+			<g:HTMLPanel styleName='{style.button}'>
+				<w:CustomImageButton 
+					ui:field="validate" 
+					title="{i18n.validateTip}" 
+					url='{images.validateButton.getSafeUri.asString}' 
+					height="40px" />
+				<g:Label text="{i18n.validate}"	title="{i18n.validateTip}" ></g:Label>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+	</w:ResizableHtmlPanel>
+</ui:UiBinder> 

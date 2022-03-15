@@ -1,0 +1,606 @@
+{
+    "onchange": "(function onchange(){console.log(\"I been changed now!\");})",
+    "validate": "(function validate(e){var a=Xonomy.docSpec.elements[e.name];a.validate&&a.validate(e);for(l=0;l<e.attributes.length;l++){var t=e.attributes[l],i=a.attributes[t.name];i.validate&&i.validate(t)}for(var l=0;l<e.children.length;l++){var r=e.children[l];\"element\"==r.type&&Xonomy.docSpec.validate(r)}})",
+    "elements": {
+    	"course": {
+    		"menu": [
+                {
+                    "caption": "Append a <coursepart>",
+                    "action": "Xonomy.newElementChild",
+                    "actionParameter": "<coursepart/>"
+                },
+                {
+                    "caption": "Add @id=\"id\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "id",
+                        "value": "id"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"id\");})"
+                },
+                {
+                    "caption": "Add @name=\"name\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "name",
+                        "value": "name"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"name\");})"
+                },
+                {
+                    "caption": "Add @author=\"author\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "author",
+                        "value": "author"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"author\");})"
+                },
+                {
+                    "caption": "Add @creationDate=\"2017-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "creationDate",
+                        "value": "2017-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"creationDate\");})"
+                },
+                {
+                    "caption": "Add @startDate=\"2017-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "startDate",
+                        "value": "2017-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"startDate\");})"
+                },
+                {
+                    "caption": "Add @endDate=\"2017-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "endDate",
+                        "value": "2017-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"endDate\");})"
+                },
+                {
+                    "caption": "Add @mode=\"RELAX\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "mode",
+                        "value": "RELAX"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"mode\");})"
+                },
+                {
+                    "caption": "Add @recommender=\"pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "recommender",
+                        "value": "pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"recommender\");})"
+                }
+            ],
+            "attributes": {
+            	"id": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must not be empty.\"}),!1):!(document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length>1)||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must be unique.\"}),!1)})"
+            	},
+            	"name": {
+            		"asker": "Xonomy.askString"
+            	},
+            	"author": {
+            		"asker": "Xonomy.askString"
+            	},
+            	"creationDate": {
+            		"asker": "Xonomy.askDatetime"
+            	},
+            	"startDate": {
+            		"asker": "Xonomy.askDatetime"
+            	},
+            	"endDate": {
+            		"asker": "Xonomy.askDatetime"
+            	},
+                "mode": {
+                    "asker": "Xonomy.askPicklist",
+                    "askerParameter": [
+                        "RELAX", "MODERATE", "STRICT"
+                    ]
+                },
+                "recommender": {
+                    "asker": "Xonomy.askPicklist",
+                    "askerParameter": [
+                        "pt.up.fc.dcc.seqins.server.recommendation.impl.SequentialRecommender"
+                    ]
+                }
+            }
+    	},
+    	"coursepart": {
+    		"menu": [
+    			{
+                    "caption": "Append a <coursepart>",
+                    "action": "Xonomy.newElementChild",
+                    "actionParameter": "<coursepart />"
+                },
+    			{
+                    "caption": "Append a <resource>",
+                    "action": "Xonomy.newElementChild",
+                    "actionParameter": "<resource />"
+                },
+                {
+                    "caption": "Add @id=\"id\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "id",
+                        "value": "id"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"id\");})"
+                },
+                {
+                    "caption": "Add @name=\"name\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "name",
+                        "value": "name"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"name\");})"
+                },
+                {
+                    "caption": "Add @minimumWeight=\"0\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "minimumWeight",
+                        "value": "0"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"minimumWeight\");})"
+                },
+                {
+                    "caption": "Add @start=\"start\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "start",
+                        "value": "start"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"start\");})"
+                },
+                {
+                    "caption": "Add @startDate=\"2017-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "startDate",
+                        "value": "2017-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"startDate\");})"
+                },
+                {
+                    "caption": "Add @endDate=\"2017-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "endDate",
+                        "value": "2017-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"endDate\");})"
+                },
+                {
+                    "caption": "Add @previous=\"previous\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "previous",
+                        "value": "previous"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"previous\");})"
+                },
+                {
+                    "caption": "Add @following=\"following\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "following",
+                        "value": "following"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"following\");})"
+                },
+                {
+                    "caption": "Add @precedences=\"precedences\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "precedences",
+                        "value": "precedences"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"precedences\");})"
+                },
+                {
+                    "caption": "Add @probabilityInExam=\"0\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "probabilityInExam",
+                        "value": "0"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"probabilityInExam\");})"
+                },
+                {
+                    "caption": "Add @weightInExam=\"0\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "weightInExam",
+                        "value": "0"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"weightInExam\");})"
+                },
+                {
+                    "caption": "Add @language=\"language\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "language",
+                        "value": "language"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"language\");})"
+                },
+                {
+                    "caption": "New <coursepart> before this",
+                    "action": "Xonomy.newElementBefore",
+                    "actionParameter": "<coursepart/>"
+                },
+                {
+                    "caption": "New <coursepart> after this",
+                    "action": "Xonomy.newElementAfter",
+                    "actionParameter": "<coursepart/>"
+                },
+                {
+                    "caption": "New <resource> before this",
+                    "action": "Xonomy.newElementBefore",
+                    "actionParameter": "<resource/>"
+                },
+                {
+                    "caption": "New <resource> after this",
+                    "action": "Xonomy.newElementAfter",
+                    "actionParameter": "<resource/>"
+                },
+                {
+                    "caption": "Delete this <coursepart>",
+                    "action": "Xonomy.deleteElement"
+                }
+    		],
+    		"canDropTo": ["course", "coursepart"],
+            "attributes": {
+            	"id": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must not be empty.\"}),!1):!(document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length>1)||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must be unique.\"}),!1)})"
+            	},
+            	"name": {
+            		"asker": "Xonomy.askString"
+            	},
+            	"minimumWeight": {
+            		"asker": "Xonomy.askNumber",
+            		"askerParameter": {
+            			"min": 0,
+            			"max": 100
+            		},
+                    "menu": [
+                        {
+                            "caption": "Delete this @minimumWeight",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"start": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @start attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @start attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @start",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"startDate": {
+            		"asker": "Xonomy.askDatetime",
+                    "menu": [
+                        {
+                            "caption": "Delete this @startDate",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"endDate": {
+            		"asker": "Xonomy.askDatetime",
+                    "menu": [
+                        {
+                            "caption": "Delete this @endDate",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"previous": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @previous attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @previous attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @previous",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"following": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @following attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @following attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @following",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"precedences": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){for(ts=t.value.trim().split(\" \"),k=0;k<ts.length;k++)if(v=ts[k],0==document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+v.trim()+'\"]').length)return Xonomy.warnings.push({htmlID:t.htmlID,text:\"All words in @precedences attribute must point to an element's @id attribute.\"}),!1;return!0})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @precedences",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"probabilityInExam": {
+            		"asker": "Xonomy.askNumber",
+            		"askerParameter": {
+            			"min": 0,
+            			"max": 100
+            		},
+                    "menu": [
+                        {
+                            "caption": "Delete this @probabilityInExam",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"weightInExam": {
+            		"asker": "Xonomy.askNumber",
+            		"askerParameter": {
+            			"min": 0,
+            			"max": 100
+            		},
+                    "menu": [
+                        {
+                            "caption": "Delete this @weightInExam",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"language": {
+            		"asker": "Xonomy.askString",
+                    "menu": [
+                        {
+                            "caption": "Delete this @language",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	}
+            }
+    	},
+    	"resource": {
+    		"menu": [
+                {
+                    "caption": "Add @id=\"id\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "id",
+                        "value": "id"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"id\");})"
+                },
+                {
+                    "caption": "Add @title=\"title\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "title",
+                        "value": "title"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"title\");})"
+                },
+                {
+                    "caption": "Add @href=\"href\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "href",
+                        "value": "href"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"href\");})"
+                },
+                {
+                    "caption": "Add @type=\"PROBLEM\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "type",
+                        "value": "PROBLEM"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"type\");})"
+                },
+                {
+                    "caption": "Add @learningTime=\"1970-01-01T00:00:00.000Z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "learningTime",
+                        "value": "1970-01-01T00:00:00.000Z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"learningTime\");})"
+                },
+                {
+                    "caption": "Add @previous=\"previous\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "previous",
+                        "value": "previous"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"previous\");})"
+                },
+                {
+                    "caption": "Add @following=\"following\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "following",
+                        "value": "following"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"following\");})"
+                },
+                {
+                    "caption": "Add @onFail=\"onFail\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "onFail",
+                        "value": "onFail"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"onFail\") || !jsElement.hasAttribute(\"type\") || jsElement.getAttributeValue(\"type\")!=\"PROBLEM\";})"
+                },
+                {
+                    "caption": "Add @onSuccess=\"onSuccess\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "onSuccess",
+                        "value": "onSuccess"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"onSuccess\") || !jsElement.hasAttribute(\"type\") || jsElement.getAttributeValue(\"type\")!=\"PROBLEM\";})"
+                },
+                {
+                    "caption": "Add @eval=\"false\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "eval",
+                        "value": "false"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"eval\") || !jsElement.hasAttribute(\"type\") || jsElement.getAttributeValue(\"type\")!=\"PROBLEM\";})"
+                },
+                {
+                    "caption": "Add @tags=\"x,y,z\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "tags",
+                        "value": "x,y,z"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"tags\");})"
+                },
+                {
+                    "caption": "Add @language=\"language\"",
+                    "action": "Xonomy.newAttribute",
+                    "actionParameter": {
+                        "name": "language",
+                        "value": "language"
+                    },
+                    "hideIf": "(function hideIf(jsElement){return jsElement.hasAttribute(\"language\") || !jsElement.hasAttribute(\"type\") || jsElement.getAttributeValue(\"type\")!=\"PROBLEM\";})"
+                },
+                {
+                    "caption": "New <resource> before this",
+                    "action": "Xonomy.newElementBefore",
+                    "actionParameter": "<resource/>"
+                },
+                {
+                    "caption": "New <resource> after this",
+                    "action": "Xonomy.newElementAfter",
+                    "actionParameter": "<resource/>"
+                },
+                {
+                    "caption": "Delete this <resource>",
+                    "action": "Xonomy.deleteElement"
+                }
+    		],
+    		"canDropTo": ["coursepart"],
+            "attributes": {
+            	"id": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must not be empty.\"}),!1):!(document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length>1)||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @id attribute must be unique.\"}),!1)})"
+            	},
+            	"title": {
+            		"asker": "Xonomy.askString"
+            	},
+            	"href": {
+            		"asker": "Xonomy.askString"
+            	},
+                "type": {
+                    "asker": "Xonomy.askPicklist",
+                    "askerParameter": [
+                        "PROBLEM", "PDF", "VIDEO"
+                    ]
+                },
+            	"learningTime": {
+            		"asker": "Xonomy.askTime",
+                    "menu": [
+                        {
+                            "caption": "Delete this @learningTime",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"previous": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @previous attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @previous attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @previous",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"following": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @following attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @following attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @following",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"onFail": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @onFail attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @onFail attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @onFail",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"onSuccess": {
+            		"asker": "Xonomy.askString",
+            		"validate": "(function validate(t){return\"\"==t.value.trim()?(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @onSuccess attribute must not be empty.\"}),!1):0!=document.querySelectorAll('.xonomy .attribute[data-name=\"id\"][data-value=\"'+t.value.trim()+'\"]').length||(Xonomy.warnings.push({htmlID:t.htmlID,text:\"The @onSuccess attribute must point to an element's @id attribute.\"}),!1)})",
+                    "menu": [
+                        {
+                            "caption": "Delete this @onSuccess",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"eval": {
+            		"asker": "Xonomy.askString",
+                    "askerParameter": [
+                        "true", "false"
+                    ],
+                    "menu": [
+                        {
+                            "caption": "Delete this @eval",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"tags": {
+            		"asker": "Xonomy.askTags",
+                    "menu": [
+                        {
+                            "caption": "Delete this @tags",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	},
+            	"language": {
+            		"asker": "Xonomy.askString",
+                    "menu": [
+                        {
+                            "caption": "Delete this @language",
+                            "action": "Xonomy.deleteAttribute"
+                        }
+                    ]
+            	}
+            }
+    	}
+    }
+}

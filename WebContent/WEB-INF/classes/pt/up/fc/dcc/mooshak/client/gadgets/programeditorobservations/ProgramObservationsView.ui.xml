@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:w="urn:import:pt.up.fc.dcc.mooshak.client.widgets">
+    
+	<ui:style src="ProgramObservations.css" />
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.enki.i18n.EnkiConstants' />
+	
+	<ui:with field="imagesEnki" 
+		type="pt.up.fc.dcc.mooshak.client.guis.enki.resources.EnkiResources"/>
+	
+	<w:ResizableHtmlPanel ui:field="panel" styleName="{style.base}">
+		
+		<w:CustomImageButton 
+					ui:field="fullscreen" 
+					title="{i18n.fullscreenTip}" 
+					url='{imagesEnki.fullScreen.getSafeUri.asString}' 
+					height="30px"
+					styleName='{style.fullscreenButton}' />
+		<w:CustomImageButton 
+					ui:field="exitFullscreen" 
+					title="{i18n.exitFullscreenTip}" 
+					url='{imagesEnki.exitFullScreen.getSafeUri.asString}' 
+					height="30px"
+					styleName='{style.fullscreenButton} {style.hide}' />
+		<g:HTML styleName='{style.observations}' ui:field='observations' />
+	</w:ResizableHtmlPanel>
+</ui:UiBinder> 

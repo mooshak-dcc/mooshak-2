@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='judge'>
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name='com.smartgwt.SmartGwt'/>  -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean'/>
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.google.gwt.xml.XML" />
+	<!--<inherits name="com.google.gwt.logging.Logging"/> -->
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<inherits name='edu.ycp.cs.dh.acegwt.AceGWT'/>
+	<inherits name='com.google.gwt.visualization.Visualization'/>
+	<inherits name="pt.up.fc.dcc.eshu.ESHU2_0Kora" />
+	
+	<extend-property name="locale" values="pt"/>
+	
+	<source path="client"/>
+	<source path="shared"/>
+		
+	<entry-point 
+		class="pt.up.fc.dcc.mooshak.client.guis.judge.JudgeEntryPoint"/>
+
+	<add-linker name="xsiframe" />
+	<set-configuration-property name="devModeRedirectEnabled" value="true" />
+
+	<!-- enable source maps -->
+	<set-property name="compiler.useSourceMaps" value="true" />
+
+	<!-- Remote services used during a JUnit run  -->
+  <servlet 
+  	path='/adminCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.AdminCommandServiceImpl'/>
+  <servlet 
+  	path='/judgeCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.JudgeCommandServiceImpl'/>
+  <servlet 
+  	path='/basicCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.BasicCommandServiceImpl'/>
+  <servlet 
+  	path='/participantCommand' 
+  	class='pt.up.fc.dcc.mooshak.server.commands.ParticipantCommandServiceImpl'/>
+  <servlet 
+  	path='/event' 
+  	class='pt.up.fc.dcc.mooshak.server.events.EventServiceImpl'/>
+</module>

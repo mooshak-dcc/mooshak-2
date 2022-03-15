@@ -1,0 +1,175 @@
+@CHARSET "UTF-8";
+
+
+.gwt-Button {
+	font-size: large;
+	color: #669;
+}
+
+/** Top **/
+
+.body-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.base {
+	position: relative;
+	font-size: large;
+}
+
+.base, .film {
+	width: 1200px;
+	height: 800px;
+	margin: auto;
+	color: #669;
+}
+
+.base {	
+	background: -webkit-linear-gradient(#BBC,white); /* For Safari */
+    background: -o-linear-gradient(#BBC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BBC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BBC, white); /* Standard syntax (must be last) */   
+}	
+
+.film {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+}
+
+.top {
+	width: 90%;
+	position: relative;
+	margin-left: 3%;
+}
+
+.browse, .execute, .edit, .state {
+	width: 95%;
+	margin: auto;
+	position: relative;
+	
+}
+
+.top, .execute, .state {
+	height: 7%;
+}
+
+.mooshakButtons {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px;
+	z-index: 10;
+}
+
+
+.serverStatus {
+	position: absolute;
+	right: 12cm;
+	width: 7cm;
+	font-family: sans-serif;
+	font-size: small;
+	margin-top: 1mm;
+	border-width: 3px;
+	border-style: outset;
+	border-radius: 10px;
+	padding: 2px;
+	
+}
+
+.serverStatusLabel {
+	display: inline;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.browse {
+	height: 45%;
+	
+	border: 1px;
+	border-style: none;
+}
+
+.edit {
+	margin-top: 1%;
+	height: 43%;
+	overflow: visible;
+}
+
+.banner {
+	float: left;
+	font-size: xx-large;
+	color: teal;
+	padding: 5mm 5mm 5mm 0;
+}
+
+.find {
+	float: right;
+	font-size: small;
+	margin: 3mm;
+}
+
+.findWhat {
+	width: 2cm;
+	float: left;
+	margin-top: -2mm;
+	margin-bottom: -2mm;
+	margin-left: 1mm;
+	margin-right: 1mm;
+}
+
+.searchTerms {
+	border-radius: 5px;
+}
+
+.findState {
+	width: 1cm;
+	float: right;
+	padding: 2mm;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 0.3m;
+	font-size: xx-small;
+	color: grey;
+}
+
+.selected {
+	font-weight: bold;
+	color: orange;
+}
+
+/** Footer **/
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	margin-right: 1cm;	
+}
+
+.middle {
+	float: left;
+	width: 10cm;
+	margin-left: 10cm;
+}
+
+.logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 3cm;
+	margin: 5mm;
+	z-index: 1;
+}
+
+.version {
+	display: inline; 
+}

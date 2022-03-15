@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<q:quiz xmlns:q="http://www.example.org/Quiz" xmlns:fn="http://www.w3.org/2005/xpath-functions"
+	xmlns:fun="http://example.org/xslt/functions" xmlns:h="http://www.w3.org/1999/xhtml">
+	<q:group id="d2e1" maxScore="0" name="superquiz"
+		numberQuestion="1" score="0" shuffle="true">
+		<q:QA id="d3e1" shuffle="true" type="boolean">
+			<q:question>
+				1+1=2
+				<h:img alt="a piano" src="img.jpg"
+					style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+			</q:question>
+			<q:answer>
+				<q:choice id="d4e11" score="1" selected="false" value="true">
+					True
+					<q:feedback>comment1 hh jo</q:feedback>
+				</q:choice>
+				<q:choice id="d4e12" score="0" selected="false" value="false">
+					False
+					<q:feedback>comment2}</q:feedback>
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d5e1" shuffle="true" type="single">
+			<q:question>What's between orange and green in the spectrum?
+
+			</q:question>
+			<q:answer>
+				<q:choice id="d6e12" score="1" selected="false">
+					<q:feedback> right; good! </q:feedback>
+					yellow
+				</q:choice>
+				<q:choice id="d6e13" score="0" selected="false">
+					<q:feedback> wrong, it's yellow </q:feedback>
+					red
+				</q:choice>
+				<q:choice id="d6e14" score="0" selected="false">
+					<q:feedback> wrong, it's yellow</q:feedback>
+					blue
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d7e1" shuffle="true" type="shortAnswer">
+			<q:question>
+				Two plus
+				<q:missingWord>d8e12</q:missingWord>
+				equals four.
+			</q:question>
+			<q:answer id="d8e12">
+				<q:choice id="d8e121" score="1" selected="false">two </q:choice>
+				<q:choice id="d8e122" score="1" selected="false">2</q:choice>
+				<q:choice id="d8e123" score="1" selected="false">4w</q:choice>
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d9e1" type="matching">
+			<q:question>Which animal eats which food?</q:question>
+			<q:answer>
+				<q:choice id="d10e12" mapKey="cat " mappedValue=" cat food "
+					score="1" />
+				<q:choice id="d10e13" mapKey="dog " mappedValue=" dog food"
+					score="1" />
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d11e1" shuffle="true" type="numeric">
+			<q:question>What is a number from 1 to 5?</q:question>
+			<q:answer>
+				<q:choice id="d12e12" maximumValue="3" minimumValue="2"
+					score="1" selected="0" />
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d15e1" shuffle="true" type="numeric">
+			<q:question>What is a number from 1 to 5?</q:question>
+			<q:answer>
+				<q:choice high="5" id="d17e12" low="1" score="1" selected="0" />
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d19e1" shuffle="true" type="numeric">
+			<q:question>When was Ulysses S. Grant born?
+			</q:question>
+			<q:answer>
+				<q:choice id="d22e12" maximumValue="1822" minimumValue="0"
+					score="1" selected="0">
+					<q:feedback> Correct! Full credit. </q:feedback>
+				</q:choice>
+				<q:choice id="d22e13" maximumValue="1822" minimumValue="2"
+					score="1" selected="0" tolerance="50">
+					<q:feedback> He was born in 1822. Half credit for being close.
+					</q:feedback>
+				</q:choice>
+			</q:answer>
+			<q:response>
+				<q:value>"23"</q:value>
+			</q:response>
+		</q:QA>
+	</q:group>
+	<q:group id="d23e1" maxScore="0" name="group2" numberQuestion="1"
+		score="0" shuffle="true">
+		<q:QA id="d24e1" shuffle="true" type="multiple">
+			<q:question>What two people are entombed in Grant's tomb?
+			</q:question>
+			<q:answer>
+				<q:choice id="d25e12" score="-100" selected="false">No one
+				</q:choice>
+				<q:choice id="d25e13" score="50" selected="false">Grant     </q:choice>
+				<q:choice id="d25e14" score="50" selected="false">Grant's wife
+				</q:choice>
+				<q:choice id="d25e15" score="-100" selected="false">Grant's father
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d26e1" shuffle="true" type="fillInTheBlank">
+			<q:question>
+				The American holiday of Thanksgiving is celebrated on the
+				<q:missingWord>d27e12</q:missingWord>
+				Thursday of November
+			</q:question>
+			<q:answer id="d27e12">
+				<q:choice id="d27e121" score="0" selected="false">second</q:choice>
+				<q:choice id="d27e122" score="1" selected="false">third\=fjgnf
+				</q:choice>
+				<q:choice id="d27e123" score="1" selected="false">fourt</q:choice>
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d28e1" shuffle="true" type="fillInTheBlank">
+			<q:question>
+				Mahatma Gandhi birthday is an Indian holiday on
+				<q:missingWord>d29e12</q:missingWord>
+				of October. Since
+				<q:missingWord>d29e14</q:missingWord>
+				the town of Hastings England has been "famous with visitors".
+			</q:question>
+			<q:answer id="d29e12">
+				<q:choice id="d29e122" score="0" selected="false">15th</q:choice>
+				<q:choice id="d29e123" score="0" selected="false">3rd</q:choice>
+				<q:choice id="d29e124" score="1" selected="false">2nd</q:choice>
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+			<q:answer id="d29e14">
+				<q:choice id="d29e142" score="0" selected="false">495 AD  </q:choice>
+				<q:choice id="d29e143" score="1" selected="false">1066 AD
+				</q:choice>
+				<q:choice id="d29e144" score="0" selected="false">1215 AD
+				</q:choice>
+				<q:choice id="d29e145" score="0" selected="false">43 AD</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d30e1" shuffle="true" type="fillInTheBlank">
+			<q:question>
+				Difficult multiple choice question
+				<q:missingWord>d31e12</q:missingWord>
+				teste test
+			</q:question>
+			<q:answer id="d31e12">
+				<q:choice id="d31e122" score="0" selected="false">wrong answer
+				</q:choice>
+				<q:choice id="d31e123" score="0" selected="false">half credit
+					answer      </q:choice>
+				<q:choice id="d31e124" score="1" selected="false">full credit
+					answer    </q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d32e1" shuffle="true" type="single">
+			<q:question>
+				What's the answer to this multiple-choice question?
+				<h:img alt="a piano" src="img.jpg"
+					style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+			</q:question>
+			<q:answer>
+				<q:choice id="d33e12" score="0" selected="false">
+					<q:feedback>feedback comment on the wrong answer </q:feedback>
+					wrong answer
+				</q:choice>
+				<q:choice id="d33e13" score="0" selected="false">
+					<q:feedback>feedback comment on this wrong answer </q:feedback>
+					another wrong answer
+				</q:choice>
+				<q:choice id="d33e14" score="1" selected="false">
+					<q:feedback>Very good!</q:feedback>
+					right answer
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d34e1" shuffle="true" type="shortAnswer">
+			<q:question>
+				Deep Thought said "
+				<q:missingWord>d35e12</q:missingWord>
+				is the Ultimate Answer to the Ultimate Question of Life, The
+				Universe, and Everything."
+			</q:question>
+			<q:answer id="d35e12">
+				<q:choice id="d35e122" score="1" selected="false">
+					<q:feedback>Correct according to The Hitchhiker's Guide to the
+						Galaxy!  </q:feedback>
+					forty two
+				</q:choice>
+				<q:choice id="d35e123" score="1" selected="false">
+					<q:feedback>Correct, as told to Loonquawl and Phouchg  </q:feedback>
+					42
+				</q:choice>
+				<q:choice id="d35e124" score="1" selected="false">
+					<q:feedback>Correct!</q:feedback>
+					forty-two
+				</q:choice>
+			</q:answer>
+			<q:response>
+				<q:value>null</q:value>
+			</q:response>
+		</q:QA>
+		<q:QA id="d36e1" shuffle="true" type="essay">
+			<q:question>
+				How are you?
+				<h:img alt="a piano" src="img.jpg"
+					style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+			</q:question>
+			<q:answer>
+				<q:choice cols="60" id="d37e1" rows="10" score="1"
+					selected="false" />
+			</q:answer>
+			<q:response>
+				<q:value>"23"</q:value>
+			</q:response>
+		</q:QA>
+	</q:group>
+	<q:group id="d38e1" maxScore="0" name="HTML" numberQuestion="5"
+		score="0" shuffle="true">
+		<q:QA id="d39e1" shuffle="true" type="single">
+			<q:question>What does HTML stand for?</q:question>
+			<q:answer>
+				<q:choice id="d40e12" score="0" selected="false">
+					Hyperlinks and Text Markup Language
+					<h:img alt="a piano" src="img.jpg"
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+				</q:choice>
+				<q:choice id="d40e13" score="1" selected="false">Hyper Text Markup
+					Language </q:choice>
+				<q:choice id="d40e14" score="0" selected="true">Home Tool Markup
+					Language</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d41e1" shuffle="true" type="single">
+			<q:question>Who is making the Web standards?</q:question>
+			<q:answer>
+				<q:choice id="d42e12" score="0" selected="false">Microsoft Language
+				</q:choice>
+				<q:choice id="d42e13" score="1" selected="true">The World Wide Web
+					Consortium </q:choice>
+				<q:choice id="d42e14" score="0" selected="false">Google</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d43e1" shuffle="true" type="single">
+			<q:question>Which HTML attribute specifies an alternate text for an
+				image, if the image cannot be displayed?</q:question>
+			<q:answer>
+				<q:choice id="d44e12" score="0" selected="false">src </q:choice>
+				<q:choice id="d44e13" score="1" selected="false">alt </q:choice>
+				<q:choice id="d44e14" score="0" selected="true">
+					longdesc
+					<h:img alt="a piano" src="img.jpg"
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d45e1" shuffle="true" type="boolean">
+			<q:question>42 is the Absolute Answer to everything.</q:question>
+			<q:answer>
+				<q:choice id="d46e11" score="1" selected="false" value="false">
+					<h:img alt="a piano" src="img.jpg"
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+					False
+					<q:feedback>42is the Ultimate Answer.</q:feedback>
+				</q:choice>
+				<q:choice id="d46e12" score="0" selected="true" value="true">
+					True
+					<h:img alt="a piano" src="img.jpg"
+						style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+					<q:feedback>You gave the right answer.}</q:feedback>
+				</q:choice>
+			</q:answer>
+		</q:QA>
+		<q:QA id="d47e1" shuffle="true" type="multiple">
+			<q:question>Jesus Christ was from</q:question>
+			<q:answer>
+				<q:choice id="d48e12" score="0" selected="false">
+					<q:feedback>
+						This was an important city, but the wrong answer.
+						<h:img alt="a piano" src="img.jpg"
+							style="vertical-align: middle; margin: 10px; width: 300px; height: 150px;" />
+					</q:feedback>
+					Jerusalem
+				</q:choice>
+				<q:choice id="d48e13" score="25" selected="false">
+					<q:feedback>He was born here, but not raised here.    </q:feedback>
+					Bethlehem
+				</q:choice>
+				<q:choice id="d48e14" score="50" selected="false">
+					<q:feedback>You need to be more specific.    </q:feedback>
+					Galilee
+				</q:choice>
+				<q:choice id="d48e15" score="100" selected="true">
+					<q:feedback>Yes! That's right! </q:feedback>
+					Nazareth
+				</q:choice>
+			</q:answer>
+		</q:QA>
+	</q:group>
+</q:quiz>

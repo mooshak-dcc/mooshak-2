@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE Problem [
+	<!ELEMENT Problem (Images, Tests)>
+		<!ATTLIST Problem
+			xmlns           CDATA    #FIXED "http://www.ncc.up.pt/mooshak/"
+			xmlns:ct        CDATA    #FIXED "http://www.ncc.up.pt/mooshak/clear_text_password"
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Name            (A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | X | Y | W | Z) #IMPLIED
+			Color           CDATA    #IMPLIED
+			Title           CDATA    #IMPLIED
+			Difficulty      (1 | 2 | 3 | 4 | 5) #IMPLIED
+			Type            (sorting | graphs | geometry | combinatorial | strings | mathematics | ad-hoc) #IMPLIED
+			Description     CDATA    #IMPLIED
+			PDF             CDATA    #IMPLIED
+			Program         CDATA    #IMPLIED
+			Environment     CDATA    #IMPLIED
+			Timeout         CDATA    #IMPLIED
+			Static_corrector CDATA    #IMPLIED
+			Dynamic_corrector CDATA    #IMPLIED>
+	<!ELEMENT Images EMPTY>
+		<!ATTLIST Images
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Image           CDATA    #IMPLIED>
+	<!ELEMENT Tests (Test*)>
+		<!ATTLIST Tests
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			Definition      CDATA    #IMPLIED>
+	<!ELEMENT Test EMPTY>
+		<!ATTLIST Test
+			xml:id          ID       #IMPLIED
+			Fatal           CDATA    #IMPLIED
+			Warning         CDATA    #IMPLIED
+			args            CDATA    #IMPLIED
+			input           CDATA    #IMPLIED
+			output          CDATA    #IMPLIED
+			context         CDATA    #IMPLIED
+			Points          CDATA    #IMPLIED
+			Feedback        CDATA    #IMPLIED
+			Show            (yes | no) #IMPLIED>
+]>
+<Problem xmlns="http://www.ncc.up.pt/mooshak/"
+          Warning="Undefined variable &lt;code&gt;Color&lt;/code&gt;&lt;br&gt;"
+          Name="J"
+          Title="Financial Risk"
+          Description="risk.html"
+          PDF="PDF.pdf"
+          Program="risk.java"
+          Environment="Environment"
+          Timeout="2">
+     <Images xml:id="images"
+               Image="img9.png"/>
+     <Tests xml:id="tests"
+               Warning="Few tests defined&lt;br&gt;"
+               Definition="Definition">
+          <Test xml:id="tests.T0"
+                    Warning="Consider &lt;a target=&apos;_parent&apos; href=&apos;519917296488?operation+cleanup+data/contests/proto_icpc/problems/J/tests/T0&apos;&gt; cleaning up test files&lt;/a&gt; since they have&lt;ul&gt;&lt;li&gt;spaces or tabs ending lines&lt;br&gt;&lt;li&gt;consecutive spaces&lt;br&gt;&lt;li&gt;empty lines in final&lt;br&gt;&lt;/ul&gt;"
+                    input="input"
+                    output="output"
+                    context="context"/>
+          <Test xml:id="tests.T1"
+                    Warning="Consider &lt;a target=&apos;_parent&apos; href=&apos;519917296488?operation+cleanup+data/contests/proto_icpc/problems/J/tests/T1&apos;&gt; cleaning up test files&lt;/a&gt; since they have&lt;ul&gt;&lt;li&gt;spaces or tabs ending lines&lt;br&gt;&lt;li&gt;consecutive spaces&lt;br&gt;&lt;li&gt;empty lines in final&lt;br&gt;&lt;/ul&gt;"
+                    input="input"
+                    output="output"
+                    context="context"/>
+          <Test xml:id="tests.T2"
+                    input="input"
+                    output="output"/>
+     </Tests>
+</Problem>
+

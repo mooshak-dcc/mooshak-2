@@ -1,0 +1,637 @@
+{
+ "reducibles": [],
+ "note": "",
+ "nodes": [
+  {
+   "type": "Attribute",
+   "id": 3,
+   "x": 92,
+   "y": 61,
+   "width": 70,
+   "height": 41,
+   "label": "morada",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 2,
+   "x": 200,
+   "y": 41,
+   "width": 70,
+   "height": 41,
+   "label": "nome",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeMultivalue",
+   "id": 4,
+   "x": 57,
+   "y": 113,
+   "width": 70,
+   "height": 41,
+   "label": "telefones",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 9,
+   "x": 449,
+   "y": 52,
+   "width": 70,
+   "height": 51,
+   "label": "produz",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 8,
+   "x": 57,
+   "y": 198,
+   "width": 70,
+   "height": 41,
+   "label": "Num_BI",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 1,
+   "x": 239,
+   "y": 147,
+   "width": 70,
+   "height": 41,
+   "label": "Musicos",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 14,
+   "x": 200,
+   "y": 241,
+   "width": 70,
+   "height": 51,
+   "label": "tocam",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 10,
+   "x": 361,
+   "y": 242,
+   "width": 70,
+   "height": 51,
+   "label": "particpam",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 44,
+   "x": 708,
+   "y": 17,
+   "width": 70,
+   "height": 41,
+   "label": "titulo",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 11,
+   "x": 663,
+   "y": 112,
+   "width": 70,
+   "height": 41,
+   "label": "Album",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 45,
+   "x": 817,
+   "y": 69,
+   "width": 70,
+   "height": 41,
+   "label": "formato",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Relationship",
+   "id": 13,
+   "x": 642,
+   "y": 269,
+   "width": 70,
+   "height": 51,
+   "label": "pertence",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 46,
+   "x": 778,
+   "y": 153,
+   "width": 70,
+   "height": 41,
+   "label": "id",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 15,
+   "x": 183,
+   "y": 361,
+   "width": 77,
+   "height": 41,
+   "label": "Instrumentos",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Attribute",
+   "id": 27,
+   "x": 83,
+   "y": 468,
+   "width": 70,
+   "height": 41,
+   "label": "nome",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKey",
+   "id": 29,
+   "x": 196,
+   "y": 459,
+   "width": 70,
+   "height": 41,
+   "label": "chave",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKeyWeak",
+   "id": 42,
+   "x": 420,
+   "y": 498,
+   "width": 70,
+   "height": 41,
+   "label": "titulo",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "Entity",
+   "id": 12,
+   "x": 486,
+   "y": 337,
+   "width": 70,
+   "height": 41,
+   "label": "Musicas",
+   "features": [],
+   "containers": []
+  },
+  {
+   "type": "AttributeKeyWeak",
+   "id": 37,
+   "x": 523,
+   "y": 490,
+   "width": 70,
+   "height": 41,
+   "label": "autor",
+   "features": [],
+   "containers": []
+  }
+ ],
+ "edges": [
+  {
+   "type": "Line",
+   "id": 5,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 2,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 232,
+     "y": 79
+    },
+    {
+     "x": 271,
+     "y": 144
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 6,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 3,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 159,
+     "y": 78
+    },
+    {
+     "x": 271,
+     "y": 144
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 7,
+   "sourceType": "AttributeMultivalue",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 4,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 124,
+     "y": 130
+    },
+    {
+     "x": 236,
+     "y": 164
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "LineTotal",
+   "id": 20,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 11,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 660,
+     "y": 129
+    },
+    {
+     "x": 516,
+     "y": 74
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 21,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 1,
+   "target": 9,
+   "listHandler": [
+    {
+     "x": 271,
+     "y": 144
+    },
+    {
+     "x": 446,
+     "y": 74
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 16,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 1,
+   "target": 14,
+   "listHandler": [
+    {
+     "x": 271,
+     "y": 185
+    },
+    {
+     "x": 232,
+     "y": 238
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 18,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 8,
+   "target": 1,
+   "listHandler": [
+    {
+     "x": 124,
+     "y": 215
+    },
+    {
+     "x": 236,
+     "y": 164
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 22,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 1,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 271,
+     "y": 185
+    },
+    {
+     "x": 393,
+     "y": 239
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "LineTotal",
+   "id": 23,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 12,
+   "target": 10,
+   "listHandler": [
+    {
+     "x": 518,
+     "y": 334
+    },
+    {
+     "x": 393,
+     "y": 291
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 26,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 11,
+   "target": 13,
+   "listHandler": [
+    {
+     "x": 695,
+     "y": 150
+    },
+    {
+     "x": 674,
+     "y": 266
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 47,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 44,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 740,
+     "y": 55
+    },
+    {
+     "x": 695,
+     "y": 109
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 48,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 45,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 814,
+     "y": 86
+    },
+    {
+     "x": 730,
+     "y": 129
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 49,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 46,
+   "target": 11,
+   "listHandler": [
+    {
+     "x": 775,
+     "y": 170
+    },
+    {
+     "x": 730,
+     "y": 129
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 17,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 15,
+   "target": 14,
+   "listHandler": [
+    {
+     "x": 218,
+     "y": 358
+    },
+    {
+     "x": 232,
+     "y": 289
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "M"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 24,
+   "sourceType": "Entity",
+   "targetType": "Relationship",
+   "label": "line",
+   "source": 12,
+   "target": 13,
+   "listHandler": [
+    {
+     "x": 518,
+     "y": 334
+    },
+    {
+     "x": 639,
+     "y": 291
+    }
+   ],
+   "features": [
+    {
+     "name": "cardinalityTarget",
+     "value": "N"
+    }
+   ]
+  },
+  {
+   "type": "Line",
+   "id": 30,
+   "sourceType": "Attribute",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 27,
+   "target": 15,
+   "listHandler": [
+    {
+     "x": 115,
+     "y": 465
+    },
+    {
+     "x": 218,
+     "y": 399
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 31,
+   "sourceType": "AttributeKey",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 29,
+   "target": 15,
+   "listHandler": [
+    {
+     "x": 228,
+     "y": 456
+    },
+    {
+     "x": 218,
+     "y": 399
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 43,
+   "sourceType": "AttributeKeyWeak",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 42,
+   "target": 12,
+   "listHandler": [
+    {
+     "x": 452,
+     "y": 495
+    },
+    {
+     "x": 518,
+     "y": 375
+    }
+   ],
+   "features": []
+  },
+  {
+   "type": "Line",
+   "id": 38,
+   "sourceType": "AttributeKeyWeak",
+   "targetType": "Entity",
+   "label": "line",
+   "source": 37,
+   "target": 12,
+   "listHandler": [
+    {
+     "x": 555,
+     "y": 487
+    },
+    {
+     "x": 518,
+     "y": 375
+    }
+   ],
+   "features": []
+  }
+ ]
+}

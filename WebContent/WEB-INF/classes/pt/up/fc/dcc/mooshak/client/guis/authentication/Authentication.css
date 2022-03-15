@@ -1,0 +1,161 @@
+
+.body-wrapper {
+	width: 100%;
+	height: 100%;
+	background: rgb(250,250,250);
+}
+
+.base {
+	width: 1200px;
+	height: 800px;
+	margin: auto;
+	color: #669;
+	padding: 2cm;
+	font-size: xx-large;
+	position: relative;
+	
+	background: -webkit-linear-gradient(#BBC,white); /* For Safari */
+    background: -o-linear-gradient(#BBC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#BBC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#BBC, white); /* Standard syntax (must be last) */
+}
+
+.globalMoveCursor * { 
+    cursor: wait !important; 
+} 
+
+#dialog {
+	
+	width: 14cm;
+	height: 10cm;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5cm;
+	
+	background-color: white;
+	color: #AAB;
+	
+	border-radius: 15px;
+	
+	border: 2px;
+	border-style: solid;
+	box-shadow: 4px 4px 10px rgb(100,100,100);
+	
+}
+
+.title {
+	font-family: sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	
+	width: 10cm;
+	margin-top: 1cm;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1cm;
+}
+
+
+
+.label {
+	width: 45%;
+	height: 1cm;
+	float: left;
+	text-align: right;
+	font-family: sans-serif;
+	font-size: x-large;
+	font-weight: bold;
+	display: inline;
+	vertical-align: bottom;
+	line-height: 1cm;
+}
+
+.value {
+	width: 45%;
+	height: 1cm;
+	float: right;
+	font-family: monospace;
+}
+
+.value input, .value select {
+	max-width: 70%;
+}
+
+.authTextbox {
+	font-size: 12pt;
+}
+
+
+#message {
+	margin: auto;
+}
+
+.message-box {
+	width: 100%;
+	height: 1cm;
+	color: red;
+	background-color: transparent;
+	border: 0;
+	border-style: none;
+	text-align: center;
+	font-size: 12pt;
+}
+
+
+#buttons {
+	margin: auto;
+	text-align: center;
+}
+
+.button {
+	margin: 5mm;
+}
+
+.gwt-Button {
+	color: #AAB;
+	font-weight: bold;
+}	
+
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 0.3m;
+	font-size: xx-small;
+	color: grey;
+}
+
+/** Footer **/
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	margin-right: 1cm;	
+}
+
+.middle {
+	float: left;
+	width: 10cm;
+	margin-left: 10cm;
+}
+
+.logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 3cm;
+	margin: 5mm;
+	z-index: 1;
+}
+
+.version {
+	display: inline; 
+}
+	
+.gwt-Button[disabled] {
+    color: lightgrey;
+}

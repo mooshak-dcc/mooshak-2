@@ -1,0 +1,9 @@
+set        Fatal {}
+set      Warning {}
+set  Designation Default
+set      Acronym DFLT
+set        Color Black
+set         Flag 00
+set         Team other
+set Authentication Basic
+set        Basic {}

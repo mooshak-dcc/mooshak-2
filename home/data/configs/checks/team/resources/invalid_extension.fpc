@@ -1,0 +1,18 @@
+program long_output;
+
+  const
+     max = 10000;
+
+  var
+	i : integer;
+
+begin
+
+  i := 0;
+  while(i<max) 
+  do
+	begin
+	  	Writeln ('ola mundo');
+		i := i+1
+	end
+end.

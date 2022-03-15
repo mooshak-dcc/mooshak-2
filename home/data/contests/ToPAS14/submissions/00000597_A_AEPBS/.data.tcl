@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399631997
+set Time 597
+set Problem A
+set Team AEPBS
+set Classify ACCEPTED
+set Mark 0
+set Size 507
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program main.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.001
+set Memory 64.0
+set Signals {}
+set Feedback {{ 6 tests with <b>Accepted</b>}}

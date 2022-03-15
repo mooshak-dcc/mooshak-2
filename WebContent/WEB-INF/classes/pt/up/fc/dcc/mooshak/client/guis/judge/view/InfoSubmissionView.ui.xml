@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:u='urn:import:pt.up.fc.dcc.mooshak.client.utils'
+	xmlns:a='urn:import:pt.up.fc.dcc.mooshak.client.form.admin' 
+	xmlns:v="urn:import:pt.up.fc.dcc.mooshak.client.guis.creator.view"
+	xmlns:ace='urn:import:edu.ycp.cs.dh.acegwt.client.ace'
+	xmlns:m="urn:import:pt.up.fc.dcc.mooshak.client.widgets"
+	xmlns:e="urn:import:pt.up.fc.dcc.eshu.client.eshugwt"
+	ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+    
+    <ui:with field='i18n' 
+    	type='pt.up.fc.dcc.mooshak.client.guis.judge.i18n.JudgeConstants' />
+
+	<ui:style src="InfoSubmission.css" />
+
+	<ui:with field="images" 
+		type="pt.up.fc.dcc.mooshak.client.images.ImageResources"/>
+		
+	<g:HTMLPanel styleName='{style.base}'>
+		<div class="{style.stackpanel}">
+			<g:StackPanel ui:field="submissionDetails">
+				<g:HTMLPanel g:StackPanel-text="Report" styleName="{style.report}">
+					<table>
+						<tr>
+							<td>
+								<p>
+									<span>Result</span><a:TextListBox ui:field="result" styleName="{style.lbResult}" />
+								</p>
+							</td>
+							<td>
+								<p>
+									<span>State</span>
+									<a:CustomRadioButton ui:field="pending" name="state" text="pending" checked="true" styleName="{style.cbState}"/>
+									<a:CustomRadioButton ui:field="finalized" name="state" text="final" styleName="{style.cbState}"/>
+								</p>
+							</td>
+							<td>
+								<p><span>Problem:</span><v:CustomLabelPath ui:field="problemId" styleName='{style.datainfo} {style.lblProblem}'/></p>
+							</td>
+						</tr>
+					</table>
+					<p><span>Failed Tests</span></p>
+					<c:CellTable ui:field="testsTable" />
+				</g:HTMLPanel>
+				<g:HTMLPanel g:StackPanel-text="General" styleName="{style.general}">
+					<div class="{style.left}">
+						<p><span>Submission:</span><g:Label ui:field="submission" styleName='{style.datainfo}'></g:Label></p>
+						<p><span>File:</span><v:CustomLabelPath ui:field="file" styleName='{style.datainfo}'/></p>
+						<p><span>Received:</span><a:HtmlFreeLabel ui:field="received" styleName='{style.datainfo}'/></p>
+						<p><span>Analyzed:</span><a:HtmlFreeLabel ui:field="analyzed" styleName='{style.datainfo}'/></p>
+						<p><span>Team:</span><v:CustomLabelPath ui:field="team" styleName='{style.datainfo}'/></p>
+						<p><span>Language:</span><v:CustomLabelPath ui:field="language" styleName='{style.datainfo}'/></p>
+					</div>
+					<div class="{style.right}">
+						<p><span>Compilation:</span><g:Label ui:field="compilation" styleName='{style.datainfo}'/></p>
+						<p><span>CPU:</span><a:HtmlFreeLabel ui:field="cpu" styleName='{style.datainfo}'/></p>
+						<p><span>Memory:</span><a:HtmlFreeLabel ui:field="memory" styleName='{style.datainfo}'/></p>
+						<p><span>Classification:</span><a:HtmlFreeLabel ui:field="classification" styleName='{style.datainfo}'/></p>
+						<p><span>Mark:</span><a:HtmlFreeLabel ui:field="mark" styleName='{style.datainfo}'/></p>
+						<p><span>Observations:</span><a:HtmlFreeLabel ui:field="observations" styleName='{style.datainfo}'/></p>
+						<p><span>Feedback:</span><a:HtmlFreeLabel ui:field="feedback" styleName='{style.datainfo}'/></p>
+					</div>
+					<div class="{style.container}">
+						<p><span>Reviewer Observations (Private):</span></p>
+						<a:CustomTextArea ui:field="reviewerObservations" styleName='{style.observations}'></a:CustomTextArea>
+					</div>
+					<div class="{style.container}">
+						<p><span>Reviewer Feedback:</span></p>
+						<a:CustomTextArea ui:field="reviewerFeedback" styleName='{style.observations}'></a:CustomTextArea>
+					</div>
+				</g:HTMLPanel>
+				<g:HTMLPanel g:StackPanel-text="Code" styleName="{style.codePanel}">					
+					<div class="{style.left}">
+						<m:TabbedMultipleEditor styleName="{style.code}" ui:field='editor' widgetHeight="400" widgetWidth="450" />
+					</div>
+					<div class="{style.right}">
+						<c:DataGrid styleName='{style.iodata}' ui:field='iodata'/>
+						<div class="{style.commands}">
+							<m:CustomImageButton 
+								ui:field="validate" 
+								title="{i18n.validate}" 
+								url='{images.validateButton.getSafeUri.asString}' 
+								height="50px"
+								styleName='{style.imgButton}' />
+						</div>
+					</div>
+					<div class="{style.response}">
+						<g:HTML styleName='{style.observations}' ui:field='validationObservations' />
+						<m:CustomImageButton 
+							ui:field="feedbackBtn" 
+							title="Feedback" 
+							url='{images.feedback.getSafeUri.asString}' 
+							height="50px"
+							styleName='{style.imgButton} {style.feedback}' />
+					</div>
+				</g:HTMLPanel>
+				<g:HTMLPanel g:StackPanel-text="Tests" styleName="{style.tests}">
+					<c:CellBrowser ui:field="tests" defaultColumnWidth='100'
+		      					styleName='{style.browse}'/>
+				</g:HTMLPanel>
+			</g:StackPanel>
+		</div>
+		<div class="{style.commands}">
+			<g:HTMLPanel styleName="{style.reportDiv}" ui:field="reportDiv">
+				Select a report: <u:SelectOneListBox ui:field="lbReports"></u:SelectOneListBox>
+			</g:HTMLPanel>
+			<g:Button styleName='{style.button}' 
+				ui:field='reevaluate' text='{i18n.reevaluate}'/>
+			<g:Button styleName='{style.button}' 
+				ui:field='viewStatement' text='{i18n.viewStatement}'/>
+		
+			<g:Label ui:field='message' styleName='{style.message}'/>
+		</div>
+		
+	</g:HTMLPanel>
+
+
+</ui:UiBinder>

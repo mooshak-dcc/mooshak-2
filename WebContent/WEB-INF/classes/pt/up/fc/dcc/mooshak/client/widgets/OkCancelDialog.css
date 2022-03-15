@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+
+/** Top **/
+
+
+.base {
+	width: 500px;
+	/**height: 100px;**/
+	
+	background: #BBC;
+	color: #669;
+	font-size: large;
+    padding: 50px;	
+}	
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 10px;
+}
+
+.flow {
+	display: inline;
+}
+
+.buttons {
+	width: 300px;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.button {
+	width: 100px;
+	font-size: large;
+	color: #669;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.rounded, .button {
+	border-radius: 5px;
+	border-color: #BCC;
+}
+
+.caption {
+	font-weight: bold;
+}
+
+.gwt-DialogBox {
+	z-index: 30;
+}

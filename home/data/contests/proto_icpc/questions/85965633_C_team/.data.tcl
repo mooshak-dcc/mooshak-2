@@ -1,0 +1,9 @@
+set         Date 1164308973
+set         Time 85965633
+set        Delay {}
+set      Problem C
+set         Team team
+set        State unanswered
+set      Subject Pois
+set     Question OK
+set       Answer {}

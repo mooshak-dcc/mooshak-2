@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399632975
+set Time 1575
+set Problem A
+set Team CyberProgramadores
+set Classify RUNTIME_ERROR
+set Mark 0
+set Size 473
+set Observations {}
+set Execution -1
+set State FINAL
+set Language C
+set Program TopasA.c
+set UserTestData {}
+set Report 1.html
+set Elapsed 0.0
+set CPU 0.0
+set Memory 64.0
+set Signals {}
+set Feedback {{ 6 tests with <b>Runtime Error</b>}}

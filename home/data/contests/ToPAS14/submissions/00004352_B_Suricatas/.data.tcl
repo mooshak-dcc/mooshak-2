@@ -1,0 +1,20 @@
+set Consider {}
+set Date 1399635752
+set Time 4352
+set Problem B
+set Team Suricatas
+set Classify WRONG_ANSWER
+set Mark 0
+set Size 390
+set Observations {}
+set Execution -1
+set State FINAL
+set Language Pascal
+set Program exb.pas
+set UserTestData {}
+set Report 1.html
+set Elapsed 1.0
+set CPU 0.0
+set Memory 64.0
+set Signals {}
+set Feedback {{ 5 tests with <b>Wrong Answer</b>}}

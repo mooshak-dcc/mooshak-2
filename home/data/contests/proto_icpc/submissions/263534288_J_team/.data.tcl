@@ -1,0 +1,24 @@
+set Consider yes
+set Date 1542631388
+set Time 263534288
+set Problem J
+set Team team
+set Classify Accepted
+set Mark 0
+set Size 2265
+set Observations {}
+set Execution {}
+set State pending
+set Language Java
+set Program risk.java
+set UserTestData {}
+set Report Report.xml
+set reports {}
+set Elapsed {}
+set CPU 0.085
+set Memory 26736.0
+set Signals {}
+set Feedback { 3 tests with <b>Accepted</b>}
+set ReviewerObservations {}
+set ReviewerFeedback {}
+set frozen false
