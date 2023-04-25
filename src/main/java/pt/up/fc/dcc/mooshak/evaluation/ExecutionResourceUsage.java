@@ -7,10 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.PosixFilePermission;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -18,11 +15,11 @@ import java.util.regex.Pattern;
 
 
 class ExecutionResourceUsage {
-	
+
 	static enum UsageVars {
 		elapsed, cpu, memory
 	};
-	
+
 	private final static Logger LOGGER = Logger.getLogger("");
 
 	private Path usageFile = null;
@@ -32,9 +29,9 @@ class ExecutionResourceUsage {
 	private Integer errorCode = 0;
 	private String errorInfo = "";
 
-	
+
 	private Map<UsageVars, Double> usage = null;
-	
+
 	private static final Pattern signalPattern = Pattern
 			.compile("^Command terminated by signal \\((\\d+): (\\w*)\\)");
 
@@ -47,17 +44,16 @@ class ExecutionResourceUsage {
 	static {
 		usagePermissions.add(PosixFilePermission.OWNER_READ);
 		usagePermissions.add(PosixFilePermission.OWNER_WRITE);
-		
+
 		usagePermissions.add(PosixFilePermission.GROUP_READ);
 		usagePermissions.add(PosixFilePermission.GROUP_WRITE);
-		
+
 		usagePermissions.add(PosixFilePermission.OTHERS_READ);
-		usagePermissions.add(PosixFilePermission.OTHERS_WRITE);	
-		
+		usagePermissions.add(PosixFilePermission.OTHERS_WRITE);
 	}
-	
-	private static Path TMP = getDefaultTempFile();
-	
+
+	private static final Path TMP = getDefaultTempFile();
+
 	private static Path getDefaultTempFile() {
 		switch(System.getProperty("os.name","")) {
 		case "Windows":
@@ -66,34 +62,37 @@ class ExecutionResourceUsage {
 			return Paths.get("/tmp");
 		default:
 			return Paths.get("");
-			
+
 		}
 	}
-	
+
 	public String getUsageFile() throws MooshakSafeExecutionException {
+		return getUsageFile(TMP);
+	}
+
+	public String getUsageFile(Path directoryPath) throws MooshakSafeExecutionException {
 		if(usageFile == null)
 			try {
-				usageFile = Files.createTempFile(TMP,"usage", ".txt");
-				
-				Files.setPosixFilePermissions(usageFile,usagePermissions);
+				usageFile = Files.createTempFile(directoryPath, "usage", ".txt").toAbsolutePath();
+				Files.setPosixFilePermissions(usageFile, usagePermissions);
 			} catch (IOException cause) {
 				String message = "I/O error creating temporary usage file";
 				throw new MooshakSafeExecutionException(message,cause);
 			}
 		return usageFile.toString();
 	}
-	
+
 	/**
 	 * Returns usage value for known usage variables
 	 * @param var UsageVar identifier
-	 * @return usage value as Double if defined; null otherwise   
+	 * @return usage value as Double if defined; null otherwise
 	 * @throws MooshakSafeExecutionException on error parsing usage data file
 	 */
 	Double getUsage(UsageVars var) throws MooshakSafeExecutionException {
-		
+
 		return usage.get(var);
 	}
-	
+
 	/**
 	 * Return process error code (exit value) . No error correspond to 0.
 	 * @return exit code, if defined; 0 otherwise
@@ -105,42 +104,42 @@ class ExecutionResourceUsage {
 		else
 			return errorCode;
 	}
-	
+
 	/**
-	 * Return process error code (exit value)  
+	 * Return process error code (exit value)
 	 * @return exit code, if defined; null otherwise
 	 * @throws MooshakSafeExecutionException on error parsing usage data file
 	 */
 	public Integer getErrorCode() throws MooshakSafeExecutionException {
-		
+
 		return errorCode;
 	}
-	
+
 	/**
-	 * Return process error info (exit message)  
+	 * Return process error info (exit message)
 	 * @return exit info, if defined; null otherwise
 	 * @throws MooshakSafeExecutionException on error parsing usage data file
 	 */
 	public String getErrorInfo() throws MooshakSafeExecutionException {
-		
+
 		return errorInfo;
 	}
-	
+
 	/**
-	 * Return signal received by signal or null if no signal was received  
+	 * Return signal received by signal or null if no signal was received
 	 * @return signal as Integer and null if no signal was received
 	 * @throws MooshakSafeExecutionException
 	 */
 	public Integer getSignal() throws MooshakSafeExecutionException {
-		
+
 		return signal;
 	}
-	
-	/** 
+
+	/**
 	 * Process usage file after process termination
 	 */
 	public void process() {
-	
+
 		errors = null;
 		try {
 			parse();
@@ -149,8 +148,8 @@ class ExecutionResourceUsage {
 			"(usage files may not have been created if the SO killed safeexec)"
 					,cause);
 		}
-			
-		
+
+
 		try {
 			cleanup();
 		} catch (MooshakSafeExecutionException cause) {
@@ -158,21 +157,21 @@ class ExecutionResourceUsage {
 			LOGGER.log(Level.WARNING,"Usage file cleanup",cause);
 		}
 	}
-	
+
 	/**
-	 * Errors occurs while processing 
+	 * Errors occurs while processing
 	 * @return
 	 */
 	public String getProcessingErrors() {
-		
+
 		return errors;
 	}
-	
-		
-	private void parse() throws MooshakSafeExecutionException {	
+
+
+	private void parse() throws MooshakSafeExecutionException {
 		if(usageFile == null)
 			throw new MooshakSafeExecutionException("No usage file created");
-		
+
 		usage = new HashMap<>();
 		try(BufferedReader reader=Files.newBufferedReader(usageFile,
 				Charset.defaultCharset())) {
@@ -205,10 +204,10 @@ class ExecutionResourceUsage {
 			String message = "Reading resource usage file";
 			throw new MooshakSafeExecutionException(message, cause);
 		}
-		
+
 	}
-	
-	
+
+
 	private void cleanup() throws MooshakSafeExecutionException {
 		if (Files.exists(usageFile)) {
 			try {
@@ -221,5 +220,5 @@ class ExecutionResourceUsage {
 		}
 	}
 
-	
+
 }
