@@ -65,45 +65,45 @@ import pt.up.fc.dcc.mooshak.shared.results.sequencing.CourseResource.ResourceTyp
  * Modeling contests. A contest is a event where automatic evaluation is used.
  * It may be an exam or an assignment. Instances of this class are persisted
  * locally
- * 
+ *
  * @author José Paulo Leal <zp@dcc.fc.up.pt>
  *
  *         Recoded in Java in May 2013 From a Tcl module coded in April 2001
  */
 public class Contest extends PersistentObject {
 	private static final long serialVersionUID = 1L;
-	
+
 	private static final Logger LOGGER = Logger.getLogger(Contest.class.getSimpleName());
-	
+
 	public static final String RESOLVER_EVENT_FEED_NAME = "contest-feed.xml";
 
 	public enum ContestType {
-		DEFAULT(Gui.ICPC, Policy.ICPC, null, YesNo.NO, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.YES, YesNo.YES, "", State.PENDING, 
-				"C+R", YesNo.NO, null, Evaluator.JUDGE), 
-		ICPC(Gui.ICPC, Policy.ICPC, 60, YesNo.NO, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "", State.PENDING, "", 
-				YesNo.NO, null, Evaluator.JUDGE), 
-		IOI(Gui.ICPC, Policy.IOI, 300, YesNo.NO, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "none", State.FINAL, "C", 
-				YesNo.YES, null, Evaluator.JUDGE), 
-		EXAM(Gui.ICPC, Policy.EXAM, null, YesNo.YES, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "", State.FINAL, "all", 
-				YesNo.NO, null, Evaluator.JUDGE), 
-		ASSIGN(Gui.ICPC, 	Policy.EXAM, null, YesNo.NO, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "none", State.FINAL, "all", 
-				YesNo.YES, (long) 9000000, Evaluator.JUDGE), 
-		QUIZ(Gui.ICPC, Policy.QUIZ, null, YesNo.YES, Service.NONE, 
-				Challenge.QUIZ, YesNo.NO, YesNo.NO, "", State.FINAL, "", 
-				YesNo.NO, null, Evaluator.JUDGE), 
-		SHORT(Gui.ICPC, Policy.SHORT, null, YesNo.NO, Service.NONE, 
-				Challenge.PROBLEMS, YesNo.NO, YesNo.NO,	"", State.PENDING, "C+R", 
-				YesNo.YES, null, Evaluator.JUDGE), 
-		SERVICE(Gui.ICPC, Policy.ICPC, null, YesNo.NO, Service.BOTH, 
+		DEFAULT(Gui.ICPC, Policy.ICPC, null, YesNo.NO, Service.NONE,
+				Challenge.PROBLEMS, YesNo.YES, YesNo.YES, "", State.PENDING,
+				"C+R", YesNo.NO, null, Evaluator.JUDGE),
+		ICPC(Gui.ICPC, Policy.ICPC, 60, YesNo.NO, Service.NONE,
+				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "", State.PENDING, "",
+				YesNo.NO, null, Evaluator.JUDGE),
+		IOI(Gui.ICPC, Policy.IOI, 300, YesNo.NO, Service.NONE,
+				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "none", State.FINAL, "C",
+				YesNo.YES, null, Evaluator.JUDGE),
+		EXAM(Gui.ICPC, Policy.EXAM, null, YesNo.YES, Service.NONE,
+				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "", State.FINAL, "all",
+				YesNo.NO, null, Evaluator.JUDGE),
+		ASSIGN(Gui.ICPC, 	Policy.EXAM, null, YesNo.NO, Service.NONE,
+				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "none", State.FINAL, "all",
+				YesNo.YES, (long) 9000000, Evaluator.JUDGE),
+		QUIZ(Gui.ICPC, Policy.QUIZ, null, YesNo.YES, Service.NONE,
+				Challenge.QUIZ, YesNo.NO, YesNo.NO, "", State.FINAL, "",
+				YesNo.NO, null, Evaluator.JUDGE),
+		SHORT(Gui.ICPC, Policy.SHORT, null, YesNo.NO, Service.NONE,
+				Challenge.PROBLEMS, YesNo.NO, YesNo.NO,	"", State.PENDING, "C+R",
+				YesNo.YES, null, Evaluator.JUDGE),
+		SERVICE(Gui.ICPC, Policy.ICPC, null, YesNo.NO, Service.BOTH,
 				Challenge.PROBLEMS, YesNo.NO, YesNo.NO, "", State.FINAL, "all",
 				YesNo.YES, null, Evaluator.JUDGE),
 		ENKI(Gui.ENKI, Policy.EXAM, 60, YesNo.NO, Service.BOTH, Challenge.PROBLEMS,
-				YesNo.NO, YesNo.NO, "", State.PENDING, "", YesNo.YES, null, 
+				YesNo.NO, YesNo.NO, "", State.PENDING, "", YesNo.YES, null,
 				Evaluator.TEACHER);
 
 		Gui gui;
@@ -143,7 +143,7 @@ public class Contest extends PersistentObject {
 			this.languages_maxProg = languages_maxProg;
 			this.evaluator = evaluator;
 		}
-		
+
 		/**
 		 * Some contest types have special names
 		 */
@@ -189,7 +189,7 @@ public class Contest extends PersistentObject {
 	}
 
 	@MooshakAttribute(
-			name = "Type", 
+			name = "Type",
 			type = AttributeType.LABEL)
 	private ContestType contestType;
 
@@ -199,17 +199,17 @@ public class Contest extends PersistentObject {
 	private ContestStatus contestStatus;
 
 	@MooshakAttribute(
-			name = "Fatal", 
+			name = "Fatal",
 			type = AttributeType.LABEL)
 	private String fatal;
 
 	@MooshakAttribute(
-			name = "Warning", 
+			name = "Warning",
 			type = AttributeType.LABEL)
 	private String warning;
 
 	@MooshakAttribute(
-			name = "Designation", 
+			name = "Designation",
 			tip = "Event name")
 	private String designation;
 
@@ -219,7 +219,7 @@ public class Contest extends PersistentObject {
 	private String organizes;
 
 	@MooshakAttribute(
-			name = "Email", 
+			name = "Email",
 			tip = "Mail address for sending messages to teams")
 	private String email;
 
@@ -230,8 +230,8 @@ public class Contest extends PersistentObject {
 	private Date open;
 
 	@MooshakAttribute(
-			name = "Start", 
-			type = AttributeType.DATE, 
+			name = "Start",
+			type = AttributeType.DATE,
 			tip = "Date/time to start the contest")
 	private Date start;
 
@@ -243,20 +243,20 @@ public class Contest extends PersistentObject {
 
 	@MooshakAttribute(
 			name = "Close",
-			type = AttributeType.DATE, 
+			type = AttributeType.DATE,
 			tip = "Date/time to close the contest")
 	private Date close;
 
 	@MooshakAttribute(
 			name = "HideListings",
-			type = AttributeType.INTEGER, 
+			type = AttributeType.INTEGER,
 			tip = "Minutes before end of contest to hide results")
 	private Integer hideListings;
 
 	@MooshakAttribute(
-			name = "Policy", 
+			name = "Policy",
 			type = AttributeType.MENU,
-			tip = "Evaluation and classification policy", 
+			tip = "Evaluation and classification policy",
 			help = "The grading of submissions and ranking of teams depends on \n"
 					+ "policies. Different types of contests will use different \n"
 					+ "policies, such as ICPC and IOI.\n\n"
@@ -269,8 +269,8 @@ public class Contest extends PersistentObject {
 
 	@MooshakAttribute(
 			name = "Virtual",
-			type = AttributeType.MENU, 
-			tip = "Is being used as a virtual contest", 
+			type = AttributeType.MENU,
+			tip = "Is being used as a virtual contest",
 			help = "In a virtual contest teams start competing in the moment\n"
 					+ "they first login, independently of Start and End times.\n"
 					+ " The team's time is automatically adjusted in relation\n"
@@ -281,13 +281,13 @@ public class Contest extends PersistentObject {
 
 	@MooshakAttribute(
 			name = "PublicScoreboard",
-			type = AttributeType.MENU, 
-			tip = "Show public scoreboard", 
+			type = AttributeType.MENU,
+			tip = "Show public scoreboard",
 			help = "")
 	private YesNo publicScoreboard = MooshakAttribute.YesNo.YES;
 
 	@MooshakAttribute(
-			name = "Register", 
+			name = "Register",
 			type = AttributeType.MENU,
 			tip = "Accept guest registration and send authentication by email",
 			help = "Use this field to allow users to register themselves as\n"
@@ -298,27 +298,27 @@ public class Contest extends PersistentObject {
 	private YesNo register = MooshakAttribute.YesNo.NO;
 
 	@MooshakAttribute(
-			name = "TransactionLimit", 
-			type = AttributeType.INTEGER, 
+			name = "TransactionLimit",
+			type = AttributeType.INTEGER,
 			tip = "Maximum number of transactions of each type to each user")
 	private Integer transactionLimit;
 
 	@MooshakAttribute(
-			name = "TransactionLimitTime", 
-			type = AttributeType.DOUBLE, 
+			name = "TransactionLimitTime",
+			type = AttributeType.DOUBLE,
 			tip = "Time to reset the number of transactions of each\n"
 					+ " user (hours ex.: 1.5)")
 	private Double transactionLimitTime;
 
 	@MooshakAttribute(
-			name = "Service", 
-			type = AttributeType.MENU, 
+			name = "Service",
+			type = AttributeType.MENU,
 			tip = "What kind of services are exposed to remote programs")
 	private Service service = Service.NONE;
 
 	@MooshakAttribute(
-			name = "Incremental", 
-			type = AttributeType.MENU, 
+			name = "Incremental",
+			type = AttributeType.MENU,
 			tip = "Supports incremental listings (For compability with 1.6)",
 			help = "FOR VERSON 1.6 ONLY\n"
 					+ "Use incremental listings. This will speed up large contests "
@@ -330,26 +330,26 @@ public class Contest extends PersistentObject {
 	private YesNo incremental = MooshakAttribute.YesNo.NO;
 
 	@MooshakAttribute(
-			name = "Resources", 
-			type = AttributeType.FILE, 
+			name = "Resources",
+			type = AttributeType.FILE,
 			tip = "File with resources configuration for Enki type contest",
 			docSpec = "course-resources-docspec.json")
 	private Path resources = null;
 
 	@MooshakAttribute(
 			name = "Notes",
-			type = AttributeType.LONG_TEXT, 
+			type = AttributeType.LONG_TEXT,
 			tip = "")
 	private String notes;
 
 	@MooshakAttribute(
-			name = "groups", 
-			type = AttributeType.DATA, 
+			name = "groups",
+			type = AttributeType.DATA,
 			tip = "")
 	private Groups groups;
 
 	@MooshakAttribute(
-			name = "submissions", 
+			name = "submissions",
 			type = AttributeType.DATA,
 			tip = "")
 	private Submissions submissions;
@@ -361,14 +361,14 @@ public class Contest extends PersistentObject {
 	private Submissions validations;
 
 	@MooshakAttribute(
-			name = "challenge", 
-			type = AttributeType.MENU, 
+			name = "challenge",
+			type = AttributeType.MENU,
 			tip = "Regular contest with problems or quiz")
 	private Challenge challenge;
 
 	@MooshakAttribute(
-			name = "gui", 
-			type = AttributeType.MENU, 
+			name = "gui",
+			type = AttributeType.MENU,
 			tip = "GUI to use in this contest")
 	private Gui gui;
 
@@ -379,17 +379,17 @@ public class Contest extends PersistentObject {
 	private Evaluator evaluator;
 
 	@MooshakAttribute(
-			name = "problems", 
+			name = "problems",
 			type = AttributeType.DATA)
 	private Problems problems;
 
 	@MooshakAttribute(
-			name = "quiz", 
+			name = "quiz",
 			type = AttributeType.HIDDEN)
 	private Void quiz;
 
 	@MooshakAttribute(
-			name = "questions", 
+			name = "questions",
 			type = AttributeType.DATA)
 	private Questions questions;
 
@@ -399,7 +399,7 @@ public class Contest extends PersistentObject {
 	private Printouts printouts;
 
 	@MooshakAttribute(
-			name = "balloons", 
+			name = "balloons",
 			type = AttributeType.DATA)
 	private Balloons ballons;
 
@@ -409,7 +409,7 @@ public class Contest extends PersistentObject {
 	private Languages languages;
 
 	@MooshakAttribute(
-			name = "users", 
+			name = "users",
 			type = AttributeType.DATA)
 	private Users users;
 
@@ -419,11 +419,11 @@ public class Contest extends PersistentObject {
 	/****************************************************************
 	 * \ Operations *
 	 ****************************************************************/
-	
-	
+
+
 	@MooshakOperation(
-			name = "Prepare", 
-			inputable = true, 
+			name = "Prepare",
+			inputable = true,
 			tip = "Prepare contest to start")
 	private CommandOutcome prepare(MethodContext context) {
 		CommandOutcome outcome = new CommandOutcome();
@@ -444,8 +444,8 @@ public class Contest extends PersistentObject {
 	}
 
 	@MooshakOperation(
-			name = "PrepareClean", 
-			inputable = false, 
+			name = "PrepareClean",
+			inputable = false,
 			show = false)
 	private CommandOutcome prepareClean() {
 		CommandOutcome outcome = new CommandOutcome();
@@ -472,7 +472,7 @@ public class Contest extends PersistentObject {
 	}
 
 	@MooshakOperation(
-			name = "Type", 
+			name = "Type",
 			inputable = false,
 			tip = "Configures several fields in this folder and sub-folders "
 					+ "with pre-defined values")
@@ -512,8 +512,8 @@ public class Contest extends PersistentObject {
 	}
 
 	@MooshakOperation(
-			name = "TypeForm", 
-			inputable = true, 
+			name = "TypeForm",
+			inputable = true,
 			show = false)
 	private CommandOutcome typeForm(MethodContext context) {
 		CommandOutcome outcome = new CommandOutcome();
@@ -643,15 +643,15 @@ public class Contest extends PersistentObject {
 
 		return outcome;
 	}
-	
-	
+
+
 	@MooshakOperation(
-			name = "Update", 
+			name = "Update",
 			inputable = false,
 			tip = "Update rankings")
 	private CommandOutcome refreshRanking() {
 		CommandOutcome outcome = new CommandOutcome();
-	
+
 		try {
 			if(getRankingPolicy() == null)
 				outcome.setMessage("No ranking policy - nothing done");
@@ -663,18 +663,18 @@ public class Contest extends PersistentObject {
 		} catch (MooshakException e) {
 			outcome.setMessage("No ranking policy - nothing done");
 		}
-		
+
 		return outcome;
 	}
-	
-	
+
+
 	@MooshakOperation(
-			name = "Finalize Rankings", 
-			inputable = false, 
+			name = "Finalize Rankings",
+			inputable = false,
 			tip = "Finalize Rankings")
 	private CommandOutcome finalizeRanking() {
 		CommandOutcome outcome = new CommandOutcome();
-	
+
 		try {
 			if(getRankingPolicy() == null)
 				outcome.setMessage("No ranking policy - nothing done");
@@ -685,18 +685,18 @@ public class Contest extends PersistentObject {
 		} catch (MooshakException e) {
 			outcome.setMessage("No ranking policy - nothing done");
 		}
-		
+
 		return outcome;
 	}
-	
-	
+
+
 	@MooshakOperation(
-			name = "Export Resolver Feed", 
-			inputable = false, 
+			name = "Export Resolver Feed",
+			inputable = false,
 			tip = "Export Resolver XML Feed")
 	private CommandOutcome exportResolverFeed() {
 		CommandOutcome outcome = new CommandOutcome();
-	
+
 		try {
 			if (!(getRankingPolicy() instanceof IcpcRankingPolicy))
 				throw new Exception("Resolver XML Feed is just available for ICPC contests!");
@@ -706,7 +706,7 @@ public class Contest extends PersistentObject {
 			outcome.setMessage("Error: " + e.getMessage());
 			return outcome;
 		}
-		
+
 		try {
 			outcome.addPair("mimeType", "application/xml");
 			outcome.addPair("file", Base64Coder.encodeLines(PersistentCore
@@ -717,18 +717,18 @@ public class Contest extends PersistentObject {
 					.getLocalizedMessage());
 			return outcome;
 		}
-		
+
 		outcome.setContinuation("ResolverFeedDownload");
-		
+
 		return outcome;
 	}
-		
+
 	@MooshakOperation(
-			name = "Initialize Tournament", 
-			inputable = false, 
+			name = "Initialize Tournament",
+			inputable = false,
 			tip = "Initialize Tournament")
 	private CommandOutcome initTournament() {
-		
+
 		CommandOutcome outcome = new CommandOutcome();
 		try {
 			Tournaments tournamentsPO = open("tournaments");
@@ -737,26 +737,26 @@ public class Contest extends PersistentObject {
 		} catch (MooshakException e) {
 			outcome.setMessage("Error: " + e.getMessage());
 		}
-	
+
 		return outcome;
 	}
-	
+
 	@MooshakOperation(
 			name="ResolverFeedDownload",
 			inputable=true,
 			show=false)
-	private CommandOutcome generateResolverFeedDownload(MethodContext context) {	
+	private CommandOutcome generateResolverFeedDownload(MethodContext context) {
 		return new CommandOutcome();
 	}
-	
-	
+
+
 	@MooshakOperation(
-			name = "Cleanup", 
-			inputable = false, 
+			name = "Cleanup",
+			inputable = false,
 			tip = "Cleanup previous compilations")
 	private CommandOutcome cleanup() {
 		CommandOutcome outcome = new CommandOutcome();
-	
+
 		try {
 			((Submissions) open("submissions")).cleanup();
 			((Submissions) open("validations")).cleanup();
@@ -765,13 +765,13 @@ public class Contest extends PersistentObject {
 			outcome.setMessage("Error cleaning compilations: " + e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 		return outcome;
 	}
-		
+
 	@MooshakOperation(
-			name = "Create Tournament", 
-			inputable = true, 
+			name = "Create Tournament",
+			inputable = true,
 			show = false)
 	private CommandOutcome createTournament(MethodContext context) {
 		CommandOutcome outcome = new CommandOutcome();
@@ -782,17 +782,17 @@ public class Contest extends PersistentObject {
 		} catch (MooshakException e) {
 			outcome.setMessage("Error: " + e.getMessage());
 		}
-        
+
 		return outcome;
 	}
-	
+
 	@MooshakOperation(
-			name = "Set Up Tournament", 
-			inputable = true, 
+			name = "Set Up Tournament",
+			inputable = true,
 			show = false)
 	private CommandOutcome setUpTournament(MethodContext context) {
 		CommandOutcome outcome = new CommandOutcome();
-		
+
 		try {
 			Tournaments tournamentsPO = open("tournaments");
 			Operation operation = Operations.getOperation(Tournaments.class, "Set Up Tournament");
@@ -800,7 +800,7 @@ public class Contest extends PersistentObject {
 		} catch (MooshakException e) {
 			outcome.setMessage("Error: " + e.getMessage());
 		}
-        
+
 		return outcome;
 	}
 
@@ -808,7 +808,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * The type (ICPC, IOI, etc) of this contest. Default is ICPC.
-	 * 
+	 *
 	 * @return
 	 */
 	public ContestType getContestType() {
@@ -820,7 +820,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Change the type (ICPC, IOI, etc) of this contest
-	 * 
+	 *
 	 * @param contestType
 	 */
 	public void setContestType(ContestType contestType) {
@@ -829,7 +829,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Status of this contest. Default is created.
-	 * 
+	 *
 	 * @return
 	 */
 	public ContestStatus getContestStatus() {
@@ -841,7 +841,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Change status of this contest. Use {@code null} to revert to default.
-	 * 
+	 *
 	 * @param contestStatus
 	 */
 	public void setContestStatus(ContestStatus contestStatus) {
@@ -850,7 +850,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Fatal errors messages of this folder
-	 * 
+	 *
 	 * @return
 	 */
 	public String getFatal() {
@@ -863,7 +863,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Set fatal error messages
-	 * 
+	 *
 	 * @param fatal
 	 */
 	public void setFatal(String fatal) {
@@ -872,7 +872,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Warning errors messages of this folder
-	 * 
+	 *
 	 * @return
 	 */
 	public String getWarning() {
@@ -884,7 +884,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Set warning error messages
-	 * 
+	 *
 	 * @param fatal
 	 */
 	public void setWarning(String warning) {
@@ -893,7 +893,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Designation of this contest. Defaults to the empty string.
-	 * 
+	 *
 	 * @return
 	 */
 	public String getDesignation() {
@@ -905,7 +905,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Set designation of this contest. Use {@code null} to revert to default.
-	 * 
+	 *
 	 * @param designation
 	 */
 	public void setDesignation(String designation) {
@@ -914,7 +914,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Organizer's name. Defaults to the empty string
-	 * 
+	 *
 	 * @return
 	 */
 	public String getOrganizes() {
@@ -926,7 +926,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Changes the organizer's name. Use {@code null} to revert to default.
-	 * 
+	 *
 	 * @param organizes
 	 */
 	public void setOrganizes(String organizes) {
@@ -935,7 +935,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Organizer's email. Defaults to the empty string
-	 * 
+	 *
 	 * @return
 	 */
 	public String getEmail() {
@@ -947,7 +947,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Changes the organizer's email. Set {@code null} to revert to default.
-	 * 
+	 *
 	 * @param email
 	 */
 	public void setEmail(String email) {
@@ -988,7 +988,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Seconds before stopping when listings freeze. Defaults to 0
-	 * 
+	 *
 	 * @return
 	 */
 	public int getHideListings() {
@@ -1001,7 +1001,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Change seconds before stopping when listings freeze. Use {@code null} to
 	 * revert to default
-	 * 
+	 *
 	 * @param hideListings
 	 */
 	public void setHideListings(Integer hideListings) {
@@ -1010,7 +1010,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Contest ranking policy, Defaults to ICPC
-	 * 
+	 *
 	 * @return
 	 */
 	public Policy getPolicy() {
@@ -1029,7 +1029,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Is contest virtual? Defaults to {@code false}
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isVirtual() {
@@ -1041,7 +1041,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Set contest as virtual. Set {@code null} to revert to default.
-	 * 
+	 *
 	 * @param virtual
 	 */
 	public void setVirtual(boolean virtual) {
@@ -1053,7 +1053,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Show scoreboard publicly? Defaults to {@code true}
-	 * 
+	 *
 	 * @return {@code false} if scoreboard is not publicly available, {@code true} otherwise
 	 */
 	public boolean isPublicScoreboard() {
@@ -1065,7 +1065,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Set show scoreboard publicly.
-	 * 
+	 *
 	 * @param publicScoreboard
 	 */
 	public void setPublicScoreboard(boolean publicScoreboard) {
@@ -1077,7 +1077,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Is contest accepting registration? Defaults to {@code false}
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isRegister() {
@@ -1100,7 +1100,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Kind of service provided by this contest. Defaults to {@code None}
-	 * 
+	 *
 	 * @return
 	 */
 	public Service getService() {
@@ -1113,7 +1113,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Changes the kind of service provided by this contest. Use {@code null} to
 	 * revert to default.
-	 * 
+	 *
 	 * @param service
 	 */
 	public void setService(Service service) {
@@ -1152,7 +1152,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Notes on this contest. Defaults to the empty string
-	 * 
+	 *
 	 * @return
 	 */
 	public String getNotes() {
@@ -1164,7 +1164,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Changes notes on this contest. Use {@code null} to revert to default.
-	 * 
+	 *
 	 * @param notes
 	 */
 	public void setNotes(String notes) {
@@ -1174,7 +1174,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Kind of challenge provided by this contest: problems or quiz. Defaults no
 	 * problems
-	 * 
+	 *
 	 * @return
 	 */
 	public Challenge getChallenge() {
@@ -1187,7 +1187,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Changes Kind of challenge provided by this contest: problems or quiz. Use
 	 * {@code null} to revert to default.
-	 * 
+	 *
 	 * @param challenge
 	 */
 	public void setChallenge(Challenge challenge) {
@@ -1196,7 +1196,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Kind of GUI provided by this contest Defaults ICPC
-	 * 
+	 *
 	 * @return
 	 */
 	public Gui getGui() {
@@ -1209,7 +1209,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Changes Kind of gui provided by this contest Use {@code null} to revert
 	 * to default.
-	 * 
+	 *
 	 * @param gui
 	 */
 	public void setGui(Gui gui) {
@@ -1218,7 +1218,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Kind of evaluator used by this contest Defaults JUDGE
-	 * 
+	 *
 	 * @return
 	 */
 	public Evaluator getEvaluator() {
@@ -1231,7 +1231,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Changes Kind of evaluator used by this contest Use {@code null} to revert
 	 * to default.
-	 * 
+	 *
 	 * @param evaluator
 	 */
 	public void setEvaluator(Evaluator evaluator) {
@@ -1254,7 +1254,7 @@ public class Contest extends PersistentObject {
 	/**
 	 * Return a transaction identifier based on team and problem IDs. The prefix
 	 * of the identifier is the time passed since the contest start.
-	 * 
+	 *
 	 * @param teamId
 	 * @param problemId
 	 * @return
@@ -1265,11 +1265,11 @@ public class Contest extends PersistentObject {
 
 		return getTransactionId(teamId, problemId, true);
 	}
-	
+
 	/**
 	 * Return a transaction identifier based on team and problem IDs. The prefix
 	 * of the identifier is the time passed since the contest start.
-	 * 
+	 *
 	 * @param teamId
 	 * @param problemId
 	 * @param timestamp prefix with timestamp?
@@ -1278,7 +1278,7 @@ public class Contest extends PersistentObject {
 	 */
 	public synchronized String getTransactionId(String teamId, String problemId,
 			boolean timestamp) throws MooshakContentException {
-		
+
 		if (teamId == null)
 			teamId = "";
 		if (problemId == null)
@@ -1294,22 +1294,28 @@ public class Contest extends PersistentObject {
 	/**
 	 * Number of seconds since the contest started
 	 * @return
-	 * @throws MooshakContentException 
+	 * @throws MooshakContentException
 	 */
 	public long getSecondsPassed(String teamName) throws MooshakContentException {
 
-	
+
 		Date now = new Date();
 		if(YesNo.YES.equals(virtual)) {
 			Team team = getTeam(teamName);
-			if(team == null)
-				return 0;
-			else
+			if (team == null) {
+				if (start != null)
+					return (now.getTime() - start.getTime()) / 1000;
+				if (open != null)
+					return (now.getTime() - open.getTime()) / 1000;
+				return now.getTime() / 1000;
+			} else
 				return team.getSecondsFromLogin();
-		} else if(start != null) 
+		} else if(start != null)
 			return (now.getTime() - start.getTime()) / 1000;
-		else 
-			return 0;
+		else if(open != null)
+			return (now.getTime() - open.getTime()) / 1000;
+		else
+			return now.getTime() / 1000;
 	}
 
 	/**
@@ -1324,17 +1330,29 @@ public class Contest extends PersistentObject {
 		else
 			return Long.MAX_VALUE;
 	}
-	
+
 	/**
 	 * Get Team in this contest with given id
-	 * 
-	 * @param teamName
+	 *
+	 * @param teamId
 	 * @return
 	 * @throws MooshakContentException
 	 */
 	Team getTeam(String teamId) throws MooshakContentException {
 		Groups groups = open("groups");
 		return groups.find(teamId);
+	}
+
+	/**
+	 * Get User in this contest with given id
+	 *
+	 * @param userId
+	 * @return
+	 * @throws MooshakContentException
+	 */
+	User getUser(String userId) throws MooshakContentException {
+		Users users = open("users");
+		return users.find(userId);
 	}
 
 	private RankingPolicy rankingPolicy = null;
@@ -1347,7 +1365,7 @@ public class Contest extends PersistentObject {
 	public RankingPolicy getSharedRankingPolicy() {
 		return rankingPolicy;
 	}
-	
+
 	/**
 	 * Get common ranking policy, share by all team in non virtual contests
 	 * @return
@@ -1363,16 +1381,16 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Get a fresh (unused) ranking policy.
-	 * Teams in virtual contests need their own contest policy  
+	 * Teams in virtual contests need their own contest policy
 	 * @return
 	 * @throws MooshakException
 	 */
 	public RankingPolicy getFreshRankingPolicy() throws MooshakException {
 		return  RankingPolicy.getPolicy(getPolicy(), this);
 	}
-	
+
 	/**
-	 * Is this contest currently running? 
+	 * Is this contest currently running?
 	 * @return
 	 * @throws MooshakException
 	 */
@@ -1390,20 +1408,20 @@ public class Contest extends PersistentObject {
 
 		return false;
 	}
-	
-	
+
+
 	public boolean isRunning(String teamId) throws MooshakException {
 		switch(contestStatus) {
 		case RUNNING:
 		case RUNNING_VIRTUALLY:
-			return getSecondsPassed(teamId) < getDurationInSeconds(); 
+			return getSecondsPassed(teamId) < getDurationInSeconds();
 		default:
 			return false;
 		}
 	}
-	
 
-	
+
+
 
 	/**
 	 * Return true if contest listings are frozen; false otherwise
@@ -1411,14 +1429,14 @@ public class Contest extends PersistentObject {
 	 */
 	public boolean isFreezingListing() {
 		Date stop = getStop();
-		
+
 		if(stop == null || isVirtual())
 			return false;
-		
-		long timeToHide = stop.getTime() - getHideListings()*1000;
-			
+
+		long timeToHide = stop.getTime() - (long) getHideListings() * 60L * 1000L;
+
 		return System.currentTimeMillis() > timeToHide;
-		
+
 	}
 
 	@Override
@@ -1426,7 +1444,7 @@ public class Contest extends PersistentObject {
 		// setContestStatus(computeStatus());
 		updateStatus();
 		broadcastContestStatusChange();
-		
+
 		attachCourseFileWatcher();
 	}
 
@@ -1442,43 +1460,43 @@ public class Contest extends PersistentObject {
 		broadcastContestStatusChange();
 
 		attachCourseFileWatcher();
-		
+
 		return false;
 	}
-	
+
 	@Override
 	protected void destroyed() throws MooshakContentException {
-		
+
 		detachCourseFileWatcher();
-		
+
 		super.destroyed();
-	}	
+	}
 
 	private Course course = null;
-	
+
 	/**
 	 * Read course file
-	 * 
+	 *
 	 * @return {@link Course} course
 	 */
 	private Course readCourseFile() {
-		
+
 		Path resourcesPath = getResources();
-		
+
 		if (resourcesPath == null) {
 			LOGGER.info("Could not read resources: path not set.");
 			return course;
 		}
-		
+
 		Path filePath = getAbsoluteFile().resolve(resourcesPath.getFileName());
-		
+
 		if (!Files.exists(filePath)) {
 			LOGGER.info("Could not read resources: file does not exist.");
 			return course;
 		}
-		
+
 		try {
-			
+
 			Unmarshaller unmarshaller = null;
 			try {
 				JAXBContext jc = JAXBContextFactory.getInstance().getJaxBContext(Course.class);
@@ -1486,60 +1504,60 @@ public class Contest extends PersistentObject {
 			} catch (JAXBException e1) {
 				throw new MooshakException("Creating unmarshaler!");
 			}
-			
+
 			InputStream is = new FileInputStream(filePath.toFile());
 			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
 			course = (Course) unmarshaller.unmarshal(reader);
-			
+
 		    reader.close();
 		} catch (MooshakException | IOException | JAXBException e) {
 			LOGGER.info("Could not read resources. Error: " + e.getMessage());
 		}
-		
+
 		return course;
 	}
-	
+
 	/**
 	 * @return the course
 	 */
 	public Course getCourse() {
 		return course;
 	}
-	
+
 	private String courseXmlAttached = null;
 	private Runnable courseXmlCbDetachModification = null;
 	private Runnable courseXmlCbDetachDeletion = null;
-	
+
 	/**
 	 * Attach course file watcher
 	 */
 	public synchronized void attachCourseFileWatcher() {
-		
+
 		if (getResources() == null) {
 			detachCourseFileWatcher();
 			return;
 		}
-		
+
 		Path courseFileName = getResources().getFileName();
-		
+
 		if (courseFileName != null && courseXmlAttached != null
 				&& courseFileName.toString().equals(courseXmlAttached)) {
 			return;
 		} else if (courseFileName != null) {
-			
+
 			detachCourseFileWatcher();
-			
+
 			Executors.newSingleThreadExecutor().submit(() -> {
 				readCourseFile();
 				updateResources();
 			});
-			
+
 			Path courseFilePath = getAbsoluteFile(courseFileName.toString());
-			
+
 			courseXmlCbDetachModification = PathManager.getInstance()
 				.watchRegularFileForModification(courseFilePath.toString(), new Runnable() {
-				
+
 				@Override
 				public void run() {
 					LOGGER.severe("Reading course");
@@ -1547,60 +1565,60 @@ public class Contest extends PersistentObject {
 					updateResources();
 				}
 			});
-			
+
 			courseXmlCbDetachDeletion = PathManager.getInstance()
 				.watchRegularFileForDeletion(courseFilePath.toString(), new Runnable() {
-				
+
 				@Override
 				public void run() {
 					course = null;
 				}
 			});
-			
+
 			courseXmlAttached = courseFileName.toString();
 		}
 	}
-	
+
 	/**
 	 * Detach course file watcher
 	 */
 	public void detachCourseFileWatcher() {
-		
+
 		if (courseXmlCbDetachModification != null)
 			courseXmlCbDetachModification.run();
-		
+
 		if (courseXmlCbDetachDeletion != null)
 			courseXmlCbDetachDeletion.run();
-		
+
 		courseXmlCbDetachModification = null;
 		courseXmlCbDetachDeletion = null;
 		courseXmlAttached = null;
 	}
-	
+
 	/**
 	 * Updates resources of the course if it is a Enki contest
 	 */
 	private void updateResources() {
-		
+
 		if (course == null)
 			return;
 
 		try {
-			
+
 			setOpen(course.getCreationDate());
 			setStart(course.getStartDate());
 			setStop(course.getStopDate());
 			setClose(course.getEndDate());
-			
+
 			boolean partsChanged = false;
 			for (CoursePart coursePart : course.getChildren()) {
-				
+
 				partsChanged = partsChanged || updateResources(coursePart);
 			}
-			
+
 			EnkiManager.getInstance().updateGamificationServiceResources(course);
 			EnkiManager.getInstance().insertCourseIntoSequenciationService(course);
-			
+
 			save();
 
 	        /*Marshaller marshaller = null;
@@ -1610,7 +1628,7 @@ public class Contest extends PersistentObject {
 			} catch (JAXBException e1) {
 				throw new MooshakException("Creating marshaler!");
 			}
-			
+
 			marshaller.marshal(course, getAbsoluteFile(getResources().getFileName().toString())
 					.toFile());*/
 		} catch (Exception e) {
@@ -1622,34 +1640,34 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Update resources from a {@link CoursePart}
-	 * 
+	 *
 	 * @param coursePart {@link CoursePart} sub-tree
 	 * @return {@link Boolean} <code>true</code> if xml changed, <code>false</code> otherwise
 	 * @throws MooshakException
 	 */
 	private boolean updateResources(CoursePart coursePart) throws MooshakException {
-		
+
 		boolean xmlChanged = false;
-		
+
 		for (CourseResource resource : coursePart.getResources()) {
-			
+
 			ResourceType type = resource.getType();
 			if (type != ResourceType.PROBLEM)
 				continue;
-			
+
 			if (resource.getId() == null)
 				continue;
-			
+
 			String problemId = resource.getId();
 			String problemName = "";
 			if (resource.getTitle() != null)
 				problemName = resource.getTitle();
-			
+
 			String url = resource.getHref();
-			
-			if (url == null || url.startsWith("http://" + getIdName())) 
+
+			if (url == null || url.startsWith("http://" + getIdName()))
 				continue;
-			
+
 			if (!Pattern.matches(AdministratorManager.REGEX_URL, url))
 				continue;
 			else if (!url.endsWith(".zip"))
@@ -1657,10 +1675,10 @@ public class Contest extends PersistentObject {
 
 			Problems problemsPO = open("problems");
 			Problem problem = problemsPO.find(problemId);
-			
+
 			if (problem == null) {
 				AdministratorManager.getInstance()
-					.importMooshakObject(problemsPO.getPath().toString(), problemName, 
+					.importMooshakObject(problemsPO.getPath().toString(), problemName,
 							readRemoteURL(url));
 				problem = problemsPO.find(problemId);
 			}
@@ -1669,67 +1687,67 @@ public class Contest extends PersistentObject {
 					.openConnection();
 				long lastModified = connection.getLastModified();
 				Date date = new Date(lastModified);
-				
-				if (date.after(new Date(new File(getAbsoluteFile().toString() + File.separator 
+
+				if (date.after(new Date(new File(getAbsoluteFile().toString() + File.separator
 						+ "problems" + File.separator + problemId).lastModified()))) {*/
 					AdministratorManager.getInstance().destroyMooshakObject(problem.getPath()
 							.toString());
 					AdministratorManager.getInstance()
-						.importMooshakObject(problemsPO.getPath().toString(), problemId, 
+						.importMooshakObject(problemsPO.getPath().toString(), problemId,
 								readRemoteURL(url));
 					problem = problemsPO.find(problemId);
 				/*}*/
-					
+
 			}
-			
+
 			xmlChanged = true;
 			resource.setId("http://" + getIdName() + "/" + problem.getIdName());
 			resource.setHref("http://" + getIdName() + "/" + problem.getIdName());
-			
+
 			problem.setName(problemName);
 			problem.setOriginalLocation(url);
-		
+
 		}
-		
+
 		for (CoursePart childPart : coursePart.getChildren()) {
-			
+
 			xmlChanged = xmlChanged || updateResources(childPart);
 		}
-		
+
 		return xmlChanged;
 	}
 
 	/**
 	 * Extract id from URL string
-	 * 
+	 *
 	 * @param url Url string to extract id from
 	 * @return id
 	 */
 	private String extractIdFromURL(String url) {
-		
+
 		String file = url.substring(url.lastIndexOf("/") + 1, url.length());
-		
+
 		return file.substring(0, file.lastIndexOf("."));
 	}
 
 	/**
 	 * Reads a file from a remote URL to a byte array
-	 * 
+	 *
 	 * @param href
-	 * @throws MooshakException 
+	 * @throws MooshakException
 	 */
 	private byte[] readRemoteURL(String href) throws MooshakException {
 		byte[] data = null;
 		try {
 			URL url = new URL(href);
 			InputStream is = url.openStream();
-			ByteArrayOutputStream os = new ByteArrayOutputStream();			
+			ByteArrayOutputStream os = new ByteArrayOutputStream();
 			byte[] buf = new byte[4096];
-			int n;			
-			while ((n = is.read(buf)) >= 0) 
+			int n;
+			while ((n = is.read(buf)) >= 0)
 				os.write(buf, 0, n);
 			os.close();
-			is.close();			
+			is.close();
 			data = os.toByteArray();
 		} catch (MalformedURLException e) {
 			throw new MooshakException("Could not read resource");
@@ -1743,11 +1761,11 @@ public class Contest extends PersistentObject {
 	@Override
 	public void setFrozen(boolean frozen) throws MooshakException {
 		super.setFrozen(frozen);
-		
+
 		EventSender.getEventSender().send(new ContextChangedEvent());
 		broadcastContestStatusChange();
 	}
-	
+
 	private void checkValues() {
 		List<String> names = Arrays.asList("open", "start", "stop", "close");
 		List<Date> dates = Arrays.asList(open, start, stop, close);
@@ -1776,7 +1794,7 @@ public class Contest extends PersistentObject {
 
 	/**
 	 * Computes the contest status based on contest dates
-	 * 
+	 *
 	 * @return
 	 */
 	private ContestStatus computeStatus() {
@@ -1824,17 +1842,17 @@ public class Contest extends PersistentObject {
 
 		if (updateStatusTimers.containsKey(status))
 			updateStatusTimers.get(status).cancel();
-		
+
 		Date now = new Date();
 
 		if (date == null)
 			return;
-		
+
 		if (date.before(now)) {
 			updateStatusImmediately(status);
 			return;
 		}
-		
+
 		Timer timer = new Timer("update "+status+" timer in "+getDesignation());
 		long delay = date.getTime() - now.getTime();
 
@@ -1854,18 +1872,18 @@ public class Contest extends PersistentObject {
 		}, delay + status.ordinal()*2); // add slack so that greater status overwrite lower
 
 	}
-	
+
 	private Timer immediateUpdateTimer = null;
-	
+
 	private synchronized void updateStatusImmediately(final ContestStatus status) {
-		
+
 		if (immediateUpdateTimer != null)
 			immediateUpdateTimer.cancel();
-		
+
 		immediateUpdateTimer = new Timer();
-		
+
 		immediateUpdateTimer.schedule(new TimerTask() {
-			
+
 			@Override
 			public void run() {
 				setContestStatus(status);
@@ -1890,7 +1908,7 @@ public class Contest extends PersistentObject {
 				try(POStream<Problem> stream = problems.newPOStream()) {
 					for (Problem problem : stream)
 						problem.broadcastProblemChanges();
-				} 
+				}
 			} catch (Exception e) {
 				LOGGER.severe("Could not update problems in contest " + getIdName() + ": " + e.getMessage());
 			}
@@ -1913,18 +1931,18 @@ public class Contest extends PersistentObject {
 	/**
 	 * Get time since start of contest; it may depend on team if this is a
 	 * virtual contest
-	 * 
+	 *
 	 * @param teamId
 	 * @return
 	 * @throws MooshakContentException
 	 */
 	public Date transactionTime(String teamId) throws MooshakContentException {
-		
+
 		if (teamId == null)
 			return new Date(0);
-		
+
 		Team team = getTeam(teamId);
-		
+
 		if (team == null) {
 			if (getStart() != null)
 				return new Date(new Date().getTime() - getStart().getTime());

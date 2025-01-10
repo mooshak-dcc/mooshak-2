@@ -1,0 +1,16 @@
+/gwt-unitCache/
+/.idea/
+/target/
+/WebContent/WEB-INF/classes/
+/WebContent/WEB-INF/deploy/
+/WebContent/WEB-INF/lib/
+/WebContent/icpc/
+/WebContent/authentication/
+/WebContent/kora/
+/WebContent/enki/
+/WebContent/judge/
+/WebContent/creator/
+/WebContent/admin/
+/WebContent/replay/
+/WebContent/runner/
+/WebContent/scoreboard/
